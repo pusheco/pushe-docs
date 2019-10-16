@@ -10,7 +10,7 @@ title: مستندات
 
 |پلتفرم|Android|iOS|
 |----|:----:|:----:|
-|**Native**|[**مستندات**](android-studio/studio-intro)|NO|
+|**Native**|[**مستندات**](android-studio/intro.md)|NO|
 |**Flutter**|YES|NO|
 |**Unity**|YES|NO|
 |**React native**|YES|NO|
