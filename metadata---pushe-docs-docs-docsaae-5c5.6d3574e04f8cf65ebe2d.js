@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[57],{50:function(s){s.exports=JSON.parse('{"id":"docs","title":"مستندات","description":"<div dir=\'rtl\'>","source":"@site/docs/all.md","permalink":"pushe-docs/docs/docs"}')}}]);
