@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[58],{80:function(t){t.exports=JSON.parse('{"id":"flutter/flutter-intro","title":"Introduction","description":"## Depend on it","source":"@site/docs/flutter/intro.md","permalink":"/pushe-docs/docs/flutter/flutter-intro"}')}}]);

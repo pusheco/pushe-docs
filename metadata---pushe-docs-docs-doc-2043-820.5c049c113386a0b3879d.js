@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[55],{54:function(o){o.exports=JSON.parse('{"id":"doc2","title":"Document Number 2","description":"This is a link to [another document.](doc3.md)","source":"@site/docs/doc2.md","permalink":"pushe-docs/docs/doc2"}')}}]);
