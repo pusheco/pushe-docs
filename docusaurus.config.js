@@ -5,21 +5,22 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+
 module.exports = {
   title: 'پوشه',
   tagline: 'مستندات پوشه (بتا)',
-  url: 'https://pusheco.github.io/pushe-docs/',
+  url: 'https://pusheco.github.io/',
   baseUrl: '/',
   favicon: 'img/pushe_logo.jpeg',
   organizationName: 'pusheco', // Usually your GitHub org/user name.
   projectName: 'pushe-docs', // Usually your repo name.
-  //themes: ['@docusaurus/theme-classic', '@docusaurus/theme-live-codeblock'],
   themeConfig: {
+    prismTheme: require('prism-react-renderer/themes/vsDark'),
     navbar: {
-      title: 'پوشه',
+      title: 'پوشه ',
       logo: {
-        alt: 'پوشه',
-        src: 'img/logo.svg',
+        alt: 'پوشه ',
+        src: 'img/pushe_logo.jpeg',
       },
       links: [
         {to: 'docs/docs', label: 'مستندات', position: 'left'},

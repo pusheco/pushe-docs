@@ -13,7 +13,7 @@ title: اعلان از یک دیوایس یه دیوایس دیگر
 
 <div dir='ltr'>
 
-`static void sendSimpleNotifToUser(Context, pusheId, title, content)`
+#### `static void sendSimpleNotifToUser(Context, pusheId, title, content)`
 
 </div>
 
@@ -38,7 +38,7 @@ if (Pushe.isPusheInitialized(this)) {
 
 <div dir='ltr'>
 
-##### `sendAdvancedNotifToUser(Context, pusheId, notificationJson)` throws `Exception`
+#### `sendAdvancedNotifToUser(Context, pusheId, notificationJson)` throws `Exception`
 
 </div>
 
@@ -70,7 +70,7 @@ try {
 
 <div dir='ltr'>
 
-##### `sendCustomJsonToUser(Context, pusheId, customJson)` throws `Exception`
+#### `sendCustomJsonToUser(Context, pusheId, customJson)` throws `Exception`
 
 </div>
 

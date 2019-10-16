@@ -13,6 +13,12 @@ title: رویدادهای نوتیفیکیشن
 
 ## تعریف کالبک برای مطلع‌‌شدن از رویداد
 
+#### `static void setNotificationListener(notificationListener)`
+
+|پارامتر ورودی|استفاده|
+|:--:|--|
+|notificationListener|یک اینترفیس که متدهای رویدادها را نگه‌داری و در زمان رخ‌داد فراخوانی می‌کند|
+
 برای اینکه بتوانید اعلان‌ها را در هر زمانی دریافت کنید بهتر است پیاده‌سازی کدهای اعلان را در **کلاس اپلیکیشن** انجام دهید. برای اینکار:
 
 * کلاسی بسازید که از `Application` ارث ببرد.
@@ -55,3 +61,43 @@ Pushe.setNotificationListener(new Pushe.NotificationListener() {
     }
 });
 ```
+به محض دریافت نوتیفیکیشن بایستی کد داخل `onNotificationReceived` اجرا شود و ....
+
+## توضیحات کلاس‌های کالبک
+
+اینترفیس کالبک برای این‌کار به صورت زیر است:
+
+```java
+public interface NotificationListener {
+    void onNotificationReceived(@NonNull NotificationData notificationData);
+    void onNotificationClicked(@NonNull NotificationData notificationData);
+    void onNotificationButtonClicked(@NonNull NotificationData notificationData, @NonNull NotificationButtonData clickedButton);
+    void onCustomContentReceived(@NonNull JSONObject customContent);
+    void onNotificationDismissed(@NonNull NotificationData notificationData);
+}
+```
+
+و کلاس‌های `NotificationData` و `NotificationButtonData` دارای فیلدهای زیر هستند:
+
+##### `NotificationData.java`:
+
+|فیلد|توضیحات|
+|:--:|--|
+|title|تیتر نوتیفیکیشن|
+|content|محتوای نوتیفیکیشن|
+|bigTitle|تیتر بزرگ نوتیفیکیشن|
+|bigContent|محتوای بزرگ نوتیفیکیشن|
+|summary|متن خلاصه‌ی نوتیفکیشن|
+|imageUrl|لینک عکس نوتیفیکیشن|
+|iconUrl|لینک آیکون نوتیفیکیشن|
+|customContent|جیسون دلخواه نوتیفیکیشن|
+|buttons|لیست دکمه‌هایی که نوتیفیکیشن دارد|
+
+جز `title` و `content` بقیه‌ی فیلدها می‌توانند `null` باشند.
+
+##### `NotificationButtonData.java`
+
+|فیلد|توضیحات|
+|:--:|--|
+|id|شناسه‌ای برای تشخیص دکمه|
+|text|متن دکمه|

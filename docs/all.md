@@ -3,27 +3,23 @@ id: docs
 title: مستندات
 ---
 
-<div dir='rtl'>
-
 # مستندات پوشه [بتا]
 
 در پوشه وضعیت پشتیبانی از فریم‌ورک‌ها و پلتفرم‌های مختلف به صورت زیر است.
 
-</div>
 
 |پلتفرم|Android|iOS|
 |----|:----:|:----:|
-|Native|[YES](android-studio/studio-intro)|YES|
-|Flutter|[YES](flutter/flutter-intro)|YES|
-|Unity|YES|YES|
-|React native|YES|YES|
-|VB (B4A/B4i)|YES|NO|
-|Cordova|YES|NO|
+|**Native**|[**مستندات**](android-studio/studio-intro)|NO|
+|**Flutter**|YES|NO|
+|**Unity**|YES|NO|
+|**React native**|YES|NO|
+|**Basic4Android**|YES|NO|
+|**Cordova**|YES|NO|
+|**RESTful API**|YES|YES|
 
 
-
-
-## Web
+## وب‌پوش
 
 |Frameworks and plugins|
 |:-:|
@@ -31,12 +27,8 @@ title: مستندات
 |Wordpress|
 
 
-## RESTful
+## آموزش کار در کنسول پوشه
 
-[RESTful Documentations]()
+تجربه‌ی کار با کنسول پوشه و یادگیری تمامی بخش‌ها
 
-
-## Console
-
-Learn how to use console to send notifications.
-[Console Documentations]()
+[مستندات کنسول پوشه]()

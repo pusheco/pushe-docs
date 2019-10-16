@@ -2,8 +2,8 @@
 
 This project is a work in progress of the new Pushe documentations.
 
-You can check it out from [here](https://pusheco.github.io/pushe-docs).
+You can check it out from [here](https://betadoc.pushe.co).
 
 ### Supported documents for now:
 
-* [Android native](https://pusheco.github.io/pushe-docs/docs/android-studio/studio-intro)
+* [Android native](https://betadoc.pushe.co/docs/android-studio/studio-intro)
