@@ -1,0 +1,203 @@
+/**
+ * Copyright (c) 2017-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: rgb(33, 175, 144);
+  --ifm-color-primary-darker: rgb(31, 165, 136);
+  --ifm-color-primary-darkest: rgb(26, 136, 112);
+  --ifm-color-primary-light: rgb(70, 203, 174);
+  --ifm-color-primary-lighter: rgb(102, 212, 189);
+  --ifm-color-primary-lightest: rgb(146, 224, 208);
+}
+
+@font-face {
+  font-family: "IRANSans";
+  src: url("/static/fonts/IRANSansWeb.eot") format("eot"),
+        url('/static/fonts/IRANSansWeb.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+        url("/static/fonts/IRANSansWeb.woff2") format("woff2"),
+        url("/static/fonts/IRANSansWeb.woff") format("woff"),
+        url("/static/fonts/IRANSansWeb.ttf") format("truetype");
+}
+
+html, body {
+  direction: rtl;
+  font-family: IRANSans !important;
+}
+
+.menu__link {
+  text-align: right;
+}
+
+.contents.contents__left-border {
+  border-right-color: rgba(0, 0, 0, 0.1);
+  border-right-color: var(--ifm-contents-border-color);
+  border-right-style: solid;
+  border-right-width: 1px;
+
+  padding-right: 20px;
+
+  /* unset default ltr */
+  border-left-color: unset;
+  border-left-color: unset;
+  border-left-style: unset;
+  border-left-width: unset;
+}
+
+pre {
+  direction: ltr;
+}
+
+.navbar .navbar__sidebar {
+  left: unset;
+  right: 0;
+  transform: translateX(100%);
+}
+
+.tabs {
+  direction: ltr;
+  position: relative;
+  bottom: -15px;
+}
+
+.docTitle_1vWb {
+  font-size: 2.3rem;
+}
+
+.docSidebarContainer_1cYp {
+  width: 350px;
+}
+
+/**
+ * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/chriskempson/tomorrow-theme
+ * @author Rose Pritchard
+ */
+
+ code[class*="language-"],
+ pre[class*="language-"] {
+   color: #ccc !important;
+   background: none !important;
+   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace !important;
+   font-size: .95rem !important;
+   text-align: left !important;
+   white-space: pre !important;
+   word-spacing: normal !important;
+   word-break: normal !important;
+   word-wrap: normal !important;
+   line-height: 1.5 !important;
+ 
+   -moz-tab-size: 4 !important;
+   -o-tab-size: 4 !important;
+   tab-size: 4 !important;
+ 
+   -webkit-hyphens: none !important;
+   -moz-hyphens: none !important;
+   -ms-hyphens: none !important;
+   hyphens: none !important;
+ 
+ }
+ 
+ /* Code blocks */
+ pre[class*="language-"] {
+   padding: 1em !important;
+   margin: .5em 0 !important;
+   overflow: auto !important;
+ }
+ 
+ :not(pre) > code[class*="language-"],
+ pre[class*="language-"] {
+   background: #2d2d2d !important;
+ }
+ 
+ /* Inline code */
+ :not(pre) > code[class*="language-"] {
+   padding: .1em !important;
+   border-radius: .3em !important;
+   white-space: normal !important;
+ }
+ 
+ .token.comment,
+ .token.block-comment,
+ .token.prolog,
+ .token.doctype,
+ .token.cdata {
+   color: #999 !important;
+ }
+ 
+ .token.punctuation {
+   color: #ccc !important;
+ }
+ 
+ .token.tag,
+ .token.attr-name,
+ .token.namespace,
+ .token.deleted {
+   color: #e2777a !important;
+ }
+ 
+ .token.function-name {
+   color: #6196cc !important;
+ }
+ 
+ .token.boolean,
+ .token.number,
+ .token.function {
+   color: #f08d49 !important;
+ }
+ 
+ .token.property,
+ .token.class-name,
+ .token.constant,
+ .token.symbol {
+   color: #f8c555 !important;
+ }
+ 
+ .token.selector,
+ .token.important,
+ .token.atrule,
+ .token.keyword,
+ .token.builtin {
+   color: #cc99cd !important;
+ }
+ 
+ .token.string,
+ .token.char,
+ .token.attr-value,
+ .token.regex,
+ .token.variable {
+   color: #7ec699 !important;
+ }
+ 
+ .token.operator,
+ .token.entity,
+ .token.url {
+   color: #67cdcc !important;
+ }
+ 
+ .token.important,
+ .token.bold {
+   font-weight: bold !important;
+ }
+ .token.italic {
+   font-style: italic !important;
+ }
+ 
+ .token.entity {
+   cursor: help !important;
+ }
+ 
+ .token.inserted {
+   color: green !important;
+ }
