@@ -85,3 +85,9 @@ pre {
 .codeBlock_19pQ {
   font-size: 1em;
 }
+
+.hash-link {
+  position: inherit !important;
+  margin-left: unset !important;
+  padding-right: unset !important;
+}
