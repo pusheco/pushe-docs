@@ -7,8 +7,9 @@
 
 module.exports = {
   studio: {
-    "Android studio": ["android-studio/studio-intro", "android-studio/studio-advanced"],
+    "Android studio": ["android-studio/studio-intro",],
     "قابلیت‌ها": [
+      "android-studio/studio-advanced",
       "android-studio/studio-init",
       "android-studio/studio-pusheid",
       "android-studio/studio-topic",
@@ -19,5 +20,35 @@ module.exports = {
       "android-studio/studio-fcm"
     ],
     "سوالات و مشکلات": ["android-studio/studio-faq"]
+  },
+
+  flutter: {
+    "Flutter": ["flutter/flutter-intro"],
+    "قابلیت‌ها و امکانات": [
+      "flutter/flutter-advanced",
+      "flutter/flutter-init",
+      "flutter/flutter-pusheid",
+      "flutter/flutter-topic",
+      "flutter/flutter-d2d",
+      "flutter/flutter-listener",
+      "flutter/flutter-disable",
+      "flutter/flutter-channel",
+      "flutter/flutter-fcm"
+    ],
+    "سوالات و مشکلات": ["flutter/flutter-faq"]
+  },
+
+  unity: {
+    "Unity": ["unity/unity-intro"],
+    "قابلیت‌ها و امکانات": [
+      "unity/unity-advanced",
+      "unity/unity-init",
+      "unity/unity-pusheid",
+      "unity/unity-topic",
+      "unity/unity-d2d",
+      "unity/unity-disable",
+      "unity/unity-channel",
+    ],
+    "سوالات و مشکلات": ["unity/unity-faq"]
   },
 };

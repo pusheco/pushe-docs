@@ -38,6 +38,8 @@ title: راه‌اندازی سریع
 <meta-data android:name="co.ronash.pushe.token" android:value="{PUSHE_TOKEN}" />
 ```
 
+به جای `{PUSHE_TOKEN}` باید توکن برنامه‌ی خود را قرار دهید.
+
 و محل اضافه‌کردن آن در فایل `AndroidManifest` باید مطابق زیر باشد:
 
 ```xml
@@ -48,6 +50,12 @@ title: راه‌اندازی سریع
         <meta-data android:name="co.ronash.pushe.token" android:value="{PUSHE_TOKEN}" />
     </application>
 </manifest>
+```
+
+برای استفاده از **امکان ارسال اعلان با استفاده‌از موقعیت مکانی** پرمیشن لوکیشن را نیز به مانیفست اضافه‌کنید:
+
+```xml
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 ```
 
 ## اضافه‌کردن کد‌های لازم

@@ -1,5 +1,5 @@
 ---
-id: flutter-pusheid
+id: unity-pusheid
 title: شناسایی کاربر
 ---
 
@@ -9,7 +9,7 @@ title: شناسایی کاربر
 
 <div dir='ltr'>
 
-#### `static Future<String> getPusheId()`
+#### `static string getPusheId()`
 
 </div>
 
@@ -21,14 +21,6 @@ title: شناسایی کاربر
 > **گرفتن پوشه‌آی‌دی نیازی به رجیسترشدن و حتی اتصال به اینترنت ندارد** و بدست‌آمدن آن به معنی ثبت‌شدن نصب در پوشه نیست.
 
 ```js
-var pusheId = await Pushe.getPusheId();
-
-
-
-// Or use the non-async way
-
-Pushe.getPusheId().then((pusheId){
-    // Use pushe id
-});
+var pusheId = Pushe.GetPusheId();
 
 ```

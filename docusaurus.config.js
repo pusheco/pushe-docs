@@ -9,7 +9,7 @@
 module.exports = {
   title: 'پوشه',
   tagline: 'مستندات پوشه (بتا)',
-  url: 'https://pusheco.github.io/',
+  url: 'https://betadoc.pushe.co',
   baseUrl: '/',
   favicon: 'img/pushe_logo.jpeg',
   organizationName: 'pusheco', // Usually your GitHub org/user name.

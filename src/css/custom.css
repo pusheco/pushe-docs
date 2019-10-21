@@ -91,3 +91,7 @@ pre {
   margin-left: unset !important;
   padding-right: unset !important;
 }
+
+.row .col.col--3 {
+  --ifm-col-width: calc(3 / 10 * 100%);
+}

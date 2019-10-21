@@ -11,9 +11,13 @@ title: رویدادهای نوتیفیکیشن
 * کاربر اعلان را رد کند
 * کاربر بر روی دکمه‌ای از اعلان کلیک کند
 
-## تعریف کالبک برای مطلع‌‌شدن از رویداد
+## تعریف رویداد برای مطلع‌‌شدن از رویداد
+
+<div dir='ltr'>
 
 #### `static void setNotificationListener(notificationListener)`
+
+</div>
 
 |پارامتر ورودی|استفاده|
 |:--:|--|
@@ -63,9 +67,11 @@ Pushe.setNotificationListener(new Pushe.NotificationListener() {
 ```
 به محض دریافت نوتیفیکیشن بایستی کد داخل `onNotificationReceived` اجرا شود و ....
 
-## توضیحات کلاس‌های کالبک
 
-اینترفیس کالبک برای این‌کار به صورت زیر است:
+## `NotificationListener`
+
+
+اینترفیس callback برای این‌کار به صورت زیر است:
 
 ```java
 public interface NotificationListener {
@@ -79,7 +85,11 @@ public interface NotificationListener {
 
 و کلاس‌های `NotificationData` و `NotificationButtonData` دارای فیلدهای زیر هستند:
 
-##### `NotificationData.java`:
+<div dir='ltr'>
+
+#### `NotificationData.java`:
+
+</div>
 
 |فیلد|توضیحات|
 |:--:|--|
@@ -95,7 +105,11 @@ public interface NotificationListener {
 
 جز `title` و `content` بقیه‌ی فیلدها می‌توانند `null` باشند.
 
-##### `NotificationButtonData.java`
+<div dir='ltr'>
+
+#### `NotificationButtonData.java`
+
+</div>
 
 |فیلد|توضیحات|
 |:--:|--|
