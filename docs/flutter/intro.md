@@ -1,9 +1,10 @@
 ---
 id: flutter-intro
-title: راه‌اندازی سریع
+title: راه‌اندازی در فلاتر
+sidebar_label: راه‌اندازی سریع
 ---
 
-> نسخه‌ی فعلی فقط برای از سیستم‌عامل اندروید پشتیبانی می‌کند.
+> نسخه‌ی فعلی پلاگین فقط از سیستم‌عامل اندروید پشتیبانی می‌کند.
 
 ## پیش‌نیاز‌ها
 
@@ -22,14 +23,14 @@ title: راه‌اندازی سریع
 
 
 ```yml
-pushe: 1.2.0^
+pushe: 1.0.1^
 ```
 
 و محل قرارگیری آن در زیرمجموعه‌ی `dependencies` می‌باشد.
 
 ```yaml
 dependencies:
-    pushe: 1.2.0^
+    pushe: 1.0.1^
 ```
 
 سپس سینک کنید یا دستور `flutter packages get` را در ترمینال وارد کنید تا پلاگین‌ها به پروژه اضافه‌شوند.
@@ -71,13 +72,13 @@ dependencies:
 
 در بخش `import`ها کد زیر را اضافه‌کنید تا کلاس‌های پوشه در فایل قابل‌استفاده شوند:
 
-```dart
+```js
 import 'package:pushe/pushe.dart';
 ```
 
 و از کد زیر برای شروع‌ عملیات رجیسترکردن پوشه استفاده کنید:
 
-```dart
+```js
 Pushe.initialize();
 ```
 
@@ -91,14 +92,14 @@ Pushe.initialize();
 
 برای مشاهده‌ی بهتر لاگ‌ها می‌توانید فیلتر `Pushe` را روی لاگ‌ها اعمال کنید.
 
-```bash
-# Android logcat:
+```js
+// Android logcat:
 
---------+ Started Initialization of Pushe 1.7 +--------
+--------+ Started Initialization of Pushe 1.6.3 +--------
 Trying to register to Pushe
 Successfully registered to pushe
 ```
 
-در صورتی که در یکی از این مراحل مشکلی وجود داشت، ابتدا [سوالات متداول](flutter-faq) را بررسی کنید و در صورتی نیافتن مشکل آن را در [Github issue](https://github.com/pusheco/pushe-flutter/issues?utf8=%E2%9C%93&q=is%3Aissue) مطرح کنید.
+در صورتی که در یکی از این مراحل مشکلی وجود داشت، ابتدا [سوالات متداول](flutter-errors) را بررسی کنید و در صورتی نیافتن مشکل آن را در [Github issue](https://github.com/pusheco/pushe-flutter/issues?utf8=%E2%9C%93&q=is%3Aissue) مطرح کنید.
 
 برای مشاهده‌ی امکانات و قابلیت‌های بیشتر پوشه در فلاتر به مطالعه‌ی ادامه‌ی مستندات بپردازید.

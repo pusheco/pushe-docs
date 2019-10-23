@@ -90,8 +90,18 @@ pre {
   position: inherit !important;
   margin-left: unset !important;
   padding-right: unset !important;
+  padding-left: 10px;
 }
 
 .row .col.col--3 {
   --ifm-col-width: calc(3 / 10 * 100%);
+}
+
+.container-vertical-space {
+  margin: 50px auto;
+}
+
+.navbar__logo {
+  margin-right: .5rem;
+  margin-left: .5rem;
 }

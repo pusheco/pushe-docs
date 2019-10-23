@@ -23,7 +23,7 @@ module.exports = {
         src: 'img/pushe_logo.jpeg',
       },
       links: [
-        {to: 'docs/docs', label: 'مستندات', position: 'left'},
+        {to: '/', label: 'مستندات', position: 'left'},
         {to: 'https://pushe.co', label: 'وب‌سایت', position: 'left'},
         {
           href: 'https://github.com/pusheco',
@@ -46,11 +46,6 @@ module.exports = {
         },
         
       ],
-      logo: {
-        alt: 'Facebook Open Source Logo',
-        src: 'https://docusaurus.io/img/oss_logo.png',
-      },
-      copyright: `Copyright © ${new Date().getFullYear()} Facebook, Inc. Built with Docusaurus.`,
     },
   },
   presets: [
@@ -63,6 +58,7 @@ module.exports = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        
       },
     ],
   ]

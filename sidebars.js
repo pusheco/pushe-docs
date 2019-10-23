@@ -19,7 +19,7 @@ module.exports = {
       "android-studio/studio-channel",
       "android-studio/studio-fcm"
     ],
-    "سوالات و مشکلات": ["android-studio/studio-faq"]
+    "سوالات و مشکلات": ["android-studio/studio-errors", "android-studio/studio-faq"]
   },
 
   flutter: {
@@ -35,7 +35,7 @@ module.exports = {
       "flutter/flutter-channel",
       "flutter/flutter-fcm"
     ],
-    "سوالات و مشکلات": ["flutter/flutter-faq"]
+    "سوالات و مشکلات": ["flutter/flutter-errors", "flutter/flutter-faq"]
   },
 
   unity: {
@@ -49,6 +49,6 @@ module.exports = {
       "unity/unity-disable",
       "unity/unity-channel",
     ],
-    "سوالات و مشکلات": ["unity/unity-faq"]
+    "سوالات و مشکلات": ["unity/unity-errors", "unity/unity-faq"]
   },
 };

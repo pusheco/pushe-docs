@@ -1,8 +1,8 @@
 ---
 id: studio-intro
-title: راه‌اندازی سریع
+title: راه اندازی در اندروید استودیو
+sidebar_label: راه‌اندازی سریع
 ---
-
 
 ## پیش‌نیازها
 
@@ -22,12 +22,12 @@ title: راه‌اندازی سریع
 
 ```java
 //dependencies {
-    implementation 'co.ronash.android.pushe-base:1.7' // Comes from Jcenter()
+    implementation 'co.ronash.android.pushe-base:1.6.3' // Comes from Jcenter()
 //}
 ```
 
 سپس گریدل را سینک کنید.
-در صورت بروز خطا در هنگام سینک بخش [عیب‌یابی](studio-faq) را بررسی نمایید.
+در صورت بروز خطا در هنگام سینک بخش [عیب‌یابی](studio-errors) را بررسی نمایید.
 
 ## اضافه‌کردن محتوای مانیفست
 
@@ -84,11 +84,11 @@ import co.ronash.pushe.Pushe;
 ```bash
 # Android logcat:
 
---------+ Started Initialization of Pushe 1.7 +--------
+--------+ Started Initialization of Pushe 1.6.3 +--------
 Trying to register to Pushe
 Successfully registered to pushe
 ```
 
-در صورتی که پس‌از مدتی خطایی در لاگ‌کت رخ‌داد و تمامی لاگ‌ها (خصوصا لاگ آخر) چاپ نشد بایستی بررسی کنید دلیل خطا چیست. سپس خطای خود را در بخش [سوالات و مشکلات](studio-faq) جستجو نمایید.
+در صورتی که پس‌از مدتی خطایی در لاگ‌کت رخ‌داد و تمامی لاگ‌ها (خصوصا لاگ آخر) چاپ نشد بایستی بررسی کنید دلیل خطا چیست. سپس خطای خود را در بخش [سوالات و مشکلات](studio-errors) جستجو نمایید.
 
 برای مشاهده‌ی امکانات و قابلیت‌های اضافه‌ای که پوشه در Android native ارائه می‌دهد، به صفحه‌ی بعد مراجعه کنید.
