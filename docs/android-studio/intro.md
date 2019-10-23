@@ -73,7 +73,7 @@ import co.ronash.pushe.Pushe;
     Pushe.initialize(this, true);
 ```
 
-برای اطلاعات بیشتر در مورد تابع‌‌ `initialize‍` [API reference](studio-init) را بررسی نمایید.
+برای اطلاعات بیشتر در مورد تابع‌‌ `initialize‍` [API reference](init.md) را بررسی نمایید.
     
 
 ## تست و ثبت دستگاه در پوشه
