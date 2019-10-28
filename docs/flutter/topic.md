@@ -35,26 +35,3 @@ Pushe.subscribe(sportTopic);
 var topicToRemoveUserFrom = "sport";
 Pushe.unsubscribe(topicToRemoveUserFrom);
 ```
-
-## گرفتن تاپیک‌های کاربر
-
-<div dir='ltr'>
-
-#### `static Future<List<String>> getSubscribedTopic()`
-
-</div>
-
-> این امکان درنسخه‌ی 1.1.0 اضافه خواهد شد.
-
-برای گرفتن تاپیک‌هایی که این دیوایس در آنها عضو است می‌توانید از کد زیر استفاده کنید:
-
-```js
-var usersTopics = await Pushe.getSubscribedTopics();
-
-
-
-// Or use the non-async way
-Pushe.getSubscribedTopics().then((topics) {
-    // Use the topic list of the device.
-})
-```
