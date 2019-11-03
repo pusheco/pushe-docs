@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[88],{112:function(i){i.exports=JSON.parse('{"id":"unity/unity-faq","title":"سوالات","description":"## مرتبط با نمایش نوتیفیکیشن","source":"@site/docs/unity/faq.md","permalink":"/docs/unity/unity-faq","sidebar":"unity","previous":{"title":"خطاهای ممکن","permalink":"/docs/unity/unity-errors"}}')}}]);
