@@ -146,6 +146,6 @@ Trying to register to Pushe
 Successfully registered to pushe
 ```
 
-در صورتی که در یکی از این مراحل مشکلی وجود داشت، ابتدا [سوالات متداول](b4a-errors) را بررسی کنید و در صورتی نیافتن مشکل آن را در [Github issue](https://github.com/pusheco/b4a-sample/issues?utf8=%E2%9C%93&q=is%3Aissue) مطرح کنید.
+در صورتی که در یکی از این مراحل مشکلی وجود داشت، ابتدا [سوالات متداول](/docs/b4a/b4a-errors) را بررسی کنید و در صورتی نیافتن مشکل آن را در [Github issue](https://github.com/pusheco/b4a-sample/issues?utf8=%E2%9C%93&q=is%3Aissue) مطرح کنید.
 
 برای مشاهده‌ی امکانات و قابلیت‌های بیشتر پوشه در B4A به مطالعه‌ی ادامه‌ی مستندات بپردازید.

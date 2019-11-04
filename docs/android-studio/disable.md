@@ -37,7 +37,6 @@ Pushe.setNotficationOn(this);
 
 ## بررسی وضعیت نمایش اعلان
 
-> این امکان درنسخه‌ی 1.7 اضافه خواهد شد.
 
 از: `co.ronash.pushe.Pushe`
 #### `static boolean isNotificationOn(Context)`
