@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[88],{140:function(a){a.exports=JSON.parse('{"id":"b4a/b4a-intro","title":"بیسیک4اندروید","sidebar_label":"راه‌اندازی سریع","description":"## پیش‌نیاز‌ها","source":"@site/docs/b4a/intro.md","permalink":"/docs/b4a/b4a-intro","sidebar":"b4a","next":{"title":"معرفی امکانات","permalink":"/docs/b4a/b4a-advanced"}}')}}]);

@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[74],{60:function(d){d.exports=JSON.parse('{"id":"android-studio/studio-faq","title":"سوالات","description":"---","source":"@site/docs/android-studio/faq.md","permalink":"/docs/android-studio/studio-faq","sidebar":"studio","previous":{"title":"خطاهای ممکن","permalink":"/docs/android-studio/studio-errors"}}')}}]);
