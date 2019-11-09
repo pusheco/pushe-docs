@@ -6,19 +6,17 @@ title: غیرفعال‌کردن نمایش اعلان
 
 به طور پیش‌فرض نمایش اعلان برای کاربر فعال‌است. اما می‌توان نمایش اعلان را برای کاربر با استفاده از کد غیرفعال و یا مجددا فعال نمود.
 
->‌ توابع callback کماکان اجرا می‌شوند و برای جلوگیری از اجرای آنها فعال‌بودن را بررسی کنید.
-
 ## غیرفعال‌کردن نمایش اعلان
 
 
 <div dir='ltr'>
 
-#### `static void NotificationOff()`
+#### `static void SetNotificationOff()`
 
 </div>
 
 ```js
-Pushe.NotficationOff();
+Pushe.SetNotficationOff();
 ```
 
 ## فعال‌کردن نمایش اعلان
@@ -26,10 +24,23 @@ Pushe.NotficationOff();
 
 <div dir='ltr'>
 
-#### `static void NotificationOn()`
+#### `static void SetNotificationOn()`
 
 </div>
 
 ```js
-Pushe.NotficationOn();
+Pushe.SetNotficationOn();
+```
+
+## بررسی فعال‌بودن نمایش اعلان
+
+
+<div dir='ltr'>
+
+#### `static void IsNotificationOn()`
+
+</div>
+
+```js
+var isNotificationOn = Pushe.IsNotficationOn();
 ```
