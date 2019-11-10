@@ -1,0 +1,144 @@
+---
+id: rn-listener
+title: رویداد نوتیفیکیشن
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+در صورتی که پیامی از پوشه به کاربر ارسال شود (نوتیفیکیشن و یا جیسون)، می‌توان از آنها باخبر شد.
+برای اینکار می‌توانید رویدادی تعریف‌کنید و هنگام رخ‌دادن یکی از رویدادهای زیر کدهای خود را فراخوانی کنید.
+* دریافت نوتیفیکیشن
+* دریافت JSON (Custom content)
+* کاربر بر روی اعلان کلیک کند
+* کاربر اعلان را رد کند
+* کاربر بر روی دکمه‌ای از اعلان کلیک کند
+
+
+## اضافه‌کردن کد لازم
+
+<br />
+
+برای دو حالت باز و بسته بودن برنامه، دو حالت مختلف برای افزودن رویداد وجود دارد که برای استفاده از هردو باید آن‌ها را به پروژه اضافه نمایید.
+
+<Tabs
+  defaultValue="fore"
+  values={[
+    { label: 'اپ باز باشد', value: 'fore', },
+    { label: 'اپ بسته باشد', value: 'back', },
+  ]
+}>
+
+<TabItem value="fore">
+
+
+```js
+import React, {useEffect} from "react";
+import Pushe from "pushe-react-native";
+
+const App = () => {
+    useEffect(() => {
+        Pushe.addEventListener(Pushe.EVENTS.RECEIVED, (notification) => {
+             // Notification was received
+        });
+
+        Pushe.addEventListener(Pushe.EVENTS.CLICKED, (notification) => {
+             // Notification was clicked
+        });
+
+        Pushe.addEventListener(Pushe.EVENTS.DISMISSED, (notification) => {
+             // Notification was dismissed
+        });
+
+        Pushe.addEventListener(Pushe.EVENTS.BUTTON_CLICKED, (notification) => {
+             // Notification button was clicked
+        });
+
+        Pushe.addEventListener(Pushe.EVENTS.CUSTOM_CONTENT_RECEIVED, (notification) => {
+             // Custom content was received
+        });
+    });
+    return (
+      // The jsx that would renders
+    );  
+}
+```
+
+</TabItem>
+
+<TabItem value="back">
+
+
+در این حالت می‌توانید یک فایل مجزا مثلا `notificationCallbacks.js` در کدتان بسازید و در داخل فایل `index.js`ی که در روت پروژه‌تان قرار دارد کد زیر را قرار دهید:
+
+```js
+AppRegistry.registerHeadlessTask('PusheNotificationTask', () => require('./notificationCallbacks'));
+```
+
+سپس در داخلی فایلی که ساخته اید `notificationCallbacks.js` کد زیر را قرار دهید:
+
+```js
+import Pushe from "pushe-react-native";
+
+module.exports = async (notificationData) => {          
+    if(notificationData['EVENT_TYPE'] === Pushe.EVENTS.RECEIVED) {
+       // Notification received
+    } else if (notificationData['EVENT_TYPE'] === Pushe.EVENTS.CLICKED) {
+       // Notification clicked
+    } else if (notificationData['EVENT_TYPE'] === Pushe.EVENTS.DISMISSED) {
+       // Notification dismissed
+    } else if (notificationData['EVENT_TYPE'] === Pushe.EVENTS.BUTTON_CLICKED) {
+       // Notification Button clicked
+    } else if (notificationData['EVENT_TYPE'] === Pushe.EVENTS.CUSTOM_CONTENT_RECEIVED) {
+       // Custom Content Received
+    }
+};
+```
+
+در داخلی module ی که export شده می توانید کد‌هایتان را قرار دهید و زمانی که اپلیکیشن در background باشد و اعلان دریافت شود این کد اجرا خواهد شد.
+
+
+</TabItem>
+
+</Tabs>
+
+---
+
+حالت‌های مختلف رویداد در جدول زیر شرح‌ داده‌ شده‌است:
+
+|پارامتر ورودی|استفاده|
+|:--:|--|
+|Pushe.EVENTS.RECEIVED|زمانی که نوتیفیکیشن دریافت شد این متد اجرا می‌شود.|
+|Pushe.EVENTS.CLICKED|زمانی که کاربر روی نوتیفیکیشن کلیک کند، این متد اجرا می‌شود|
+|Pushe.EVENTS.DISMISSED|زمان که کاربر نوتیفیکیشن را رد کند، این متد اجرا می‌شود|
+|Pushe.EVENTS.BUTTON_CLICKED|زمانی که کاربر روی یک دکمه‌ی نوتیفیکیشن کلیک‌کند، این متد اجرا می‌شود|
+|Pushe.EVENTS.CUSTOM_CONTENT_RECEIVED|زمانی که نوتیفیکیشن همراه با جیسون دلخواه و یا جیسون دلخواه‌، دریافت شود این متد اجرا می‌شود|
+
+---
+
+آرگومان‌های ورودی نیز رشته‌هایی با فرمت زیر هستند:
+
+* `Notification`: این رشته اطلاعات نوتیفکیشن را در غالب یک جیسون دارد. از قبیل تیتر، متن.
+
+فیلد|توضیحات|
+|:--:|--|
+|title|تیتر نوتیفیکیشن|
+|content|محتوای نوتیفیکیشن|
+|bigTitle|تیتر بزرگ نوتیفیکیشن|
+|bigContent|محتوای بزرگ نوتیفیکیشن|
+|summary|متن خلاصه‌ی نوتیفکیشن|
+|imageUrl|لینک عکس نوتیفیکیشن|
+|iconUrl|لینک آیکون نوتیفیکیشن|
+|customContent|جیسون دلخواه نوتیفیکیشن|
+|buttons|لیست دکمه‌هایی که نوتیفیکیشن دارد|
+
+* `Button`: این رشته اطلاعات دکمه‌ي کلیک‌شده را در غالب جیسون‌دارد.
+
+|فیلد|توضیحات|
+|:--:|--|
+|id|شناسه‌ای برای تشخیص دکمه|
+|text|متن دکمه|
+
+* `customContent`: این رشته جیسونی است که توسعه‌دهنده هنگام ساخت و ارسال نوتیفیکیشن به آن ضمیمه می‌کند.
+
+

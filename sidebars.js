@@ -66,4 +66,20 @@ module.exports = {
     ],
     "سوالات و مشکلات": ["b4a/b4a-errors", "b4a/b4a-faq"]
   },
+
+  reactnative: {
+    "React Native": ["react-native/rn-intro"],
+    "قابلیت‌ها و امکانات": [
+      "react-native/rn-advanced",
+      "react-native/rn-init",
+      "react-native/rn-pusheid",
+      "react-native/rn-topic",
+      "react-native/rn-d2d",
+      "react-native/rn-listener",
+      "react-native/rn-disable",
+      "react-native/rn-channel",
+      "react-native/rn-fcm"
+    ],
+    "سوالات و مشکلات": ["react-native/rn-errors", "react-native/rn-faq"]
+  },
 };

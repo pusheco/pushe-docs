@@ -86,6 +86,12 @@ pre {
   font-size: 1em;
 }
 
+/* Prism code font size */
+
+.prism-code {
+  font-size: 0.85rem;
+}
+
 .hash-link {
   position: inherit !important;
   margin-left: unset !important;
@@ -104,4 +110,18 @@ pre {
 .navbar__logo {
   margin-right: .5rem;
   margin-left: .5rem;
+}
+
+/* Move Quote border from left to right */
+
+blockquote {
+  border-right: 6px solid var(--ifm-color-emphasis-300);
+  border-left: unset;
+
+}
+
+/* RTL Tab texts */
+
+.tab-item {
+  direction: rtl;
 }

@@ -15,7 +15,7 @@ module.exports = {
   organizationName: 'pusheco', // Usually your GitHub org/user name.
   projectName: 'pushe-docs', // Usually your repo name.
   themeConfig: {
-    prismTheme: require('prism-react-renderer/themes/vsDark'),
+    prismTheme: require('prism-react-renderer/themes/duotoneDark'),
     navbar: {
       title: 'پوشه ',
       logo: {
