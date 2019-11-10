@@ -1,22 +1,24 @@
 ---
-id: unity-disable
+id: b4a-disable
 title: غیرفعال‌کردن نمایش اعلان
 ---
 
 
 به طور پیش‌فرض نمایش اعلان برای کاربر فعال‌است. اما می‌توان نمایش اعلان را برای کاربر با استفاده از کد غیرفعال و یا مجددا فعال نمود.
 
+>‌ توابع callback کماکان اجرا می‌شوند و برای جلوگیری از اجرای آنها فعال‌بودن را بررسی کنید.
+
 ## غیرفعال‌کردن نمایش اعلان
 
 
 <div dir='ltr'>
 
-#### `static void SetNotificationOff()`
+#### `Sub notificationOff()`
 
 </div>
 
 ```js
-Pushe.SetNotficationOff();
+Pushe.notficationOff()
 ```
 
 ## فعال‌کردن نمایش اعلان
@@ -24,23 +26,10 @@ Pushe.SetNotficationOff();
 
 <div dir='ltr'>
 
-#### `static void SetNotificationOn()`
+#### `Sub notificationOn()`
 
 </div>
 
 ```js
-Pushe.SetNotficationOn();
-```
-
-## بررسی فعال‌بودن نمایش اعلان
-
-
-<div dir='ltr'>
-
-#### `static void IsNotificationOn()`
-
-</div>
-
-```js
-var isNotificationOn = Pushe.IsNotficationOn();
+Pushe.notficationOn()
 ```

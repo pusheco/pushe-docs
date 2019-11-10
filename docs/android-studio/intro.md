@@ -22,8 +22,18 @@ sidebar_label: راه‌اندازی سریع
 
 ```java
 //dependencies {
-    implementation 'co.ronash.android.pushe-base:1.6.3' // Comes from Jcenter()
+    implementation 'co.ronash.android.pushe-base:1.7.0-alpha1'
 //}
+```
+
+```java
+// Build.gradle (project)
+
+repositories {
+    allProjects {
+        maven { url 'https://dl.bintray.com/mah-d/pushe/' }
+    }
+}
 ```
 
 سپس گریدل را سینک کنید.
@@ -73,7 +83,7 @@ import co.ronash.pushe.Pushe;
     Pushe.initialize(this, true);
 ```
 
-برای اطلاعات بیشتر در مورد تابع‌‌ `initialize‍` [API reference](init.md) را بررسی نمایید.
+برای اطلاعات بیشتر در مورد تابع‌‌ `initialize‍` [API reference](/docs/android-studio/studio-init) را بررسی نمایید.
     
 
 ## تست و ثبت دستگاه در پوشه
@@ -84,11 +94,11 @@ import co.ronash.pushe.Pushe;
 ```bash
 # Android logcat:
 
---------+ Started Initialization of Pushe 1.6.3 +--------
+--------+ Started Initialization of Pushe 1.7.0-alpha1 +--------
 Trying to register to Pushe
 Successfully registered to pushe
 ```
 
-در صورتی که پس‌از مدتی خطایی در لاگ‌کت رخ‌داد و تمامی لاگ‌ها (خصوصا لاگ آخر) چاپ نشد بایستی بررسی کنید دلیل خطا چیست. سپس خطای خود را در بخش [سوالات و مشکلات](studio-errors) جستجو نمایید.
+در صورتی که پس‌از مدتی خطایی در لاگ‌کت رخ‌داد و تمامی لاگ‌ها (خصوصا لاگ آخر) چاپ نشد بایستی بررسی کنید دلیل خطا چیست. سپس خطای خود را در بخش [سوالات و مشکلات](/docs/android-studio/studio-errors) جستجو نمایید.
 
 برای مشاهده‌ی امکانات و قابلیت‌های اضافه‌ای که پوشه در Android native ارائه می‌دهد، به صفحه‌ی بعد مراجعه کنید.

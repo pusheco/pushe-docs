@@ -1,5 +1,5 @@
 ---
-id: flutter-topic
+id: b4a-topic
 title: گروه‌بندی کاربران با تاپیک
 ---
 
@@ -10,28 +10,30 @@ title: گروه‌بندی کاربران با تاپیک
 
 <div dir='ltr'>
 
-#### `static void subscribe(topicName)`
+#### `Sub subscribe(topicName As String)`
 
 </div>
 
 کاربر را به تاپیک‌ مشخص اضافه می‌کند.
 
 ```js
-var sportTopic = "sport";
-Pushe.subscribe(sportTopic);
+Dim Pushe As Pushe
+Dim topic As String = "topicName"
+Pushe.subscribe(topic)
 ```
 
 ## لغو عضویت کاربر از تاپیک
 
 <div dir='ltr'>
 
-#### `static void unsubscribe(topicName)`
+#### `Sub unsubscribe(topicName As String)`
 
 </div>
 
 کاربر را از تاپیک در صورت وجود حذف می‌کند (در صورتی که قبلا عضو نشده‌باشد اتفاقی نمی‌افتد)
 
 ```js
-var topicToRemoveUserFrom = "sport";
-Pushe.unsubscribe(topicToRemoveUserFrom);
+Dim Pushe As Pushe
+Dim topic As String = "topicName"
+Pushe.unsubscribe(topic)
 ```

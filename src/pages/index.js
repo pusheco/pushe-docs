@@ -58,6 +58,15 @@ return (
                 <td>استفاده از سرویس نوتیفیکیشن در <strong>موتور بازی‌سازی یونیتی برای اندروید</strong></td>
               </tr>
               <tr>
+                <td align="center"><a href="/docs/b4a/b4a-intro"><img src="/img/b4a_logo.png" width="80" /></a>
+                </td>
+                <td align="center"><a href="/docs/b4a/b4a-intro"><strong>لینک مستندات</strong></a></td>
+                <td align="center"><a
+                    href="https://github.com/pusheco/b4a-sample/issues?utf8=%E2%9C%93&amp;q=is%3Aissue"><strong>گیتهاب</strong></a>
+                </td>
+                <td>استفاده از سرویس نوتیفیکیشن در <strong>بیسیک‌فور‌اندروید</strong></td>
+              </tr>
+              <tr>
                 <td align="center"><a aria-current="page" className="active" href="/docs/docs"><img
                       src="/img/ios_native.png" width="80" /></a></td>
                 <td align="center">-</td>

@@ -51,4 +51,19 @@ module.exports = {
     ],
     "سوالات و مشکلات": ["unity/unity-errors", "unity/unity-faq"]
   },
+
+  b4a: {
+    "بیسیک‌فوراندروید": ["b4a/b4a-intro"],
+    "قابلیت‌ها و امکانات": [
+      "b4a/b4a-advanced", 
+      "b4a/b4a-pusheid",
+      "b4a/b4a-topic",
+      "b4a/b4a-d2d",
+      "b4a/b4a-listener",
+      "b4a/b4a-disable",
+      "b4a/b4a-channel",
+      "b4a/b4a-fcm",
+    ],
+    "سوالات و مشکلات": ["b4a/b4a-errors", "b4a/b4a-faq"]
+  },
 };

@@ -113,6 +113,6 @@ Trying to register to Pushe
 Successfully registered to pushe
 ```
 
-در صورتی که در یکی از این مراحل مشکلی وجود داشت، ابتدا [سوالات متداول](unity-errors) را بررسی کنید و در صورتی نیافتن مشکل آن را در [Github issue](https://github.com/pusheco/unity-sample/issues?utf8=%E2%9C%93&q=is%3Aissue) مطرح کنید.
+در صورتی که در یکی از این مراحل مشکلی وجود داشت، ابتدا [سوالات متداول](/docs/unity/unity-errors) را بررسی کنید و در صورتی نیافتن مشکل آن را در [Github issue](https://github.com/pusheco/unity-sample/issues?utf8=%E2%9C%93&q=is%3Aissue) مطرح کنید.
 
 برای مشاهده‌ی امکانات و قابلیت‌های بیشتر پوشه در یونیتی به مطالعه‌ی ادامه‌ی مستندات بپردازید.
