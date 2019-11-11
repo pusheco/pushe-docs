@@ -25,7 +25,12 @@ Pushe.subscribe(sportTopic);
 ## لغو عضویت کاربر از تاپیک
 
 از: `co.ronash.pushe.Pushe`
+
+<div dir='ltr'>
+
 #### `static void unsubscribe(Context, topicName)`
+
+</div>
 
 کاربر را از تاپیک در صورت وجود حذف می‌کند (در صورتی که قبلا عضو نشده‌باشد اتفاقی نمی‌افتد)
 
