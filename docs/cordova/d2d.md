@@ -1,109 +1,99 @@
 ---
 id: cordova-d2d
-title: اعلان از یک دیوایس یه دیوایس دیگر
+title: اعلان از یک دیوایس به دیوایس دیگر
 ---
 
-با استفاده‌از [pushe id](/docs/android-cordova/cordova-pusheid) یک دیوایس می‌توان از یک دیوایس دیگر به آن اعلان فرستاد.
+با استفاده‌از [pushe id](/docs/android-cordova/cordova-pusheid) یک دیوایس، می‌توان از یک دیوایس دیگر به آن اعلان فرستاد.
 
-> ارسال از یک دیوایس به دیوایس دیگر فقط مختص یک برنامه‌است و ارسال اعلان خارج‌ از محیط برنامه ممکن نیست.
+> ارسال از یک دیوایس به دیوایس دیگر فقط مختص یک برنامه‌ است و ارسال اعلان خارج‌ از محیط برنامه ممکن نیست.
 
 ## ارسال نوتیفیکیشن ساده
 
-از: `co.ronash.pushe.Pushe`
 
-<div dir='ltr'>
+<div dir='ltr' >
 
-#### `static void sendSimpleNotifToUser(Context, pusheId, title, content)`
+#### `window.pushe.sendSimpleNotifToUser("pusheId", "title", "content");`
 
 </div>
 
 |پارامتر ورودی|استفاده|
 |:--:|--|
-|pusheId|شناسه‌ی دستگاه موردنظر|
+|pusheId|شناسه‌ی دستگاه مورد نظر|
 |title|تیتر اعلان|
 |content|محتوای اعلان|
 
-می‌توانید با استفاده از این تابع نوتیفیکیشنی با تیتر و متن (نوتیفیکیشن ساده) به کاربر خاصی که این اپلیکیشن را نصب کرده و نصب آن در کنسول ثبت‌شده اعلان ارسال کنید.
+می‌توانید با استفاده از این تابع نوتیفیکیشنی با تیتر و متن (نوتیفیکیشن ساده) به کاربر خاصی که این اپلیکیشن را نصب کرده و نصب آن در کنسول ثبت‌ شده ارسال کنید.
 
 ```java
-if (Pushe.isPusheInitialized(this)) {
-    String pusheId = "1234567";
-    Pushe.sendSimpleNotifToUser(this, pusheId, "Hello user", "How are you doing?");
-}
+window.pushe.sendSimpleNotifToUser(pusheId, "Hello user", "How are you doing?");
+
 ```
 
 ## ارسال نوتیفیکیشن پیشرفته
 
-از: `co.ronash.pushe.Pushe`
 
 <div dir='ltr'>
 
-#### `sendAdvancedNotifToUser(Context, pusheId, notificationJson)` throws `Exception`
+#### `window.pushe.sendAdvancedNotifToUser(pusheId, notificationJson)`
 
 </div>
 
 |پارامتر ورودی|استفاده|
 |:--:|--|
-|pusheId|شناسه‌ی دستگاه موردنظر|
+|pusheId|شناسه‌ی دستگاه مورد نظر|
 |notificationJson|یک استرینگ با فرمت جیسون که تمام مقادیر لازم برای شئ نوتیفیکیشن را دارد.|
 
 
-همانند ارسال با استفاده از RESTful API می‌توانید به کاربر خاص خود نوتیفیکیشنی کامل‌تر ارسال کنید. فیلد‌های همچون صدای زنگ، آیکون و .... برای این کار از کد زیر استفاده کنید.
+همانند ارسال با استفاده از RESTful API، می‌توانید به یک کاربر خاص نوتیفیکیشنی کامل‌تر ارسال کنید. مشابه کد زیر می‌توانید فیلد‌هایی همچون صدای زنگ، آیکون و .... را در جیسون وارد کنید.
 
 ```java
-String pusheId = "1234567";
-JSONObject object = new JSONObject();
-object.put("title", "Hello user");
-object.put("content", "How are you doing?");
-try {
-    Pushe.sendAdvancedNotifToUser(this, pusheId, object.toString());
-} catch(Exception e) {
-    // Json might have problem
-}
+    window.pushe.sendAdvancedNotifToUser("pid_a0e3-82ac-a0", "{ \"title\":\"تست\", \"content\":\"پیام ارسالی از یک دستگاه \" }");
+
 ```
 
-برای اطلاعات بیشتر در مورد کلید‌های کامل‌تر به بخش [RESTful API در پوشه](docs/api/api-keys) مراجعه کنید.
+برای اطلاعات بیشتر در مورد کلید‌هایی که می‌توانند در جیسون استفاده شوند به بخش [RESTful API در پوشه](docs/api/api-keys) مراجعه کنید.
 
 ## ارسال جیسون دلخواه
 
-از: `co.ronash.pushe.Pushe`
 
 <div dir='ltr'>
 
-#### `sendCustomJsonToUser(Context, pusheId, customJson)` throws `Exception`
+#### `window.pushe.sendCustomJsonToUser(pusheId, customJson)`
 
 </div>
 
 |پارامتر ورودی|استفاده|
 |:--:|--|
-|pusheId|شناسه‌ی دستگاه موردنظر|
-|customJson|یک استرینگ با فرمت جیسون که به کاربر ارسال شود.|
+|pusheId|شناسه‌ی دستگاه مورد نظر|
+|customJson|یک استرینگ با فرمت جیسون که به کاربر ارسال می‌شود.|
 
 
 ```java
-String pusheId = "1234567";
-JSONObject object = new JSONObject();
-object.put("key1", "A value");
-object.put("key2", "Another value");
 
-// It also can be a nested JSON
+    window.pushe.sendCustomJsonToUser("pid_a0e3-82ac-a0", "{ \"key1\":\"value1\", \"key2\":\"value2\" }");
 
-try {
-    Pushe.sendCustomJsonToUser(this, pusheId, object.toString());
-} catch(Exception e) {
-    // Json might have problem
-}
 ```
 
-دستگاه مقصد می‌تواند با تعریف [کالبک نوتیفیکیشن](cordova-listener)، جیسون را در متد `onCustomContentReceived` دریافت کند.
+<!-- دستگاه مقصد می‌تواند با تعریف [کالبک نوتیفیکیشن](cordova-listener)، جیسون را در متد `onCustomContentReceived` دریافت کند. -->
 
 ## ارسال اعلان و یا جیسون به دستگاه اجراکننده‌ی کد
 
 در صورتی که بخواهید به همین دستگاهی که کد را اجرا می‌کند اعلان ارسال کنید کافیست PusheId را برابر شناسه‌ی همین دستگاه قرار دهید:
 
 ```java
-String thisPusheId = Pushe.getPusheId(this);
+window.pushe.getPusheId(function pidCallnack(pid){
+    // Send notification to this device
+    window.pushe.sendSimpleNotifToUser(pid, "Hello user", "How are you?");
+})
 
-// Send notification to this device
-Pushe.sendSimpleNotifToUser(this, thisPusheId, "Hello user", "How are you?");
+```
+**نکته!** توابع ارسال اعلان به دستگاه دیگر را بعد از اطمینان از اینکه عملیات initialization پوشه انجام شده است، صدا بزنید. برای مثال برای ارسال اعلان پیشرفته به روش زیر عمل کنید:
+
+```java
+window.pushe.isPusheInitialized(function pusheInited(result){
+       if(result) {
+            window.pushe.sendAdvancedNotifToUser("pid_a0e3-82ac-a0", "{ \"title\":\"test\", \"content\":\"sent from client\" }");
+       }
+ });
+
 ```
