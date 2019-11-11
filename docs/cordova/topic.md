@@ -6,30 +6,17 @@ title: گروه‌بندی با تاپیک
 تاپیک را می‌توان یک گروه به حساب آورد که کاربران یک اپ را می‌توان به آن اضافه و از آن حذف کرد.
 
 ## عضویت کاربر در تاپیک
-
-از: `co.ronash.pushe.Pushe`
-
-<div dir='ltr'>
-
-#### `static void subscribe(Context, topicName)`
-
-</div>
-
-کاربر را به تاپیک‌ مشخص اضافه می‌کند.
+کد زیر کاربر را به تاپیک varzeshi اضافه میکند.
 
 ```java
-String sportTopic = "sport";
-Pushe.subscribe(sportTopic);
+window.pushe.subscribe("varzeshi");
 ```
 
 ## لغو عضویت کاربر از تاپیک
 
-از: `co.ronash.pushe.Pushe`
-#### `static void unsubscribe(Context, topicName)`
 
-کاربر را از تاپیک در صورت وجود حذف می‌کند (در صورتی که قبلا عضو نشده‌باشد اتفاقی نمی‌افتد)
+کد زیر کاربر را از تاپیک varzeshi حذف می‌کند (در صورتی که قبلا عضو نشده‌ باشد اتفاقی نمی‌افتد) 
 
 ```java
-String topicToRemoveUserFrom = "sport";
-Pushe.unsubscribe(topicToRemoveUserFrom);
+window.pushe.unsubscribe("varzeshi");
 ```
