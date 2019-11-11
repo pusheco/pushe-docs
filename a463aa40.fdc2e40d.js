@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[88],{110:function(o){o.exports=JSON.parse('{"id":"docs","title":"\u0645\u0633\u062a\u0646\u062f\u0627\u062a","description":"# \u0645\u0633\u062a\u0646\u062f\u0627\u062a \u067e\u0648\u0634\u0647 [\u0628\u062a\u0627]","source":"@site/docs/all.md","permalink":"/docs/docs"}')}}]);
