@@ -1,12 +1,12 @@
 ---
 id: cordova-intro
-title: راه اندازی در اندروید استودیو
+title: راه‌اندازی در کوردوا
 sidebar_label: راه‌اندازی سریع
 ---
 
-// TODO: محتوا کامل باید با محتوای درست جایگزین بشه
+> نسخه‌ی فعلی پلاگین فقط از سیستم‌ عامل اندروید پشتیبانی می‌کند.
 
-## پیش‌نیازها
+## پیش‌نیاز‌ها
 
 قبل از شروع کار موارد زیر را بررسی و از درستی آنها اطمینان حاصل نمایید.
 
@@ -17,90 +17,64 @@ sidebar_label: راه‌اندازی سریع
 - توکن مانیفست از کنسول برداشته‌شود.
 - دستگاه تست باید دارای گوگل‌پلی‌سرویس بوده و اینترنت آن فعال‌باشد.
 
-## اضافه‌کردن کتابخانه به پروژه در گریدل
+## اضافه‌کردن پلاگین به پروژه
 
+دقت کنید در صورتی که قبلا پلاگین را به صورت فایل دانلود و نصب کرده بودید قبل از نصب این نسخه حتما پلاگین قبلی را از پروژه خود پاک کنید.
 
-**فایل `build.gradle (app:module)`**:
+در ترمینال و در مسیر پروژه، دستور زیر را اجرا کنید تا پلاگین پوشه به اپلیکیشن شما اضافه شود.
 
-```java
-//dependencies {
-    implementation 'co.ronash.android.pushe-base:1.7.0-alpha1'
-//}
+```yml
+cordova plugin add pushe-cordova
 ```
 
-```java
-// Build.gradle (project)
+## تغییرات مربوط به فایل config.xml
 
-repositories {
-    allProjects {
-        maven { url 'https://dl.bintray.com/mah-d/pushe/' }
-    }
-}
-```
+وارد [کنسول پوشه](https://console.pushe.co) شوید و در قسمت اپلیکیشن‌ها، روی آیکون دریافت مانیفست بزنید (این آیکون را با کلیک بر روی علامت سه نقطه‌ی گوشه‌ی کارت اپلیکیشن می‌توانید ببینید).
 
-سپس گریدل را سینک کنید.
-در صورت بروز خطا در هنگام سینک بخش [عیب‌یابی](cordova-errors) را بررسی نمایید.
 
-## اضافه‌کردن محتوای مانیفست
-
-تگ مانیفست را از [کنسول پوشه](https://console.pushe.co) دریافت‌کنید و در فایل `AndroidManifest.xml` خود اضافه کنید. تگ دریافتی باید کدی همانند زیر باشد:
+تگ مانیفست اپلیکیشن‌تان را کپی کرده و در فایل `config.xml` که در روت پروژه کوردوا قرار گرفته وارد کنید. این تگ باید به عنوان زیر مجموعه تگ `platform` اندروید مشابه کد زیر قرار گیرد.
 
 
 ```xml
-<meta-data android:name="co.ronash.pushe.token" android:value="{PUSHE_TOKEN}" />
+<platform name="android">
+    <config-file parent="application" target="AndroidManifest.xml">
+        <meta-data android:name="co.ronash.pushe.token" android:value="PUSHE_TOKEN" />
+    </config-file>
+</platform>
 ```
 
 به جای `{PUSHE_TOKEN}` باید توکن برنامه‌ی خود را قرار دهید.
 
-و محل اضافه‌کردن آن در فایل `AndroidManifest` باید مطابق زیر باشد:
+کد زیر را هم به تگ `widget` در فایل `config.xml` اضافه کنید.
 
 ```xml
-<manifest ...>
-    <application ...>
-        ...
-        <!-- تگ باید در اینجا قرار گیرد -->
-        <meta-data android:name="co.ronash.pushe.token" android:value="{PUSHE_TOKEN}" />
-    </application>
-</manifest>
+xmlns:android="http://schemas.android.com/apk/res/android"
 ```
 
-برای استفاده از **امکان ارسال اعلان با استفاده‌از موقعیت مکانی** پرمیشن لوکیشن را نیز به مانیفست اضافه‌کنید:
+## اضافه‌کردن کدهای لازم برای راه‌اندازی پوشه
 
-```xml
-<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+فایل `index.js` را از آدرس `www/js/index.js` باز کرده و در داخل متد `‍‍receivedEvent` کد زیر را قرار دهید:
+
+```js
+window.pushe.initialize();
 ```
-
-## اضافه‌کردن کد‌های لازم
-
-با استفاده‌از کد `Pushe.initialize` می‌توانید عملیات ثبت‌نصب در پوشه را فراخوانی کنید.
-**!نکته**: دقت کنید که این کد را در آغازین‌ترین مرحله‌ی شروع برنامه‌ی خود قرار دهید تا به محض ورود کاربر به برنامه این کد اجرا شود. برای مثال اولین اکتیویتی یا کلاس اپلیکیشن.
-
-**فایل `MainActivity.java`**:
-
-```java
-// imports
-import co.ronash.pushe.Pushe;
-
-// onCreate:
-    Pushe.initialize(this, true);
-```
-
-برای اطلاعات بیشتر در مورد تابع‌‌ `initialize‍` [API reference](/docs/android-cordova/cordova-init) را بررسی نمایید.
-    
 
 ## تست و ثبت دستگاه در پوشه
 
 پس از اجرای برنامه و فراخوانی کد رجیستر پوشه، باید در **Android logcat** لاگ‌های زیر را ببینید (ممکن است به دلیل ارتباط با سرور این پروسه چند ثانیه طول بکشد):
 
-برای مشاهده‌ی بهتر لاگ‌ها می‌توانید فیلتر `Pushe` را روی لاگ‌ها اعمال کنید.
-```bash
-# Android logcat:
+> در اندروید استودیو لاگ‌کت یکی از ابزارهای موجود است. در صورتی که از محیط دیگری مانند VSCode استفاده‌ می‌کنید می‌توانید از هر روشی برای مشاهده‌ی لاگ استفاده کنید. [مستندات اندروید برای لاگ‌کت](https://developer.android.com/studio/command-line/logcat)
 
---------+ Started Initialization of Pushe 1.7.0-alpha1 +--------
+برای مشاهده‌ی بهتر لاگ‌ها می‌توانید فیلتر `Pushe` را روی لاگ‌ها اعمال کنید.
+
+```js
+// Android logcat:
+
+--------+ Started Initialization of Pushe 1.6.3 +--------
 Trying to register to Pushe
 Successfully registered to pushe
 ```
 
-در صورتی که پس‌از مدتی خطایی در لاگ‌کت رخ‌داد و تمامی لاگ‌ها (خصوصا لاگ آخر) چاپ نشد بایستی بررسی کنید دلیل خطا چیست. سپس خطای خود را در بخش [سوالات و مشکلات](/docs/android-cordova/cordova-errors) جستجو نمایید.
+در صورتی که در یکی از این مراحل مشکلی وجود داشت، ابتدا [سوالات متداول](/docs/flutter/flutter-errors) را بررسی کنید و در صورتی نیافتن مشکل آن را در [Github issue](https://github.com/pusheco/pushe-flutter/issues?utf8=%E2%9C%93&q=is%3Aissue) مطرح کنید.
 
-برای مشاهده‌ی امکانات و قابلیت‌های اضافه‌ای که پوشه در Android native ارائه می‌دهد، به صفحه‌ی بعد مراجعه کنید.
+برای مشاهده‌ی امکانات و قابلیت‌های بیشتر پوشه در کوردوا به مطالعه‌ی ادامه‌ی مستندات بپردازید.
