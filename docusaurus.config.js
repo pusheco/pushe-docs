@@ -24,11 +24,11 @@ module.exports = {
       },
       links: [
         {to: '/', label: 'مستندات', position: 'left'},
-        {to: 'https://pushe.co', label: 'وب‌سایت', position: 'left'},
+        {to: 'https://pushe.co', label: 'وب‌سایت پوشه', position: 'left'},
         {
           href: 'https://github.com/pusheco',
-          label: 'GitHub',
-          position: 'right',
+          label: 'گیتهاب پوشه',
+          position: 'left',
         },
       ],
     },
