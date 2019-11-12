@@ -84,16 +84,14 @@ module.exports = {
   },
 
   cordova: {
-    "Android studio": ["cordova/cordova-intro",],
+    "Cordova": ["cordova/cordova-intro",],
     "قابلیت‌ها": [
       "cordova/cordova-advanced",
       "cordova/cordova-pusheid",
-      "cordova/cordova-topic",
       "cordova/cordova-d2d",
-      "cordova/cordova-listener",
-      "cordova/cordova-disable",
+      "cordova/cordova-topic",
       "cordova/cordova-channel",
-    ],
-    "سوالات و مشکلات": ["cordova/cordova-errors", "cordova/cordova-faq"]
+      "cordova/cordova-disable"
+    ]
   },
 };
