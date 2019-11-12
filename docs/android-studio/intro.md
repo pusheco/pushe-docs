@@ -22,7 +22,7 @@ sidebar_label: راه‌اندازی سریع
 
 ```java
 //dependencies {
-    implementation 'co.ronash.android.pushe-base:1.7.0-alpha1'
+    implementation 'co.ronash.android.pushe-base:1.7.0-alpha3'
 //}
 ```
 
@@ -31,7 +31,7 @@ sidebar_label: راه‌اندازی سریع
 
 repositories {
     allProjects {
-        maven { url 'https://dl.bintray.com/mah-d/pushe/' }
+        maven { url 'https://dl.bintray.com/pushe/preview/' }
     }
 }
 ```

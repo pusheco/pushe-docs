@@ -21,6 +21,9 @@ var sportTopic = "sport";
 Pushe.subscribe(sportTopic);
 ```
 
+> نام تاپیک باید انگلیسی باید و Regex آن مطابق داکیومنت فایربیس بصورت زیر است:
+> `[a-zA-Z0-9-_.~%]+`
+
 ## لغو عضویت کاربر از تاپیک
 
 <div dir='ltr'>
