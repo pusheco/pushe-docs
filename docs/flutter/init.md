@@ -6,6 +6,7 @@ title: رجیسترکردن
 **!نکته**: عملیات رجیستر دستگاه فقط یکبار انجام می‌شود و وضعیت بعد از اتمام آن ذخیره می‌شود (در صورتی نصب دوباره و یا پاک‌کردن دیتا این عملیات ریست می‌شود.)
 
 ## تابع Initialize
+> تمام نسخه‌ها
 
 <div dir='ltr'>
 
@@ -29,11 +30,12 @@ Pushe.initialize();
 Pushe.initialize(showDialog: true);
 ```
 ## بررسی رجیستر‌شدن
-
+> تمام نسخه‌ها
 
 <div dir='ltr'>
 
 #### `static Future<bool> isPusheInitialized()`
+- since version `0.2.0`
 
 </div>
 

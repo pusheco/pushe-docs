@@ -10,6 +10,7 @@ title: اعلان از یک دیوایس به دیوایس دیگر
 ## ارسال نوتیفیکیشن ساده
 
 از: `co.ronash.pushe.Pushe`
+> نسخه‌ی 1.0.0 به بعد
 
 <div dir='ltr'>
 
@@ -35,6 +36,7 @@ if (Pushe.isPusheInitialized(this)) {
 ## ارسال نوتیفیکیشن پیشرفته
 
 از: `co.ronash.pushe.Pushe`
+> نسخه‌ی 1.0.0 به بعد
 
 <div dir='ltr'>
 
@@ -67,6 +69,7 @@ try {
 ## ارسال جیسون دلخواه
 
 از: `co.ronash.pushe.Pushe`
+> نسخه‌ی 1.0.0 به بعد
 
 <div dir='ltr'>
 

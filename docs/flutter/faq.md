@@ -3,6 +3,8 @@ id: flutter-faq
 title: سوالات و مشکلات
 ---
 
+> **سوال مورد نظر شما در لیست نیست؟** در [گیت‌هاب](https://github.com/pusheco/pushe-flutter/issues?utf8=%E2%9C%93&q=is%3Aissue) به دنبال آن بروید و در صورت نیافتن در آنجا [مورد جدیدی](https://github.com/pusheco/pushe-flutter/issues/new) مطرح کنید.
+
 ## مرتبط با نمایش نوتیفیکیشن
 
 ### آیکن نوتیفیکیشن مربعی سفید و یا خاکستری‌ است

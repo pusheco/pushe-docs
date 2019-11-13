@@ -9,7 +9,7 @@ title: اعلان از یک دیوایس یه دیوایس دیگر
 > ارسال از یک دیوایس به دیوایس دیگر فقط مختص یک برنامه‌است و ارسال اعلان خارج‌ از محیط برنامه ممکن نیست.
 
 ## ارسال نوتیفیکیشن ساده
-
+> تمام نسخه‌ها
 
 <div dir='ltr'>
 
@@ -35,6 +35,7 @@ Pushe.isPusheInitialized().then(isInitialized => {
 ```
 
 ## ارسال نوتیفیکیشن پیشرفته
+> تمام نسخه‌ها
 
 <div dir='ltr'>
 
@@ -64,7 +65,7 @@ Pushe.sendAdvancedNotifToUser(pusheId, JSON.stringify({ title:'Hello user', cont
 برای اطلاعات بیشتر در مورد کلید‌های کامل‌تر به بخش [RESTful API در پوشه](docs/api/api-keys) مراجعه کنید.
 
 ## ارسال جیسون دلخواه
-
+> تمام نسخه‌ها
 
 <div dir='ltr'>
 

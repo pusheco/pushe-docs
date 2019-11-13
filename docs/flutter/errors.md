@@ -7,11 +7,9 @@ title: خطاهای ممکن
 
 > در صورتی که مورد شما خطا (Error) نیست، ممکن است در بخش [سوالات](/docs/flutter/flutter-faq) ذکر شده باشد.
 
----
 
-> **خطای مورد نظر شما در لیست نیست؟** در [گیت‌هاب](https://github.com/pusheco/pushe-flutter/issues?utf8=%E2%9C%93&q=is%3Aissue) به دنبال آن بروید و در صورت نیافتن در آنجا مورد جدیدی مطرح کنید.
+> **خطای مورد نظر شما در لیست نیست؟** در [گیت‌هاب](https://github.com/pusheco/pushe-flutter/issues?utf8=%E2%9C%93&q=is%3Aissue) به دنبال آن بروید و در صورت نیافتن در آنجا [مورد جدیدی](https://github.com/pusheco/pushe-flutter/issues/new) مطرح کنید.
 
----
 
 ## خطاهای حین نصب‌ و راه‌اندازی
 
