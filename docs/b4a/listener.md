@@ -41,7 +41,7 @@ Sub MessageReceived (JsonMsg As String)
 	Log("Received Json Message")
 	Log(JsonMsg)
 
-    ' Process json message here ...
+    '// Process json message here ... 
 End Sub
 ```
 

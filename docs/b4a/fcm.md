@@ -21,7 +21,6 @@ CreateResourceFromFile(Macro, FirebaseAnalytics.GooglePlayBase)
 CreateResourceFromFile(Macro, FirebaseAnalytics.Firebase)
 CreateResourceFromFile(Macro, Pushe.FirebaseCompatible)
 AddApplicationText(<meta-data android:name="co.ronash.pushe.token" android:value="PUSHE_TOKEN"/>)
-AddPermission(android.permission.ACCESS_COARSE_LOCATION)
 ```
 
 
