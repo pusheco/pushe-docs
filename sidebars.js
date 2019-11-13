@@ -12,14 +12,24 @@ module.exports = {
       "android-studio/studio-advanced",
       "android-studio/studio-init",
       "android-studio/studio-pusheid",
-      "android-studio/studio-topic",
+      {
+        type: 'category',
+        label: 'گروهبندی کاربران',
+        items: ['android-studio/studio-topic', 'android-studio/studio-channel'],
+      },
       "android-studio/studio-d2d",
       "android-studio/studio-listener",
       "android-studio/studio-disable",
-      "android-studio/studio-channel",
       "android-studio/studio-fcm"
     ],
-    "سوالات و مشکلات": ["android-studio/studio-errors", "android-studio/studio-faq"]
+    "سوالات و مشکلات": ["android-studio/studio-errors", "android-studio/studio-faq"],
+    "مستندات قدیمی": [
+      {
+        type:"link",
+        label: "مستندات پوشه",
+        href:"https://pushe.co/docs/android-studio"
+      }
+    ]
   },
 
   flutter: {
