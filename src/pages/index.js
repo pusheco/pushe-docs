@@ -40,6 +40,13 @@ return (
                 <td>استفاده از پوشه در پروژه‌های گریدل نوشته‌شده با <strong>جاوا و کاتلین</strong></td>
               </tr>
               <tr>
+                <td align="center"><a aria-current="page" className="active" href="/docs/docs"><img
+                      src="/img/ios_native.png" width="80" /></a></td>
+                <td align="center">-</td>
+                <td align="center">-</td>
+                <td>استفاده از پوشه در iOS</td>
+              </tr>
+              <tr>
                 <td align="center"><a href="/docs/flutter/flutter-intro"><img src="/img/flutter_logo.png"
                       width="80" /></a></td>
                 <td align="center"><a href="/docs/flutter/flutter-intro"><strong>لینک مستندات</strong></a></td>
@@ -76,11 +83,13 @@ return (
                 <td>استفاده از سرویس نوتیفیکیشن در <strong>React native</strong></td>
               </tr>
               <tr>
-                <td align="center"><a aria-current="page" className="active" href="/docs/docs"><img
-                      src="/img/ios_native.png" width="80" /></a></td>
-                <td align="center">-</td>
-                <td align="center">-</td>
-                <td>استفاده از پوشه در iOS</td>
+                <td align="center"><a href="/docs/cordova/cordova-intro"><img src="/img/cordova_logo.png" width="80" /></a>
+                </td>
+                <td align="center"><a href="/docs/cordova/cordova-intro"><strong>لینک مستندات</strong></a></td>
+                <td align="center"><a
+                    href="https://github.com/pusheco/cordova-sample/issues?utf8=%E2%9C%93&amp;q=is%3Aissue"><strong>گیتهاب</strong></a>
+                </td>
+                <td>استفاده از سرویس نوتیفیکیشن در <strong>Apache Cordova</strong></td>
               </tr>
               <tr>
                 <td align="center"><a aria-current="page" className="active" href="/docs/docs"><img

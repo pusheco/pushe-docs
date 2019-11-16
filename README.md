@@ -11,3 +11,4 @@ You can check it out from [here](https://betadoc.pushe.co).
 * [Unity](https://betadoc.pushe.co/docs/unity/unity-intro)
 * [Basic4Android](https://betadoc.pushe.co/docs/b4a/b4a-intro)
 * [React native](https://betadoc.pushe.co/docs/react-native/rn-intro)
+* [Cordova](https://betadoc.pushe.co/docs/cordova/cordova-intro)
