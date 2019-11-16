@@ -92,6 +92,7 @@ module.exports = {
       "cordova/cordova-topic",
       "cordova/cordova-channel",
       "cordova/cordova-disable"
-    ]
+    ],
+    "سوالات و مشکلات": ["cordova/cordova-errors", "cordova/cordova-faq"]
   },
 };
