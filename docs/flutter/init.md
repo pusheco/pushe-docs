@@ -35,7 +35,6 @@ Pushe.initialize(showDialog: true);
 <div dir='ltr'>
 
 #### `static Future<bool> isPusheInitialized()`
-- since version `0.2.0`
 
 </div>
 

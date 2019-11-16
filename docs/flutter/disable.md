@@ -14,7 +14,7 @@ title: غیرفعال‌کردن نمایش اعلان
 <div dir='ltr'>
 
 #### `static void setNotificationOff()`
-> نسخه‌ی 0.2.0 به بعد
+> تمام نسخه‌ها
 
 </div>
 
