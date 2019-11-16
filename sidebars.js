@@ -96,4 +96,16 @@ module.exports = {
     ],
     "سوالات و مشکلات": ["react-native/rn-errors", "react-native/rn-faq"]
   },
+
+  cordova: {
+    "Cordova": ["cordova/cordova-intro",],
+    "قابلیت‌ها": [
+      "cordova/cordova-advanced",
+      "cordova/cordova-pusheid",
+      "cordova/cordova-d2d",
+      "cordova/cordova-topic",
+      "cordova/cordova-channel",
+      "cordova/cordova-disable"
+    ]
+  },
 };
