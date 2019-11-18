@@ -49,7 +49,14 @@ module.exports = {
       
       "flutter/flutter-fcm"
     ],
-    "سوالات و مشکلات": ["flutter/flutter-errors", "flutter/flutter-faq"]
+    "سوالات و مشکلات": ["flutter/flutter-errors", "flutter/flutter-faq"],
+    "مستندات قدیمی": [
+      {
+        type:"link",
+        label: "مستندات پوشه",
+        href:"https://pushe.co/docs/flutter"
+      }
+    ]
   },
 
   unity: {
@@ -63,7 +70,14 @@ module.exports = {
       "unity/unity-disable",
       "unity/unity-channel",
     ],
-    "سوالات و مشکلات": ["unity/unity-errors", "unity/unity-faq"]
+    "سوالات و مشکلات": ["unity/unity-errors", "unity/unity-faq"],
+    "مستندات قدیمی": [
+      {
+        type:"link",
+        label: "مستندات پوشه",
+        href:"https://pushe.co/docs/unity"
+      }
+    ]
   },
 
   b4a: {
@@ -78,7 +92,14 @@ module.exports = {
       "b4a/b4a-channel",
       "b4a/b4a-fcm",
     ],
-    "سوالات و مشکلات": ["b4a/b4a-errors", "b4a/b4a-faq"]
+    "سوالات و مشکلات": ["b4a/b4a-errors", "b4a/b4a-faq"],
+    "مستندات قدیمی": [
+      {
+        type:"link",
+        label: "مستندات پوشه",
+        href:"https://pushe.co/docs/b4a"
+      }
+    ],
   },
 
   reactnative: {
@@ -94,7 +115,14 @@ module.exports = {
       "react-native/rn-channel",
       "react-native/rn-fcm"
     ],
-    "سوالات و مشکلات": ["react-native/rn-errors", "react-native/rn-faq"]
+    "سوالات و مشکلات": ["react-native/rn-errors", "react-native/rn-faq"],
+    "مستندات قدیمی": [
+      {
+        type:"link",
+        label: "مستندات پوشه",
+        href:"https://pushe.co/docs/react-native"
+      }
+    ]
   },
 
   cordova: {
