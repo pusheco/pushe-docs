@@ -136,4 +136,17 @@ module.exports = {
       "cordova/cordova-disable"
     ]
   },
+
+
+
+  plusNative: {
+    "Android Native" : ["plus/native/pnative-intro",],
+    "قابلیت‌ها": [
+      "plus/native/pnative-features",
+    ]
+  },
+
+  plusUnity: {
+    "Unity" : ["plus/unity/punity-intro",],
+  }
 };
