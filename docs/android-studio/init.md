@@ -8,6 +8,7 @@ title: رجیستر‌کردن
 ## تابع Initialize
 
 از: `co.ronash.pushe.Pushe`
+> تمام نسخه‌ها
 
 <div dir='ltr'>
 
@@ -29,6 +30,7 @@ Pushe.initialize(this, true);
 ## بررسی رجیستر‌شدن
 
 از: `co.ronash.pushe.Pushe`
+> تمام نسخه‌ها
 
 <div dir='ltr'>
 

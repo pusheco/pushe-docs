@@ -125,3 +125,7 @@ blockquote {
 .tab-item {
   direction: rtl;
 }
+
+.docSidebarContainer_node_modules-\@docusaurus-theme-classic-src-theme-DocPage- {
+  width: 370px !important;
+}

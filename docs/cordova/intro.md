@@ -11,9 +11,8 @@ sidebar_label: راه‌اندازی سریع
 قبل از شروع کار موارد زیر را بررسی و از درستی آنها اطمینان حاصل نمایید.
 
 - برای گذر از تحریم سرور‌های Jcenter از ابزار گذرازتحریم یا ... استفاده کنید.
-- `MinSDKVersion` >= 14
-- `TargetSDK` >= 25 (نسخه‌های پایین‌تر هم ممکن است کار کنند اما تضمینی نیست.)
-- اپلیکیشن باید در کنسول ثبت‌شود. [Pushe console](https://console.pushe.co)
+- `MinSDKVersion` >= 14 , `TargetSDK` >= 25
+- اپلیکیشن باید در کنسول ثبت‌شود. [Pushe console](/docs/console/console-submit)
 - توکن مانیفست از کنسول برداشته‌شود.
 - دستگاه تست باید دارای گوگل‌پلی‌سرویس بوده و اینترنت آن فعال‌باشد.
 
@@ -47,7 +46,7 @@ cordova plugin add pushe-cordova
 
 کد زیر را هم به تگ `widget` در فایل `config.xml` اضافه کنید.
 
-```xml
+```js
 xmlns:android="http://schemas.android.com/apk/res/android"
 ```
 
@@ -70,11 +69,19 @@ window.pushe.initialize();
 ```js
 // Android logcat:
 
---------+ Started Initialization of Pushe 1.6.3 +--------
+--------+ Started Initialization of Pushe +--------
 Trying to register to Pushe
 Successfully registered to pushe
 ```
 
-در صورتی که در یکی از این مراحل مشکلی وجود داشت، ابتدا [سوالات متداول](/docs/flutter/flutter-errors) را بررسی کنید و در صورتی نیافتن مشکل آن را در [Github issue](https://github.com/pusheco/pushe-flutter/issues?utf8=%E2%9C%93&q=is%3Aissue) مطرح کنید.
+## ادامه‌ی کار
+(بر روی لینک مورد نظر کلیک کنید)
 
-برای مشاهده‌ی امکانات و قابلیت‌های بیشتر پوشه در کوردوا به مطالعه‌ی ادامه‌ی مستندات بپردازید.
+### [پروژه‌ی نمونه در گیت‌هاب](https://github.com/pusheco/cordova-sample)
+بررسی امکانات در نمونه‌ای از قبل طراحی شده دارای تمام امکانات کتابخانه‌ی پوشه
+
+### [سوالات و مشکلات احتمالی](/docs/cordova/cordova-errors)
+در صورتی که در یکی از مراحل زیر به مشکلی برخوردید یا هر سوالی در مورد کتابخانه‌ دارید
+
+### [مشاهده‌ی امکانات بیشتر](/docs/cordova/cordova-advanced)
+مشاهده‌ی امکانات پیشرفته ارائه‌ شده در کتابخانه‌‌ی پوشه

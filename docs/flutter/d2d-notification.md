@@ -9,7 +9,7 @@ title: اعلان از یک دیوایس یه دیوایس دیگر
 > ارسال از یک دیوایس به دیوایس دیگر فقط مختص یک برنامه‌است و ارسال اعلان خارج‌ از محیط برنامه ممکن نیست.
 
 ## ارسال نوتیفیکیشن ساده
-
+> تمام نسخه‌ها
 
 <div dir='ltr'>
 
@@ -35,6 +35,7 @@ Pushe.isPusheInitialized().then((isInitialized) {
 ```
 
 ## ارسال نوتیفیکیشن پیشرفته
+> تمام نسخه‌ها
 
 از: `co.ronash.pushe.Pushe`
 
@@ -71,15 +72,13 @@ Pushe.isPusheInitialized().then((isInitialized) {
 برای اطلاعات بیشتر در مورد کلید‌های کامل‌تر به بخش [RESTful API در پوشه](docs/api-keys) مراجعه کنید.
 
 ## ارسال جیسون دلخواه
-
+> نسخه‌ی 1.1.0 به بعد
 
 <div dir='ltr'>
 
 #### `sendCustomJsonToUser(pusheId, customJson)` throws `Exception`
 
 </div>
-
-> این امکان درنسخه‌ی 1.1.0 اضافه خواهد شد.
 
 |پارامتر ورودی|استفاده|
 |:--:|--|

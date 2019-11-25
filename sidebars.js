@@ -11,15 +11,25 @@ module.exports = {
     "قابلیت‌ها": [
       "android-studio/studio-advanced",
       "android-studio/studio-init",
+      {
+        type: 'category',
+        label: 'گروهبندی کاربران',
+        items: ['android-studio/studio-topic', 'android-studio/studio-channel'],
+      },
       "android-studio/studio-pusheid",
-      "android-studio/studio-topic",
       "android-studio/studio-d2d",
       "android-studio/studio-listener",
       "android-studio/studio-disable",
-      "android-studio/studio-channel",
       "android-studio/studio-fcm"
     ],
-    "سوالات و مشکلات": ["android-studio/studio-errors", "android-studio/studio-faq"]
+    "سوالات و مشکلات": ["android-studio/studio-errors", "android-studio/studio-faq"],
+    "مستندات قدیمی": [
+      {
+        type:"link",
+        label: "مستندات پوشه",
+        href:"https://pushe.co/docs/android-studio"
+      }
+    ]
   },
 
   flutter: {
@@ -27,12 +37,16 @@ module.exports = {
     "قابلیت‌ها و امکانات": [
       "flutter/flutter-advanced",
       "flutter/flutter-init",
+      {
+        type: 'category',
+        label: 'گروهبندی کاربران',
+        items: ["flutter/flutter-topic", "flutter/flutter-channel",],
+      },
       "flutter/flutter-pusheid",
-      "flutter/flutter-topic",
       "flutter/flutter-d2d",
       "flutter/flutter-listener",
       "flutter/flutter-disable",
-      "flutter/flutter-channel",
+      
       "flutter/flutter-fcm"
     ],
     "سوالات و مشکلات": ["flutter/flutter-errors", "flutter/flutter-faq"]

@@ -14,6 +14,7 @@ title: کانال نوتیفیکیشن
 <div dir='ltr'>
 
 #### `static void CreateNotificationChannel(parameters...)`
+> تمام نسخه‌ها
 
 </div>
 
@@ -48,6 +49,7 @@ Pushe.CreateNotificationChannel(
 ```
 
 ## حذف کانال نوتیفیکیشن
+> تمام نسخه‌ها
 
 در صورتی که قصد دارید دستگاه را از کانال لغو عضویت کنید، کد زیر را فراخوانی کنید.
 
