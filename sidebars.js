@@ -140,7 +140,7 @@ module.exports = {
 
 
   plusNative: {
-    "Android Native" : ["plus/native/pnative-intro",],
+    "Android Native" : ["plus/native/pnative-intro", "plus/native/pnative-adsetup"],
     "قابلیت‌ها": [
       "plus/native/pnative-features",
     ]
@@ -148,5 +148,30 @@ module.exports = {
 
   plusUnity: {
     "Unity" : ["plus/unity/punity-intro",],
+    "قابلیت‌ها": [
+      "plus/unity/punity-features",
+      "plus/unity/punity-reg",
+      "plus/unity/punity-id", 
+      {
+        type:"category",
+        label:"گروهبندی کاربران",
+        items: [
+          "plus/unity/punity-topic",
+          "plus/unity/punity-tag",
+          "plus/unity/punity-channel"
+        ]
+      },
+      {
+        type: "category",
+        label: "ارسال اعلان",
+        items: [
+          "plus/unity/punity-d2d",
+          "plus/unity/punity-listener",
+          "plus/unity/punity-disable", 
+          "plus/unity/punity-sound",
+        ]
+      },
+      "plus/unity/punity-events"
+    ]
   }
 };

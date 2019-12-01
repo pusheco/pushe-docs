@@ -4,6 +4,10 @@ title: راه‌اندازی سریع در Unity
 sidebar_label: راه‌اندازی سریع
 ---
 
+
+> **می‌خواهید در مورد این سرویس بیشتر بدانید؟** [کلیک‌کنید]()
+
+
 ## پیش‌نیازها
 
 - پروژه باید از **Gradle build tool** استفاده کند.
@@ -26,10 +30,44 @@ sidebar_label: راه‌اندازی سریع
 
 ### دانلود کتابخانه‌ها
 
-فایل `mainTemplate.gradle` لایبرری‌های لازم را اضافه نموده است. برای اجرا برنامه کافیست پروژه را بیلد کنید.
+در صورتی که در برنامه فایل `mainTemplate.gradle` **ندارد**، این فایل را از فولدر `Pushe/Setup` در آدرس `Assets/Plugin/Android` کپی کنید.
 
-> **چرا از** `Unity Jar resolver` **استفاده نشده‌است؟**
-> این ابزار در نسخه‌ی فعلی قابلیت `Exclude`کردن را ندارد که نبود این قابلیت باعث می‌شود به دلیل duplicate‌شدن لایبرری Excludeشده بیلد با خطا مواجه شود. در صورتی که این مورد حل شود و پلاگین نیز آپدیت خواهد شد.
+<blockquote>
+
+در صورتی که این فایل از قبل وجود دارد موارد زیر را در فایل `mainTemplate.gradle` خود اضافه‌کنید:
+
+```java
+allprojects {
+   repositories {
+      google()
+      jcenter()
+	  
+      // Pushe Extended plugin
+	  maven { url 'https://dl.bintray.com/pushe/plugin' }
+      
+      flatDir {
+        dirs 'libs'
+      }
+   }
+}
+```
+
+و سپس لایبرری پلاس را اضافه نمایید:
+
+```java
+dependencies {
+	implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+	// Adding Pushe Plus
+	implementation ('co.pushe.plus:unity-extended:0.4.3')
+**DEPS**}
+```
+
+</blockquote>
+
+> **چرا از** `Unity Jar resolver` **استفاده نشده‌است؟**<br /><br />
+> این ابزار در نسخه‌ی فعلی قابلیت `Exclude`کردن را ندارد که نبود این قابلیت باعث می‌شود به دلیل duplicate‌شدن لایبرری Excludeشده بیلد با خطا مواجه شود. در صورتی که این مورد حل شود و پلاگین نیز آپدیت خواهد شد.<br /><br />
+> به علاوه به دلیل اینکه لایبرری تعداد متد زیادی دارد ممکن است که Single dex برای اجرای برنامه کافی نباشد. لذا برای پشتیبانی از `API<21` باید مالتی‌دکس را فعال‌کرد.
 
 ## افزودن شناسه به مانیفست
 
@@ -37,14 +75,12 @@ sidebar_label: راه‌اندازی سریع
 
 
 ```xml
-<meta-data android:name="pushe_token" android:value="{PUSHE_TOKEN}" />
+<meta-data android:name="pushe_token" android:value="PLUS_TOKEN" />
 ```
 
-به جای `{PUSHE_TOKEN}` باید توکن برنامه‌ی خود را قرار دهید.
+به جای `PLUS_TOKEN` باید توکن برنامه‌ی خود را قرار دهید.
 
-> **نکته**: محل فایل‌مانیفست `Assets/plugin/Android/AndroidManifest.xml` می‌باشد. در صورتی که این فایل موجود نیست آن‌را از آدرس زیر به آدرس ذکر‌شده کپی کنید:
-* `C:\Program Files\Unity\Editor\Data\PlaybackEngines\androidplayer\apk`
-
+> **نکته**: محل فایل‌مانیفست `Assets/plugin/Android/AndroidManifest.xml` می‌باشد. در صورتی که این فایل موجود نیست آن‌را از `Pushe/Setup` می‌توانید کپی کنید
 
 و محل اضافه‌کردن آن در فایل `AndroidManifest` باید مطابق زیر باشد:
 
@@ -66,3 +102,34 @@ sidebar_label: راه‌اندازی سریع
 
 > در صورتی که بخواهید **آمار کاربران را بر حسب موقعیت جغرافیایی** آنها مشاهده کنید و یا **با فیلتر لوکیشن اعلان ارسال کنید** باید کاربر این دسترسی را به برنامه بدهد.
 
+## اجرای برنامه
+
+برای اجرا شدن عملیات رجیستر پوشه نیازی به اضافه‌کردن اسکریپت خاصی نیست. کافیست برنامه را اجرا کنید.
+
+<blockquote>
+
+**متوقف‌شدن برنامه قبل از نمایش لوگو**:
+
+در صورتی که این اتفاق رخ‌‌داد احتمالا در برنامه **MultiDex** باید اضافه‌شود.
+
+- ابتدا مطمئن شوید که در بلاک `dafaultConfig` عبارت `multiDexEnabled true` اضافه‌شده باشد.
+
+```java
+defaultConfig {
+    multiDexEnabled true
+    //...
+```
+
+- سپس در فایل `AndroidManifest` عبارت زیر را به اتریبیوت‌های `<application>` اضافه‌کنید:
+
+```xml
+<application
+        android:name="co.pushe.plus.ext.PusheMultiDexApplication"
+        ...>
+```
+
+</blockquote>
+
+> در فایل `SampleCode.cs` مثالهایی از قابلیت‌های بیشتر قرار داده شده است.
+
+برای مشاهده‌ی امکانات پیشرفته‌تر به بررسی ادامه‌ی داکیومنت بپردازید.

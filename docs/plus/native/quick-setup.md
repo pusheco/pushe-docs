@@ -8,11 +8,16 @@ sidebar_label: راه‌اندازی سریع
 
 <div dir='ltr'>
 
-#### TL; DR
+#### `TL; DR`
 
-- **Create** app in conole
-- **Gradle**: `implementation 'co.pushe.plus:base:2.0.2'`
-- **Manifest**: `<meta-data android:name="pushe_token" android:value="${TOKEN}" />`
+- **Gradle**:
+  ```java
+  implementation 'co.pushe.plus:base:2.0.2'
+  ```
+- **Manifest**:
+  ```xml
+  <meta-data android:name="pushe_token" android:value="${TOKEN}" />
+  ```
 - Build and **Run**
 
 </div>
