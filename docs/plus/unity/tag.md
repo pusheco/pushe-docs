@@ -60,12 +60,14 @@ Pushe.RemoveTag("name", "age", "birthday");
 
 <div dir='ltr'>
 
-#### `static Dictionary<string, string> GetSubscribedTags()`
+#### `static string GetSubscribedTags()`
 
 </div>
 
-خروجی این تابع یک ‌Dictionary که تمام تگ‌های کاربر در آن وجود دارد خواهد بود.
+خروجی این تابع یک Json string که تمام تگ‌های کاربر در آن وجود دارد خواهد بود.
 
 ```java
-var tags = Pushe.GetSubscribedTags();
+Pushe.AddTags(new Dictionary<string, string> {{"name","Ali"}})
+
+string tags = Pushe.GetSubscribedTags(); // tags: {"name":"Ali"}
 ```

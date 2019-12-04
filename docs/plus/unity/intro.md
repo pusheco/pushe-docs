@@ -13,7 +13,6 @@ sidebar_label: راه‌اندازی سریع
 - پروژه باید از **Gradle build tool** استفاده کند.
 - داشتن‌ ابزار گذرازتحریم (به دلیل تحریم‌بودن ‌Bintray)
 - باید Android SDK بروزرسانی شود
-- داشتن پلن پلاس ([اطلاعات‌ بیشتر](/docs/console/console-plan))
 - ثبت اپلیکیشن در کنسول
 - دستگاه تست باید گوگل‌پلی‌سرویس داشته‌باشد
 
@@ -26,7 +25,7 @@ sidebar_label: راه‌اندازی سریع
 
 فایل پلاگین از لینک زیر **دانلود** کرده و آن‌را در پروژه‌ی خود **import** کنید.
 
-> [**پلاگین پوشه‌پلاس برای یونیتی**]()
+> [**پلاگین پوشه‌پلاس برای یونیتی**](https://static.pushe.co/d/unity/pushe-plus-unity-0.4.4.unitypackage)
 
 ### دانلود کتابخانه‌ها
 
@@ -52,6 +51,12 @@ allprojects {
 }
 ```
 
+و همچنین:
+
+```java
+compileSdkVersion 28
+```
+
 و سپس لایبرری پلاس را اضافه نمایید:
 
 ```java
@@ -59,7 +64,7 @@ dependencies {
 	implementation fileTree(dir: 'libs', include: ['*.jar'])
 
 	// Adding Pushe Plus
-	implementation ('co.pushe.plus:unity-extended:0.4.3')
+	implementation ('co.pushe.plus:unity-extended:0.4.4')
 **DEPS**}
 ```
 

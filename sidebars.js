@@ -143,6 +143,7 @@ module.exports = {
     "Android Native" : ["plus/native/pnative-intro", "plus/native/pnative-adsetup"],
     "قابلیت‌ها": [
       "plus/native/pnative-features",
+      "plus/native/pnative-reg",
     ]
   },
 
@@ -151,11 +152,11 @@ module.exports = {
     "قابلیت‌ها": [
       "plus/unity/punity-features",
       "plus/unity/punity-reg",
-      "plus/unity/punity-id", 
       {
         type:"category",
-        label:"گروهبندی کاربران",
+        label:"شناسایی و گروهبندی کاربر",
         items: [
+          "plus/unity/punity-id", 
           "plus/unity/punity-topic",
           "plus/unity/punity-tag",
           "plus/unity/punity-channel"
@@ -171,7 +172,21 @@ module.exports = {
           "plus/unity/punity-sound",
         ]
       },
-      "plus/unity/punity-events"
+      {
+        type: "category",
+        label: "آنالیتیکس",
+        items: [
+          "plus/unity/punity-events",
+        ]
+      },
+      {
+        type: "category",
+        label: "سوالات و مشکلات",
+        items: [
+          "plus/unity/punity-errors",
+          "plus/unity/punity-faq",
+        ]
+      },
     ]
   }
 };

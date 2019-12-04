@@ -1,6 +1,6 @@
 ---
 id: punity-events
-title: آنالیتیکس
+title: Event
 ---
 
 

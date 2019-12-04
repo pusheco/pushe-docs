@@ -17,7 +17,13 @@ sidebar_label: رویداد اعلان
 * یک GameObject به نام **PusheCallback** ایجاد کنید و آن‌را به Hierarchy پروژه اضافه کنید.
 * اسکریپت `PusheCallback.cs` را از فولدر `Pushe` به این آبجکت Attach کتید.
 
+> **محدودیت موجود برای دریافت کالبک‌ها**:<br />
+>
+> موتور یونیتی زمانی اقدام به اجرای اسکریپت‌ها می‌کند، که بازی یا برنامه در حال اجرا در Forground باشد.<br />
+> بدین معنی که در صورت بسته‌شدن یا Pause شدن، برنامه به طور کامل به حالت `onPause` قرار می‌گیرد.
+> نتیجه‌ این خواهد شد که: **در صورت باز نبودن بازی Callbackها در اسکریپ اجرا نخواهند شد.**
 > 
+> در صورتی که بخواهید در تمام حالات از این رویدادها مطلع شوید باید کد نیتیو برای اندروید بنویسید.
 
 ### اضافه‌کردن کد به اسکریپت خود
 
@@ -69,8 +75,7 @@ PusheNotification.SetNotificationListener(new PusheNotifListener());
 در صورتی که قصد دارید شئی اضافه نداشته باشید و یا به هردلیلی امکان استفاده از `PusheCallback` ممکن نیست، می‌توانید با استفاده از کد زیر GameObject کاستوم استفاده کنید.
 
 ```java
-string customGameObjectName = "myOwnObject";
-PusheCallback.SetCallbackGameObject(customGameObjectName);
+PusheNotification.SetNotificationListener(gameObject.name, new PusheNotifListener());
 ```
 
-و سپس `PusheCallback.cs` را به آن Attach کنید.
+> **نکته**: باید اسکریپت `PusheCallback.cs` به این GameObject متصل شده‌باشد.

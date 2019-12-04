@@ -32,7 +32,7 @@ sidebar_label: راه‌اندازی سریع
 - ثبت اپلیکیشن در کنسول
 - دستگاه تست باید گوگل‌پلی‌سرویس داشته‌باشد
 
-## اضافه‌کردن gradle dependency // Ask about different modules
+## اضافه‌کردن gradle dependency
 
 <div dir='ltr'>
 
@@ -50,6 +50,8 @@ sidebar_label: راه‌اندازی سریع
  ```java
 // dependencies {
     implementation("co.pushe.plus:base:2.0.2") { exclude group: 'co.pushe.plus', module: 'rxjava' }
+    // Make sure you add RxJava
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.12'
 // }
  ```
 
@@ -77,7 +79,7 @@ sidebar_label: راه‌اندازی سریع
 ## ادامه‌ی کار
 (بر روی لینک مورد نظر کلیک کنید)
 
-### [پروژه‌ی نمونه در گیت‌هاب](https://github.com/pusheco/android-studio-sample) // Needs example and repo for issue
+### [پروژه‌ی نمونه در گیت‌هاب](https://github.com/pusheco/android-sdk)
 بررسی امکانات در نمونه‌ای از قبل طراحی شده دارای تمام امکانات کتابخانه‌ی پوشه
 
 ### [سوالات و مشکلات احتمالی](/docs/plus-native/pnative-errors)
