@@ -144,6 +144,11 @@ module.exports = {
     "قابلیت‌ها": [
       "plus/native/pnative-features",
       "plus/native/pnative-reg",
+      "plus/native/pnative-fcm",
+    ],
+    "سوالات و مشکلات": [
+      "plus/native/pnative-errors",
+      "plus/native/pnative-faq",
     ]
   },
 
