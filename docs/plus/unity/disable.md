@@ -1,0 +1,50 @@
+---
+id: punity-disable
+title: غیرفعال‌کردن نمایش اعلان
+sidebar_label: غیرفعال‌سازی اعلان
+---
+
+
+به طور پیش‌فرض نمایش اعلان برای کاربر فعال‌است. اما می‌توان نمایش اعلان را برای کاربر با استفاده از کد غیرفعال و یا مجددا فعال نمود.
+
+## غیرفعال‌کردن نمایش اعلان
+> تمام نسخه‌ها
+
+
+<div dir='ltr'>
+
+#### `static void DisableNotification()`
+
+</div>
+
+```java
+PusheNotification.DisableNotification();
+```
+
+## فعال‌کردن نمایش اعلان
+> تمام نسخه‌ها
+
+
+<div dir='ltr'>
+
+#### `static void EnableNotification()`
+
+</div>
+
+```java
+PusheNotification.EnableNotification();
+```
+
+## بررسی فعال‌بودن نمایش اعلان
+> تمام نسخه‌ها
+
+
+<div dir='ltr'>
+
+#### `static void IsNotificationEnabled()`
+
+</div>
+
+```java
+var isNotificationOn = PusheNotification.IsNotificationEnabled();
+```
