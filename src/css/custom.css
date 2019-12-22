@@ -25,15 +25,16 @@
 
 @font-face {
   font-family: 'IRANSans';
-  src: url( '/fonts/IRANSansWeb.eot') format('eot'),
-        url('/fonts/IRANSansWeb.eot?#iefix') format('embedded-opentype'),
-        url('/fonts/IRANSansWeb.woff2') format('woff2'),
-        url('/fonts/IRANSansWeb.woff') format('woff'),
-        url('/fonts/IRANSansWeb.ttf') format('truetype');
-} 
+  src: url('/fonts/IRANSansWeb.eot') format('eot'),
+    url('/fonts/IRANSansWeb.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/IRANSansWeb.woff2') format('woff2'),
+    url('/fonts/IRANSansWeb.woff') format('woff'),
+    url('/fonts/IRANSansWeb.ttf') format('truetype');
+}
 
 
-html, body {
+html,
+body {
   direction: rtl;
   font-family: IRANSans !important;
 }
@@ -97,6 +98,7 @@ pre {
   margin-left: unset !important;
   padding-right: unset !important;
   padding-left: 10px;
+  opacity: 1 !important;
 }
 
 .row .col.col--3 {
@@ -128,4 +130,9 @@ blockquote {
 
 .docSidebarContainer_node_modules-\@docusaurus-theme-classic-src-theme-DocPage- {
   width: 370px !important;
+}
+
+code {
+  direction: ltr;
+  unicode-bidi: isolate;
 }

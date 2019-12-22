@@ -194,5 +194,19 @@ module.exports = {
         ]
       },
     ]
+  },
+  webpush: {
+    "وب‌پوش" : [
+      "webpush/intro",
+    ],
+    "قابلیت‌ها": [
+      "webpush/subscribe-prompt",
+      "webpush/unique-device-id",
+      "webpush/unsubscribe",
+    ],
+    "سوالات و مشکلات": [
+      "webpush/errors",
+      "webpush/faq",
+    ]
   }
 };
