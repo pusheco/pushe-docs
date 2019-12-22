@@ -7,7 +7,7 @@
 
 module.exports = {
   studio: {
-    "Android studio": ["android-studio/studio-intro",],
+    "اندروید استودیو": ["android-studio/studio-intro",],
     "قابلیت‌ها": [
       "android-studio/studio-advanced",
       "android-studio/studio-init",
