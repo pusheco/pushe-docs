@@ -208,5 +208,32 @@ module.exports = {
       "webpush/errors",
       "webpush/faq",
     ]
+  },
+  'mobile-api': {
+    "وب‌سرویس موبایل (اندروید و آی‌او‌اس)": [
+      "mobile-api/authentication",
+      "mobile-api/create_application",
+      "mobile-api/get_applications_list",
+      "mobile-api/rename_application",
+      "mobile-api/remove_application",
+      "mobile-api/application_installations",
+      "mobile-api/table_notification_keys",
+      "mobile-api/table_icons",
+      "mobile-api/table_notification_actions",
+      "mobile-api/table_notification_led_colors",
+      "mobile-api/table_frameworks",
+    ],
+  },
+  'web-api': {
+    "وب‌سرویس وب‌پوش": [
+      "web-api/authentication",
+      "web-api/create_website",
+      "web-api/get_website_list",
+      "web-api/rename_website",
+      "web-api/remove_website",
+      "web-api/send_notification",
+      "web-api/table_notification_keys",
+      "web-api/table_actions",
+    ],
   }
 };
