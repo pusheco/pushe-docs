@@ -32,90 +32,90 @@ module.exports = {
     ]
   },
 
-  // flutter: {
-  //   "Flutter": ["flutter/flutter-intro"],
-  //   "قابلیت‌ها و امکانات": [
-  //     "flutter/flutter-advanced",
-  //     "flutter/flutter-init",
-  //     {
-  //       type: 'category',
-  //       label: 'گروهبندی کاربران',
-  //       items: ["flutter/flutter-topic", "flutter/flutter-channel",],
-  //     },
-  //     "flutter/flutter-pusheid",
-  //     "flutter/flutter-d2d",
-  //     "flutter/flutter-listener",
-  //     "flutter/flutter-disable",
+  flutter: {
+    "Flutter": ["flutter/flutter-intro"],
+    "قابلیت‌ها و امکانات": [
+      "flutter/flutter-advanced",
+      "flutter/flutter-init",
+      {
+        type: 'category',
+        label: 'گروهبندی کاربران',
+        items: ["flutter/flutter-topic", "flutter/flutter-channel",],
+      },
+      "flutter/flutter-pusheid",
+      "flutter/flutter-d2d",
+      "flutter/flutter-listener",
+      "flutter/flutter-disable",
       
-  //     "flutter/flutter-fcm"
-  //   ],
-  //   "سوالات و مشکلات": ["flutter/flutter-errors", "flutter/flutter-faq"],
-  //   "مستندات قدیمی": [
-  //     {
-  //       type:"link",
-  //       label: "مستندات پوشه",
-  //       href:"https://pushe.co/docs/flutter"
-  //     }
-  //   ]
-  // },
+      "flutter/flutter-fcm"
+    ],
+    "سوالات و مشکلات": ["flutter/flutter-errors", "flutter/flutter-faq"],
+    "مستندات قدیمی": [
+      {
+        type:"link",
+        label: "مستندات پوشه",
+        href:"https://pushe.co/docs/flutter"
+      }
+    ]
+  },
 
-  // b4a: {
-  //   "بیسیک‌فوراندروید": ["b4a/b4a-intro"],
-  //   "قابلیت‌ها و امکانات": [
-  //     "b4a/b4a-advanced", 
-  //     "b4a/b4a-pusheid",
-  //     "b4a/b4a-topic",
-  //     "b4a/b4a-d2d",
-  //     "b4a/b4a-listener",
-  //     "b4a/b4a-disable",
-  //     "b4a/b4a-channel",
-  //     "b4a/b4a-fcm",
-  //   ],
-  //   "سوالات و مشکلات": ["b4a/b4a-errors", "b4a/b4a-faq"],
-  //   "مستندات قدیمی": [
-  //     {
-  //       type:"link",
-  //       label: "مستندات پوشه",
-  //       href:"https://pushe.co/docs/b4a"
-  //     }
-  //   ],
-  // },
+  b4a: {
+    "بیسیک‌فوراندروید": ["b4a/b4a-intro"],
+    "قابلیت‌ها و امکانات": [
+      "b4a/b4a-advanced", 
+      "b4a/b4a-pusheid",
+      "b4a/b4a-topic",
+      "b4a/b4a-d2d",
+      "b4a/b4a-listener",
+      "b4a/b4a-disable",
+      "b4a/b4a-channel",
+      "b4a/b4a-fcm",
+    ],
+    "سوالات و مشکلات": ["b4a/b4a-errors", "b4a/b4a-faq"],
+    "مستندات قدیمی": [
+      {
+        type:"link",
+        label: "مستندات پوشه",
+        href:"https://pushe.co/docs/b4a"
+      }
+    ],
+  },
 
-  // reactnative: {
-  //   "React Native": ["react-native/rn-intro"],
-  //   "قابلیت‌ها و امکانات": [
-  //     "react-native/rn-advanced",
-  //     "react-native/rn-init",
-  //     "react-native/rn-pusheid",
-  //     "react-native/rn-topic",
-  //     "react-native/rn-d2d",
-  //     "react-native/rn-listener",
-  //     "react-native/rn-disable",
-  //     "react-native/rn-channel",
-  //     "react-native/rn-fcm"
-  //   ],
-  //   "سوالات و مشکلات": ["react-native/rn-errors", "react-native/rn-faq"],
-  //   "مستندات قدیمی": [
-  //     {
-  //       type:"link",
-  //       label: "مستندات پوشه",
-  //       href:"https://pushe.co/docs/react-native"
-  //     }
-  //   ]
-  // },
+  reactnative: {
+    "React Native": ["react-native/rn-intro"],
+    "قابلیت‌ها و امکانات": [
+      "react-native/rn-advanced",
+      "react-native/rn-init",
+      "react-native/rn-pusheid",
+      "react-native/rn-topic",
+      "react-native/rn-d2d",
+      "react-native/rn-listener",
+      "react-native/rn-disable",
+      "react-native/rn-channel",
+      "react-native/rn-fcm"
+    ],
+    "سوالات و مشکلات": ["react-native/rn-errors", "react-native/rn-faq"],
+    "مستندات قدیمی": [
+      {
+        type:"link",
+        label: "مستندات پوشه",
+        href:"https://pushe.co/docs/react-native"
+      }
+    ]
+  },
 
-  // cordova: {
-  //   "Cordova": ["cordova/cordova-intro",],
-  //   "قابلیت‌ها": [
-  //     "cordova/cordova-advanced",
-  //     "cordova/cordova-pusheid",
-  //     "cordova/cordova-d2d",
-  //     "cordova/cordova-topic",
-  //     "cordova/cordova-channel",
-  //     "cordova/cordova-disable"
-  //   ],
-  //   "سوالات و مشکلات": ["cordova/cordova-errors", "cordova/cordova-faq"]
-  // },
+  cordova: {
+    "Cordova": ["cordova/cordova-intro",],
+    "قابلیت‌ها": [
+      "cordova/cordova-advanced",
+      "cordova/cordova-pusheid",
+      "cordova/cordova-d2d",
+      "cordova/cordova-topic",
+      "cordova/cordova-channel",
+      "cordova/cordova-disable"
+    ],
+    "سوالات و مشکلات": ["cordova/cordova-errors", "cordova/cordova-faq"]
+  },
 
   unity: {
     "Unity" : ["unity/intro",],

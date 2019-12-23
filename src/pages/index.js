@@ -7,6 +7,91 @@
 
 import React from 'react';
 import Layout from '@theme/Layout';
+import TRow from "./TRow.jsx";
+
+const docs = [
+  {
+    display: true,
+    docLink: '/docs/android-studio/studio-intro',
+    img: '/img/android_native.png',
+    github: 'https://github.com/pusheco/android-studio-sample/issues?utf8=%E2%9C%93&amp;q=is%3Aissue',
+    desc: <>استفاده از پوشه در پروژه‌های گریدل نوشته‌شده با <strong>جاوا و کاتلین</strong></>,
+    version: 2,
+  },
+  {
+    display: true,
+    docLink: '/docs/ios/intro',
+    img: '/img/ios_native.png',
+    github: '#',
+    desc: 'استفاده از پوشه در iOS',
+    version: '-'
+  },
+  {
+    display: false,
+    docLink: '/docs/flutter/flutter-intro',
+    img: '/img/flutter_logo.png',
+    github: 'https://github.com/pusheco/pushe-flutter/issues?utf8=%E2%9C%93&amp;q=is%3Aissue',
+    desc: <>استفاده از پوشه در فریم‌ورک <strong>فلاتر</strong></>,
+    version: 1,
+  },
+  {
+    display: true,
+    docLink: '/docs/unity/intro',
+    img: '/img/unity_logo.png',
+    github: 'https://github.com/pusheco/unity-sample/issues?utf8=%E2%9C%93&amp;q=is%3Aissue',
+    desc: <>استفاده از سرویس نوتیفیکیشن در <strong>موتور بازی‌سازی یونیتی برای اندروید</strong></>,
+    version: 2,
+  },
+  {
+    display: false,
+    docLink: '/docs/b4a/b4a-intro',
+    img: '/img/b4a_logo.png',
+    github: 'https://github.com/pusheco/b4a-sample/issues?utf8=%E2%9C%93&amp;q=is%3Aissue',
+    desc: <>استفاده از سرویس نوتیفیکیشن در <strong>بیسیک‌فور‌اندروید</strong></>,
+    version: 1,
+  },
+  {
+    display: false,
+    docLink: '/docs/react-native/rn-intro',
+    img: '/img/rn_logo.png',
+    github: 'https://github.com/pusheco/pushe-react-native/issues?utf8=%E2%9C%93&amp;q=is%3Aissue',
+    desc: <>استفاده از سرویس نوتیفیکیشن در <strong>React native</strong></>,
+    version: 1,
+  },
+  {
+    display: false,
+    docLink: '/docs/cordova/cordova-intro',
+    img: '/img/cordova_logo.png',
+    github: 'https://github.com/pusheco/cordova-sample/issues?utf8=%E2%9C%93&amp;q=is%3Aissue',
+    desc: <>استفاده از سرویس نوتیفیکیشن در <strong>Apache Cordova</strong></>,
+    version: 1,
+  },
+  {
+    display: true,
+    docLink: '/docs/mobile-api/authentication',
+    img: '/img/restapi.png',
+    github: '#',
+    desc: 'وب‌سرویس پوشه برای موبایل (iOS, Android)',
+    version: 2,
+  },
+  {
+    display: true,
+    docLink: '/docs/web-api/authentication',
+    img: '/img/webpush.png',
+    github: '#',
+    desc: 'وب‌سرویس پوشه برای وب',
+    version: 2,
+  },
+  {
+    display: false,
+    docLink: '#',
+    img: '/img/pushe_logo.jpeg',
+    github: '#',
+    desc: <>آموزش استفاده از <strong>کنسول پوشه</strong></>,
+    version: '-'
+  },
+];
+
 
 function Home() {
 return (
@@ -15,11 +100,9 @@ return (
     <main>
       <div className="container-vertical-space">
         <div className="markdown">
-          <h1>
-            <a aria-hidden="true" className="anchor" id="مستندات-پوشه-بتا"></a><a aria-hidden="true"
-              className="hash-link" href="#مستندات-پوشه-بتا">#</a>مستندات پوشه [بتا]
-          </h1>
+          <h1>مستندات پوشه</h1>
           <p>در پوشه وضعیت پشتیبانی از فریم‌ورک‌ها و پلتفرم‌های مختلف به صورت زیر است.</p>
+
           <table>
             <thead>
               <tr>
@@ -27,99 +110,17 @@ return (
                 <th align="center">مستندات</th>
                 <th align="center">پشتیبانی و سوالات</th>
                 <th>توضیحات</th>
+                <th>ورژن</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td align="center"><a href="/docs/android-studio/studio-intro"><img src="/img/android_native.png"
-                      width="120" /></a></td>
-                <td align="center"><a href="/docs/android-studio/studio-intro"><strong>لینک مستندات</strong></a></td>
-                <td align="center"><a
-                    href="https://github.com/pusheco/android-studio-sample/issues?utf8=%E2%9C%93&amp;q=is%3Aissue"><strong>گیتهاب</strong></a>
-                </td>
-                <td>استفاده از پوشه در پروژه‌های گریدل نوشته‌شده با <strong>جاوا و کاتلین</strong></td>
-              </tr>
-              <tr>
-                <td align="center"><a aria-current="page" className="active" href="/docs/docs"><img
-                      src="/img/ios_native.png" width="80" /></a></td>
-                <td align="center">-</td>
-                <td align="center">-</td>
-                <td>استفاده از پوشه در iOS</td>
-              </tr>
-              <tr>
-                <td align="center"><a href="/docs/flutter/flutter-intro"><img src="/img/flutter_logo.png"
-                      width="80" /></a></td>
-                <td align="center"><a href="/docs/flutter/flutter-intro"><strong>لینک مستندات</strong></a></td>
-                <td align="center"><a
-                    href="https://github.com/pusheco/pushe-flutter/issues?utf8=%E2%9C%93&amp;q=is%3Aissue"><strong>گیتهاب</strong></a>
-                </td>
-                <td>استفاده از پوشه در فریم‌ورک <strong>فلاتر</strong></td>
-              </tr>
-              <tr>
-                <td align="center"><a href="/docs/unity/unity-intro"><img src="/img/unity_logo.png" width="80" /></a>
-                </td>
-                <td align="center"><a href="/docs/unity/unity-intro"><strong>لینک مستندات</strong></a></td>
-                <td align="center"><a
-                    href="https://github.com/pusheco/unity-sample/issues?utf8=%E2%9C%93&amp;q=is%3Aissue"><strong>گیتهاب</strong></a>
-                </td>
-                <td>استفاده از سرویس نوتیفیکیشن در <strong>موتور بازی‌سازی یونیتی برای اندروید</strong></td>
-              </tr>
-              <tr>
-                <td align="center"><a href="/docs/b4a/b4a-intro"><img src="/img/b4a_logo.png" width="80" /></a>
-                </td>
-                <td align="center"><a href="/docs/b4a/b4a-intro"><strong>لینک مستندات</strong></a></td>
-                <td align="center"><a
-                    href="https://github.com/pusheco/b4a-sample/issues?utf8=%E2%9C%93&amp;q=is%3Aissue"><strong>گیتهاب</strong></a>
-                </td>
-                <td>استفاده از سرویس نوتیفیکیشن در <strong>بیسیک‌فور‌اندروید</strong></td>
-              </tr>
-              <tr>
-                <td align="center"><a href="/docs/react-native/rn-intro"><img src="/img/rn_logo.png" width="80" /></a>
-                </td>
-                <td align="center"><a href="/docs/react-native/rn-intro"><strong>لینک مستندات</strong></a></td>
-                <td align="center"><a
-                    href="https://github.com/pusheco/pushe-react-native/issues?utf8=%E2%9C%93&amp;q=is%3Aissue"><strong>گیتهاب</strong></a>
-                </td>
-                <td>استفاده از سرویس نوتیفیکیشن در <strong>React native</strong></td>
-              </tr>
-              <tr>
-                <td align="center"><a href="/docs/cordova/cordova-intro"><img src="/img/cordova_logo.png" width="80" /></a>
-                </td>
-                <td align="center"><a href="/docs/cordova/cordova-intro"><strong>لینک مستندات</strong></a></td>
-                <td align="center"><a
-                    href="https://github.com/pusheco/cordova-sample/issues?utf8=%E2%9C%93&amp;q=is%3Aissue"><strong>گیتهاب</strong></a>
-                </td>
-                <td>استفاده از سرویس نوتیفیکیشن در <strong>Apache Cordova</strong></td>
-              </tr>
-              <tr>
-                <td align="center"><a aria-current="page" className="active" href="/docs/docs"><img
-                      src="/img/restapi.png" width="80" /></a></td>
-                <td align="center">-</td>
-                <td align="center">-</td>
-                <td>ارسال نوتیفیکیشن به پلتفرم‌ها با استفاده از <strong>RESTful API</strong></td>
-              </tr>
-              <tr>
-                <td align="center"><a aria-current="page" className="active" href="/docs/docs"><img
-                      src="/img/webpush.png" width="80" /></a></td>
-                <td align="center">-</td>
-                <td align="center">-</td>
-                <td>ارسال نوتیفیکیشن به وب‌‌سایت با استفاده از <strong>وب پوش</strong> پوشه</td>
-              </tr>
-              <tr>
-                <td align="center"><a aria-current="page" className="active" href="/docs/docs"><img
-                      src="/img/pushe_logo.jpeg" width="80" /></a></td>
-                <td align="center">-</td>
-                <td align="center">-</td>
-                <td>آموزش استفاده از <strong>کنسول پوشه</strong></td>
-              </tr>
+              
+              {docs.filter(({display}) => display).map(({docLink, img, github, desc, version}) => 
+              <TRow key={docLink} docLink={docLink} img={img} github={github} desc={desc} version={version} />)}
+
             </tbody>
           </table>
 
-          <div dir='ltr'>
-            <a href="/docs/plus/native/pnative-intro">Plus for Android native</a>
-            <br />
-            <a href="/docs/plus/unity/punity-intro">Plus for Unity engine</a>
-          </div>
         </div>
       </div>
     </main>
