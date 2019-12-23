@@ -192,7 +192,10 @@ class NotificationService: UNNotificationServiceExtension {
 
 پس از اجرای برنامه و فراخوانی کد رجیستر پوشه، باید در **Xcode console** لاگ‌های زیر را ببینید (ممکن است به دلیل ارتباط با سرور این پروسه چند ثانیه طول بکشد):
 
-<img src="/img/studio/logcat.png" />
+```
+registering in Pushe ...
+📗 -> successfully registered in Pushe
+```
 <br /><br />
 
 ## ادامه‌ی کار
