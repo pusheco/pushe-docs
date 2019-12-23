@@ -10,10 +10,9 @@ module.exports = {
     "اندروید استودیو": ["android-studio/studio-intro",],
     "قابلیت‌ها": [
       "android-studio/studio-advanced",
-      "android-studio/studio-init",
       {
         type: 'category',
-        label: 'گروهبندی کاربران',
+        label: 'گروه بندی کاربران',
         items: ['android-studio/studio-topic', 'android-studio/studio-channel'],
       },
       "android-studio/studio-pusheid",
