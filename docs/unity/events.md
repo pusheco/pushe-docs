@@ -1,5 +1,5 @@
 ---
-id: punity-events
+id: events
 title: Event
 ---
 

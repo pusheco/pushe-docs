@@ -1,6 +1,7 @@
 ---
-id: unity-disable
+id: disable
 title: غیرفعال‌کردن نمایش اعلان
+sidebar_label: غیرفعال‌سازی اعلان
 ---
 
 
@@ -12,12 +13,12 @@ title: غیرفعال‌کردن نمایش اعلان
 
 <div dir='ltr'>
 
-#### `static void SetNotificationOff()`
+#### `static void DisableNotification()`
 
 </div>
 
-```js
-Pushe.SetNotficationOff();
+```java
+PusheNotification.DisableNotification();
 ```
 
 ## فعال‌کردن نمایش اعلان
@@ -26,24 +27,24 @@ Pushe.SetNotficationOff();
 
 <div dir='ltr'>
 
-#### `static void SetNotificationOn()`
+#### `static void EnableNotification()`
 
 </div>
 
-```js
-Pushe.SetNotficationOn();
+```java
+PusheNotification.EnableNotification();
 ```
 
 ## بررسی فعال‌بودن نمایش اعلان
-> نسخه‌ی 1.3 به بعد
+> تمام نسخه‌ها
 
 
 <div dir='ltr'>
 
-#### `static void IsNotificationOn()`
+#### `static void IsNotificationEnabled()`
 
 </div>
 
-```js
-var isNotificationOn = Pushe.IsNotficationOn();
+```java
+var isNotificationOn = PusheNotification.IsNotificationEnabled();
 ```

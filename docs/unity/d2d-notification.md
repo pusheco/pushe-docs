@@ -1,79 +1,75 @@
 ---
-id: unity-d2d
+id: d2d
 title: اعلان از یک دیوایس یه دیوایس دیگر
+sidebar_label: اعلان به یک دیوایس
 ---
 
 
-با استفاده‌از [Pushe id](/docs/unity/unity-pusheid) یک دیوایس می‌توان از یک دیوایس دیگر به آن اعلان فرستاد.
 
-> ارسال از یک دیوایس به دیوایس دیگر فقط مختص یک برنامه‌است و ارسال اعلان خارج‌ از محیط برنامه ممکن نیست.
+## ارسال پوش از یک دستگاه به دستگاه دیگر
 
-## ارسال نوتیفیکیشن ساده
-> تمام نسخه‌ها
+می‌توانید مستقیم از یک دستگاه به دستگاه دیگر اعلان ارسال کنید. برای این امر لازم است که یکی از شناسه‌ها‌ی دستگاه مقصد را داشته باشید. 
+برای اطلاع از شناسه‌های موجود و نحوه دریافت آن‌ها به بخش 
+[شناسه‌ها](/docs/plus/unity/punity-id)
+رجوع کنید.
 
+با داشتن شناسه‌ی دستگاه مورد نظر می‌توانید یک شی از کلاس 
+`UserNotification` 
+بسازید، در آن اطلاعات اعلان را وارد کنید و با دادن آن به تابع 
+`PusheNotification.SendNotificationToUser`
+اعلان را ارسال نمایید.
 
-<div dir='ltr'>
+برای ساخت یک شی از کلاس 
+`UserNotification`
+با داشتن هریک از شناسه‌ها، از متد مربوطه موجود در این کلاس به شکل زیر استفاده کنید:
 
-#### `static void SendSimpleNotifToUser(pusheId, title, content)`
-
-</div>
-
-|پارامتر ورودی|استفاده|
-|:--:|--|
-|pusheId|شناسه‌ی دستگاه موردنظر|
-|title|تیتر اعلان|
-|content|محتوای اعلان|
-
-می‌توانید با استفاده از این تابع نوتیفیکیشنی با تیتر و متن (نوتیفیکیشن ساده) به کاربر خاصی که این اپلیکیشن را نصب کرده و نصب آن در کنسول ثبت‌شده اعلان ارسال کنید.
-
-```js
-if (Pushe.PusheIsInitialized()) {
-  string pusheId = "12345";
-  string title = "Hello user";
-  string content = "How are you?";
-  Pushe.SendSimpleNotifToUser(pusheId, title, content);
-}
+```java
+UserNotification.WithAndroidId(string androidId);
+UserNotification.WithAdvertisementId(string advertisementId);
+UserNotification.withCustomId(string customId);
 ```
 
-## ارسال نوتیفیکیشن پیشرفته
-> تمام نسخه‌ها
+پس از ساخت شی خود، برای واردکردن اطلاعات اعلان می‌توانید از متدهای این کلاس به شرح زیر استفاده کنید:
 
-
-<div dir='ltr'>
-
-#### `SendAdvancedNotifToUser(pusheId, notificationJson)` throws `Exception`
-
-</div>
-
-|پارامتر ورودی|استفاده|
-|:--:|--|
-|pusheId|شناسه‌ی دستگاه موردنظر|
-|notificationJson|یک استرینگ با فرمت جیسون که تمام مقادیر لازم برای شئ نوتیفیکیشن را دارد.|
-
-
-همانند ارسال با استفاده از RESTful API می‌توانید به کاربر خاص خود نوتیفیکیشنی کامل‌تر ارسال کنید. فیلد‌های همچون صدای زنگ، آیکون و .... برای این کار از کد زیر استفاده کنید.
-
-```cpp
-if (Pushe.PusheIsInitialized()) {
-  string pusheId = "12345";
-  var json = @"{
-    ""title"":""Hello user"",
-    ""content"":""How are you?""           
-  }";
-  Pushe.SendAdvancedNotifToUser(pusheId, title, content);
-}
+```java
+public UserNotification SetTitle(string title);
+public UserNotification SetContent(string content);
+public UserNotification SetBigTitle(string bigTitle);
+public UserNotification SetBigContent(string bigContent);
+public UserNotification SetImageUrl(string imageUrl);
+public UserNotification SetIconUrl(string iconUrl);
+public UserNotification SetNotifIcon(string notifIcon);
+public UserNotification SetCustomContent(string customContent);
 ```
 
-برای اطلاعات بیشتر در مورد کلید‌های کامل‌تر به بخش [RESTful API در پوشه](/docs/api/api-keys) مراجعه کنید.
+### مثال
 
-## ارسال اعلان و یا جیسون به دستگاه اجراکننده‌ی کد
-> تمام نسخه‌ها
+نمونه کد زیر نحوه‌ی ارسال یک اعلان ساده با تیتر و متن را به کاربری که شناسه‌ی 
+Android ID
+او را داریم نشان می‌دهد.
 
-در صورتی که بخواهید به همین دستگاهی که کد را اجرا می‌کند اعلان ارسال کنید کافیست PusheId را برابر شناسه‌ی همین دستگاه قرار دهید:
+```java
+UserNotification notification =
+                        UserNotification.WithAndrodId(androidId)
+                                .SetTitle("تیتر اعلان")
+                                .SetContent("متن اعلان");
 
-```js
-string thisPusheId = Pushe.GetPusheId();
-
-// Send notification to this device
-Pushe.SendSimpleNotifToUser(thisPusheId, "Hello user", "How are you?");
+PusheNotification.SendNotificationToUser(notification);
 ```
+
+در صورتی که مایلید اعلان پیشرفته‌تری بسازید که با توابع قرار داده شده ممکن نیست، می‌توانید از تابع
+`UserNotification.SetAdvancedNotification`
+استفاده کنید. 
+
+برای اینکار باید به تابع اطلاعات اعلان را در 
+قالب یک 
+JSON String
+بدهید. ساختار 
+JSON
+ورودی مشابه ساختار استفاده شده در 
+[ارسال اعلان با API](/docs/api/api-intro)
+می‌باشد.
+
+> توجه داشته باشید که اگر از تابع 
+`SetAdvanvedNotification`
+برای ایجاد اعلان استفاده کنید، سایر اطلاعاتی که با بقیه‌ی توابع کلاس داده می‌شوند دیگر در نظر گرفته نخواهند شد.

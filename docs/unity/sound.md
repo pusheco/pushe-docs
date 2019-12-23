@@ -1,5 +1,5 @@
 ---
-id: punity-sound
+id: sound
 title: صدای دلخواه اعلان
 ---
 

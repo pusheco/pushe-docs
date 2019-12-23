@@ -1,5 +1,5 @@
 ---
-id: punity-listener
+id: listener
 title: رویداد نوتیفیکیشن
 sidebar_label: رویداد اعلان
 ---

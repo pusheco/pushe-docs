@@ -32,169 +32,134 @@ module.exports = {
     ]
   },
 
-  flutter: {
-    "Flutter": ["flutter/flutter-intro"],
-    "قابلیت‌ها و امکانات": [
-      "flutter/flutter-advanced",
-      "flutter/flutter-init",
-      {
-        type: 'category',
-        label: 'گروهبندی کاربران',
-        items: ["flutter/flutter-topic", "flutter/flutter-channel",],
-      },
-      "flutter/flutter-pusheid",
-      "flutter/flutter-d2d",
-      "flutter/flutter-listener",
-      "flutter/flutter-disable",
+  // flutter: {
+  //   "Flutter": ["flutter/flutter-intro"],
+  //   "قابلیت‌ها و امکانات": [
+  //     "flutter/flutter-advanced",
+  //     "flutter/flutter-init",
+  //     {
+  //       type: 'category',
+  //       label: 'گروهبندی کاربران',
+  //       items: ["flutter/flutter-topic", "flutter/flutter-channel",],
+  //     },
+  //     "flutter/flutter-pusheid",
+  //     "flutter/flutter-d2d",
+  //     "flutter/flutter-listener",
+  //     "flutter/flutter-disable",
       
-      "flutter/flutter-fcm"
-    ],
-    "سوالات و مشکلات": ["flutter/flutter-errors", "flutter/flutter-faq"],
-    "مستندات قدیمی": [
-      {
-        type:"link",
-        label: "مستندات پوشه",
-        href:"https://pushe.co/docs/flutter"
-      }
-    ]
-  },
+  //     "flutter/flutter-fcm"
+  //   ],
+  //   "سوالات و مشکلات": ["flutter/flutter-errors", "flutter/flutter-faq"],
+  //   "مستندات قدیمی": [
+  //     {
+  //       type:"link",
+  //       label: "مستندات پوشه",
+  //       href:"https://pushe.co/docs/flutter"
+  //     }
+  //   ]
+  // },
+
+  // b4a: {
+  //   "بیسیک‌فوراندروید": ["b4a/b4a-intro"],
+  //   "قابلیت‌ها و امکانات": [
+  //     "b4a/b4a-advanced", 
+  //     "b4a/b4a-pusheid",
+  //     "b4a/b4a-topic",
+  //     "b4a/b4a-d2d",
+  //     "b4a/b4a-listener",
+  //     "b4a/b4a-disable",
+  //     "b4a/b4a-channel",
+  //     "b4a/b4a-fcm",
+  //   ],
+  //   "سوالات و مشکلات": ["b4a/b4a-errors", "b4a/b4a-faq"],
+  //   "مستندات قدیمی": [
+  //     {
+  //       type:"link",
+  //       label: "مستندات پوشه",
+  //       href:"https://pushe.co/docs/b4a"
+  //     }
+  //   ],
+  // },
+
+  // reactnative: {
+  //   "React Native": ["react-native/rn-intro"],
+  //   "قابلیت‌ها و امکانات": [
+  //     "react-native/rn-advanced",
+  //     "react-native/rn-init",
+  //     "react-native/rn-pusheid",
+  //     "react-native/rn-topic",
+  //     "react-native/rn-d2d",
+  //     "react-native/rn-listener",
+  //     "react-native/rn-disable",
+  //     "react-native/rn-channel",
+  //     "react-native/rn-fcm"
+  //   ],
+  //   "سوالات و مشکلات": ["react-native/rn-errors", "react-native/rn-faq"],
+  //   "مستندات قدیمی": [
+  //     {
+  //       type:"link",
+  //       label: "مستندات پوشه",
+  //       href:"https://pushe.co/docs/react-native"
+  //     }
+  //   ]
+  // },
+
+  // cordova: {
+  //   "Cordova": ["cordova/cordova-intro",],
+  //   "قابلیت‌ها": [
+  //     "cordova/cordova-advanced",
+  //     "cordova/cordova-pusheid",
+  //     "cordova/cordova-d2d",
+  //     "cordova/cordova-topic",
+  //     "cordova/cordova-channel",
+  //     "cordova/cordova-disable"
+  //   ],
+  //   "سوالات و مشکلات": ["cordova/cordova-errors", "cordova/cordova-faq"]
+  // },
 
   unity: {
-    "Unity": ["unity/unity-intro"],
-    "قابلیت‌ها و امکانات": [
-      "unity/unity-advanced",
-      "unity/unity-init",
-      "unity/unity-pusheid",
-      "unity/unity-topic",
-      "unity/unity-d2d",
-      "unity/unity-disable",
-      "unity/unity-channel",
-    ],
-    "سوالات و مشکلات": ["unity/unity-errors", "unity/unity-faq"],
-    "مستندات قدیمی": [
-      {
-        type:"link",
-        label: "مستندات پوشه",
-        href:"https://pushe.co/docs/unity"
-      }
-    ]
-  },
-
-  b4a: {
-    "بیسیک‌فوراندروید": ["b4a/b4a-intro"],
-    "قابلیت‌ها و امکانات": [
-      "b4a/b4a-advanced", 
-      "b4a/b4a-pusheid",
-      "b4a/b4a-topic",
-      "b4a/b4a-d2d",
-      "b4a/b4a-listener",
-      "b4a/b4a-disable",
-      "b4a/b4a-channel",
-      "b4a/b4a-fcm",
-    ],
-    "سوالات و مشکلات": ["b4a/b4a-errors", "b4a/b4a-faq"],
-    "مستندات قدیمی": [
-      {
-        type:"link",
-        label: "مستندات پوشه",
-        href:"https://pushe.co/docs/b4a"
-      }
-    ],
-  },
-
-  reactnative: {
-    "React Native": ["react-native/rn-intro"],
-    "قابلیت‌ها و امکانات": [
-      "react-native/rn-advanced",
-      "react-native/rn-init",
-      "react-native/rn-pusheid",
-      "react-native/rn-topic",
-      "react-native/rn-d2d",
-      "react-native/rn-listener",
-      "react-native/rn-disable",
-      "react-native/rn-channel",
-      "react-native/rn-fcm"
-    ],
-    "سوالات و مشکلات": ["react-native/rn-errors", "react-native/rn-faq"],
-    "مستندات قدیمی": [
-      {
-        type:"link",
-        label: "مستندات پوشه",
-        href:"https://pushe.co/docs/react-native"
-      }
-    ]
-  },
-
-  cordova: {
-    "Cordova": ["cordova/cordova-intro",],
+    "Unity" : ["unity/intro",],
     "قابلیت‌ها": [
-      "cordova/cordova-advanced",
-      "cordova/cordova-pusheid",
-      "cordova/cordova-d2d",
-      "cordova/cordova-topic",
-      "cordova/cordova-channel",
-      "cordova/cordova-disable"
-    ],
-    "سوالات و مشکلات": ["cordova/cordova-errors", "cordova/cordova-faq"]
-  },
-
-
-
-  plusNative: {
-    "Android Native" : ["plus/native/pnative-intro", "plus/native/pnative-adsetup"],
-    "قابلیت‌ها": [
-      "plus/native/pnative-features",
-      "plus/native/pnative-reg",
-      "plus/native/pnative-fcm",
-    ],
-    "سوالات و مشکلات": [
-      "plus/native/pnative-errors",
-      "plus/native/pnative-faq",
-    ]
-  },
-
-  plusUnity: {
-    "Unity" : ["plus/unity/punity-intro",],
-    "قابلیت‌ها": [
-      "plus/unity/punity-features",
-      "plus/unity/punity-reg",
+      "unity/features",
+      "unity/reg",
       {
         type:"category",
         label:"شناسایی و گروهبندی کاربر",
         items: [
-          "plus/unity/punity-id", 
-          "plus/unity/punity-topic",
-          "plus/unity/punity-tag",
-          "plus/unity/punity-channel"
+          "unity/id", 
+          "unity/topic",
+          "unity/tag",
+          "unity/channel"
         ]
       },
       {
         type: "category",
         label: "ارسال اعلان",
         items: [
-          "plus/unity/punity-d2d",
-          "plus/unity/punity-listener",
-          "plus/unity/punity-disable", 
-          "plus/unity/punity-sound",
+          "unity/d2d",
+          "unity/listener",
+          "unity/disable", 
+          "unity/sound",
         ]
       },
       {
         type: "category",
         label: "آنالیتیکس",
         items: [
-          "plus/unity/punity-events",
+          "unity/events",
         ]
       },
       {
         type: "category",
         label: "سوالات و مشکلات",
         items: [
-          "plus/unity/punity-errors",
-          "plus/unity/punity-faq",
+          "unity/errors",
+          "unity/faq",
         ]
       },
     ]
   },
+
   webpush: {
     "وب‌پوش" : [
       "webpush/intro",
@@ -209,6 +174,7 @@ module.exports = {
       "webpush/faq",
     ]
   },
+
   'mobile-api': {
     "وب‌سرویس موبایل (اندروید و آی‌او‌اس)": [
       "mobile-api/authentication",
@@ -224,6 +190,7 @@ module.exports = {
       "mobile-api/table_frameworks",
     ],
   },
+
   'web-api': {
     "وب‌سرویس وب‌پوش": [
       "web-api/authentication",
@@ -235,5 +202,6 @@ module.exports = {
       "web-api/table_notification_keys",
       "web-api/table_actions",
     ],
-  }
+  },
+  
 };

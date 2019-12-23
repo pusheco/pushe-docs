@@ -1,5 +1,5 @@
 ---
-id: punity-tag
+id: tag
 title: برچسب (Tag)
 ---
 
