@@ -7,18 +7,25 @@
 
 module.exports = {
   studio: {
-    "اندروید استودیو": ["android-studio/studio-intro",],
+    "اندروید استودیو": ["android-studio/studio-intro","android-studio/studio-advanced-setup"],
     "قابلیت‌ها": [
       "android-studio/studio-advanced",
+      "android-studio/studio-init",
       {
         type: 'category',
         label: 'گروه بندی کاربران',
-        items: ['android-studio/studio-topic', 'android-studio/studio-channel'],
+        items: ['android-studio/studio-topic', 'android-studio/studio-channel','android-studio/studio-tag'],
       },
       "android-studio/studio-pusheid",
       "android-studio/studio-d2d",
       "android-studio/studio-listener",
       "android-studio/studio-disable",
+      {
+        type: 'category',
+        label: 'آنالیتیکس',
+        items: ['android-studio/studio-events']
+      }
+,
       "android-studio/studio-fcm"
     ],
     "سوالات و مشکلات": ["android-studio/studio-errors", "android-studio/studio-faq"],
