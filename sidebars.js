@@ -203,5 +203,15 @@ module.exports = {
       "web-api/table_actions",
     ],
   },
-  
+
+  wordpress: {
+    "راه اندازی": [
+      "wordpress/intro",
+    ],
+    "تنظیمات پلاگین": [
+      "wordpress/subscription_prompt",
+      "wordpress/settings"
+    ],
+  }
+
 };
