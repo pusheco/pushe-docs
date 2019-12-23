@@ -39,7 +39,7 @@ const docs = [
     docLink: '/docs/unity/intro',
     img: '/img/unity_logo.png',
     github: 'https://github.com/pusheco/unity-sample/issues?utf8=%E2%9C%93&amp;q=is%3Aissue',
-    desc: <>استفاده از سرویس نوتیفیکیشن در <strong>موتور بازی‌سازی یونیتی برای اندروید</strong></>,
+    desc: 'یونیتی برای اندروید',
     version: 2,
   },
   {
@@ -88,6 +88,14 @@ const docs = [
     img: '/img/pushe_logo.jpeg',
     github: '#',
     desc: <>آموزش استفاده از <strong>کنسول پوشه</strong></>,
+    version: '-'
+  },
+  {
+    display: true,
+    docLink: '/docs/wordpress/intro',
+    img: '/img/wordpress_logo.png',
+    github: 'https://github.com/pusheco/webpush-wordpress-plugin',
+    desc: 'پلاگین وردپرس برای وب‌پوش',
     version: '-'
   },
 ];
