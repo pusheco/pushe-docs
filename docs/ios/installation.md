@@ -105,7 +105,7 @@ class NotificationService: UNNotificationServiceExtension {
  در ابتدا سعی کنید پروژه را Build کنید، اگر با خطای `undefined symbol` مواجه شدید، گام‌های ۱ و ۲ را انجام دهید، در غیراین‌صورت می‌توانید با انجام گام ۳ پوشه را راه‌اندازی کنید:
 
  گام اول: اطمینان حاصل کنید که در target اصلی برنامه و `Notification Service Extension`، مقدار فیلد `Always Embed Swift Standard Libraries` در قسمت `Build Settings` برابر با `Yes` باشد.     
- <img src="/docs/iOS/images/34. Objc.png" />   
+ <img src="/static/img/iOS/34. Objc.png" />   
 
  <img src="/docs/iOS/images/35. Objc.png" />    
 

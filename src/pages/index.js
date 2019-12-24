@@ -20,7 +20,7 @@ const docs = [
   },
   {
     display: true,
-    docLink: '/docs/ios/prerequisites',
+    docLink: '/docs/iOS/prerequisites',
     img: '/img/ios_native.png',
     github: '#',
     desc: 'استفاده از پوشه در iOS',
