@@ -40,9 +40,9 @@ return (
                 <td>استفاده از پوشه در پروژه‌های گریدل نوشته‌شده با <strong>جاوا و کاتلین</strong></td>
               </tr>
               <tr>
-                <td align="center"><a aria-current="page" className="active" href="/docs/iOS/xcode-intro"><img
+                <td align="center"><a aria-current="page" className="active" href="/docs/iOS/prerequisites"><img
                       src="/img/ios_native.png" width="80" /></a></td>
-                <td align="center"><a href="/docs/iOS/xcode-intro"><strong>لینک مستندات</strong></a></td>
+                <td align="center"><a href="/docs/iOS/prerequisites"><strong>لینک مستندات</strong></a></td>
                 <td align="center">-</td>
                 <td>استفاده از پوشه در پروژه‌های iOS نوشته شده با <strong> Swift </strong> و  یا <strong> Objective-C </strong> </td>
               </tr>
