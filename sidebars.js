@@ -32,6 +32,18 @@ module.exports = {
     ]
   },
 
+  iOS: {
+    "نصب و راه‌اندازی در Xcode": [
+      "iOS/prerequisites",
+      "iOS/installation"
+    ],
+    "API reference": [
+      "iOS/Pushe-Protocol",
+      "iOS/Pushe-Client",
+      "iOS/Pushe-Delegate"
+    ]
+  },
+
   flutter: {
     "Flutter": ["flutter/flutter-intro"],
     "قابلیت‌ها و امکانات": [
@@ -213,5 +225,4 @@ module.exports = {
       "wordpress/settings"
     ],
   }
-
 };
