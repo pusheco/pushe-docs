@@ -1,11 +1,17 @@
 ---
-id: studio-init
-title: بررسی initialization
-sidebar_label: بررسی initialization
+id: pnative-reg
+title: رجیسترکردن
 ---
+
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+
+
+
+> **!نکته**: عملیات رجیستر دستگاه فقط یکبار انجام می‌شود و وضعیت بعد از اتمام آن ذخیره می‌شود (در صورتی نصب دوباره و یا پاک‌کردن دیتا این عملیات ریست می‌شود.)
+
+---
 
 شروع به کار پوشه در برنامه در دو مرحله‌ی اصلی انجام می‌شود. **Initialization** و **Registration**.
 
@@ -13,36 +19,20 @@ import TabItem from '@theme/TabItem';
 
 **تفاوت Registration و Initialization**:
 
-هنگامی که ماژول‌های مختلف (نوتیفیکیشن، آنالیتیکس و ...) به طور کامل برای استفاده آماده شوند `Initialization` انجام‌شده است.
+هنگامی که ماژول‌های مختلف پلاس (نوتیفیکیشن، آنالیتیکس و ...) به طور کامل برای استفاده آماده شوند `Initialization` انجام‌شده است.
 
 در صورتی که نصب این دستگاه در سرورهای پوشه ثبت شود و امکان ارسال اعلان ممکن شود، `Registration` انجام‌شده است
 
-لذا عملیات `Registration` نیاز به اینترنت دستگاه‌ دارد.
+لذا عملیات `Registration` نیاز به اینترنت دستگاه‌دارد.
 
 </blockquote>
-می‌توانید از اتمام initialization پوشه در برنامه خود با خبر شوید. به این ترتیب می‌توانید پس از initialize شدن ماژول‌های پوشه عملیات دلخواه خود را انجام دهید.
 
-به این منظور از دستور زیر استفاده نمایید:
 
-```java
-Pushe.setInitializationCompleteListener(new Pushe.Callback() {
-    @Override
-    public void onComplete() {
-        Log.i("Pushe", "Pushe initialization completed successfully.");
-        // your logic
-    }
-});
-```
+## Registration
 
-**نکته**: انجام‌شدن Initialization به معنی ثبت‌شدن دستگاه نیست و مربوط به ماژول‌های لایبرری‌ست.
+اجرای پروسه‌ی رجیستر به طور خودکار انجام می‌شود. اما برای استفاده از امکانات اضافی باید اسکریپتی بسازید و آن‌را در `Hierarchy` قرار دهید.
 
-همچنین برای چک کردن initialization پوشه می‌توانید از متد زیر استفاده کنید:
-
-```java
-Pushe.isInitialized();
-```
-
-### بررسی رجیستر شدن
+## بررسی رجیسترشدن
 
 برای اینکه بررسی کنید عملیات رجیسترکردن دستگاه در پوشه انجام شده‌است، می‌توانید از دو روش استفاده کنید:
 
@@ -126,4 +116,3 @@ Pushe.setRegistrationCompleteListener(new Pushe.Callback() {
 </Tabs>
 
 > بهتر است برای استفاده از امکانات پوشه از این تابع استفاده کنید تا مطمئن شوید تا رجیستر انجام نشده‌است،‌ امکانات فراخوانی نشوند.
-

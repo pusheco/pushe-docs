@@ -7,19 +7,25 @@
 
 module.exports = {
   studio: {
-    "Android studio": ["android-studio/studio-intro",],
+    "اندروید استودیو": ["android-studio/studio-intro","android-studio/studio-advanced-setup"],
     "قابلیت‌ها": [
       "android-studio/studio-advanced",
       "android-studio/studio-init",
       {
         type: 'category',
-        label: 'گروهبندی کاربران',
-        items: ['android-studio/studio-topic', 'android-studio/studio-channel'],
+        label: 'گروه بندی کاربران',
+        items: ['android-studio/studio-topic', 'android-studio/studio-channel','android-studio/studio-tag'],
       },
       "android-studio/studio-pusheid",
       "android-studio/studio-d2d",
       "android-studio/studio-listener",
       "android-studio/studio-disable",
+      {
+        type: 'category',
+        label: 'آنالیتیکس',
+        items: ['android-studio/studio-events']
+      }
+,
       "android-studio/studio-fcm"
     ],
     "سوالات و مشکلات": ["android-studio/studio-errors", "android-studio/studio-faq"],
@@ -49,7 +55,14 @@ module.exports = {
       
       "flutter/flutter-fcm"
     ],
-    "سوالات و مشکلات": ["flutter/flutter-errors", "flutter/flutter-faq"]
+    "سوالات و مشکلات": ["flutter/flutter-errors", "flutter/flutter-faq"],
+    "مستندات قدیمی": [
+      {
+        type:"link",
+        label: "مستندات پوشه",
+        href:"https://pushe.co/docs/flutter"
+      }
+    ]
   },
 
   unity: {
@@ -63,7 +76,14 @@ module.exports = {
       "unity/unity-disable",
       "unity/unity-channel",
     ],
-    "سوالات و مشکلات": ["unity/unity-errors", "unity/unity-faq"]
+    "سوالات و مشکلات": ["unity/unity-errors", "unity/unity-faq"],
+    "مستندات قدیمی": [
+      {
+        type:"link",
+        label: "مستندات پوشه",
+        href:"https://pushe.co/docs/unity"
+      }
+    ]
   },
 
   b4a: {
@@ -78,7 +98,14 @@ module.exports = {
       "b4a/b4a-channel",
       "b4a/b4a-fcm",
     ],
-    "سوالات و مشکلات": ["b4a/b4a-errors", "b4a/b4a-faq"]
+    "سوالات و مشکلات": ["b4a/b4a-errors", "b4a/b4a-faq"],
+    "مستندات قدیمی": [
+      {
+        type:"link",
+        label: "مستندات پوشه",
+        href:"https://pushe.co/docs/b4a"
+      }
+    ],
   },
 
   reactnative: {
@@ -94,7 +121,14 @@ module.exports = {
       "react-native/rn-channel",
       "react-native/rn-fcm"
     ],
-    "سوالات و مشکلات": ["react-native/rn-errors", "react-native/rn-faq"]
+    "سوالات و مشکلات": ["react-native/rn-errors", "react-native/rn-faq"],
+    "مستندات قدیمی": [
+      {
+        type:"link",
+        label: "مستندات پوشه",
+        href:"https://pushe.co/docs/react-native"
+      }
+    ]
   },
 
   cordova: {
@@ -109,4 +143,62 @@ module.exports = {
     ],
     "سوالات و مشکلات": ["cordova/cordova-errors", "cordova/cordova-faq"]
   },
+
+
+
+  plusNative: {
+    "Android Native" : ["plus/native/pnative-intro", "plus/native/pnative-adsetup"],
+    "قابلیت‌ها": [
+      "plus/native/pnative-features",
+      "plus/native/pnative-reg",
+      "plus/native/pnative-fcm",
+    ],
+    "سوالات و مشکلات": [
+      "plus/native/pnative-errors",
+      "plus/native/pnative-faq",
+    ]
+  },
+
+  plusUnity: {
+    "Unity" : ["plus/unity/punity-intro",],
+    "قابلیت‌ها": [
+      "plus/unity/punity-features",
+      "plus/unity/punity-reg",
+      {
+        type:"category",
+        label:"شناسایی و گروهبندی کاربر",
+        items: [
+          "plus/unity/punity-id", 
+          "plus/unity/punity-topic",
+          "plus/unity/punity-tag",
+          "plus/unity/punity-channel"
+        ]
+      },
+      {
+        type: "category",
+        label: "ارسال اعلان",
+        items: [
+          "plus/unity/punity-d2d",
+          "plus/unity/punity-listener",
+          "plus/unity/punity-disable", 
+          "plus/unity/punity-sound",
+        ]
+      },
+      {
+        type: "category",
+        label: "آنالیتیکس",
+        items: [
+          "plus/unity/punity-events",
+        ]
+      },
+      {
+        type: "category",
+        label: "سوالات و مشکلات",
+        items: [
+          "plus/unity/punity-errors",
+          "plus/unity/punity-faq",
+        ]
+      },
+    ]
+  }
 };
