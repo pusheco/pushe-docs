@@ -1,5 +1,5 @@
 ---
-id: iOS-capabilities
+id: capabilities
 title: نحوه فعال کردن قابلیت‌های موردنیاز برای دریافت Push Notification
 sidebar_label: نحوه فعال کردن قابلیت‌های موردنیاز برای دریافت Push Notification
 ---

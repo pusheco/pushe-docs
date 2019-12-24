@@ -105,25 +105,28 @@ class NotificationService: UNNotificationServiceExtension {
  در ابتدا سعی کنید پروژه را Build کنید، اگر با خطای `undefined symbol` مواجه شدید، گام‌های ۱ و ۲ را انجام دهید، در غیراین‌صورت می‌توانید با انجام گام ۳ پوشه را راه‌اندازی کنید:
 
  گام اول: اطمینان حاصل کنید که در target اصلی برنامه و `Notification Service Extension`، مقدار فیلد `Always Embed Swift Standard Libraries` در قسمت `Build Settings` برابر با `Yes` باشد.     
- <img src="/static/img/iOS/34. Objc.png" />   
 
- <img src="/docs/iOS/images/35. Objc.png" />    
+ ![IOS IMAGE](/img/iOS/34.Objc.png)
+
+
+ ![IOS image](/img/iOS/35.Objc.png)
+
 
  گام دوم: بر روی فایل پروژه‌تان راست کلیک کنید و New File بزنید.
 
- <img src="/docs/iOS/images/36. Bridging header.png" />   
+![IOS image](/img/iOS/36.Bridging-header.png) 
 
  از بین گزینه‌های موجود، Swift File را انتخاب کنید وNext را بزنید.     
 
- <img src="/docs/iOS/images/37. Bridging header.png" />   
+![IOS image](/img/iOS/37.Bridging-header.png)  
 
  اطمینان حاصل کنید که این فایل هم عضو target اصلی و هم عضو Notification Service Extension پروژه باشد و سپس Create را بزنید.    
 
- <img src="/docs/iOS/images/38. Bridging header.png" />    
+ ![IOS image](/img/iOS/38.Bridging-header.png)    
 
  در مرحله آخر، گزینه Create bridging header را انتخاب کنید.    
 
- <img src="/docs/iOS/images/39. Bridging header.png" />
+ ![IOS image](/img/iOS/39.Bridging-header.png)
 
 * گام سوم: محتوای فایل `AppDelegate.m` را براساس کد زیر تغییر دهید:      
 ```objc

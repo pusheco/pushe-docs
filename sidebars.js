@@ -40,13 +40,13 @@ module.exports = {
 
   iOS: {
     "نصب و راه‌اندازی در Xcode": [
-      "iOS/prerequisites",
-      "iOS/installation"
+      "ios/prerequisites",
+      "ios/installation"
     ],
     "API reference": [
-      "iOS/pushe-protocol",
-      "iOS/pushe-client",
-      "iOS/pushe-delegate"
+      "ios/pushe-protocol",
+      "ios/pushe-client",
+      "ios/pushe-delegate"
     ]
   },
 

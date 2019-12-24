@@ -1,5 +1,5 @@
 ---
-id: iOS-firebase
+id: firebase
 title: نحوه دریافت Sender ID وServer key از فایربیس
 sidebar_label: نحوه دریافت Sender ID وServer key از فایربیس
 ---

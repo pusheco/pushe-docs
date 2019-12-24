@@ -1,5 +1,5 @@
 ---
-id: iOS-NotificationServiceExtension
+id: notification-service-extension
 title: نحوه اضافه کردن Notification Service Extension
 sidebar_label: نحوه اضافه کردن Notification Service Extension
 ---

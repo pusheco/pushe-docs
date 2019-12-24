@@ -1,5 +1,5 @@
 ---
-id: iOS-APNs-key
+id: apns-key
 title: نحوه ایجاد کلید APNs
 sidebar_label: نحوه ایجاد کلید APNs
 ---
