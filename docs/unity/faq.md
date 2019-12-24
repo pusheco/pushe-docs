@@ -1,5 +1,5 @@
 ---
-id: unity-faq
+id: faq
 title: سوالات
 ---
 

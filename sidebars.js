@@ -38,6 +38,18 @@ module.exports = {
     ]
   },
 
+  iOS: {
+    "نصب و راه‌اندازی در Xcode": [
+      "iOS/prerequisites",
+      "iOS/installation"
+    ],
+    "API reference": [
+      "iOS/Pushe-Protocol",
+      "iOS/Pushe-Client",
+      "iOS/Pushe-Delegate"
+    ]
+  },
+
   flutter: {
     "Flutter": ["flutter/flutter-intro"],
     "قابلیت‌ها و امکانات": [
@@ -61,27 +73,6 @@ module.exports = {
         type:"link",
         label: "مستندات پوشه",
         href:"https://pushe.co/docs/flutter"
-      }
-    ]
-  },
-
-  unity: {
-    "Unity": ["unity/unity-intro"],
-    "قابلیت‌ها و امکانات": [
-      "unity/unity-advanced",
-      "unity/unity-init",
-      "unity/unity-pusheid",
-      "unity/unity-topic",
-      "unity/unity-d2d",
-      "unity/unity-disable",
-      "unity/unity-channel",
-    ],
-    "سوالات و مشکلات": ["unity/unity-errors", "unity/unity-faq"],
-    "مستندات قدیمی": [
-      {
-        type:"link",
-        label: "مستندات پوشه",
-        href:"https://pushe.co/docs/unity"
       }
     ]
   },
@@ -144,61 +135,100 @@ module.exports = {
     "سوالات و مشکلات": ["cordova/cordova-errors", "cordova/cordova-faq"]
   },
 
-
-
-  plusNative: {
-    "Android Native" : ["plus/native/pnative-intro", "plus/native/pnative-adsetup"],
+  unity: {
+    "Unity" : ["unity/intro",],
     "قابلیت‌ها": [
-      "plus/native/pnative-features",
-      "plus/native/pnative-reg",
-      "plus/native/pnative-fcm",
-    ],
-    "سوالات و مشکلات": [
-      "plus/native/pnative-errors",
-      "plus/native/pnative-faq",
-    ]
-  },
-
-  plusUnity: {
-    "Unity" : ["plus/unity/punity-intro",],
-    "قابلیت‌ها": [
-      "plus/unity/punity-features",
-      "plus/unity/punity-reg",
+      "unity/features",
+      "unity/reg",
       {
         type:"category",
         label:"شناسایی و گروهبندی کاربر",
         items: [
-          "plus/unity/punity-id", 
-          "plus/unity/punity-topic",
-          "plus/unity/punity-tag",
-          "plus/unity/punity-channel"
+          "unity/id", 
+          "unity/topic",
+          "unity/tag",
+          "unity/channel"
         ]
       },
       {
         type: "category",
         label: "ارسال اعلان",
         items: [
-          "plus/unity/punity-d2d",
-          "plus/unity/punity-listener",
-          "plus/unity/punity-disable", 
-          "plus/unity/punity-sound",
+          "unity/d2d",
+          "unity/listener",
+          "unity/disable", 
+          "unity/sound",
         ]
       },
       {
         type: "category",
         label: "آنالیتیکس",
         items: [
-          "plus/unity/punity-events",
+          "unity/events",
         ]
       },
       {
         type: "category",
         label: "سوالات و مشکلات",
         items: [
-          "plus/unity/punity-errors",
-          "plus/unity/punity-faq",
+          "unity/errors",
+          "unity/faq",
         ]
       },
     ]
+  },
+
+  webpush: {
+    "وب‌پوش" : [
+      "webpush/intro",
+    ],
+    "قابلیت‌ها": [
+      "webpush/subscribe-prompt",
+      "webpush/unique-device-id",
+      "webpush/unsubscribe",
+    ],
+    "سوالات و مشکلات": [
+      "webpush/errors",
+      "webpush/faq",
+    ]
+  },
+
+  'mobile-api': {
+    "وب‌سرویس موبایل (اندروید و آی‌او‌اس)": [
+      "mobile-api/authentication",
+      "mobile-api/create_application",
+      "mobile-api/get_applications_list",
+      "mobile-api/rename_application",
+      "mobile-api/remove_application",
+      "mobile-api/application_installations",
+      "mobile-api/table_notification_keys",
+      "mobile-api/table_icons",
+      "mobile-api/table_notification_actions",
+      "mobile-api/table_notification_led_colors",
+      "mobile-api/table_frameworks",
+    ],
+  },
+
+  'web-api': {
+    "وب‌سرویس وب‌پوش": [
+      "web-api/authentication",
+      "web-api/create_website",
+      "web-api/get_website_list",
+      "web-api/rename_website",
+      "web-api/remove_website",
+      "web-api/send_notification",
+      "web-api/table_notification_keys",
+      "web-api/table_actions",
+    ],
+  },
+
+  wordpress: {
+    "راه اندازی": [
+      "wordpress/intro",
+    ],
+    "تنظیمات پلاگین": [
+      "wordpress/subscription_prompt",
+      "wordpress/settings"
+    ],
   }
 };

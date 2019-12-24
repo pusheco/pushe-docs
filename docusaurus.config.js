@@ -11,43 +11,32 @@ module.exports = {
   tagline: 'مستندات پوشه (بتا)',
   url: 'https://betadoc.pushe.co',
   baseUrl: '/',
-  favicon: 'img/pushe_logo.jpeg',
+  favicon: 'img/favicon.ico',
   organizationName: 'pusheco', // Usually your GitHub org/user name.
   projectName: 'pushe-docs', // Usually your repo name.
   themeConfig: {
     sidebarCollapsible: false,
-    prismTheme: require('prism-react-renderer/themes/duotoneDark'),
+    prism: {
+      theme: require('prism-react-renderer/themes/palenight'),
+      defaultLanguage: 'javascript',
+    },
     navbar: {
-      title: 'پوشه ',
+      title: ' ',
       logo: {
         alt: 'پوشه ',
-        src: 'img/pushe_logo.jpeg',
+        src: 'img/logo.svg',
       },
       links: [
         {to: '/', label: 'مستندات', position: 'left'},
         {to: 'https://pushe.co', label: 'وب‌سایت پوشه', position: 'left'},
         {
           href: 'https://github.com/pusheco',
-          label: 'گیتهاب پوشه',
+          label: 'گیت‌هاب پوشه',
           position: 'left',
         },
       ],
     },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'وبسایت',
-          items: [
-            {
-              label: 'پوشه',
-              to: 'https://pushe.co',
-            },
-          ],
-        },
-        
-      ],
-    },
+    footer: {}
   },
   presets: [
     [
