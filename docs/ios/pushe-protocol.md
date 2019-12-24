@@ -1,5 +1,5 @@
 ---
-id: Pushe-Protocol
+id: pushe-protocol
 title: پروتکل PusheProtocol
 sidebar_label: پروتکل PusheProtocol
 ---

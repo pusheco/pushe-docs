@@ -1,5 +1,5 @@
 ---
-id: Pushe-Client
+id: pushe-client
 title: کلاس PusheClient
 sidebar_label: کلاس PusheClient
 ---

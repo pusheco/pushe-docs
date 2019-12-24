@@ -1,5 +1,5 @@
 ---
-id: Pushe-Delegate
+id: pushe-delegate
 title: پروتکل PusheDelegate
 sidebar_label: پروتکل PusheDelegate
 ---
