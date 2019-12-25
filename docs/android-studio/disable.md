@@ -9,7 +9,6 @@ title: غیرفعال‌کردن نمایش اعلان
 
 ## غیرفعال‌کردن نمایش اعلان
 
-از: `co.ronash.pushe.Pushe`
 > از نسخه‌ی 1.0.0 به بعد
 
 <div dir='ltr'>
@@ -24,7 +23,6 @@ Pushe.setNotficationOff(this);
 
 ## فعال‌کردن نمایش اعلان
 
-از: `co.ronash.pushe.Pushe`
 > از نسخه‌ی 1.0.0 به بعد
 
 <div dir='ltr'>
@@ -40,7 +38,6 @@ Pushe.setNotficationOn(this);
 ## بررسی وضعیت نمایش اعلان
 
 
-از: `co.ronash.pushe.Pushe`
 
 > از نسخه‌ی 1.7.0 به بعد
 

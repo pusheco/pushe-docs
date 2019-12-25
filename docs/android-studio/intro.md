@@ -79,7 +79,7 @@ android {
 ```xml
 <meta-data
             android:name="pushe_token"
-            android:value="A_TOKEN" />
+            android:value="PUSHE_TOKEN" />
 ```
 
 به جای `{PUSHE_TOKEN}` باید توکن برنامه‌ی خود را قرار دهید.
@@ -91,7 +91,7 @@ android {
     <application ...>
         ...
         <!-- تگ باید مانند نمونه زیر داخل تگ اپلیکیشن قرار گیرد -->
-        <meta-data android:name="co.ronash.pushe.token" android:value="{PUSHE_TOKEN}" />
+        <meta-data android:name="pushe_token" android:value="{PUSHE_TOKEN}" />
     </application>
 </manifest>
 ```
