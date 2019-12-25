@@ -1,13 +1,11 @@
 ---
 id: rn-intro
-title: راه اندازی در ReactNative
+title: راه اندازی در ری‌اکت نیتیو
 sidebar_label: راه‌اندازی سریع
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-
-> نسخه‌ی فعلی پلاگین فقط از سیستم‌عامل اندروید پشتیبانی می‌کند.
 
 
 ## پیش‌نیازها
@@ -75,87 +73,20 @@ react-native link pushe-react-native
 
 >‌ فایل مانیفست برنامه در آدرس زیر در پروژه قابل دسترسی‌ست: `android/src/main/AndroidManifest.xml`
 
-## اضافه‌کردن کدهای لازم
-
-<br />
-
-در فایل `App.js` و یا کامپوننت دیگری که آغاز کننده‌ی برنامه‌ است کتابخانه‌ی پروژه را بسته به نوع کامپوننت خود `initialize` کنید:
-
-<Tabs
-  defaultValue="class"
-  values={[
-    { label: 'کامپوننت از نوع class است', value: 'class', },
-    { label: 'کامپوننت از نوع Function است', value: 'function', },
-  ]
-}>
-
-<TabItem value="class">
-
-<br />
-
-تابع `initialize` پوشه را در constructor کلاس خود قرار دهید:
-
-```js
-import React from "react";
-import Pushe from "pushe-react-native"; // * Import Pushe
-
-class App extends React.Component {
-    constructor(props) {
-        super(props);
-        // Initialize Pushe library
-        Pushe.initialize(true);
-    }
-
-    render() {
-        return (
-            //...
-        );
-    }
-}
-```
-
-</TabItem>
-
-<TabItem value="function">
-
-<br />
-
-به صورت زیر تابع `initialize` پوشه را اضافه کنید:
-
-```js
-import React, {useEffect} from "react";
-import Pushe from "pushe-react-native"; // * Import Pushe
-
-const App = () => {
-    // Use react hooks to initialize Pushe
-    useEffect(() => {
-        Pushe.initialize(true);
-    }, []);
-
-
-    return (
-        //...
-    );
-}
-```
-
-</TabItem>
-
-</Tabs>
 
 
 ## تست و ثبت دستگاه در پوشه
 
-پس از اجرای برنامه و فراخوانی کد رجیستر پوشه، باید در **Android logcat** لاگ‌های زیر را ببینید (ممکن است به دلیل ارتباط با سرور این پروسه چند ثانیه طول بکشد):
+پس از اجرای برنامه، باید در **Android logcat** لاگ‌های زیر را ببینید (ممکن است به دلیل ارتباط با سرور این پروسه چند ثانیه طول بکشد):
 
-> در اندروید استودیو لاگ‌کت از ابزار موجود است. در صورتی که از ابزار دیگری مانند VSCode استفاده‌ می‌کنید می‌توانید از هر روشی برای مشاهده‌ی لاگ استفاده کنید. [مستندات اندروید برای لاگ‌کت](https://developer.android.com/studio/command-line/logcat)
+> در اندروید استودیو لاگ‌کت جزء ابزارهای موجود است. در صورتی که از ابزار دیگری مانند VSCode استفاده‌ می‌کنید می‌توانید از هر روشی برای مشاهده‌ی لاگ استفاده کنید. [مستندات اندروید برای لاگ‌کت](https://developer.android.com/studio/command-line/logcat)
 
 برای مشاهده‌ی بهتر لاگ‌ها می‌توانید فیلتر `Pushe` را روی لاگ‌ها اعمال کنید.
 
 ```js
 // Android logcat:
 
---------+ Started Initialization of Pushe 1.7.0 +--------
+--------+ Started Initialization of Pushe 2.0.2 +--------
 Trying to register to Pushe
 Successfully registered to pushe
 ```

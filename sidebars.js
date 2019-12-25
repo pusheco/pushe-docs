@@ -28,14 +28,7 @@ module.exports = {
 ,
       "android-studio/studio-fcm"
     ],
-    "سوالات و مشکلات": ["android-studio/studio-errors", "android-studio/studio-faq"],
-    "مستندات قدیمی": [
-      {
-        type:"link",
-        label: "مستندات پوشه",
-        href:"https://pushe.co/docs/android-studio"
-      }
-    ]
+    "سوالات و مشکلات": ["android-studio/studio-errors", "android-studio/studio-faq"]
   },
 
   iOS: {
@@ -100,26 +93,23 @@ module.exports = {
   },
 
   reactnative: {
-    "React Native": ["react-native/rn-intro"],
+    "ری‌اکت نیتیو": ["react-native/rn-intro"],
     "قابلیت‌ها و امکانات": [
       "react-native/rn-advanced",
       "react-native/rn-init",
       "react-native/rn-pusheid",
-      "react-native/rn-topic",
+      {
+        type: 'category',
+        label: 'گروه بندی کاربران',
+        items: [ 'react-native/rn-topic', 'react-native/rn-channel','react-native/rn-tag'],
+      },
+     
       "react-native/rn-d2d",
       "react-native/rn-listener",
       "react-native/rn-disable",
-      "react-native/rn-channel",
       "react-native/rn-fcm"
     ],
-    "سوالات و مشکلات": ["react-native/rn-errors", "react-native/rn-faq"],
-    "مستندات قدیمی": [
-      {
-        type:"link",
-        label: "مستندات پوشه",
-        href:"https://pushe.co/docs/react-native"
-      }
-    ]
+    "سوالات و مشکلات": ["react-native/rn-errors", "react-native/rn-faq"]
   },
 
   cordova: {

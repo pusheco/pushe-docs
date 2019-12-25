@@ -51,7 +51,7 @@ const docs = [
     version: 1,
   },
   {
-    display: false,
+    display: true,
     docLink: '/docs/react-native/rn-intro',
     img: '/img/rn_logo.png',
     github: 'https://github.com/pusheco/pushe-react-native/issues?utf8=%E2%9C%93&amp;q=is%3Aissue',

@@ -65,11 +65,14 @@ const App = () => {
     );  
 }
 ```
-
 </TabItem>
 
 <TabItem value="back">
+ابتدا باید در فایل به آدرس ‍‍android/app/src/main/java/[your-app-package-name]/MainApplication.java که می توانید در داخل پروژه اپلیکیشن تان در زیر شاخه android آن را پیدا کنید کد زیر را در متد onCreate قرار دهید:
 
+```js
+co.pushe.plus.RNPushe.initializeEventListeners(this);
+```
 
 در این حالت می‌توانید یک فایل مجزا مثلا `notificationCallbacks.js` در کدتان بسازید و در داخل فایل `index.js`ی که در روت پروژه‌تان قرار دارد کد زیر را قرار دهید:
 
@@ -77,7 +80,7 @@ const App = () => {
 AppRegistry.registerHeadlessTask('PusheNotificationTask', () => require('./notificationCallbacks'));
 ```
 
-سپس در داخلی فایلی که ساخته اید `notificationCallbacks.js` کد زیر را قرار دهید:
+سپس در داخلی فایلی که ساخته‌اید یعنی `notificationCallbacks.js` کد زیر را قرار دهید:
 
 ```js
 import Pushe from "pushe-react-native";
@@ -99,6 +102,7 @@ module.exports = async (notificationData) => {
 
 در داخلی module ی که export شده می توانید کد‌هایتان را قرار دهید و زمانی که اپلیکیشن در background باشد و اعلان دریافت شود این کد اجرا خواهد شد.
 
+دقت کنید که برای تست این حالت دوم یعنی زمانی که اپ در بک‌گراند می‌باشد باید از ابزار هایی نظیر logcat در اندروید استودیو و یا pidcat برای مشاهده لاگ و تست کردن استفاده کنید
 
 </TabItem>
 
