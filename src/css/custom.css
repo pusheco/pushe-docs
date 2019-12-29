@@ -72,6 +72,22 @@ body {
   font-family: IRANSans !important;
 }
 
+a {
+  color: #0065ff
+}
+
+a:hover {
+  color: #0065ff
+}
+
+.menu .menu__link.menu__link--active {
+  color: #0065ff
+}
+
+.contents .contents__link:hover, .contents .contents__link.contents__link--active {
+  color: #0065ff
+}
+
 .menu__link {
   text-align: right;
 }
@@ -168,4 +184,31 @@ blockquote {
 code {
   direction: ltr;
   unicode-bidi: isolate;
+}
+
+.navbar .navbar__link:hover, .navbar .navbar__link.navbar__link--active {
+  color: #0065ff
+}
+
+div.menu > ul.menu__list > li.menu__list-item > a.menu__link {
+  color: #0065ff;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+div.menu > ul.menu__list .menu__list-item .menu__link {
+  font-size: .87rem;
+  color: #000000;
+}
+
+div.menu .menu__list-item {
+  position: relative;
+}
+
+div.menu .menu__list .menu__list {
+  padding-right: 20px;
+}
+
+.menu .menu__link.menu__link--active:not(.menu__link--sublist) {
+  border-radius: 0;
 }
