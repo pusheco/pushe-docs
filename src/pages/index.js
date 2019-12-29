@@ -83,6 +83,14 @@ const docs = [
     version: 2,
   },
   {
+    display: true,
+    docLink: '/docs/webpush/intro',
+    img: '/img/webpush.png',
+    github: '#',
+    desc: 'راه ‌اندازی وب‌پوش پوشه',
+    version: 2,
+  },
+  {
     display: false,
     docLink: '#',
     img: '/img/pushe_logo.jpeg',
