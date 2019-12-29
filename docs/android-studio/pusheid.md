@@ -55,5 +55,4 @@ var androidId = Pushe.GetAndroidId();
 // Google Advertising ID
 var adId = Pushe.GetGoogleAdvertisingId();
 ```
-برای این که از بین تمام نصب‌های یک اپلیکیشن یکی را جدا کنید و به آن بتوانید اعلان ارسال کنید، نیاز به این است که شناسه‌ای از آن کاربر بدست آورید و به‌ نوعی کاربر را یکتا کنید. شناسه‌ی استفاده شده در پوشه، PusheId نام‌ دارد.
 

@@ -19,7 +19,7 @@ title: خطاهای ممکن
 
 ## خطاهای حین نصب‌ و راه‌اندازی
 
-### Failed to resolve `co.ronash.android:pushe-base`
+### Failed to resolve `pushe-base`
 
 پوشه از طریق `Jcenter` به پروژه‌ی اندروید اضافه‌ می‌شود (همینطور کتابخانه‌های دیگری که پوشه از آنها استفاده‌ می‌کند). با توجه به اینکه این سرویس برای کشور ما تحریم شده است، بایستی با استفاده از ابزار گذر از تحریم این خطا را رفع‌ کنید. به طور کلی دلایل این خطا می‌تواند موارد زیر باشد:
 
@@ -81,7 +81,7 @@ configurations.all {
 
 ---
 
-## خطاهای هنگام اجرای برنامه در لاگ و ...
+## خطاهای هنگام اجرای برنامه که در لاگ‌کت(Logcat) میبینید 
 
 ### خطای `SERVICE_UNAVAILABLE`
 
@@ -95,7 +95,7 @@ configurations.all {
 
 
 ```xml
-<meta-data android:name="co.ronash.pushe.token" android:value="TOKEN" />
+<meta-data android:name="pushe_token" android:value="TOKEN" />
 ```
 
 ### خطای `No token`
@@ -109,7 +109,7 @@ configurations.all {
     <application>
         ...
         <!-- تگ پوشه باید اینجا قرار گیرد -->
-        <meta-data android:name="co.ronash.pushe.token" android:value="XXXXXXXXXX" />  
+        <meta-data android:name="pushe_token" android:value="XXXXXXXXXX" />  
     </application>
 </manifest>
 ```

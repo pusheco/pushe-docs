@@ -3,13 +3,16 @@ id: studio-d2d
 title: اعلان از یک دیوایس به دیوایس دیگر
 ---
 
-با استفاده‌از [pushe id](/docs/android-studio/studio-pusheid) یک دیوایس، می‌توان از یک دیوایس دیگر به آن اعلان فرستاد.
+با استفاده‌ از [شناسه‌های کاربر](/docs/android-studio/studio-pusheid) می‌توان از یک دیوایس دیگر به آن اعلان فرستاد.
 
 > ارسال از یک دیوایس به دیوایس دیگر فقط مختص یک برنامه‌ است و ارسال اعلان خارج‌ از محیط برنامه ممکن نیست.
 
+<b>
+به جای pusheId میتوانید از androidId و googleAdvertisingId که در بخش شناسایی کاربر به آنها پرداخته شده نیز استفاده کنید
+</b>
+
 ## ارسال نوتیفیکیشن ساده
 
-از: `co.ronash.pushe.Pushe`
 > نسخه‌ی 1.0.0 به بعد
 
 <div dir='ltr'>
@@ -35,7 +38,6 @@ if (Pushe.isPusheInitialized(this)) {
 
 ## ارسال نوتیفیکیشن پیشرفته
 
-از: `co.ronash.pushe.Pushe`
 > نسخه‌ی 1.0.0 به بعد
 
 <div dir='ltr'>
@@ -68,7 +70,6 @@ try {
 
 ## ارسال جیسون دلخواه
 
-از: `co.ronash.pushe.Pushe`
 > نسخه‌ی 1.0.0 به بعد
 
 <div dir='ltr'>

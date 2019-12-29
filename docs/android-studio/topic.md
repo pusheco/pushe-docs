@@ -8,7 +8,6 @@ title: تاپیک
 
 ## عضویت کاربر در تاپیک
 
-از: `co.ronash.pushe.Pushe`
 > تمام نسخه‌ها
 
 <div dir='ltr'>
@@ -29,7 +28,6 @@ Pushe.subscribe(sportTopic);
 
 ## لغو عضویت کاربر از تاپیک
 
-از: `co.ronash.pushe.Pushe`
 > تمام نسخه‌ها
 
 <div dir='ltr'>
