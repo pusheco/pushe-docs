@@ -1,10 +1,29 @@
 ---
-id: installation
-title: نصب پوشه
-sidebar_label: نصب پوشه
+id: intro
+title: نصب و راه‌اندازی پوشه در Xcode
+sidebar_label: راه‌اندازی سریع
 ---
 
-## اضافه‌کردن کتابخانه به پروژه با استفاده از cocoapods
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+## پیش‌نیازها
+
+- برای داشتن امکان دریافت Push notification در برنامه خود، باید Apple Develeper Account داشته باشید.
+- با استفاده از Apple Developer Account خود، یک کلید APNs ایجاد کنید. 
+    - [نحوه ایجاد کلید APNs](/docs/ios/extra/apns-key)
+- در کنسول فایربیس یک پروژه ایجاد کنید و ‍`Server key` و `Sender ID` دریافت کنید.
+    - [نحوه دریافت Sender ID وServer key از فایربیس](/docs/ios/extra/firebase)
+- در کنسول فایربیس، یک برنامه متناظر با برنامه خود ایجاد کنید و ‍‍‍فایل `GoogleService-Info.plist` را دریافت کرده و به پروژه خود اضافه کنید. 
+    - [نحوه دریافت Sender ID وServer key از فایربیس](/docs/ios/extra/firebase)
+- اپلیکشین خود را در ** کنسول پوشه ** ثبت کنید و appId متناظر با برنامه خود را دریافت کنید.
+- دستگاه تست باید یک دستگاه فیزیکی باشد. (در حال حاضر simulatorهای Xcode از Push Notification پشتیبانی نمی‌کنند.)
+- قابلیت‌های موردنیاز را در Xcode به برنامه خود اضافه کنید.
+    - [نحوه فعال کردن قابلیت‌های موردنیاز برای دریافت Push Notification](/docs/ios/extra/capabilities)
+- برای دریافت عکس، فیلم و ... در Pushe Notification، یک Notification Service Extension به برنامه خود اضافه کنید.
+    - [نحوه اضافه کردن Notification Service Extension](/docs/ios/extra/notification-service-extension)
+
+## نصب پوشه با استفاده از cocoapods
 
 در **`Podfile`** پوشه را برای Target اصلی و Notification Service Extension اضافه کنید:
 
@@ -48,11 +67,20 @@ pod 'Pushe', '0.9.0'
 
 ## اضافه‌کردن کد‌های لازم
 
-* در صورتی‌که از زبان `Swift` استفاده می‌کنید:
+در Target مربوط به برنامه:
 
- محتوای فایل `AppDelegate.swift` را براساس کد زیر تغییر دهید:
+<Tabs
+  defaultValue="swift"
+  values={[
+    { label: 'Swift', value: 'swift', },
+    { label: 'Objective-C', value: 'objc', },
+  ]}>
+
+<TabItem value="swift">
 
 ```swift
+// AppDelegate.swift file
+
 import UIKit
 import Pushe
 
@@ -70,11 +98,50 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 ```
 
-اگر مایل باشید، می‌توانید پروتکل `pusheDelegate` را پیاده‌سازی کنید تا بتوانید callbackهایی را در هنگام دریافت پوش‌نوتیفیکیشن، کلیک کاربر و ... اجرا کنید.
+</TabItem>
 
- همچنین محتوای فایل NotificationService.swift را مطابق زیر تغییر دهید:
+<TabItem value="objc">
+
+```objc
+// AppDelegate.m file
+
+#import "AppDelegate.h"
+@import Pushe;
+
+@interface AppDelegate () <UNUserNotificationCenterDelegate>
+
+@end
+
+@implementation AppDelegate 
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	PusheClient.shared.delegate = somethingImplementingPusheDelegate;    // this line is optional
+    [PusheClient.shared start:@"enter your appId from pushe console here"];
+	
+    return YES;
+}
+
+@end
+```
+
+</TabItem>
+
+</Tabs>
+
+و در Target مربوط به `NotificationServiceExtension`:
+
+<Tabs
+  defaultValue="swift"
+  values={[
+    { label: 'Swift', value: 'swift', },
+    { label: 'Objective-C', value: 'objc', },
+  ]}>
+
+<TabItem value="swift">
 
 ```swift
+// NotificationService.swift.swift file
+
 import UserNotifications
 import Pushe
 
@@ -100,56 +167,13 @@ class NotificationService: UNNotificationServiceExtension {
 }
 ```
 
-* در صورتی‌که از زبان `Objective-C` استفاده می‌کنید:
+</TabItem>
 
- در ابتدا سعی کنید پروژه را Build کنید، اگر با خطای `undefined symbol` مواجه شدید، گام‌های ۱ و ۲ را انجام دهید، در غیراین‌صورت می‌توانید با انجام گام ۳ پوشه را راه‌اندازی کنید:
+<TabItem value="objc">
 
- گام اول: اطمینان حاصل کنید که در target اصلی برنامه و `Notification Service Extension`، مقدار فیلد `Always Embed Swift Standard Libraries` در قسمت `Build Settings` برابر با `Yes` باشد.     
-
- ![IOS IMAGE](/img/iOS/34.Objc.png)
-
-
- ![IOS image](/img/iOS/35.Objc.png)
-
-
- گام دوم: بر روی فایل پروژه‌تان راست کلیک کنید و New File بزنید.
-
-![IOS image](/img/iOS/36.Bridging-header.png) 
-
- از بین گزینه‌های موجود، Swift File را انتخاب کنید وNext را بزنید.     
-
-![IOS image](/img/iOS/37.Bridging-header.png)  
-
- اطمینان حاصل کنید که این فایل هم عضو target اصلی و هم عضو Notification Service Extension پروژه باشد و سپس Create را بزنید.    
-
- ![IOS image](/img/iOS/38.Bridging-header.png)    
-
- در مرحله آخر، گزینه Create bridging header را انتخاب کنید.    
-
- ![IOS image](/img/iOS/39.Bridging-header.png)
-
-* گام سوم: محتوای فایل `AppDelegate.m` را براساس کد زیر تغییر دهید:      
 ```objc
-#import "AppDelegate.h"
-@import Pushe;
+// NotificationService.m file
 
-@interface AppDelegate () <UNUserNotificationCenterDelegate>
-
-@end
-
-@implementation AppDelegate 
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-	PusheClient.shared.delegate = somethingImplementingPusheDelegate;    // this line is optional
-    [PusheClient.shared start:@"enter your appId from pushe console here"];
-	
-    return YES;
-}
-
-@end
-```
-همچنین محتوای فایل NotificationService.m را مطابق زیر تغییر دهید:        
-```objc
 #import "NotificationService.h"
 @import Pushe;
 
@@ -176,6 +200,12 @@ class NotificationService: UNNotificationServiceExtension {
 
 @end
 ```
+
+</TabItem>
+
+</Tabs>
+
+اگر مایل باشید، می‌توانید پروتکل `pusheDelegate` را پیاده‌سازی کنید تا بتوانید callbackهایی را در هنگام دریافت پوش‌نوتیفیکیشن، کلیک کاربر و ... اجرا کنید.
 
 ## تست و ثبت دستگاه در پوشه
 
@@ -209,7 +239,7 @@ NSString *advertisementID = [PusheApp getAdvertisementID];
 ### [پروژه‌ی نمونه در گیت‌هاب](https://github.com/pusheco/android-studio-sample)
 بررسی امکانات در نمونه‌ای از قبل طراحی شده دارای تمام امکانات کتابخانه‌ی پوشه
 
-### [سوالات و مشکلات احتمالی](/docs/android-studio/studio-errors)
+### [سوالات و مشکلات احتمالی](/docs/ios/errors)
 در صورتی که در یکی از مراحل زیر به مشکلی برخوردید یا هر سوالی در مورد کتابخانه‌ دارید
 
 ### [مشاهده‌ی امکانات بیشتر](/docs/android-studio/studio-advanced)

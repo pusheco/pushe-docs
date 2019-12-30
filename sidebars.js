@@ -32,15 +32,25 @@ module.exports = {
   },
 
   iOS: {
-    "نصب و راه‌اندازی در Xcode": [
-      "ios/prerequisites",
-      "ios/installation"
+    "نصب و راه‌اندازی پوشه در Xcode": [
+      "ios/intro"
+    ],
+    "قابلیت‌ها": [
+      "ios/features",
+      {
+        type: 'category',
+        label: 'گروه بندی کاربران',
+        items: ['ios/features/topic', 'ios/features/tag'],
+      },
+      "ios/features/callbacks"
     ],
     "API reference": [
       "ios/pushe-protocol",
       "ios/pushe-client",
-      "ios/pushe-delegate"
-    ]
+      "ios/pushe-delegate",
+      "ios/notification-data"
+    ],
+    "سوالات و مشکلات": ["ios/errors", "android-studio/studio-faq"]
   },
 
   flutter: {
