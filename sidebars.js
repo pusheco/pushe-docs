@@ -103,11 +103,11 @@ module.exports = {
   },
 
   reactnative: {
-    "ری‌اکت نیتیو": ["react-native/rn-intro"],
+    "ری‌اکت نیتیو": ["react-native/intro"],
     "قابلیت‌ها و امکانات": [
       "react-native/rn-advanced",
       "react-native/rn-init",
-      "react-native/rn-pusheid",
+      "react-native/user-unique-ids",
       {
         type: 'category',
         label: 'گروه بندی کاربران',
