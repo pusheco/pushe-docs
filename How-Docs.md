@@ -35,3 +35,4 @@ hide_title: true
 
 1. For installable docs e.g. android-studio , the doc should be started with a qucik setup page and the url should be **intro**
 2. For non install docs e.g. web api, the doc should be started with an intro page to describe the doc and the url should be **intro**
+3. Do not use any html tags in the md files, just use standard markdown and mdx

@@ -106,12 +106,12 @@ module.exports = {
     "ری‌اکت نیتیو": ["react-native/intro"],
     "قابلیت‌ها و امکانات": [
       "react-native/rn-advanced",
-      "react-native/rn-init",
+      "react-native/check-library-status",
       "react-native/user-unique-ids",
       {
         type: 'category',
         label: 'گروه بندی کاربران',
-        items: [ 'react-native/rn-topic', 'react-native/rn-channel','react-native/rn-tag'],
+        items: [ 'react-native/topic', 'react-native/rn-channel','react-native/rn-tag'],
       },
      
       "react-native/rn-d2d",
