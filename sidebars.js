@@ -111,12 +111,12 @@ module.exports = {
       {
         type: 'category',
         label: 'گروه بندی کاربران',
-        items: [ 'react-native/topic', 'react-native/rn-channel','react-native/rn-tag'],
+        items: [ 'react-native/topic', 'react-native/notification-channels','react-native/tag'],
       },
      
       "react-native/rn-d2d",
       "react-native/rn-listener",
-      "react-native/rn-disable",
+      "react-native/disable-notification",
       "react-native/rn-fcm"
     ],
     "سوالات و مشکلات": ["react-native/rn-errors", "react-native/rn-faq"]
