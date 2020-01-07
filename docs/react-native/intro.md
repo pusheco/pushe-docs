@@ -1,11 +1,14 @@
 ---
-id: rn-intro
+id: intro
 title: راه اندازی در ری‌اکت نیتیو
 sidebar_label: راه‌اندازی سریع
+hide_title: true
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+
+# راه‌اندازی سریع ری‌اکت‌نیتیو
 
 
 ## پیش‌نیازها

@@ -20,7 +20,7 @@ const docs = [
   },
   {
     display: true,
-    docLink: '/docs/ios/prerequisites',
+    docLink: '/docs/ios/intro',
     img: '/img/ios_native.png',
     github: '#',
     desc: 'استفاده از پوشه در iOS',
@@ -52,7 +52,7 @@ const docs = [
   },
   {
     display: true,
-    docLink: '/docs/react-native/rn-intro',
+    docLink: '/docs/react-native/intro',
     img: '/img/rn_logo.png',
     github: 'https://github.com/pusheco/pushe-react-native/issues?utf8=%E2%9C%93&amp;q=is%3Aissue',
     desc: <>استفاده از سرویس نوتیفیکیشن در <strong>React native</strong></>,

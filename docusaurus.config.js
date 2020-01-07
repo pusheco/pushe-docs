@@ -8,14 +8,14 @@
 
 module.exports = {
   title: 'پوشه',
-  tagline: 'مستندات پوشه (بتا)',
-  url: 'https://betadoc.pushe.co',
+  tagline: 'مستندات پوشه',
+  url: 'https://docs.pushe.co',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'pusheco', // Usually your GitHub org/user name.
   projectName: 'pushe-docs', // Usually your repo name.
   themeConfig: {
-    sidebarCollapsible: false,
+    sidebarCollapsible: true,
     prism: {
       theme: require('prism-react-renderer/themes/palenight'),
       defaultLanguage: 'javascript',
