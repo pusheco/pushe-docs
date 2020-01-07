@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[160],{89:function(a){a.exports=JSON.parse('{"id":"b4a/b4a-faq","title":"سوالات","description":"## مرتبط با نمایش نوتیفیکیشن","source":"@site/docs/b4a/faq.md","permalink":"/docs/b4a/b4a-faq","sidebar":"b4a","previous":{"title":"خطاهای ممکن","permalink":"/docs/b4a/b4a-errors"}}')}}]);
