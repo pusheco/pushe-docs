@@ -82,7 +82,7 @@ android {
             android:value="PUSHE_TOKEN" />
 ```
 
-به جای `{PUSHE_TOKEN}` باید توکن برنامه‌ی خود را قرار دهید.
+به جای `PUSHE_TOKEN` باید توکن برنامه‌ی خود را قرار دهید.
 
 و محل اضافه‌کردن آن در فایل `AndroidManifest` باید مطابق زیر باشد:
 
@@ -91,7 +91,7 @@ android {
     <application ...>
         ...
         <!-- تگ باید مانند نمونه زیر داخل تگ اپلیکیشن قرار گیرد -->
-        <meta-data android:name="pushe_token" android:value="{PUSHE_TOKEN}" />
+        <meta-data android:name="pushe_token" android:value="PUSHE_TOKEN" />
     </application>
 </manifest>
 ```

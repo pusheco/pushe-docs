@@ -3,8 +3,6 @@ id: studio-listener
 title: رویدادهای نوتیفیکیشن
 ---
 
-> نسخه‌ی 1.7.0 به بعد
-
 
 در صورتی که پیامی از پوشه به کاربر ارسال شود (به صورت نوتیفیکیشن و یا جیسون)، می‌توان از آنها باخبر شد.
 برای اینکار می‌توانید کالبکی تعریف‌ کنید و هنگام رخ‌دادن یکی از رویدادهای زیر کدهای خود را فراخوانی کنید.
@@ -19,7 +17,7 @@ title: رویدادهای نوتیفیکیشن
 
 <div dir='ltr'>
 
-#### `static void setNotificationListener(notificationListener)`
+#### `Pushe.getPusheService(PusheNotification.class).setNotificationListener(notificationListener)`
 
 </div>
 
@@ -46,30 +44,34 @@ title: رویدادهای نوتیفیکیشن
 
 
 ```java
-Pushe.setNotificationListener(new Pushe.NotificationListener() {
-    @Override
-    public void onNotificationReceived(@NonNull NotificationData notificationData) {
-        // Notification received
-    }
-    @Override
-    public void onNotificationClicked(@NonNull NotificationData notificationData) {
-        // Notification clicked
-    }
-    @Override
-    public void onNotificationButtonClicked(@NonNull NotificationData notificationData, @NonNull NotificationButtonData clickedButton) {
-        // Notification button clicked
-    }
-    @Override
-    public void onCustomContentReceived(@NonNull JSONObject customContent) {
-        // Notification custom content (Json) received
-    }
-    @Override
-    public void onNotificationDismissed(@NonNull NotificationData notificationData) {
-        // Notification dismissed
-    }
-});
+        Pushe.getPusheService(PusheNotification.class).setNotificationListener(new PusheNotificationListener() {
+            @Override
+            public void onNotification(@NonNull NotificationData notification) {
+               //Notification Received
+            }
+
+            @Override
+            public void onCustomContentNotification(@NonNull Map<String, Object> customContent) {
+                // Notification custom content (Json) received
+            }
+
+            @Override
+            public void onNotificationClick(@NonNull NotificationData notification) {
+               // Notification clicked
+            }
+
+            @Override
+            public void onNotificationDismiss(@NonNull NotificationData notification) {
+                // Notification dismissed
+            }
+
+            @Override
+            public void onNotificationButtonClick(@NonNull NotificationButtonData button, @NonNull NotificationData notification) {
+                // Notification button clicked
+            }
+        });
 ```
-به محض دریافت نوتیفیکیشن بایستی کد داخل `onNotificationReceived` اجرا شود و برای رویدادهای دیگر نیز به همین ترتیب، وقتی رخ بدهند کدهای مربوط به آنها اجرا می‌شود.
+به محض دریافت نوتیفیکیشن بایستی کد داخل `onNotification` اجرا شود و برای رویدادهای دیگر نیز به همین ترتیب، وقتی رخ بدهند کدهای مربوط به آنها اجرا می‌شود.
 
 
 ## `NotificationListener`
@@ -78,12 +80,12 @@ Pushe.setNotificationListener(new Pushe.NotificationListener() {
 اینترفیس callback برای این‌کار به صورت زیر است:
 
 ```java
-public interface NotificationListener {
-    void onNotificationReceived(@NonNull NotificationData notificationData);
-    void onNotificationClicked(@NonNull NotificationData notificationData);
-    void onNotificationButtonClicked(@NonNull NotificationData notificationData, @NonNull NotificationButtonData clickedButton);
-    void onCustomContentReceived(@NonNull JSONObject customContent);
-    void onNotificationDismissed(@NonNull NotificationData notificationData);
+public interface PusheNotificationListener {
+    void onNotification(@NonNull NotificationData notification);
+    void onCustomContentNotification(@NonNull Map<String, Object> customContent);
+    void onNotificationClick(@NonNull NotificationData notification);
+    void onNotificationDismiss(@NonNull NotificationData notification);
+    void onNotificationButtonClick(@NonNull NotificationButtonData button, @NonNull NotificationData notification);
 }
 ```
 
@@ -104,7 +106,7 @@ public interface NotificationListener {
 |summary|متن خلاصه‌ی نوتیفکیشن|
 |imageUrl|لینک عکس نوتیفیکیشن|
 |iconUrl|لینک آیکون نوتیفیکیشن|
-|customContent|جیسون دلخواه نوتیفیکیشن|
+|customContent|مپ دلخواه نوتیفیکیشن|
 |buttons|لیست دکمه‌هایی که نوتیفیکیشن دارد|
 
 جز `title` و `content` بقیه‌ی فیلدها می‌توانند `null` باشند.
@@ -119,3 +121,4 @@ public interface NotificationListener {
 |:--:|--|
 |id|شناسه‌ای برای تشخیص دکمه|
 |text|متن دکمه|
+|icon|آیکن دکمه|

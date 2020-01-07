@@ -51,7 +51,7 @@ Pushe.isInitialized();
 
 <div dir='ltr'>
 
-#### `IsRegistered(): Boolean`
+#### `isRegistered(): Boolean`
 
 </div>
 

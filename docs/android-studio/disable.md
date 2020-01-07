@@ -9,47 +9,40 @@ title: غیرفعال‌کردن نمایش اعلان
 
 ## غیرفعال‌کردن نمایش اعلان
 
-> از نسخه‌ی 1.0.0 به بعد
-
 <div dir='ltr'>
 
-#### `static void setNotificationOff(Context)`
+#### `Pushe.getPusheService(PusheNotification.class).disableNotifications()`
 
 </div>
 
 ```java
-Pushe.setNotficationOff(this);
+Pushe.getPusheService(PusheNotification.class).disableNotifications();
 ```
 
 ## فعال‌کردن نمایش اعلان
 
-> از نسخه‌ی 1.0.0 به بعد
-
 <div dir='ltr'>
 
-#### `static void setNotificationOn(Context)`
+#### `Pushe.getPusheService(PusheNotification.class).enableNotifications()`
 
 </div>
 
 ```java
-Pushe.setNotficationOn(this);
+Pushe.getPusheService(PusheNotification.class).enableNotifications();
 ```
 
 ## بررسی وضعیت نمایش اعلان
 
 
-
-> از نسخه‌ی 1.7.0 به بعد
-
 <div dir='ltr'>
 
-#### `static boolean isNotificationOn(Context)`
+#### `Pushe.getPusheService(PusheNotification.class).isNotificationEnable()`
 
 </div>
 در صورتی که نمایش اعلان برای کاربر فعال‌باشد، این تابع مقدار صحیح برمی‌گرداند.
 
 ```java
-boolean showingNotificationEnabled = Pushe.isNotificationOn(this);
+boolean showingNotificationEnabled = Pushe.getPusheService(PusheNotification.class).isNotificationEnable();
 
 if (showingNotificationEnabled) {
     // Notification will be shown

@@ -11,103 +11,36 @@ title: اعلان از یک دیوایس به دیوایس دیگر
 به جای pusheId میتوانید از androidId و googleAdvertisingId که در بخش شناسایی کاربر به آنها پرداخته شده نیز استفاده کنید
 </b>
 
-## ارسال نوتیفیکیشن ساده
-
-> نسخه‌ی 1.0.0 به بعد
+## ارسال نوتیفیکیشن 
 
 <div dir='ltr'>
 
-#### `static void sendSimpleNotifToUser(Context, pusheId, title, content)`
+#### `Pushe.getPusheService(PusheNotification.class).sendNotificationToUser(userNotification)`
 
 </div>
 
 |پارامتر ورودی|استفاده|
 |:--:|--|
-|pusheId|شناسه‌ی دستگاه مورد نظر|
-|title|تیتر اعلان|
-|content|محتوای اعلان|
+|userNotification|یک آبجکت از نوع UserNotification|
 
-می‌توانید با استفاده از این تابع نوتیفیکیشنی با تیتر و متن (نوتیفیکیشن ساده) به کاربر خاصی که این اپلیکیشن را نصب کرده و نصب آن در کنسول ثبت‌شده ارسال کنید.
+می‌توانید با استفاده از این تابع نوتیفیکیشنی به کاربر خاصی که این اپلیکیشن را نصب کرده و نصب آن در کنسول ثبت‌شده ارسال کنید. موقع ساختن آبجکت UserNotification شناسه‌ای را که با استفاده از آن میخواهید نوتیفیکیشن را ارسال کنید تعیین میکنید. برای مثال در نمونه زیر از androidId برای ساختن آبجکت نوتیفیکیشن استفاده شده است.
 
 ```java
-if (Pushe.isPusheInitialized(this)) {
-    String pusheId = "1234567";
-    Pushe.sendSimpleNotifToUser(this, pusheId, "Hello user", "How are you doing?");
+if (Pushe.isInitialized()) {
+    UserNotification userNotification = UserNotification.withAndroidId(androidId);
+    userNotification.setTitle("title1");
+    userNotification.setContent("content1");
+    Pushe.getPusheService(PusheNotification.class).sendNotificationToUser(userNotification);
 }
 ```
 
-## ارسال نوتیفیکیشن پیشرفته
-
-> نسخه‌ی 1.0.0 به بعد
-
-<div dir='ltr'>
-
-#### `sendAdvancedNotifToUser(Context, pusheId, notificationJson)` throws `Exception`
-
-</div>
-
-|پارامتر ورودی|استفاده|
-|:--:|--|
-|pusheId|شناسه‌ی دستگاه مورد نظر|
-|notificationJson|یک استرینگ با فرمت جیسون که تمام مقادیر لازم برای شئ نوتیفیکیشن را دارد.|
-
-
-همانند ارسال با استفاده از RESTful API، می‌توانید به یک کاربر خاص نوتیفیکیشنی کامل‌تر ارسال کنید. مشابه کد زیر می‌توانید فیلد‌هایی همچون صدای زنگ، آیکون و .... را در جیسون وارد کنید.
-
-```java
-String pusheId = "1234567";
-JSONObject object = new JSONObject();
-object.put("title", "Hello user");
-object.put("content", "How are you doing?");
-try {
-    Pushe.sendAdvancedNotifToUser(this, pusheId, object.toString());
-} catch(Exception e) {
-    // Json might have problem
-}
-```
-
-برای اطلاعات بیشتر در مورد کلید‌هایی که می‌توانند در جیسون استفاده شوند به بخش [RESTful API در پوشه](docs/api/api-keys) مراجعه کنید.
-
-## ارسال جیسون دلخواه
-
-> نسخه‌ی 1.0.0 به بعد
-
-<div dir='ltr'>
-
-#### `sendCustomJsonToUser(Context, pusheId, customJson)` throws `Exception`
-
-</div>
-
-|پارامتر ورودی|استفاده|
-|:--:|--|
-|pusheId|شناسه‌ی دستگاه مورد نظر|
-|customJson|یک استرینگ با فرمت جیسون که به کاربر ارسال می‌شود.|
-
-
-```java
-String pusheId = "1234567";
-JSONObject object = new JSONObject();
-object.put("key1", "A value");
-object.put("key2", "Another value");
-
-// It also can be a nested JSON
-
-try {
-    Pushe.sendCustomJsonToUser(this, pusheId, object.toString());
-} catch(Exception e) {
-    // Json might have problem
-}
-```
-
-دستگاه مقصد می‌تواند با تعریف [کالبک نوتیفیکیشن](studio-listener)، جیسون را در متد `onCustomContentReceived` دریافت کند.
-
-## ارسال اعلان و یا جیسون به دستگاه اجراکننده‌ی کد
+## ارسال اعلان به دستگاه اجراکننده‌ی کد
 
 در صورتی که بخواهید به همین دستگاهی که کد را اجرا می‌کند اعلان ارسال کنید کافیست PusheId را برابر شناسه‌ی همین دستگاه قرار دهید:
 
 ```java
-String thisPusheId = Pushe.getPusheId(this);
-
-// Send notification to this device
-Pushe.sendSimpleNotifToUser(this, thisPusheId, "Hello user", "How are you?");
+    UserNotification userNotification = UserNotification.withAndroidId(Pushe.getAndroidId());
+    userNotification.setTitle("title1");
+    userNotification.setContent("content1");
+    Pushe.getPusheService(PusheNotification.class).sendNotificationToUser(userNotification);
 ```

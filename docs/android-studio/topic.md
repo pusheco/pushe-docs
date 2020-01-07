@@ -8,19 +8,11 @@ title: تاپیک
 
 ## عضویت کاربر در تاپیک
 
-> تمام نسخه‌ها
-
-<div dir='ltr'>
-
-#### `static void subscribe(Context, topicName)`
-
-</div>
-
 کاربر را به تاپیک‌ مشخص اضافه می‌کند.
 
 ```java
 String sportTopic = "sport";
-Pushe.subscribe(sportTopic);
+Pushe.subscribeToTopic(sportTopic);
 ```
 
 > نام تاپیک باید انگلیسی باید و Regex آن مطابق داکیومنت فایربیس بصورت زیر است:
@@ -28,17 +20,9 @@ Pushe.subscribe(sportTopic);
 
 ## لغو عضویت کاربر از تاپیک
 
-> تمام نسخه‌ها
-
-<div dir='ltr'>
-
-#### `static void unsubscribe(Context, topicName)`
-
-</div>
-
 کاربر را از تاپیک در صورت وجود حذف می‌کند (در صورتی که قبلا عضو نشده‌ باشد اتفاقی نمی‌افتد)
 
 ```java
 String topicToRemoveUserFrom = "sport";
-Pushe.unsubscribe(topicToRemoveUserFrom);
+Pushe.unsubscribeFromTopic(topicToRemoveUserFrom);
 ```

@@ -8,11 +8,10 @@ title: کانال اعلان
 > وقتی نوتیفیکیشنی را به کانال سفارشی می‌فرستید در نظر داشته‌باشید که کانفیگ نوتیفیکیشن که هنگام ارسال در کنسول تنظیم می‌کنید از بین‌می‌رود و تنظیمات کانال نوتیفیکیشن سفارشی جایگزین آن می‌شود (مثلا صدای اعلان، رنگ LED و ...)
 
 ## اضافه‌کردن کانال نوتیفیکیشن
-> نسخه‌ی 1.4.0 به بعد
 
 <div dir='ltr'>
 
-#### `static void createNotificationChannel(parameters...)`
+#### `Pushe.getPusheService(PusheNotification.class).createNotificationChannel(parameters...)`
 
 
 </div>
@@ -32,7 +31,6 @@ title: کانال اعلان
 در صورتی که نیاز به شخصی‌سازی بیشتر دارید، ساخت کانال با استفاده از کدهای خود اندروید نیز امکان‌پذیر است. [اطلاعات بیشتر](https://developer.android.com/training/notify-user/channels)
 
 ```java
-Context context = this;
 String channel = "sportChannel";
 String channelName = "My Sport group";
 String channelDesc = "This channel holds athletes users";
@@ -41,20 +39,18 @@ boolean light = true, vibration = false, badge = true;
 long[] vibrationPatterns = null;
 
 // if(Build.VERSION.SDK_INT >= 26)
-Pushe.createNotificationChannel(
-    context, channelId, channelName, channelDesc,
+Pushe.getPusheService(PusheNotification.class).createNotificationChannel(channelId, channelName, channelDesc,
     importance, light, vibration, badge, ledColor, vibrationPattern
 );
 ```
 
 ## حذف کانال نوتیفیکیشن
-> نسخه‌ی 1.4.0 به بعد
 
 در صورتی که قصد دارید کانال نوتیفیکیشن را حذف کنید، کد زیر را فراخوانی کنید.
 
 <div dir='ltr'>
 
-#### `removeNotificationChannel(context, channelId)`
+#### `Pushe.getPusheService(PusheNotification.class).removeNotificationChannel(channelId)`
 
 </div>
 
@@ -63,7 +59,6 @@ Pushe.createNotificationChannel(
 |channelId|شناسه‌ی کانالی که ساخته شده است.|
 
 ```java
-Context context = this;
 String channelThatWasCreated = "sportChannel";
-Pushe.removeNotificationChannel(context, channelThatWasCreated);
+Pushe.getPusheService(PusheNotification.class).removeNotificationChannel(channelThatWasCreated);
 ```

@@ -42,7 +42,7 @@ FCM
 
 ```xml
 <service
-    android:name="co.ronash.pushe.fcm.FcmService" 
+    android:name="co.pushe.plus.messaging.fcm.FcmService" 
     tools:node="remove" />
 ```
 
@@ -100,35 +100,49 @@ public class MyFcmService extends FirebaseMessagingService {
 ```java
 
 public class MyFcmService extends FirebaseMessagingService {
+
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
-        if (Pushe.getFcmHandler(this).onMessageReceived(remoteMessage)) {
-            // Message belongs to Pushe, no further action needed
-            return;   
+        if (Pushe.getFcmHandler().onMessageReceived(remoteMessage)) {
+            // Message is for Pushe
+            return;
         }
+        super.onMessageReceived(remoteMessage);
 
-        // Message does not belong to Pushe, process message...
+        // Handle Firebase message
     }
 
     @Override
     public void onNewToken(String s) {
-        Pushe.getFcmHandler(this).onNewToken(s);
+        Pushe.getFcmHandler().onNewToken(s);
+        super.onNewToken(s);
+
+        // Token is refreshed
     }
 
     @Override
     public void onMessageSent(String s) {
-        Pushe.getFcmHandler(this).onMessageSent(s);
-    }
+        Pushe.getFcmHandler().onMessageSent(s);
+        super.onMessageSent(s);
 
-    @Override
-    public void onSendError(String s, Exception e) {
-        Pushe.getFcmHandler(this).onSendError(s, e);
+        // Message sent
     }
 
     @Override
     public void onDeletedMessages() {
-        Pushe.getFcmHandler(this).onDeletedMessages();
-    }    
+        Pushe.getFcmHandler().onDeletedMessages();
+        super.onDeletedMessages();
+
+        // Message was deleted
+    }
+
+    @Override
+    public void onSendError(String s, Exception e) {
+        Pushe.getFcmHandler().onSendError(s, e);
+        super.onSendError(s, e);
+
+        // Error sent
+    }
 }
 
 ```
@@ -139,7 +153,7 @@ FCM
 `onMessageReceived`
 کلاس شما صدا زده می‌شود. همانطور که در مثال بالا مشاهده می‌کنید در پیاده‌سازی این تابع، شما با استفاده از عبارت زیر پوشه را از دریافت پیغام مطلع می‌کنید:
 ```java
-Pushe.getFcmHandler(this).onMessageRecevied(remoteMessage)
+Pushe.getFcmHandler().onMessageReceived(remoteMessage)
 ```
 با این کار پیغام به دست پوشه نیز می‌رسد و اگر پیغام مربوط به کتابخانه‌ی پوشه باشد عملیات لازم بر روی آن انجام می‌شود. در صورتی که پیغام مربوط به پوشه باشد عبارت بالا مقدار 
 `true`
