@@ -3,6 +3,7 @@ id: notification-channels
 title: پوشه | راهنما ری‌اکت‌نیتیو | کانال نوتیفیکیشن
 sidebar_label: کانال نوتیفیکیشن
 hide_title: true
+description: راهنمای ری‌اکت‌نیتیو - کانال نوتیفیکیشن
 ---
 
 # کانال نوتیفیکیشن

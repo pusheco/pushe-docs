@@ -3,6 +3,7 @@ id: tag
 title: پوشه | راهنما ری‌اکت‌نیتیو | برچسب (Tag)
 sidebar_label: برچسب (Tag)
 hide_title: true
+description: راهنمای ری‌اکت‌نیتیو - برچسب
 ---
 
 # برچسب (Tag)

@@ -105,7 +105,6 @@ module.exports = {
   reactnative: {
     "ری‌اکت نیتیو": ["react-native/intro"],
     "قابلیت‌ها و امکانات": [
-      "react-native/rn-advanced",
       "react-native/check-library-status",
       "react-native/user-unique-ids",
       {
@@ -114,12 +113,12 @@ module.exports = {
         items: [ 'react-native/topic', 'react-native/notification-channels','react-native/tag'],
       },
      
-      "react-native/rn-d2d",
-      "react-native/rn-listener",
+      "react-native/d2d-notifications",
+      "react-native/notification-events",
       "react-native/disable-notification",
-      "react-native/rn-fcm"
+      "react-native/multiple-services-conflict"
     ],
-    "سوالات و مشکلات": ["react-native/rn-errors", "react-native/rn-faq"]
+    "سوالات و مشکلات": ["react-native/errors", "react-native/faq"]
   },
 
   cordova: {

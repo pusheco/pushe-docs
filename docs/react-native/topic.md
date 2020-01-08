@@ -3,6 +3,7 @@ id: topic
 title: پوشه | راهنما ری‌اکت‌نیتیو | تاپیک
 sidebar_label: تاپیک
 hide_title: true
+description: راهنمای ‌ری‌اکت‌نیتیو - تاپیک
 ---
 
 # تاپیک
