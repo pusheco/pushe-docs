@@ -19,7 +19,7 @@ title: رویدادها
 
 ```java
 string eventName = "permium_activated";
-Pushe.getPusheService(PusheAnalytics.class).sendEvent(event);
+Pushe.getPusheService(PusheAnalytics.class).sendEvent(eventName);
 ```
 
 ## ارسال Ecommerce data
