@@ -50,7 +50,7 @@ module.exports = {
       "ios/pushe-delegate",
       "ios/notification-data"
     ],
-    "سوالات و مشکلات": ["ios/errors", "android-studio/studio-faq"]
+    "سوالات و مشکلات": ["ios/errors", "ios/faq"]
   },
 
   flutter: {
