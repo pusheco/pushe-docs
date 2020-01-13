@@ -1,10 +1,12 @@
 ---
 id: event
-title: کلاس Event
+title: پوشه | راهنما آی‌اواس | کلاس Event
 sidebar_label: کلاس Event
+hide_title: true
+description: راهنمای آی‌اواس - کلاس Event
 ---
 
-# معرفی
+# معرفی کلاس Event
 
 کلاس Event داده‌های مربوط به یک رویداد را در خود نگه می‌دارد.
 این کلاس به صورت زیر تعریف شده است:

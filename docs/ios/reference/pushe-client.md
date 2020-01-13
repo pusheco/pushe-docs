@@ -1,10 +1,12 @@
 ---
 id: pushe-client
-title: کلاس PusheClient
+title: پوشه | راهنما آی‌اواس | کلاس PusheClient
 sidebar_label: کلاس PusheClient
+hide_title: true
+description: راهنمای آی‌اواس - کلاس PusheClient
 ---
 
-# معرفی
+# معرفی کلاس PusheClient
 
 کلاس `PusheClient`، رابط شما با پوشه خواهد بود. این کلاس پروتکل `PusheProtocol` را پیاده‌سازی کرده است. برای call کردن این توابع باید از
 ```swift

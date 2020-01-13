@@ -1,8 +1,12 @@
 ---
 id: firebase
-title: نحوه دریافت Sender ID وServer key از فایربیس
+title: پوشه | راهنما آی‌اواس | نحوه دریافت Sender ID وServer key از فایربیس
 sidebar_label: نحوه دریافت Sender ID وServer key از فایربیس
+hide_title: true
+description: راهنمای آی‌اواس - نحوه دریافت Sender ID وServer key از فایربیس
 ---
+
+# نحوه دریافت Sender ID وServer key از فایربیس
 
 * به صفحه [کنسول فایربیس](https://console.firebase.google.com) بروید. اگر تاکنون پروژه‌ای را که میخواهید برنامه‌تان را به آن اضافه کنید، نساخته‌اید، یک پروژه جدید بسازید:
 

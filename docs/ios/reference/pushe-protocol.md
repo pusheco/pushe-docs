@@ -1,10 +1,12 @@
 ---
 id: pushe-protocol
-title: پروتکل PusheProtocol
+title: پوشه | راهنما آی‌اواس | پروتکل PusheProtocol
 sidebar_label: پروتکل PusheProtocol
+hide_title: true
+description: راهنمای آی‌اواس - پروتکل PusheProtocol
 ---
 
-# معرفی
+# معرفی پروتکل PusheProtocol
 
 پروتکل `PusheProtocol`، توابعی را که پوشه در اختیار کاربر قرار می‌دهد، در خود دارد و کلاس ‍‍`PusheClient` این پروتکل را پیاده‌سازی کرده است. این توابع در ادامه معرفی شده‌اند.
 

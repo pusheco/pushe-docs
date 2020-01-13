@@ -1,8 +1,12 @@
 ---
 id: apns-key
-title: نحوه ایجاد کلید APNs
+title: پوشه | راهنما آی‌اواس | نحوه ایجاد کلید APNs
 sidebar_label: نحوه ایجاد کلید APNs
+hide_title: true
+description: راهنمای آی‌اواس - نحوه ایجاد کلید APNs
 ---
+
+# نحوه ایجاد کلید APNs
 
 * وارد اکانت [Apple Developer](https://developer.apple.com) خود شوید و Certificates, Identifiers & Profiles را انتخاب کنید:
 

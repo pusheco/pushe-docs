@@ -1,8 +1,12 @@
 ---
 id: capabilities
-title: نحوه فعال کردن قابلیت‌های موردنیاز برای دریافت Push Notification
+title: پوشه | راهنما آی‌اواس | نحوه فعال کردن قابلیت‌های موردنیاز برای دریافت Push Notification
 sidebar_label: نحوه فعال کردن قابلیت‌های موردنیاز برای دریافت Push Notification
+hide_title: true
+description: راهنمای آی‌اواس - نحوه فعال کردن قابلیت‌های موردنیاز برای دریافت Push Notification
 ---
+
+# نحوه فعال کردن قابلیت‌های موردنیاز برای دریافت Push Notification
 
 * فایل پروژه را انتخاب کنید. از لیست Targetها، Target اصلی برنامه و از لیست عنوان‌ها، عنوان Capabilitites (در Xcode ورژن ۱۱ این عنوان به Signing & Capabilities تغییر یافته است) را انتخاب کنید. از بین گزینه‌های موجود، Background Modes را فعال کنید و ‌Background fetch و Remote notifications را تیک بزنید.
 
