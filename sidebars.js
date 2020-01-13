@@ -42,6 +42,11 @@ module.exports = {
         label: 'گروه بندی کاربران',
         items: ['ios/features/topic', 'ios/features/tag'],
       },
+      {
+        type: 'category',
+        label: 'آنالیتیکس',
+        items: ['ios/features/event']
+      },
       "ios/features/callbacks"
     ],
     "API reference": [
