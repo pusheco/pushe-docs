@@ -1,8 +1,12 @@
 ---
 id: intro
-title: نصب و راه‌اندازی پوشه در Xcode
+title: پوشه | راهنما آی‌اواس | نصب و راه‌اندازی پوشه در Xcode
 sidebar_label: راه‌اندازی سریع
+hide_title: true
+description: راهنمای آی‌اواس - نصب و راه‌اندازی پوشه در Xcode
 ---
+
+# نصب و راه‌اندازی پوشه در Xcode
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

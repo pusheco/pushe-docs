@@ -1,7 +1,12 @@
 ---
 id: callbacks
-title: رویدادهای نوتیفیکیشن
+title: پوشه | راهنما آی‌اواس | رویدادهای نوتیفیکیشن
+sidebar_label: رویدادهای نوتیفیکیشن
+hide_title: true
+description: راهنمای آی‌اواس - رویدادهای نوتیفیکیشن
 ---
+
+# رویدادهای نوتیفیکیشن
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

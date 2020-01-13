@@ -42,15 +42,24 @@ module.exports = {
         label: 'گروه بندی کاربران',
         items: ['ios/features/topic', 'ios/features/tag'],
       },
+      {
+        type: 'category',
+        label: 'آنالیتیکس',
+        items: ['ios/features/event']
+      },
       "ios/features/callbacks"
     ],
     "API reference": [
-      "ios/pushe-protocol",
-      "ios/pushe-client",
-      "ios/pushe-delegate",
-      "ios/notification-data"
+      "ios/reference/pushe-protocol",
+      "ios/reference/pushe-client",
+      "ios/reference/pushe-delegate",
+      {
+        type: 'category',
+        label: 'مدل‌ها',
+        items: ["ios/reference/notification-data", "ios/reference/event"]
+      }
     ],
-    "سوالات و مشکلات": ["ios/errors", "android-studio/studio-faq"]
+    "سوالات و مشکلات": ["ios/errors", "ios/faq"]
   },
 
   flutter: {

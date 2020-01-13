@@ -1,10 +1,12 @@
 ---
 id: notification-data
-title: کلاس NotificationData
+title: پوشه | راهنما آی‌اواس | کلاس NotificationData
 sidebar_label: کلاس NotificationData
+hide_title: true
+description: راهنمای آی‌اواس - کلاس NotificationData
 ---
 
-# معرفی
+# معرفی کلاس NotificationData
 
 کلاس `NotificationData` ورودی callbackهای مربوط به رویداد‌های نوتیفیکیشن در [پروتکل PusheDelegate](/docs/ios/pushe-delegate) است که اطلاعات مربوط به نوتیفیکیشن مربوط را در خود دارد.
 این کلاس به صورت زیر تعریف شده است:
