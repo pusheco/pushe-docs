@@ -50,10 +50,14 @@ module.exports = {
       "ios/features/callbacks"
     ],
     "API reference": [
-      "ios/pushe-protocol",
-      "ios/pushe-client",
-      "ios/pushe-delegate",
-      "ios/notification-data"
+      "ios/reference/pushe-protocol",
+      "ios/reference/pushe-client",
+      "ios/reference/pushe-delegate",
+      {
+        type: 'category',
+        label: 'مدل‌ها',
+        items: ["ios/reference/notification-data", "ios/reference/event"]
+      }
     ],
     "سوالات و مشکلات": ["ios/errors", "ios/faq"]
   },

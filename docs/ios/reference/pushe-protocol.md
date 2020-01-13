@@ -45,6 +45,7 @@ user را در topic ورودی، ثبت‌نام می‌کند.
 public func subscribe(topic: String, completionHandler: @escaping (Error?) -> ())
 ```
 user را در topic ورودی ثبت‌نام می‌کند، سپس closure ورودی را اجرا می‌کند.
+
 ### unsubscribe
 
 ```swift
@@ -58,3 +59,15 @@ func unsubscribe(topic: String, completionHandler: @escaping (Error?) -> ())
 ```
 
 ثبت‌نام user را در topic ورودی باطل می‌کند، سپس closure ورودی را اجرا می‌کند.
+
+### sendEvent
+
+```swift
+public func sendEvent(event: Event)
+```
+رویداد ورودی را برای کاربر ثبت می‌کند.
+
+```swift
+func sendEvent(name: String)
+```
+رویدادی را با نام ورودی می‌سازد و برای کاربر ثبت می‌کند.
