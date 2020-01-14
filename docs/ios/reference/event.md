@@ -15,7 +15,7 @@ description: راهنمای آی‌اواس - کلاس Event
 @objc public class Event: NSObject {
     let name: String
     let action: EventAction
-    let data: [String: Any]
+    let data: Any?
 }
 ```
 
