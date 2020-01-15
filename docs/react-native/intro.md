@@ -3,6 +3,7 @@ id: intro
 title: راه اندازی در ری‌اکت نیتیو
 sidebar_label: راه‌اندازی سریع
 hide_title: true
+description: راهنمای ری‌اکت‌نیتیو - آموزش راه‌اندازی سریع
 ---
 
 import Tabs from '@theme/Tabs';
@@ -23,6 +24,7 @@ import TabItem from '@theme/TabItem';
 
 ## اضافه کردن کتابخانه
 
+اضافه کردن کتابخانه در نسخه قبل از ۶۰ ری‌اکت‌نیتیو و بعد از آن کمی متفاوت می‌باشد که در زیر هر دو حالت را می‌توانید مشاهده کنید.
 
 <Tabs
   defaultValue="v60u"

@@ -1,7 +1,12 @@
 ---
 id: topic
-title: تاپیک
+title: پوشه | راهنما آی‌اواس | تاپیک
+sidebar_label: تاپیک
+hide_title: true
+description: راهنمای آی‌اواس - تاپیک
 ---
+
+# تاپیک
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

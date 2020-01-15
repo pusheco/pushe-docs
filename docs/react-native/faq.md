@@ -1,6 +1,9 @@
 ---
-id: rn-faq
-title: سوالات و مشکلات
+id: faq
+title: پوشه | راهنما ری‌اکت‌نیتیو | سوالات و مشکلات
+sidebar_label: سوالات و مشکلات
+hide_title: true
+description: راهنمای ری‌اکت‌نیتیو - سوالات و مشکلات
 ---
 
 > **مشکل مورد نظر شما در لیست نیست؟** در [گیت‌هاب](https://github.com/pusheco/pushe-react-native/issues?utf8=%E2%9C%93&q=is%3Aissue) به دنبال آن بگردید و در صورت نیافتن در آنجا [مورد جدیدی](https://github.com/pusheco/pushe-react-native/issues/new) مطرح کنید.

@@ -42,15 +42,24 @@ module.exports = {
         label: 'گروه بندی کاربران',
         items: ['ios/features/topic', 'ios/features/tag'],
       },
+      {
+        type: 'category',
+        label: 'آنالیتیکس',
+        items: ['ios/features/event']
+      },
       "ios/features/callbacks"
     ],
     "API reference": [
-      "ios/pushe-protocol",
-      "ios/pushe-client",
-      "ios/pushe-delegate",
-      "ios/notification-data"
+      "ios/reference/pushe-protocol",
+      "ios/reference/pushe-client",
+      "ios/reference/pushe-delegate",
+      {
+        type: 'category',
+        label: 'مدل‌ها',
+        items: ["ios/reference/notification-data", "ios/reference/event"]
+      }
     ],
-    "سوالات و مشکلات": ["ios/errors", "android-studio/studio-faq"]
+    "سوالات و مشکلات": ["ios/errors", "ios/faq"]
   },
 
   flutter: {
@@ -105,21 +114,20 @@ module.exports = {
   reactnative: {
     "ری‌اکت نیتیو": ["react-native/intro"],
     "قابلیت‌ها و امکانات": [
-      "react-native/rn-advanced",
       "react-native/check-library-status",
       "react-native/user-unique-ids",
       {
         type: 'category',
         label: 'گروه بندی کاربران',
-        items: [ 'react-native/topic', 'react-native/rn-channel','react-native/rn-tag'],
+        items: [ 'react-native/topic', 'react-native/notification-channels','react-native/tag'],
       },
      
-      "react-native/rn-d2d",
-      "react-native/rn-listener",
-      "react-native/rn-disable",
-      "react-native/rn-fcm"
+      "react-native/d2d-notifications",
+      "react-native/notification-events",
+      "react-native/disable-notification",
+      "react-native/multiple-services-conflict"
     ],
-    "سوالات و مشکلات": ["react-native/rn-errors", "react-native/rn-faq"]
+    "سوالات و مشکلات": ["react-native/errors", "react-native/faq"]
   },
 
   cordova: {

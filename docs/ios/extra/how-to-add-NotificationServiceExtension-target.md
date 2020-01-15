@@ -1,8 +1,12 @@
 ---
 id: notification-service-extension
-title: نحوه اضافه کردن Notification Service Extension
+title: پوشه | راهنما آی‌اواس | نحوه اضافه کردن Notification Service Extension
 sidebar_label: نحوه اضافه کردن Notification Service Extension
+hide_title: true
+description: راهنمای آی‌اواس - نحوه اضافه کردن Notification Service Extension
 ---
+
+# نحوه اضافه کردن Notification Service Extension
 
 برای این‌که کاربران برنامه‌تان امکان دریافت Rich Media (عکس، فیلم و ...) را داشته باشند، باید در برنامه‌تان Notification Service Extension را پیاده‌سازی کنید:
 

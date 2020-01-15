@@ -1,10 +1,12 @@
 ---
 id: pushe-delegate
-title: پروتکل PusheDelegate
+title: پوشه | راهنما آی‌اواس | پروتکل PusheDelegate
 sidebar_label: پروتکل PusheDelegate
+hide_title: true
+description: راهنمای آی‌اواس - پروتکل PusheDelegate
 ---
 
-# معرفی
+# معرفی پروتکل PusheDelegate
 
 این پروتکل `callback`هایی را که پوشه در اختیار شما قرار می‌دهد، تعریف کرده است. کلاس `PusheClient` دارای متغیری به صورت
 ```swift

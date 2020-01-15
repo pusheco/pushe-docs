@@ -1,7 +1,12 @@
 ---
 id: tag
-title: برچسب (Tag)
+title: پوشه | راهنما آی‌اواس | برچسب (Tag)
+sidebar_label: برچسب (Tag)
+hide_title: true
+description: راهنمای آی‌اواس - برچسب (Tag)
 ---
+
+# برچسب (Tag)
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

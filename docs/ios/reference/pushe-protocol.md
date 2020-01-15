@@ -1,10 +1,12 @@
 ---
 id: pushe-protocol
-title: پروتکل PusheProtocol
+title: پوشه | راهنما آی‌اواس | پروتکل PusheProtocol
 sidebar_label: پروتکل PusheProtocol
+hide_title: true
+description: راهنمای آی‌اواس - پروتکل PusheProtocol
 ---
 
-# معرفی
+# معرفی پروتکل PusheProtocol
 
 پروتکل `PusheProtocol`، توابعی را که پوشه در اختیار کاربر قرار می‌دهد، در خود دارد و کلاس ‍‍`PusheClient` این پروتکل را پیاده‌سازی کرده است. این توابع در ادامه معرفی شده‌اند.
 
@@ -45,6 +47,7 @@ user را در topic ورودی، ثبت‌نام می‌کند.
 public func subscribe(topic: String, completionHandler: @escaping (Error?) -> ())
 ```
 user را در topic ورودی ثبت‌نام می‌کند، سپس closure ورودی را اجرا می‌کند.
+
 ### unsubscribe
 
 ```swift
@@ -58,3 +61,15 @@ func unsubscribe(topic: String, completionHandler: @escaping (Error?) -> ())
 ```
 
 ثبت‌نام user را در topic ورودی باطل می‌کند، سپس closure ورودی را اجرا می‌کند.
+
+### sendEvent
+
+```swift
+public func sendEvent(event: Event)
+```
+رویداد ورودی را برای کاربر ثبت می‌کند.
+
+```swift
+func sendEvent(name: String)
+```
+رویدادی را با نام ورودی می‌سازد و برای کاربر ثبت می‌کند.

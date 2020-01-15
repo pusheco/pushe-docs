@@ -22,6 +22,7 @@ id: intro
 title: پوشه | راهنما ری‌اکت‌نیتیو | شناسه یکتا کاربران
 sidebar_label: شناسه‌ی یکتا کاربران
 hide_title: true
+description: راهنمای ری‌اکت‌نیتیو - شناسه یکتا کاربران
 ```
 
 1. **id** should be the name that is in sidebar.js and as in Naming File section should be similar to the file name (this is the url hence choose it carefully)
@@ -30,6 +31,7 @@ hide_title: true
 4. use **hide_title** in every doc to prevent **title** to presents in the page and instead you should put **# title** in the beginning of every doc section as the title
 5. As explained in previous (4) every page should have # (h1)
 6. To have **sub contents** for each page use ## and ### in proper formats
+7. Use **description** key that is used in search engines and also when link of the page is shared, If you do not use this keywork you may see weired titles in the shared link
 
 # Some Notes:
 

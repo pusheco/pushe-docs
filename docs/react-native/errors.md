@@ -1,11 +1,16 @@
 ---
-id: rn-errors
-title: خطاهای ممکن
+id: errors
+title: پوشه | راهنما ری‌اکت‌نیتیو | خطاهای ممکن
+sidebar_label: خطاهای ممکن
+hide_title: true
+description: راهنمای ری‌اکت‌نیتیو - خطا‌های‌ ممکن
 ---
+
+# خطاهای ممکن در ری‌اکت‌نیتیو
 
 در این بخش خطاهایی که ممکن‌است در مراحل مختلف راه‌اندازی پوشه در **ReactNative** با آن‌ها مواجه شوید به همراه راه‌حل ذکر شده‌اند.
 
-> در صورتی که مورد شما خطا (Error) نیست، ممکن است در بخش [سوالات](/docs/react-native/rn-faq) ذکر شده باشد.
+> در صورتی که مورد شما خطا (Error) نیست، ممکن است در بخش [سوالات](/docs/react-native/faq) ذکر شده باشد.
 
 > **خطای مورد نظر شما در لیست نیست؟** در [گیت‌هاب](https://github.com/pusheco/pushe-react-native/issues?utf8=%E2%9C%93&q=is%3Aissue) به دنبال آن بروید و در صورت نیافتن در آنجا [مورد جدیدی](https://github.com/pusheco/pushe-react-native/issues/new) مطرح کنید.
 
@@ -26,7 +31,7 @@ title: خطاهای ممکن
  
     * برای حل این مورد بایستی تیک گزینه را از تنظیمات بردارید:
 
-        <img src="/img/studio/gradle_offline.png" width="600" />
+![/img/studio/gradle_offline.png](gradle offline)
 
 
 ### Failed to resolve `Core`
