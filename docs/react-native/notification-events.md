@@ -105,17 +105,24 @@ const App = () => {
 co.pushe.plus.RNPushe.initializeEventListeners(this);
 ```
 
-۲. در فایل ‍‍‍```index.js``` پروژه که در روت پروژه‌تان می‌باشد کد زیر را قرار دهید:
+۲. کد زیر را در مانیفست اپلیکیشن و در داخل بلاک `application` که به آدرس زیر قابل دسترسی می‌باشد قرار دهید
+‍‍```‍‍android/app/src/main/AndroidManifest.xml```
+
+```xml
+<service android:name="co.pushe.plus.RNPusheNotificationService" />
+```
+
+۳. در فایل ‍‍‍```index.js``` پروژه که در روت پروژه‌تان می‌باشد کد زیر را قرار دهید:
 
 ```js
 AppRegistry.registerHeadlessTask('PusheNotificationTask', () => require('./notificationCallbacks'));
 ```
 
-۳. سپس یک فایل در روت پروژه‌تان به نا
+۴. سپس یک فایل در روت پروژه‌تان به نا
 ```notificationCallbacks.js```
 بسازید (نام فایل بسیار مهم است و باید با نامی که در قسمت ۲ داده شده یکی باشد)
 
-۴. در داخل فایل ```notificationCallbacks.js``` که در قسمت قبل ساخته اید کد زیر را قرار دهید:
+۵. در داخل فایل ```notificationCallbacks.js``` که در قسمت قبل ساخته اید کد زیر را قرار دهید:
 
 ```js
 import Pushe from "pushe-react-native";
