@@ -51,23 +51,23 @@ SDK
 برای اطلاع از جزئیات و مشاهده‌ی خطاهای احتمالی می‌توانید از <strong>لاگ‌کت</strong> (سمت راست تب Logs) استفاده کنید.</p><p>همچنین <a href="https://www.b4x.com/android/forum/attachments/b4alogviewer1-2-zip.6454/">این ابزار</a> هم برای مشاهده‌ی لاگ‌های برنامه می‌تواند استفاده شود.</p><h3><a aria-hidden="true" tabindex="-1" class="anchor" id="مشاهدهی-جزئیات-رجیستر-در-لاگکت"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#مشاهدهی-جزئیات-رجیستر-در-لاگکت" title="Direct link to heading">#</a>مشاهده‌ی جزئیات رجیستر در لاگ‌کت</h3><p><a href="https://developer.android.com/studio/command-line/logcat">مستندات اندروید برای لاگ‌کت</a></p><p>برای مشاهده‌ی بهتر لاگ‌ها می‌توانید فیلتر <code>Pushe</code> را روی لاگ‌ها اعمال کنید.</p><pre class="mdxCodeBlock_iHAB"><div class="codeBlockWrapper_2QGZ"><pre class="prism-code language-bash codeBlock_19pQ" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token comment" style="color:rgb(105, 112, 152);font-style:italic"># Android logcat:</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">--------+ Started Initialization of Pushe +--------</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">Trying to register to Pushe</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">Successfully registered to pushe</span></div></pre><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button></div></pre><h2><a aria-hidden="true" tabindex="-1" class="anchor" id="ادامهی-کار"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#ادامهی-کار" title="Direct link to heading">#</a>ادامه‌ی کار</h2><p>(بر روی لینک مورد نظر کلیک کنید)</p><h3><a aria-hidden="true" tabindex="-1" class="anchor" id="پروژهی-نمونه-در-گیتهاب"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#پروژهی-نمونه-در-گیتهاب" title="Direct link to heading">#</a><a href="https://github.com/pusheco/b4a-sample">پروژه‌ی نمونه در گیت‌هاب</a></h3><p>بررسی امکانات در نمونه‌ای از قبل طراحی شده دارای تمام امکانات کتابخانه‌ی پوشه</p><h3><a aria-hidden="true" tabindex="-1" class="anchor" id="سوالات-و-مشکلات-احتمالی"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#سوالات-و-مشکلات-احتمالی" title="Direct link to heading">#</a><a href="/docs/b4a/b4a-errors">سوالات و مشکلات احتمالی</a></h3><p>در صورتی که در یکی از مراحل زیر به مشکلی برخوردید یا هر سوالی در مورد کتابخانه‌ دارید</p><h3><a aria-hidden="true" tabindex="-1" class="anchor" id="مشاهدهی-امکانات-بیشتر"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#مشاهدهی-امکانات-بیشتر" title="Direct link to heading">#</a><a href="/docs/b4a/b4a-advanced">مشاهده‌ی امکانات بیشتر</a></h3><p>مشاهده‌ی امکانات پیشرفته ارائه‌ شده در کتابخانه‌‌ی پوشه</p></div></article><div class="margin-vert--lg"><nav class="pagination-nav"><div class="pagination-nav__item"></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/b4a/b4a-advanced"><h5 class="pagination-nav__link--sublabel">Next</h5><h4 class="pagination-nav__link--label">معرفی امکانات »</h4></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"><ul class="contents contents__left-border"><li><a href="#پیشنیازها" class="contents__link">پیش‌نیاز‌ها</a></li><li><a href="#اضافهکردن-پلاگین-به-پروژه" class="contents__link">اضافه‌کردن پلاگین به پروژه</a></li><li><a href="#نصب-کتابخانههای-مورد-نیاز-پلاگین" class="contents__link">نصب کتابخانه‌های مورد نیاز پلاگین</a><ul><li><a href="#استفاده-از-sdk-manager" class="contents__link">استفاده از SDK manager</a></li><li><a href="#نصب-بصورت-دستی" class="contents__link">نصب بصورت دستی</a></li></ul></li><li><a href="#اضافهکردن-شناسهی-کنسول-در-مانیفست-برنامه" class="contents__link">اضافه‌کردن شناسه‌ی کنسول در مانیفست برنامه</a></li><li><a href="#اضافهکردن-کدهای-لازم-برای-رجیستر" class="contents__link">اضافه‌کردن کدهای لازم برای رجیستر</a></li><li><a href="#تست-و-ثبت-دستگاه-در-پوشه" class="contents__link">تست و ثبت دستگاه در پوشه</a><ul><li><a href="#مشاهدهی-جزئیات-رجیستر-در-لاگکت" class="contents__link">مشاهده‌ی جزئیات رجیستر در لاگ‌کت</a></li></ul></li><li><a href="#ادامهی-کار" class="contents__link">ادامه‌ی کار</a><ul><li><a href="#پروژهی-نمونه-در-گیتهاب" class="contents__link">پروژه‌ی نمونه در گیت‌هاب</a></li><li><a href="#سوالات-و-مشکلات-احتمالی" class="contents__link">سوالات و مشکلات احتمالی</a></li><li><a href="#مشاهدهی-امکانات-بیشتر" class="contents__link">مشاهده‌ی امکانات بیشتر</a></li></ul></li></ul></div></div></div></div></div></main></div></div><footer class="footer"><div class="container"><div class="text--center"></div></div></footer>
 </div>
 
-<script src="/styles.f0e3c168.js"></script>
+<script src="/styles.de1eb63c.js"></script>
 
-<script src="/runtime~main.5c55fbb6.js"></script>
+<script src="/runtime~main.ab2e5e40.js"></script>
 
-<script src="/main.3df10415.js"></script>
+<script src="/main.8be9c745.js"></script>
 
-<script src="/1.0811975e.js"></script>
+<script src="/1.6c980df0.js"></script>
 
-<script src="/2.47af8c9c.js"></script>
+<script src="/2.73994b91.js"></script>
 
-<script src="/1be78505.cbe5e137.js"></script>
+<script src="/1be78505.5536a2c0.js"></script>
 
-<script src="/20ac7829.56d3fc54.js"></script>
+<script src="/20ac7829.f85b5754.js"></script>
 
-<script src="/17896441.c0d0d08d.js"></script>
+<script src="/17896441.b18eeb47.js"></script>
 
-<script src="/de29b029.14ac9883.js"></script>
+<script src="/de29b029.091dee7e.js"></script>
 
 
 </body>
