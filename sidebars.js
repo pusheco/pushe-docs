@@ -125,6 +125,7 @@ module.exports = {
       "react-native/d2d-notifications",
       "react-native/notification-events",
       "react-native/disable-notification",
+      "react-native/analytics-events",
       "react-native/multiple-services-conflict"
     ],
     "سوالات و مشکلات": ["react-native/errors", "react-native/faq"]
