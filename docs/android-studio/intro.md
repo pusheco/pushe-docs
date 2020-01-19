@@ -39,13 +39,13 @@ allprojects{
 عبارت زیر را اضافه کنید:
 
 ```java
-implementation 'co.pushe.plus:base:2.0.2' 
+implementation 'co.pushe.plus:base:2.0.4' 
 ```
 
 در صورتی که در پروژه از لایبرری ‌`RxJava` استفاده‌ می‌نمایید، برای جلوگیری از تداخل به جای کد بالا کد زیر را به dependencies اضافه‌ نمایید:
 
 ```java
-implementation("co.pushe.plus:base:2.0.2") { exclude group: 'co.pushe.plus', module: 'rxjava' }
+implementation("co.pushe.plus:base:2.0.4") { exclude group: 'co.pushe.plus', module: 'rxjava' }
 ```
 
 
