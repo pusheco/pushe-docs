@@ -27,6 +27,6 @@ jobs:
       run: |
         export GIT_USER=${{secrets.GIT_USER}}
         npm install
-        npm run deploy
+        npm run deploy  
       env:
         CI: true
