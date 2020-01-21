@@ -22,8 +22,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: npm run deploy
       run: |
-        export GIT_USER=${{secret.GIT_USER}}
-        git config credential.helper '!f() { sleep 1; echo "username=${{secret.GIT_USER}}"; echo "password=${{secret.GIT_PASSWORD}}"; }; f'
+        export GIT_USER=${{secrets.GIT_USER}}
+        git config credential.helper '!f() { sleep 1; echo "username=${{secrets.GIT_USER}}"; echo "password=${{secrets.GIT_PASSWORD}}"; }; f'
         npm install
         npm run deploy
       env:
