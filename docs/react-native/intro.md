@@ -91,7 +91,7 @@ react-native link pushe-react-native
 ```js
 // Android logcat:
 
---------+ Started Initialization of Pushe 2.0.2 +--------
+--------+ Started Initialization of Pushe 2.0.4 +--------
 Trying to register to Pushe
 Successfully registered to pushe
 ```
