@@ -1,0 +1,36 @@
+name: Node CI
+
+on:
+  push:
+    branches: 
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [8.x]
+    
+    steps:
+    - uses: actions/checkout@v1
+    
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    
+    - uses: fusion-engineering/setup-git-credentials@v2
+      with:
+        credentials: ${{secrets.GIT_CREDENTIAL}}
+    
+    - name: npm run deploy
+      run: |
+        export GIT_USER=${{secrets.GIT_USER}}
+        git config --global user.name "$GIT_USER"
+        git config --global user.email "hi@pushe.co"
+        npm install
+        npm run deploy  
+      env:
+        CI: true
