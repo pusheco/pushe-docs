@@ -31,7 +31,7 @@ Pushe.getPusheService(PusheNotification.class).disableNotifications();
 Pushe.getPusheService(PusheNotification.class).enableNotifications();
 ```
 
-## بررسی وضعیت نمایش اعلان
+## بررسی وضعیت فعال یا غیرفعال بودن نمایش اعلان
 
 
 <div dir='ltr'>
@@ -45,8 +45,8 @@ Pushe.getPusheService(PusheNotification.class).enableNotifications();
 boolean showingNotificationEnabled = Pushe.getPusheService(PusheNotification.class).isNotificationEnable();
 
 if (showingNotificationEnabled) {
-    // Notification will be shown
+    // می‌توانید کدهایی را که می‌خواهید وقتی نمایش نوتیفیکیشن فعال است اجرا شوند در اینجا بنویسید
 } else {
-    // Notification will NOT be shown
+    // می‌توانید کدهایی را که می‌خواهید وقتی نمایش نوتیفیکیشن غیرفعال است اجرا شوند در اینجا بنویسید
 }
 ```
