@@ -16,13 +16,16 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
+    
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    
     - uses: fusion-engineering/setup-git-credentials@v2
       with:
         credentials: ${{secrets.GIT_CREDENTIAL}}
+    
     - name: npm run deploy
       run: |
         export GIT_USER=${{secrets.GIT_USER}}
