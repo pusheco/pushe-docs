@@ -20,10 +20,12 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - uses: fusion-engineering/setup-git-credentials@v2
+      with:
+        credentials: ${{secrets.GIT_CREDENTIALS}}
     - name: npm run deploy
       run: |
         export GIT_USER=${{secrets.GIT_USER}}
-        git config credential.helper '!f() { sleep 1; echo "username=${{secrets.GIT_USER}}"; echo "password=${{secrets.GIT_PASSWORD}}"; }; f'
         npm install
         npm run deploy
       env:
