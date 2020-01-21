@@ -4,7 +4,6 @@ on:
   push:
     branches: 
       - master
-      - gh-pages 
 
 jobs:
   build:
@@ -12,7 +11,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [8.x, 10.x]
+        node-version: [8.x]
     
     steps:
     - uses: actions/checkout@v1
@@ -29,6 +28,8 @@ jobs:
     - name: npm run deploy
       run: |
         export GIT_USER=${{secrets.GIT_USER}}
+        git config --global user.name=$GIT_USER
+        git config --global user.email="hi@pushe.co"
         npm install
         npm run deploy  
       env:
