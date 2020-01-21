@@ -28,8 +28,8 @@ jobs:
     - name: npm run deploy
       run: |
         export GIT_USER=${{secrets.GIT_USER}}
-        git config --global user.name=$GIT_USER
-        git config --global user.email="hi@pushe.co"
+        git config --global user.name "$GIT_USER"
+        git config --global user.email "hi@pushe.co"
         npm install
         npm run deploy  
       env:
