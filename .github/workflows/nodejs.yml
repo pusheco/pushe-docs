@@ -22,7 +22,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - uses: fusion-engineering/setup-git-credentials@v2
       with:
-        credentials: ${{secrets.GIT_CREDENTIALS}}
+        credentials: ${{secrets.GIT_CREDENTIAL}}
     - name: npm run deploy
       run: |
         export GIT_USER=${{secrets.GIT_USER}}
