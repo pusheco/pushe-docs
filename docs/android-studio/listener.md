@@ -17,7 +17,7 @@ title: رویدادهای نوتیفیکیشن
 
 <div dir='ltr'>
 
-#### `Pushe.getPusheService(PusheNotification.class).setNotificationListener(notificationListener)`
+#### `setNotificationListener(notificationListener)`
 
 </div>
 
@@ -25,56 +25,54 @@ title: رویدادهای نوتیفیکیشن
 |:--:|--|
 |notificationListener|یک اینترفیس که متدهای رویدادها را نگه‌داری و در زمان رخ‌داد فراخوانی می‌کند|
 
-برای اینکه بتوانید رویدادها را در هر زمانی دریافت کنید بهتر است پیاده‌سازی کدهای رویداد را در **کلاس اپلیکیشن** انجام دهید. برای اینکار:
+> برای اینکه بتوانید **رویدادها را در هر زمانی دریافت کنید** بهتر است پیاده‌سازی کدهای رویداد را در **کلاس اپلیکیشن** انجام دهید. برای اینکار:
+> 
+> * کلاسی بسازید که از `Application` ارث ببرد.
+> * آن‌را بصورت زیر به مانیفست اضافه‌کنید:
+> 
+> `AndroidManfiest.xml`:
+> ```xml
+> <!-- MyApplication is your class -->
+> <Manifest ...>
+>     <application ...
+>         android:name=".MyApplication">
+>         ...
+> ...
+> ```
+> 
+> در متد `onCreate` کلاس، کدهای لازم (زیر) اضافه‌کنید 
 
-* کلاسی بسازید که از `Application` ارث ببرد.
-* آن‌را بصورت زیر به مانیفست اضافه‌کنید:
-
-`AndroidManfiest.xml`:
-```xml
-<!-- MyApplication is your class -->
-<Manifest ...>
-    <application ...
-        android:name=".MyApplication">
-        ...
-...
-```
-
-در متد `onCreate` کلاس، کد زیر را اضافه‌کنید:
-
+کدهای دریافت رویداد را می‌توانید به صورت زیر استفاده کنید:
 
 ```java
-        Pushe.getPusheService(PusheNotification.class).setNotificationListener(new PusheNotificationListener() {
-            @Override
-            public void onNotification(@NonNull NotificationData notification) {
-               //Notification Received
-            }
-
-            @Override
-            public void onCustomContentNotification(@NonNull Map<String, Object> customContent) {
-                // Notification custom content (Json) received
-            }
-
-            @Override
-            public void onNotificationClick(@NonNull NotificationData notification) {
-               // Notification clicked
-            }
-
-            @Override
-            public void onNotificationDismiss(@NonNull NotificationData notification) {
-                // Notification dismissed
-            }
-
-            @Override
-            public void onNotificationButtonClick(@NonNull NotificationButtonData button, @NonNull NotificationData notification) {
-                // Notification button clicked
-            }
-        });
+PusheNotification notificationModule = Pushe.getPusheService(PusheNotification.class);
+notificationModule.setNotificationListener(new PusheNotificationListener() {
+    @Override
+    public void onNotification(@NonNull NotificationData notification) {
+       //Notification Received
+    
+    @Override
+    public void onCustomContentNotification(@NonNull Map<String, Object> customContent) {
+        // Notification custom content (Json) received
+    
+    @Override
+    public void onNotificationClick(@NonNull NotificationData notification) {
+       // Notification clicked
+    
+    @Override
+    public void onNotificationDismiss(@NonNull NotificationData notification) {
+        // Notification dismissed
+    
+    @Override
+    public void onNotificationButtonClick(@NonNull NotificationButtonData button, @NonNull NotificationData notification) {
+        // Notification button clicked
+    }
+});
 ```
 به محض دریافت نوتیفیکیشن بایستی کد داخل `onNotification` اجرا شود و برای رویدادهای دیگر نیز به همین ترتیب، وقتی رخ بدهند کدهای مربوط به آنها اجرا می‌شود.
 
 
-## `NotificationListener`
+## اینترفیس `NotificationListener`
 
 
 اینترفیس callback برای این‌کار به صورت زیر است:
