@@ -1,6 +1,6 @@
 {
   "name": "pdocs",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
@@ -13,7 +13,7 @@
     "@docusaurus/core": "^2.0.0-alpha.40",
     "@docusaurus/preset-classic": "^2.0.0-alpha.40",
     "classnames": "^2.2.6",
-    "highlight.js": "^9.17.1",
+    "highlight.js": "^9.18.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
