@@ -1,5 +1,5 @@
 ---
-id: studio-intro
+id: intro
 title: راه اندازی در اندروید استودیو
 sidebar_label: راه‌اندازی سریع
 ---

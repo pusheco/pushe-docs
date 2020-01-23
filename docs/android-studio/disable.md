@@ -1,5 +1,5 @@
 ---
-id: studio-disable
+id: disable-notification
 title: غیرفعال‌کردن نمایش اعلان
 ---
 

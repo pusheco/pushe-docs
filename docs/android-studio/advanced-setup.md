@@ -1,5 +1,5 @@
 ---
-id: studio-advanced-setup
+id: advanced-setup
 title: راه اندازی پیشرفته
 sidebar_label: راه‌اندازی پیشرفته
 ---
@@ -31,7 +31,7 @@ co.pushe.plus:notification:${pushe_version}
 ### Analytics
 
 موارد track کردن رفتار کاربر در برنامه‌ی شما مانند تعداد بازکردن برنامه، ارسال و دریافت Event و Ecommerce data و ... در این ماژول انجام می‌شود. 
-در بخش مربوط به [رویدادها](/docs/android-studio/studio-pusheid) می‌توانید درباره کاربردهای این ماژول بیشتر بدانید.
+در بخش مربوط به [رویدادها](/docs/android-studio/unification) می‌توانید درباره کاربردهای این ماژول بیشتر بدانید.
 
 ```js
 co.pushe.plus:analytics:${pushe_version}

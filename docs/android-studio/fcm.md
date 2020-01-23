@@ -1,5 +1,5 @@
 ---
-id: studio-fcm
+id: multiple-fcm
 title: استفاده‌ی همزمان با FCM
 ---
 

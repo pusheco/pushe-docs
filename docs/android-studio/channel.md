@@ -1,5 +1,5 @@
 ---
-id: studio-channel
+id: notification-channel
 title: کانال نوتیفیکیشن
 ---
 ## تعریف کانال نوتیفیکیشن

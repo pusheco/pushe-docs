@@ -1,7 +1,7 @@
 ---
-id: studio-init
-title: بررسی initialization
-sidebar_label: بررسی initialization
+id: initialzation
+title: بررسی آماده‌ به‌کار شدن کتابخانه
+sidebar_label: بررسی آماده‌ به‌کار شدن کتابخانه
 ---
 
 import Tabs from '@theme/Tabs';

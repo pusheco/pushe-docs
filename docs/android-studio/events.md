@@ -1,5 +1,5 @@
 ---
-id: studio-events
+id: events
 title: رویدادها
 ---
 

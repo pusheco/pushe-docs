@@ -1,6 +1,6 @@
 ---
-id: studio-pusheid
-title: شناسایی کاربر
+id: unification
+title: تمایز کاربران با شناسه‌ها
 ---
 
 ## شناسه‌های کاربران

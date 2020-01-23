@@ -1,5 +1,5 @@
 ---
-id: studio-tag
+id: tag
 title: برچسب (Tag)
 ---
 

@@ -1,5 +1,5 @@
 ---
-id: studio-errors
+id: troubleshoot
 title: خطاهای ممکن
 ---
 

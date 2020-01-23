@@ -1,5 +1,5 @@
 ---
-id: studio-faq
+id: faq
 title: سوالات
 ---
 
