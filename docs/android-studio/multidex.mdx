@@ -1,0 +1,147 @@
+---
+id: multidex
+title: رفع خطای مربوط به MultiDex
+---
+
+# رفع خطای مربوط به MultiDex
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+## MultiDex چیست؟
+
+در ماشین مجازی Dalvik تعداد متدهای ممکن در یک فایل `.dex` محدود به **64K** می‌باشد و در صورتی که تعداد متدها از این عدد گذر کند Dalvik توانایی دسترسی به تمام متدها را نخواهد داشت. لذا بایستی از قابلیت MultiDex استفاده شود تا چند فایل `.dex` برای دسترسی به همه‌ی متدها توسط Dalvik ممکن شود.
+
+> **نکته‌ی مهم**:    
+> در صورتی که `MinSDK >= 21` باشد این مشکل رخ نخواهد داد زیرا MultiDex در این حالت به صورت پیش‌فرض پشتیبانی می‌شود و نیاز به کار اضافه نیست.    
+> در صورتی که برنامه به این حالت است، مشکل شما MultiDex نیست.
+
+## فعال‌کردن MultiDex در برنامه
+
+### اضافه‌کردن کد گریدل
+
+‌در فایل `build.gradle(app:Module)` این موارد را اضافه کنید:
+
+```js
+defaultConfig {
+    // ...
+    multiDexEnabled true
+}
+```
+
+<Tabs
+  defaultValue="androidx"
+  values={[
+    { label: 'AndroidX', value: 'androidx', },
+    { label: 'Android support', value: 'support', },
+  ]}>
+
+<TabItem value="androidx">
+
+```js
+dependencies {
+    implementation "androidx.multidex:multidex:2.0.0"
+}
+```
+
+</TabItem>
+
+<TabItem value="support">
+
+```js
+dependencies {
+    implementation 'com.android.support:multidex:1.0.3'
+}
+```
+
+</TabItem>
+</Tabs>
+
+### Initialize کردن MultiDex
+
+سه روش برای فعال‌کردن MultiDex در برنامه وجود دارد:
+
+#### در برنامه کلاس Application کاستوم وجود ندارد
+
+به اتریبیوت‌های تگ `application` در فایل `AndroidManifest.xml` این مورد را اضافه کنید:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myapp">
+    <application
+            android:name="android.support.multidex.MultiDexApplication" >
+        ...
+    </application>
+</manifest>
+```
+
+#### کلاس Application کاستوم از android.app.Application ارث‌بری می‌کند
+
+در این حالت کلاس پدر را از `android.app.Application` به `MultiDexApplication` تغییر دهید:
+
+<Tabs
+  defaultValue="kt"
+  values={[
+    { label: 'Kotlin', value: 'kt', },
+    { label: 'Java', value: 'java', },
+  ]}>
+
+<TabItem value="kt">
+
+```java
+class MyApplication : MultiDexApplication() {...}
+```
+
+</TabItem>
+
+<TabItem value="java">
+
+```java
+public class MyApplication extends MultiDexApplication { ... }
+```
+
+</TabItem>
+
+</Tabs>
+
+#### کلاس Application کاستوم از کلاس دیگری ارث می‌برد
+
+ در این حالت می‌توانید `onAttachBaseContext` را override کنید و MultiDex را initialize کنید:
+
+<Tabs
+  defaultValue="kt"
+  values={[
+    { label: 'Kotlin', value: 'kt', },
+    { label: 'Java', value: 'java', },
+  ]}>
+
+<TabItem value="kt">
+
+```java
+class MyApplication : SomeOtherApplication() {
+
+    override fun attachBaseContext(base: Context) {
+        super.attachBaseContext(base)
+        MultiDex.install(this)
+    }
+}
+```
+
+</TabItem>
+<TabItem value="java">
+
+```java
+public class MyApplication extends SomeOtherApplication {
+  @Override
+  protected void attachBaseContext(Context base) {
+     super.attachBaseContext(base);
+     MultiDex.install(this);
+  }
+}
+```
+
+</TabItem>
+</Tabs>
+
+> **برای اطلاعات بیشتر می‌توانید [داکیومنت اندروید در مورد MultiDex](https://developer.android.com/studio/build/multidex) را مطالعه نمایید.**
