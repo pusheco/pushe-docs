@@ -20,7 +20,7 @@ title: کانال نوتیفیکیشن
 
 <div dir='ltr'>
 
-#### `Pushe.getPusheService(PusheNotification.class).createNotificationChannel(parameters...)`
+#### `createNotificationChannel(parameters...)`
 
 
 </div>
@@ -50,7 +50,8 @@ boolean light = true, vibration = false, badge = true;
 long[] vibrationPatterns = null;
 
 // if(Build.VERSION.SDK_INT >= 26)
-Pushe.getPusheService(PusheNotification.class).createNotificationChannel(channelId, channelName, channelDesc,
+Pushe.getPusheService(PusheNotification.class)
+    .createNotificationChannel(channelId, channelName, channelDesc,
     importance, light, vibration, badge, ledColor, vibrationPattern
 );
 ```
@@ -61,7 +62,7 @@ Pushe.getPusheService(PusheNotification.class).createNotificationChannel(channel
 
 <div dir='ltr'>
 
-#### `Pushe.getPusheService(PusheNotification.class).removeNotificationChannel(channelId)`
+#### `removeNotificationChannel(channelId)`
 
 </div>
 
@@ -71,5 +72,6 @@ Pushe.getPusheService(PusheNotification.class).createNotificationChannel(channel
 
 ```java
 String channelThatWasCreated = "sportChannel";
-Pushe.getPusheService(PusheNotification.class).removeNotificationChannel(channelThatWasCreated);
+Pushe.getPusheService(PusheNotification.class)
+    .removeNotificationChannel(channelThatWasCreated);
 ```
