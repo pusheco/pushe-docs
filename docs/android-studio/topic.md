@@ -12,7 +12,12 @@ title: تاپیک
 
 ```java
 String sportTopic = "sport";
-Pushe.subscribeToTopic(sportTopic);
+Pushe.subscribeToTopic(sportTopic, new Pushe.Callback() {
+    @Override
+    public void onComplete() {
+        // Successfully subscribed to topic
+    }
+});
 ```
 
 > نام تاپیک باید انگلیسی باید و Regex آن مطابق داکیومنت فایربیس بصورت زیر است:
@@ -24,5 +29,10 @@ Pushe.subscribeToTopic(sportTopic);
 
 ```java
 String topicToRemoveUserFrom = "sport";
-Pushe.unsubscribeFromTopic(topicToRemoveUserFrom);
+Pushe.unsubscribeFromTopic(topicToRemoveUserFrom, new Pushe.Callback() {
+    @Override
+    public void onComplete() {
+        // Successfully subscribed to topic
+    }
+});
 ```
