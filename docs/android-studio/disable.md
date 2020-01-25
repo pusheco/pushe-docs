@@ -1,17 +1,24 @@
 ---
-id: studio-disable
+id: disable-notification
 title: غیرفعال‌کردن نمایش اعلان
 ---
 
 به طور پیش‌فرض نمایش اعلان برای کاربر فعال‌ است. اما می‌توان نمایش اعلان را برای کاربر با استفاده از کد، غیرفعال و یا مجددا فعال نمود.
 
->‌ با غیر فعال شدن نمایش اعلان توابع کالبک کماکان اجرا می‌شوند و برای جلوگیری از اجرای آنها فعال‌بودن را بررسی کنید.
+>‌ با غیر فعال شدن نمایش اعلان [توابع رویداد](listener.md) کماکان اجرا می‌شوند و برای جلوگیری از اجرای آنها فعال‌بودن را بررسی کنید:
+> ```java
+> if(showingNotificationEnabled) {
+>   return;
+> } else {
+>   // Run callback code
+> }
+> ```
 
 ## غیرفعال‌کردن نمایش اعلان
 
 <div dir='ltr'>
 
-#### `Pushe.getPusheService(PusheNotification.class).disableNotifications()`
+#### `disableNotifications()`
 
 </div>
 
@@ -23,7 +30,7 @@ Pushe.getPusheService(PusheNotification.class).disableNotifications();
 
 <div dir='ltr'>
 
-#### `Pushe.getPusheService(PusheNotification.class).enableNotifications()`
+#### `enableNotifications()`
 
 </div>
 
@@ -36,7 +43,7 @@ Pushe.getPusheService(PusheNotification.class).enableNotifications();
 
 <div dir='ltr'>
 
-#### `Pushe.getPusheService(PusheNotification.class).isNotificationEnable()`
+#### `isNotificationEnable()`
 
 </div>
 در صورتی که نمایش اعلان برای کاربر فعال‌باشد، این تابع مقدار صحیح برمی‌گرداند.

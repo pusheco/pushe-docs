@@ -245,6 +245,3 @@ NSString *advertisementID = [PusheApp getAdvertisementID];
 
 ### [سوالات و مشکلات احتمالی](/docs/ios/errors)
 در صورتی که در یکی از مراحل زیر به مشکلی برخوردید یا هر سوالی در مورد کتابخانه‌ دارید
-
-### [مشاهده‌ی امکانات بیشتر](/docs/android-studio/studio-advanced)
-مشاهده‌ی امکانات پیشرفته ارائه‌ شده در کتابخانه‌‌ی پوشه

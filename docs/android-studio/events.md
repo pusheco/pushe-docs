@@ -1,5 +1,5 @@
 ---
-id: studio-events
+id: events
 title: رویدادها
 ---
 ##  رویداد چیست
@@ -14,7 +14,7 @@ title: رویدادها
 
 <div dir='ltr'>
 
-#### `Pushe.getPusheService(PusheAnalytics.class).sendEvent(event);`
+#### `sendEvent(event);`
 
 </div>
 
@@ -29,7 +29,7 @@ Pushe.getPusheService(PusheAnalytics.class).sendEvent(eventName);
 
 <div dir='ltr'>
 
-#### `Pushe.getPusheService(PusheAnalytics.class).sendEcommerceData(name, price)`
+#### `sendEcommerceData(name, price)`
 
 </div>
 

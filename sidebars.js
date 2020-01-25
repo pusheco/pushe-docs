@@ -7,28 +7,27 @@
 
 module.exports = {
   studio: {
-    "اندروید استودیو": ["android-studio/studio-intro","android-studio/studio-advanced-setup"],
-    "قابلیت‌ها": [
-      "android-studio/studio-advanced",
-      "android-studio/studio-init",
+    "اندروید استودیو": ["android-studio/intro","android-studio/advanced-setup", "android-studio/multidex"],
+    "قابلیت‌ها و امکانات": [
+      "android-studio/initialzation",
+      "android-studio/unification",
       {
         type: 'category',
         label: 'گروه بندی کاربران',
-        items: ['android-studio/studio-topic', 'android-studio/studio-channel','android-studio/studio-tag'],
+        items: ['android-studio/topic', 'android-studio/notification-channel','android-studio/tag'],
       },
-      "android-studio/studio-pusheid",
-      "android-studio/studio-d2d",
-      "android-studio/studio-listener",
-      "android-studio/studio-disable",
+      "android-studio/d2d-notification",
+      "android-studio/notification-listener",
+      "android-studio/disable-notification",
       {
         type: 'category',
         label: 'آنالیتیکس',
-        items: ['android-studio/studio-events']
+        items: ['android-studio/events']
       }
 ,
-      "android-studio/studio-fcm"
+      "android-studio/multiple-fcm"
     ],
-    "سوالات و مشکلات": ["android-studio/studio-errors", "android-studio/studio-faq"]
+    "سوالات و مشکلات": ["android-studio/troubleshoot", "android-studio/faq"]
   },
 
   iOS: {

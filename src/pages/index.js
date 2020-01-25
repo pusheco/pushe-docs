@@ -12,7 +12,7 @@ import TRow from "./TRow.jsx";
 const docs = [
   {
     display: true,
-    docLink: '/docs/android-studio/studio-intro',
+    docLink: '/docs/android-studio/intro',
     img: '/img/android_native.png',
     github: 'https://github.com/pusheco/android-studio-sample/issues?utf8=%E2%9C%93&amp;q=is%3Aissue',
     desc: <>استفاده از پوشه در پروژه‌های گریدل نوشته‌شده با <strong>جاوا و کاتلین</strong></>,
