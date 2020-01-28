@@ -22,14 +22,14 @@ sidebar_label: راه‌اندازی سریع
 
 
 ```json
-pushe: 2.0.0^
+pushe_flutter: 2.0.1^
 ```
 
 و محل قرارگیری آن در زیرمجموعه‌ی `dependencies` می‌باشد.
 
 ```json
 dependencies:
-    pushe: 2.0.0^
+    pushe_flutter: 2.0.1^
 ```
 
 سپس سینک کنید یا دستور `flutter packages get` را در ترمینال وارد کنید تا پلاگین‌ها به پروژه اضافه‌ شوند.
@@ -79,7 +79,7 @@ dependencies:
 در بخش `import`ها کد زیر را اضافه‌کنید تا کلاس‌های پوشه در فایل قابل‌ استفاده شوند:
 
 ```java
-import 'package:pushe/pushe.dart';
+import 'package:pushe_flutter/pushe.dart';
 ```
 
 
