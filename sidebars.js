@@ -64,12 +64,11 @@ module.exports = {
   flutter: {
     "Flutter": ["flutter/flutter-intro"],
     "قابلیت‌ها و امکانات": [
-      "flutter/flutter-advanced",
       "flutter/flutter-init",
       {
         type: 'category',
-        label: 'گروهبندی کاربران',
-        items: ["flutter/flutter-topic", "flutter/flutter-channel",],
+        label: 'گروه بندی کاربران',
+        items: ["flutter/flutter-topic"/*, "flutter/flutter-channel",*/],
       },
       "flutter/flutter-pusheid",
       "flutter/flutter-d2d",
@@ -78,14 +77,7 @@ module.exports = {
       
       "flutter/flutter-fcm"
     ],
-    "سوالات و مشکلات": ["flutter/flutter-errors", "flutter/flutter-faq"],
-    "مستندات قدیمی": [
-      {
-        type:"link",
-        label: "مستندات پوشه",
-        href:"https://pushe.co/docs/flutter"
-      }
-    ]
+    "سوالات و مشکلات": ["flutter/flutter-errors", "flutter/flutter-faq"]
   },
 
   b4a: {
