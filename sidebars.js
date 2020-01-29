@@ -80,28 +80,6 @@ module.exports = {
     "سوالات و مشکلات": ["flutter/flutter-errors", "flutter/flutter-faq"]
   },
 
-  b4a: {
-    "بیسیک‌فوراندروید": ["b4a/b4a-intro"],
-    "قابلیت‌ها و امکانات": [
-      "b4a/b4a-advanced", 
-      "b4a/b4a-pusheid",
-      "b4a/b4a-topic",
-      "b4a/b4a-d2d",
-      "b4a/b4a-listener",
-      "b4a/b4a-disable",
-      "b4a/b4a-channel",
-      "b4a/b4a-fcm",
-    ],
-    "سوالات و مشکلات": ["b4a/b4a-errors", "b4a/b4a-faq"],
-    "مستندات قدیمی": [
-      {
-        type:"link",
-        label: "مستندات پوشه",
-        href:"https://pushe.co/docs/b4a"
-      }
-    ],
-  },
-
   reactnative: {
     "ری‌اکت نیتیو": ["react-native/intro"],
     "قابلیت‌ها و امکانات": [
@@ -122,33 +100,15 @@ module.exports = {
     "سوالات و مشکلات": ["react-native/errors", "react-native/faq"]
   },
 
-  cordova: {
-    "Cordova": ["cordova/cordova-intro",],
-    "قابلیت‌ها": [
-      "cordova/cordova-advanced",
-      "cordova/cordova-pusheid",
-      "cordova/cordova-d2d",
-      "cordova/cordova-topic",
-      "cordova/cordova-channel",
-      "cordova/cordova-disable"
-    ],
-    "سوالات و مشکلات": ["cordova/cordova-errors", "cordova/cordova-faq"]
-  },
-
   unity: {
     "Unity" : ["unity/intro",],
-    "قابلیت‌ها": [
-      "unity/features",
-      "unity/reg",
+    "قابلیت‌ها و امکانات": [
+      "unity/registration",
+      "unity/unification",
       {
-        type:"category",
-        label:"شناسایی و گروهبندی کاربر",
-        items: [
-          "unity/id", 
-          "unity/topic",
-          "unity/tag",
-          "unity/channel"
-        ]
+        type: 'category',
+        label: 'گروه بندی کاربران',
+        items: ['unity/topic', 'unity/channel','unity/tag'],
       },
       {
         type: "category",
@@ -171,7 +131,7 @@ module.exports = {
         type: "category",
         label: "سوالات و مشکلات",
         items: [
-          "unity/errors",
+          "unity/troubleshoot",
           "unity/faq",
         ]
       },

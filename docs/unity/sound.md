@@ -10,11 +10,8 @@ title: صدای دلخواه اعلان
 > تمام نسخه‌ها
 
 
-<div dir='ltr'>
+### متد DisableCustomSound
 
-#### `static void DisableCustomSound()`
-
-</div>
 
 ```java
 PusheNotification.DisableCustomSound();
@@ -24,11 +21,9 @@ PusheNotification.DisableCustomSound();
 > تمام نسخه‌ها
 
 
-<div dir='ltr'>
 
-#### `static void EnableCustomSound()`
+### متد EnableCustomSound
 
-</div>
 
 ```java
 PusheNotification.EnableCustomSound();
@@ -38,11 +33,9 @@ PusheNotification.EnableCustomSound();
 > تمام نسخه‌ها
 
 
-<div dir='ltr'>
 
-#### `static void IsCustomSoundEnabled()`
+### متد IsCustomSoundEnabled
 
-</div>
 
 ```java
 var isCustomSoundEnabled = PusheNotification.IsCustomSoundEnabled();

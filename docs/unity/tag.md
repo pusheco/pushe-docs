@@ -14,11 +14,9 @@ title: برچسب (Tag)
 ## اضافه‌کردن تگ
 > تمام نسخه‌ها
 
-<div dir='ltr'>
 
-#### `static void AddTags(Dictionary<string, string> tags)`
+### متد AddTags
 
-</div>
 
 |پارامتر ورودی|استفاده|
 |:--:|--|
@@ -38,11 +36,9 @@ Pushe.AddTags(tags);
 ## حذف تگ از لیست تگ‌ها
 > تمام نسخه‌ها
 
-<div dir='ltr'>
 
-#### `static void RemoveTag(params string[] tags)`
+### متد RemoveTag
 
-</div>
 
 برای حذف می‌توانید لیست کلید‌هایی که می‌خواهید از چیسون تگ حذف کنید را به ورودی تابع بدهید.
 
@@ -60,7 +56,7 @@ Pushe.RemoveTag("name", "age", "birthday");
 
 <div dir='ltr'>
 
-#### `static string GetSubscribedTags()`
+### متد GetSubscribedTags
 
 </div>
 

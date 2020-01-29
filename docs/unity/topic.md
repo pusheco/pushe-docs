@@ -12,11 +12,9 @@ title: تاپیک (Topic)
 
 فرض کنید نام تاپیک مورد نظرتان ‍‍‍`sport` باشد. برای عضویت در این تاپیک از دستور زیر استفاده کنید:
 
-<div dir='ltr'>
 
-#### `static void SubscribeTo(topicName)`
+### متد SubscribeTo
 
-</div>
 
 ```java
 Pushe.SubscribeTo("sport");
@@ -27,11 +25,9 @@ Pushe.SubscribeTo("sport");
 
 ## لغو عضویت در تاپیک
 
-<div dir='ltr'>
 
-#### `static void UnsubscribeFrom(topicName)`
+### متد UnsubscribeFrom
 
-</div>
 
 برای لغو عضویت از این تاپیک از دستور زیر استفاده کنید:
 
@@ -41,14 +37,11 @@ Pushe.UnsubscribeFrom("sport");
 
 ## گرفتن تاپیک‌های عضوشده
 
-<div dir='ltr'>
 
-#### `static string[] GetSubscribedTopics()`
+### متد GetSubscribedTopics
 
 گرفتن تاپیک‌هایی که کاربر در آن‌ها subscribe شده است:
 
 ```java
 var topics = Pushe.GetSubscribedTopics();
 ```
-
-</div>

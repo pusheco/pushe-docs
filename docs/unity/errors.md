@@ -1,15 +1,15 @@
 ---
-id: errors
+id: troubleshoot
 title: خطاهای ممکن
 ---
 
 در این بخش خطاهایی که ممکن‌است در مراحل مختلف راه‌اندازی پوشه در **یونیتی** با آن‌ها مواجه شوید به همراه راه‌حل ذکر شده‌اند.
 
-> در صورتی که مورد شما خطا (Error) نیست، ممکن است در بخش [سوالات](/docs/unity/unity-faq) ذکر شده باشد.
+> در صورتی که مورد شما خطا (Error) نیست، ممکن است در بخش [سوالات](/docs/unity/faq) ذکر شده باشد.
 
 > **خطای مورد نظر شما در لیست نیست؟** در [گیت‌هاب](https://github.com/pusheco/unity-sample/issues?utf8=%E2%9C%93&q=is%3Aissue) به دنبال آن بروید و در صورت نیافتن در آنجا مورد جدیدی مطرح کنید.
 
-> برای درک بهتر مشکل بهتر است که از [لاگ‌کت اندروید](https://developer.android.com/studio/command-line/logcat) استفاده کنید. [مقاله‌ای در این مورد](https://pub.pushe.co/%D8%A2%D9%BE%D9%84%D9%88%D8%AF-%DA%A9%D8%B1%D8%AF%D9%86-%D9%84%D8%A7%DB%8C%D8%A8%D8%B1%D8%B1%DB%8C-%D8%A7%D9%86%D8%AF%D8%B1%D9%88%DB%8C%D8%AF-%D8%AF%D8%B1-bintray-%D8%A8%D8%A7-%DA%AF%D8%B1%DB%8C%D8%AF%D9%84-gz7aiold2agq)
+> برای درک بهتر مشکل بهتر است که از [لاگ‌کت اندروید](https://developer.android.com/studio/command-line/logcat) استفاده کنید. [مقاله‌ای در این مورد](http://vrgl.ir/ZMXXE)
 
 
 ## خطاهای حین نصب‌ و راه‌اندازی
