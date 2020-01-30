@@ -20,16 +20,11 @@ sidebar_label: راه‌اندازی سریع
 
 به فایل `pubspec.yaml` پلاگین پوشه را اضافه‌کنید:
 
-
-```json
-pushe_flutter: 2.0.1^
-```
-
-و محل قرارگیری آن در زیرمجموعه‌ی `dependencies` می‌باشد.
-
-```json
+```yaml
 dependencies:
-    pushe_flutter: 2.0.1^
+    # ...
+    # Add Pushe
+    pushe_flutter: 2.0.2^
 ```
 
 سپس سینک کنید یا دستور `flutter packages get` را در ترمینال وارد کنید تا پلاگین‌ها به پروژه اضافه‌ شوند.
