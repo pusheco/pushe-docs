@@ -62,22 +62,27 @@ module.exports = {
   },
 
   flutter: {
-    "Flutter": ["flutter/flutter-intro"],
+    "Flutter": ["flutter/intro"],
     "قابلیت‌ها و امکانات": [
-      "flutter/flutter-init",
+      "flutter/registration",
+      "flutter/unification",
       {
         type: 'category',
         label: 'گروه بندی کاربران',
-        items: ["flutter/flutter-topic"/*, "flutter/flutter-channel",*/],
+        items: ["flutter/topic"/*, "flutter/channel"*/, "flutter/tag"],
       },
-      "flutter/flutter-pusheid",
-      "flutter/flutter-d2d",
-      "flutter/flutter-listener",
-      "flutter/flutter-disable",
-      
-      "flutter/flutter-fcm"
+      {
+        type: 'category',
+        label: 'ارسال اعلان',
+        items: [ 
+          "flutter/d2d",
+          "flutter/listener",
+          "flutter/disable-notification",
+        ]
+      },
+      "flutter/fcm"
     ],
-    "سوالات و مشکلات": ["flutter/flutter-errors", "flutter/flutter-faq"]
+    "سوالات و مشکلات": ["flutter/troubleshoot", "flutter/faq"]
   },
 
   reactnative: {

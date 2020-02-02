@@ -1,5 +1,5 @@
 ---
-id: flutter-intro
+id: intro
 title: راه‌اندازی در فلاتر
 sidebar_label: راه‌اندازی سریع
 ---
@@ -12,7 +12,7 @@ sidebar_label: راه‌اندازی سریع
 
 - برای گذر از تحریم سرور‌های Jcenter از **ابزار گذر از تحریم** یا ... استفاده کنید.
 -  در پروژه شما باید `MinSDKVersion` >= 15 ,`TargetSDK` >= 28 باشد.
-- اپلیکیشن باید در**کنسول** ثبت‌ شود. [راهنمایی](/docs/console/console-submit)
+- اپلیکیشن باید در**کنسول** ثبت‌ شود.
 - **توکن مانیفست** از کنسول برداشته ‌شود.
 - دستگاه تست باید دارای **گوگل‌پلی‌سرویس** بوده و اینترنت آن فعال‌ باشد.
 
@@ -24,7 +24,7 @@ sidebar_label: راه‌اندازی سریع
 dependencies:
     # ...
     # Add Pushe
-    pushe_flutter: 2.0.2^
+    pushe_flutter: 2.0.3^
 ```
 
 سپس سینک کنید یا دستور `flutter packages get` را در ترمینال وارد کنید تا پلاگین‌ها به پروژه اضافه‌ شوند.
@@ -58,6 +58,7 @@ dependencies:
 
 ```xml
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
 <!--برای اندرویدهای ۱۰ و بالاتر -->
 <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
@@ -98,9 +99,11 @@ import 'package:pushe_flutter/pushe.dart';
 ```js
 // Android logcat:
 
---------+ Started Initialization of Pushe +--------
-Trying to register to Pushe
-Successfully registered to pushe
+Pushe: Starting Pushe initialization
+Pushe: Pushe initialization complete
+
+Pushe: Registration is required, performing registration
+Pushe: Registration successful
 ```
 
 ## ادامه‌ی کار
@@ -109,8 +112,5 @@ Successfully registered to pushe
 ### [پروژه‌ی نمونه در گیت‌هاب](https://github.com/pusheco/pushe-flutter)
 بررسی امکانات در نمونه‌ای از قبل طراحی شده دارای تمام امکانات کتابخانه‌ی پوشه
 
-### [سوالات و مشکلات احتمالی](/docs/flutter/flutter-errors)
+### [سوالات و مشکلات احتمالی](/docs/flutter/troubleshoot)
 در صورتی که در یکی از مراحل زیر به مشکلی برخوردید یا هر سوالی در مورد کتابخانه‌ دارید
-
-### [مشاهده‌ی امکانات بیشتر](/docs/flutter/flutter-advanced)
-مشاهده‌ی امکانات پیشرفته ارائه‌ شده در کتابخانه‌‌ی پوشه

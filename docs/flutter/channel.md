@@ -1,5 +1,5 @@
 ---
-id: flutter-channel
+id: channel
 title: کانال نوتیفیکیشن
 ---
 

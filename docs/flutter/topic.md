@@ -1,5 +1,5 @@
 ---
-id: flutter-topic
+id: topic
 title: تاپیک
 ---
 

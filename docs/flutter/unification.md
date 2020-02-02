@@ -1,7 +1,8 @@
 ---
 id: unification
-title: شناسه‌ی یکتا کاربران
+title: تمایز کاربران با شناسه‌ها
 ---
+
 
 ## اختصاص شناسه سفارشی به کاربران
 
@@ -16,43 +17,43 @@ title: شناسه‌ی یکتا کاربران
 
 شناسه|توضیحات|نحوه اختصاص دادن
 ------------|-------------| --------------
-**ایمیل**| آدرس ایمیل کاربر |‌`Pushe.SetUserEmail`
-**شماره تلفن**| شماره تلفن کاربر |‌`Pushe.SetUserPhoneNumber`
-**شناسه دلخواه**| هر عبارت دلخواهی که می‌خواهید به عنوان شناسه استفاده کنید | ‍`Pushe.SetCustomId`
+**ایمیل**| آدرس ایمیل کاربر |‌`Pushe.setUserEmail`
+**شماره تلفن**| شماره تلفن کاربر |‌`Pushe.setUserPhoneNumber`
+**شناسه دلخواه**| هر عبارت دلخواهی که می‌خواهید به عنوان شناسه استفاده کنید | ‍`Pushe.setCustomId`
 
 
-### متد Pushe.SetUserEmail
+### متد Pushe.setUserEmail
 
 با استفاده از این متد می توانید ایمیل کاربر را به عنوان یک شناسه یکتا برای وی ذخیره کنید و با استفاده از آن اعلان یکتا برای این کاربر ارسال کنید.
 
 
-```java
+```js
 var userEmail = "";
-Pushe.SetUserEmail(userEmail);
+Pushe.setUserEmail(userEmail);
 ```
 
 > نکته: برای حذف ایمیل از قبل ذخیره شده کاربر مقدار `null` را به عنوان پارامتر به این متد بدهید.
 
-### متد Pushe.SetUserPhoneNumber
+### متد Pushe.setUserPhoneNumber
 
 با استفاده از این متد می توانید شماره کاربر را به عنوان شناسه یکتا برای وی‌ دخیره کنید و با استفاده از این شماره به این کاربر اعلان یکتا ارسال کنید.
 
 
 
-```java
+```js
 var phoneNumber = "";
-Pushe.SetUserPhoneNumber(phoneNumber);
+Pushe.setUserPhoneNumber(phoneNumber);
 ```
 
 
-### متد Pushe.SetCustomId
+### متد Pushe.setCustomId
 
 با استفاده از این متد می توانید یک شناسه یکتا (می توانید از هر مقداری برای شناسه یکتا استفاده کنید فقط مقدار پارامتر باید از نوع string باشد) به کاربر اختصاص دهید تا با این شناسه به کاربر اعلان یکتا ارسال کنید.
 
-```java
-const customId = "aCustomIdYouSetForUser";
+```js
+const customId = "aCustomIdYousetForUser";
 
-Pushe.SetCustomId(customId);
+Pushe.setCustomId(customId);
 ```
 
 > نکته: برای حذف شناسه از پیش ذخیره شده مقدار `null` را به عنوان پارامتر به این متد بدهید.
@@ -67,22 +68,22 @@ Pushe.SetCustomId(customId);
     
 شناسه|توضیحات|نحوه دریافت
 ------------|-------------| --------------
-**Android ID**| این شناسه توسط اندروید به کاربران اختصاص داده می‌شود. در گوشی‌های با سیستم عامل پایین‌تر از اندروید ۸، شناسه‌ی Android ID کاربر بین تمامی اپلیکیشن‌های نصب شده بر روی گوشی ثابت است و همچنین پس از حذف و نصب مجدد اپلیکیشن نیز ثابت می‌ماند. در نسخه‌ی اندروید ۸ به بالا، شناسه‌ی Android ID یک کاربر تنها برای اپلیکیشن‌هایی که با کلید‌های یکسان امضا شده باشند یکتا است و برای بقیه‌ی اپلیکیشن‌ها متفاوت است. |‌`Pushe.GetAndroidId`
-**Google Advertising ID**| این شناسه را Google Play Services به کاربران اختصاص می‌دهد. شناسه Advertising ID کاربر بین تمام اپلیکیشن‌های نصب شده بر روی گوشی او ثابت است ولی کاربر قادر است که این شناسه را reset  و یا غیر فعال کند. |‌`Pushe.GetGoogleAdvertisingId`
+**Android ID**| این شناسه توسط اندروید به کاربران اختصاص داده می‌شود. در گوشی‌های با سیستم عامل پایین‌تر از اندروید ۸، شناسه‌ی Android ID کاربر بین تمامی اپلیکیشن‌های نصب شده بر روی گوشی ثابت است و همچنین پس از حذف و نصب مجدد اپلیکیشن نیز ثابت می‌ماند. در نسخه‌ی اندروید ۸ به بالا، شناسه‌ی Android ID یک کاربر تنها برای اپلیکیشن‌هایی که با کلید‌های یکسان امضا شده باشند یکتا است و برای بقیه‌ی اپلیکیشن‌ها متفاوت است. |‌`Pushe.getAndroidId`
+**Google Advertising ID**| این شناسه را Google Play Services به کاربران اختصاص می‌دهد. شناسه Advertising ID کاربر بین تمام اپلیکیشن‌های نصب شده بر روی گوشی او ثابت است ولی کاربر قادر است که این شناسه را reset  و یا غیر فعال کند. |‌`Pushe.getGoogleAdvertisingId`
 
 
-### متد Pushe.GetAndroidId
+### متد Pushe.getAndroidId
 
 
-```java
-var androidId = Pushe.GetAndroidId();
+```js
+var androidId = await Pushe.getAndroidId();
 ```
 
-### متد Pushe.GetGoogleAdvertisingId
+### متد Pushe.getGoogleAdvertisingId
 
 
-```java
-var adId = Pushe.GetGoogleAdvertisingId();
+```js
+var adId = await Pushe.getGoogleAdvertisingId();
 ```
 
 ## دریافت مقدار شناسه‌های سفارشی
@@ -93,9 +94,9 @@ var adId = Pushe.GetGoogleAdvertisingId();
     
 شناسه|توضیحات|نحوه دریافت
 ------------|-------------| --------------
-شناسه سفارشی **UserEmail** | شناسه سفارشی ایمیل که توسط شما از قبل ذخیره شده توسط این متد قابل دریافت می‌باشد. | `Pushe.GetUserEmail`
-شناسه سفارشی **UserPhoneNumber** |  شناسه سفارشی شماره کاربر که از قبل توسط شما ذخیره شده و توسط این متد قابل دریافت می‌باشد. | `Pushe.GetUserPhoneNumber`
-شناسه سفارشی **CustomId** | شناسه customId که از قبل توسط شما ذخیره شده و توسط این متد قابل دریافت می‌باشد. | `Pushe.GetCustomId`
+شناسه سفارشی **UserEmail** | شناسه سفارشی ایمیل که توسط شما از قبل ذخیره شده توسط این متد قابل دریافت می‌باشد. | `Pushe.getUserEmail`
+شناسه سفارشی **UserPhoneNumber** |  شناسه سفارشی شماره کاربر که از قبل توسط شما ذخیره شده و توسط این متد قابل دریافت می‌باشد. | `Pushe.getUserPhoneNumber`
+شناسه سفارشی **CustomId** | شناسه customId که از قبل توسط شما ذخیره شده و توسط این متد قابل دریافت می‌باشد. | `Pushe.getCustomId`
 
 
 ### متد Pushe.getUserEmail
@@ -104,8 +105,8 @@ var adId = Pushe.GetGoogleAdvertisingId();
 در صورتی که هیچ مقدار ایمیلی از قبل برای آن ذخیره نشده باشد یک string خالی برمی‌گرداند.
 
 
-```java
-var email = Pushe.GetUserEmail();
+```js
+var email = await Pushe.getUserEmail();
 ```
 
 ### متد Pushe.getUserPhoneNumber
@@ -114,16 +115,16 @@ var email = Pushe.GetUserEmail();
 در صورتی که هیچ مقداری از قبل ذخیره نشده باشد یک string خالی بر‌می‌گرداند.
 
 
-```java
-var phone = Pushe.GetUserPhoneNumber();
+```js
+var phone = await Pushe.getUserPhoneNumber();
 ```
 
-### متد Pushe.GetCustomId
+### متد Pushe.getCustomId
 
-این متد مقداری که از قبل برای customId توسط [Pushe.SetCustomId](#متد-pushesetcustomid) ذخیره شده را بر‌می‌گرداند.
+این متد مقداری که از قبل برای customId توسط [Pushe.setCustomId](#متد-pushesetcustomid) ذخیره شده را بر‌می‌گرداند.
 در صورتی که هیچ مقداری از قبل ذخیره نشده باشد یک string خالی برمی‌گرداند.
 
 
-```java
-var customId = Pushe.GetCustomId();
+```js
+var customId = await Pushe.getCustomId();
 ```

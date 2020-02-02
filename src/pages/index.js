@@ -28,7 +28,7 @@ const docs = [
   },
   {
     display: true,
-    docLink: '/docs/flutter/flutter-intro',
+    docLink: '/docs/flutter/intro',
     img: '/img/flutter_logo.png',
     github: 'https://github.com/pusheco/pushe-flutter/issues?utf8=%E2%9C%93&amp;q=is%3Aissue',
     desc: <>استفاده از پوشه در فریم‌ورک <strong>فلاتر</strong></>,

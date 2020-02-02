@@ -1,5 +1,5 @@
 ---
-id: flutter-faq
+id: faq
 title: سوالات و مشکلات
 ---
 

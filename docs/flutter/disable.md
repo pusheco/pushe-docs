@@ -1,5 +1,5 @@
 ---
-id: flutter-disable
+id: disable-notification
 title: غیرفعال‌کردن نمایش اعلان
 ---
 
@@ -9,14 +9,8 @@ title: غیرفعال‌کردن نمایش اعلان
 >‌ توابع callback کماکان اجرا می‌شوند و برای جلوگیری از اجرای آنها فعال‌بودن را بررسی کنید.
 
 ## غیرفعال‌کردن نمایش اعلان
-
-
-<div dir='ltr'>
-
-#### `static void setNotificationOff()`
 > تمام نسخه‌ها
 
-</div>
 
 ```js
 Pushe.setNotficationOff();
@@ -25,25 +19,12 @@ Pushe.setNotficationOff();
 ## فعال‌کردن نمایش اعلان
 > تمام نسخه‌ها
 
-<div dir='ltr'>
-
-#### `static void setNotificationOn()`
-
-</div>
-
 ```js
 Pushe.setNotficationOn();
 ```
 
 ## بررسی وضعیت نمایش اعلان
-> نسخه‌ی 1.1.0 به بعد
-
-<div dir='ltr'>
-
-#### `static Future<bool> isNotificationOn()`
-
-
-</div>
+> تمام نسخه‌ها
 
 
 در صورتی که نمایش اعلان برای کاربر فعال‌باشد، این تابع مقدار صحیح برمی‌گرداند.
@@ -56,17 +37,4 @@ if (showingNotificationEnabled) {
 } else {
     // Notification will NOT be shown
 }
-
-
-
-
-// Or use the non-async way
-
-Pushe.isNotificationOn().then((notificationIsOn) {
-    if (notificationIsOn) {
-        // Notification will be shown
-    } else {
-        // Notification will NOT be shown
-    }
-});
 ```
