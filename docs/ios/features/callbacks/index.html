@@ -23,23 +23,23 @@
 می‌توانید callbackی تعریف‌ کنید و هنگام رخ‌دادن یکی از رویدادهای زیر کدهای خود را فراخوانی کنید:</p><ul><li>دریافت نوتیفیکیشن (در صورتی‌که کاربر برنامه را <code>force close</code> نکرده باشد.)</li><li>دریافت JSON یا silent notification (در صورتی‌که کاربر برنامه را <code>force close</code> نکرده باشد.)</li><li>کاربر بر روی اعلان کلیک کند</li></ul><h2><a aria-hidden="true" tabindex="-1" class="anchor" id="اجرای-کد-هنگام-رخدادن-رویداد"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#اجرای-کد-هنگام-رخدادن-رویداد" title="Direct link to heading">#</a>اجرای کد هنگام رخ‌دادن رویداد</h2><div><ul role="tablist" aria-orientation="horizontal" class="tabs"><li role="tab" tabindex="0" aria-selected="true" class="tab-item tabItem_3zTA tab-item--active">Swift</li><li role="tab" tabindex="0" aria-selected="false" class="tab-item tabItem_3zTA">Objective-C</li></ul><div role="tabpanel" class="margin-vert--md"><div><pre class="mdxCodeBlock_iHAB"><div class="codeBlockWrapper_2QGZ"><pre class="prism-code language-swift codeBlock_19pQ" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">class MyCallbacks: PusheDelegate {</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    // protocol implementation</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">}</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">...</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">PusheClient.shared.delegate = myCallbacksInstance</span></div></pre><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button></div></pre></div></div></div><h2><a aria-hidden="true" tabindex="-1" class="anchor" id="پروتکل-pushedelegate"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#پروتکل-pushedelegate" title="Direct link to heading">#</a>پروتکل <code>PusheDelegate</code></h2><p>برای اطلاعات بیشتر در مورد این پروتکل، به <a href="/docs/ios/pushe-delegate">PusheDelegate&#x27;s API reference</a> مراجعه کنید.</p><pre class="mdxCodeBlock_iHAB"><div class="codeBlockWrapper_2QGZ"><pre class="prism-code language-swift codeBlock_19pQ" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">protocol PusheDelegate {</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    func userNotGrantedNotificationsPermission()</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    func didReceivedRemoteNotification(notification: NotificationData)</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    func didReceivedResponseForNotification(notification: NotificationData)</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">}</span></div></pre><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button></div></pre><p><code>NotificationData</code>دارای فیلدهای زیر است:</p><table><thead><tr><th align="center">فیلد</th><th>توضیحات</th></tr></thead><tbody><tr><td align="center">title</td><td>تیتر نوتیفیکیشن</td></tr><tr><td align="center">body</td><td>محتوای نوتیفیکیشن</td></tr><tr><td align="center">subtitle</td><td>تیتر فرعی نوتیفیکیشن</td></tr><tr><td align="center">mediaURL</td><td>آدرس محتوای ضمیمه</td></tr></tbody></table><p>برای اطلاعات بیشتر در مورد کلاس <code>NotificationData</code>، به <a href="/docs/ios/notification-data">ٔNotificationData&#x27;s API reference</a> مراجعه کنید.</p></div></article><div class="margin-vert--lg"><nav class="pagination-nav"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/ios/features/event"><h5 class="pagination-nav__link--sublabel">Previous</h5><h4 class="pagination-nav__link--label">« پوشه | راهنما آی‌اواس | رویدادها</h4></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/ios/reference/pushe-protocol"><h5 class="pagination-nav__link--sublabel">Next</h5><h4 class="pagination-nav__link--label">پوشه | راهنما آی‌اواس | پروتکل PusheProtocol »</h4></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"><ul class="contents contents__left-border"><li><a href="#اجرای-کد-هنگام-رخدادن-رویداد" class="contents__link">اجرای کد هنگام رخ‌دادن رویداد</a></li><li><a href="#پروتکل-pushedelegate" class="contents__link">پروتکل <code>PusheDelegate</code></a></li></ul></div></div></div></div></div></main></div></div><footer class="footer"><div class="container"><div class="text--center"></div></div></footer>
 </div>
 
-<script src="/styles.1085071c.js"></script>
+<script src="/styles.9dac1e75.js"></script>
 
-<script src="/runtime~main.4654a4b6.js"></script>
+<script src="/runtime~main.592abdf9.js"></script>
 
-<script src="/main.dbc5ca5a.js"></script>
+<script src="/main.d9c4f08b.js"></script>
 
-<script src="/1.cccd3c33.js"></script>
+<script src="/1.51628345.js"></script>
 
-<script src="/2.db5714ab.js"></script>
+<script src="/2.73927e4d.js"></script>
 
-<script src="/1be78505.fce65207.js"></script>
+<script src="/1be78505.77389f33.js"></script>
 
-<script src="/20ac7829.cc109368.js"></script>
+<script src="/20ac7829.48180496.js"></script>
 
-<script src="/17896441.fefaf40a.js"></script>
+<script src="/17896441.91b8b06d.js"></script>
 
-<script src="/1ef53231.692001ec.js"></script>
+<script src="/1ef53231.bf5d17c5.js"></script>
 
 
 </body>
