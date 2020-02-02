@@ -12,11 +12,9 @@ title: کانال نوتیفیکیشن
 > تمام نسخه‌ها
 
 
-<div dir='ltr'>
+### متد CreateNotificationChannel
 
-#### `static void CreateNotificationChannel(parameters...)`
-
-</div>
+<br />
 
 |پارامتر ورودی|پیش‌فرض|استفاده|
 |:--:|:--:|--|
@@ -53,11 +51,9 @@ PusheNotification.CreateNotificationChannel(
 
 در صورتی که قصد دارید دستگاه را از کانال لغو عضویت کنید، کد زیر را فراخوانی کنید.
 
-<div dir='ltr'>
 
-#### `RemoveNotificationChannel(channelId)`
+### متد RemoveNotificationChannel
 
-</div>
 
 |پارامتر ورودی|استفاده|
 |:--:|--|

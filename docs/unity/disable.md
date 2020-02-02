@@ -11,11 +11,9 @@ sidebar_label: غیرفعال‌سازی اعلان
 > تمام نسخه‌ها
 
 
-<div dir='ltr'>
 
-#### `static void DisableNotification()`
+### متد DisableNotification
 
-</div>
 
 ```java
 PusheNotification.DisableNotification();
@@ -25,11 +23,9 @@ PusheNotification.DisableNotification();
 > تمام نسخه‌ها
 
 
-<div dir='ltr'>
 
-#### `static void EnableNotification()`
+### متد EnableNotification
 
-</div>
 
 ```java
 PusheNotification.EnableNotification();
@@ -39,11 +35,9 @@ PusheNotification.EnableNotification();
 > تمام نسخه‌ها
 
 
-<div dir='ltr'>
 
-#### `static void IsNotificationEnabled()`
+### متد IsNotificationEnabled
 
-</div>
 
 ```java
 var isNotificationOn = PusheNotification.IsNotificationEnabled();

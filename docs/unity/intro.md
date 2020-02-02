@@ -5,9 +5,6 @@ sidebar_label: راه‌اندازی سریع
 ---
 
 
-> **می‌خواهید در مورد این سرویس بیشتر بدانید؟** [کلیک‌کنید]()
-
-
 ## پیش‌نیازها
 
 - پروژه باید از **Gradle build tool** استفاده کند.
@@ -25,15 +22,22 @@ sidebar_label: راه‌اندازی سریع
 
 فایل پلاگین از لینک زیر **دانلود** کرده و آن‌را در پروژه‌ی خود **import** کنید.
 
-> [**پلاگین پوشه‌پلاس برای یونیتی**](https://static.pushe.co/d/unity/pushe-plus-unity-0.4.4.unitypackage)
+> [**پلاگین پوشه‌پلاس برای یونیتی**](https://static.pushe.co/d/unity/pushe-plus-unity-0.4.6.unitypackage)
 
-### دانلود کتابخانه‌ها
+## فعالسازی کتابخانه
+
+برای فعالسازی کتابخانه در پروژه دو راه وجود دارد:
+- [**اضافه‌کردن مستقیم**](#%D8%A7%D8%B6%D8%A7%D9%81%D9%87%DA%A9%D8%B1%D8%AF%D9%86-%D9%85%D8%B3%D8%AA%D9%82%DB%8C%D9%85) به پروژه
+- [**اکسپورت‌کردن**](#%D8%A7%D8%B6%D8%A7%D9%81%D9%87%DA%A9%D8%B1%D8%AF%D9%86-%D8%A8%D9%87-%D8%A7%DA%A9%D8%B3%D9%BE%D9%88%D8%B1%D8%AA-%D9%BE%D8%B1%D9%88%DA%98%D9%87) پروژه و اضافه‌کردن پوشه به اکسپورت
+
+### اضافه‌کردن مستقیم
 
 در صورتی که در برنامه فایل `mainTemplate.gradle` **ندارد**، این فایل را از فولدر `Pushe/Setup` در آدرس `Assets/Plugin/Android` کپی کنید.
 
-<blockquote>
 
 در صورتی که این فایل از قبل وجود دارد موارد زیر را در فایل `mainTemplate.gradle` خود اضافه‌کنید:
+
+* ریپازیتوری لایبرری:
 
 ```java
 allprojects {
@@ -51,28 +55,63 @@ allprojects {
 }
 ```
 
-و همچنین:
+* بروزکردن compileSdkVersion به ۲۸ یا بالاتر
 
-```java
-compileSdkVersion 28
-```
 
-و سپس لایبرری پلاس را اضافه نمایید:
+* اضافه‌کردن لایبرری:
 
 ```java
 dependencies {
 	implementation fileTree(dir: 'libs', include: ['*.jar'])
 
 	// Adding Pushe Plus
-	implementation ('co.pushe.plus:unity-extended:0.4.4')
+	implementation ('co.pushe.plus:unity-extended:0.4.6')
 **DEPS**}
 ```
 
-</blockquote>
 
 > **چرا از** `Unity Jar resolver` **استفاده نشده‌است؟**<br /><br />
 > این ابزار در نسخه‌ی فعلی قابلیت `Exclude`کردن را ندارد که نبود این قابلیت باعث می‌شود به دلیل duplicate‌شدن لایبرری Excludeشده بیلد با خطا مواجه شود. در صورتی که این مورد حل شود و پلاگین نیز آپدیت خواهد شد.<br /><br />
 > به علاوه به دلیل اینکه لایبرری تعداد متد زیادی دارد ممکن است که Single dex برای اجرای برنامه کافی نباشد. لذا برای پشتیبانی از `API<21` باید مالتی‌دکس را فعال‌کرد.
+
+### اضافه‌کردن به اکسپورت پروژه
+
+* ابتدا پروژه را `Export` کنید:
+
+<img src="/img/unity/export.png" height="300" />    
+
+<br />
+<br />
+
+* سپس پروژه را با استفاده از `Android studio` باز کنید.
+
+* در فایل `build.gradle` موارد زیر را اضافه کنید:
+
+```java
+
+// Repository:
+allprojects {
+   repositories {
+      // ...
+	  // Pushe Extended plugin
+	  maven { url 'https://dl.bintray.com/pushe/plugin' }
+   }
+}
+
+// Enable MULTIDEX (ONLY if minSdkVersion < 21>)
+android {
+	compileSdkVersion 28 // or higher
+
+	defaultConfig {
+        // ...
+		multiDexEnabled true
+    }
+}
+
+// Add the library
+implementation ("co.pushe.plus:unity-extended:0.4.6")
+
+```
 
 ## افزودن شناسه به مانیفست
 
@@ -87,7 +126,7 @@ dependencies {
 
 > **نکته**: محل فایل‌مانیفست `Assets/plugin/Android/AndroidManifest.xml` می‌باشد. در صورتی که این فایل موجود نیست آن‌را از `Pushe/Setup` می‌توانید کپی کنید
 
-و محل اضافه‌کردن آن در فایل `AndroidManifest` باید مطابق زیر باشد:
+و محل اضافه‌کردن آن در فایل `AndroidManifest` باید مطابق زیر باشد:  
 
 ```xml
 <manifest ...>
@@ -103,6 +142,10 @@ dependencies {
 
 ```xml
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+<!-- Android 9 and higher -->
+<uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
 ```
 
 > در صورتی که بخواهید **آمار کاربران را بر حسب موقعیت جغرافیایی** آنها مشاهده کنید و یا **با فیلتر لوکیشن اعلان ارسال کنید** باید کاربر این دسترسی را به برنامه بدهد.
@@ -137,4 +180,11 @@ defaultConfig {
 
 > در فایل `SampleCode.cs` مثالهایی از قابلیت‌های بیشتر قرار داده شده است.
 
-برای مشاهده‌ی امکانات پیشرفته‌تر به بررسی ادامه‌ی داکیومنت بپردازید.
+## ادامه‌ی کار
+(بر روی لینک مورد نظر کلیک کنید)
+
+### [پروژه‌ی نمونه در گیت‌هاب](https://github.com/pusheco/unity-sample)
+بررسی امکانات در نمونه‌ای از قبل طراحی شده دارای تمام امکانات کتابخانه‌ی پوشه
+
+### [سوالات و مشکلات احتمالی](/docs/unity/troubleshoot)
+در صورتی که در یکی از مراحل زیر به مشکلی برخوردید یا هر سوالی در مورد کتابخانه‌ دارید
