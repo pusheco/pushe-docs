@@ -37,10 +37,17 @@ co.pushe.plus:notification:${pushe_version}
 ### Analytics
 
 موارد track کردن رفتار کاربر در برنامه‌ی شما مانند تعداد بازکردن برنامه، ارسال و دریافت Event و Ecommerce data و ... در این ماژول انجام می‌شود. 
-در بخش مربوط به [رویدادها](/docs/android-studio/unification) می‌توانید درباره کاربردهای این ماژول بیشتر بدانید.
+در بخش مربوط به [رویدادها](/docs/android-studio/events) می‌توانید درباره کاربردهای این ماژول بیشتر بدانید.
 
 ```js
 co.pushe.plus:analytics:${pushe_version}
+```
+### Datalytics
+
+در صورتی که بخواهید پوش جغرافیایی به کاربر بفرستید باید این ماژول به اپلیکیشنتان اضافه شده باشد.
+
+```js
+co.pushe.plus:datalytics:${pushe_version}
 ```
 
 ### روش اضافه‌کردن ماژول‌های دلخواه
