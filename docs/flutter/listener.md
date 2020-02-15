@@ -3,7 +3,12 @@ id: listener
 title: رویداد نوتیفیکیشن
 ---
 
-<platform android />
+import Platforms from '../../src/components/Platforms.jsx'
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# تعریف رویداد‌های نوتیفیکیشن
+<Platforms android />
 
 > نسخه‌ی 0.9.0 به بعد
 
@@ -29,8 +34,6 @@ main
 
 ## تابع `setNotificationListener`
 
-این تابع برای
-
 |پارامتر ورودی|استفاده|
 |:--:|--|
 |onReceived|زمانی که نوتیفیکیشن دریافت شد این متد اجرا می‌شود.|
@@ -41,17 +44,172 @@ main
 |onBackgroundNotificationReceived|تابعی که هنگام دریافت نوتیفیکیشن در زمان بسته‌بودن برنامه فراخوانی می‌شود|
 
 
+برحسب بسته‌بودن یا بازبودن برنامه، پیاده‌سازی دریافت رویداد به دو حالت تقسیم می‌شود:
 
+<Tabs
+  defaultValue="killed"
+  values={[
+    { label: 'اپ باز باشد', value: 'open', },
+    { label: 'اپ بسته باشد', value: 'killed', },
+  ]
+}>
+
+<TabItem value="open">
+
+در صورتی که اپ باز باشد توابع زیر در صورت دریافت نوتیفیکیشن اجرا خواهند شد:
+
+* ‍`onReceived`
+* `onClicked`
+* `onDismissed`
+* `onButtonClicked`
+* `onCustomContentReceived`
+  
+و همین برای دریافت تمامی رویدادهای نوتیفیکیشن هنگاهی که برنامه باز است،‌ کافیست. به محض فراخوانی‌کردن کد `setNotificationListener` این کدها به پلاگین اضافه خواهند شد و آماده‌ی اجرا شدن خواهند بود.
 
 ```js
 Pushe.setNotificationListener(
   onReceived: (notificationData) { /* Your code */ },
   onClicked: (notificationData) { /* Your code */ },
   onDismissed: (notificationData) { /* Your code */ },
-  onButtonClicked: (notificationData, clickedButton) { /* Your code */ },
+  onButtonClicked: (notificationData) { /* Your code */ },
   onCustomContentReceived: (customContent) { /* Your code */ },
 );
 ```
+
+</TabItem>
+
+<TabItem value="killed">
+
+هنگامی که نوتیفیکیشنی دریافت شود و برنامه بسته باشد، تنها کلاسی که کدهای آن فراخوانی می‌شود کلاس `Application` است. لذا انتظار اجرا کدهای فریم‌ورک را نباید داشته باشیم زیرا این کدها در `Foreground` اجرا می‌شوند.    
+برای دریافت رویداد حتی در هنگامی که برنامه بسته‌است باید کدی داشته باشیم که در کلاس `Application` اجرا شود. پس:
+
+* به آدرس `android/src/main/java/` بروید.
+*  پکیج‌نیم خود را باز کنید و در کنار کلاس `MainActivity` کلاسی (جاوا) به نام **MyApp** ایجاد کنید.    
+* کد زیر را به جای کد اصلی قرار دهید:
+
+```java {1,22,23,28}
+package co.pushe.pushe.flutter;
+
+import android.content.Context;
+
+import androidx.multidex.MultiDex;
+
+import co.pushe.plus.flutter.PushePlugin;
+import io.flutter.app.FlutterApplication;
+import io.flutter.plugin.common.PluginRegistry;
+
+public class MyApp extends FlutterApplication implements PluginRegistry.PluginRegistrantCallback {
+
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
+    }
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        PushePlugin.setDebugMode(true);
+        PushePlugin.initialize(this);
+    }
+
+    @Override
+    public void registerWith(PluginRegistry registry) {
+        PushePlugin.registerWith(registry);
+    }
+}
+
+```
+
+**نکته**: دقت کنید که به جای `co.pushe.pushe.flutter` پکیج‌نیم برنامه‌ی خود را قرار دهید (دقیقا پکیج‌نیم کلاس `MainActivity`).
+
+
+* فایل `AndroidManifest.xml` را در آدرس `android/src/main` باز کنید و این خط (Highlight شده) را به تگ `application` اضافه‌کنید:
+
+```xml {2}
+<application
+        android:name=".MyApp"
+        android:label="Pushe Flutter"
+        android:icon="@mipmap/ic_launcher"
+        ...>
+
+```
+
+* در کد فلاتر خود، همانند زیر بصورت `TopLevel` (بیرون از کلاس) و یا `static` (دارای کلمه‌ی static) تعریف کنید:
+
+```java
+
+onBackgroundMessageReceived(String eventType, dynamic message) { sdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdssd
+  switch(eventType) {
+    case Pushe.notificationReceived: // اعلان دریافت شده
+      
+      // Notification received
+
+      break;
+    case Pushe.notifiactionClicked: // اعلان کلیک شده
+      
+      // Notification clicked
+
+      break;
+    case Pushe.notificationDismissed: // اعلان رد شده
+      
+      // Notification dismissed
+
+      break;
+    case Pushe.notificationButtonClicked: // دکمه‌ای از اعلان کلیک شده
+      
+      // Notification button clicked
+
+      break;
+    case Pushe.customContentReceived: // جیسون دلخواه دریافت شده
+      
+      // Notification custom content (json) received
+
+      break;
+  }
+}
+```
+
+ورودی `eventType` می‌توانید یکی از موارد زیر باشد:
+
+* **`Pushe.notificationReceived`**: نوتیفیکیشن دریافت‌شده است و `message` می‌تواند به یک `NotificationData` تبدیل شود:
+
+```java
+var notification = NotificationData.fromDynamic(message);
+```
+
+* **`Pushe.notificationReceived`**: نوتیفیکیشن دریافت‌شده است و `message` می‌تواند به یک `NotificationData` تبدیل شود:
+
+```java
+var notification = NotificationData.fromDynamic(message);
+```
+
+
+* **`Pushe.notificationReceived`**: نوتیفیکیشن دریافت‌شده است و `message` می‌تواند به یک `NotificationData` تبدیل شود:
+
+```java
+var notification = NotificationData.fromDynamic(message);
+```
+
+
+* **`Pushe.notificationReceived`**: نوتیفیکیشن دریافت‌شده است و `message` می‌تواند به یک `NotificationData` تبدیل شود:
+
+```java
+var notification = NotificationData.fromDynamic(message);
+```
+
+
+
+
+
+</TabItem>
+
+</Tabs>
+
+
+
+
+
 
 آرگومان‌های ورودی نیز رشته‌هایی با فرمت زیر هستند:
 
