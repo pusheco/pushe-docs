@@ -33,6 +33,15 @@
 }
 
 @font-face {
+  font-family: 'IRANYekanWebLight';
+  src: url('/fonts/iranyekanweblight.eot') format('eot'),
+    url('/fonts/iranyekanweblight.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/iranyekanweblight.woff2') format('woff2'),
+    url('/fonts/iranyekanweblight.woff') format('woff'),
+    url('/fonts/iranyekanweblight.ttf') format('truetype');
+}
+
+@font-face {
   font-family: 'Material Icons';
   src: url('/fonts/MaterialIcons-Regular.eot') format('eot'),
     url('/fonts/MaterialIcons-Regular.eot?#iefix') format('embedded-opentype'),
@@ -69,7 +78,7 @@
 html,
 body {
   direction: rtl;
-  font-family: IRANSans !important;
+  font-family: IRANYekanWebLight !important;
 }
 
 a {
@@ -210,4 +219,41 @@ div.menu .menu__list .menu__list {
 
 .menu .menu__link.menu__link--active:not(.menu__link--sublist) {
   border-radius: 0;
+}
+
+.docusaurus-highlight-code-line {
+  background-color: #474c5fba;
+}
+
+/* Platform items (iOS, Android) */
+.platform-items-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  position: relative;
+  top: -30px;
+}
+
+.platform-items-wrapper .platform-item {
+  display: flex;
+  min-width: 70px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  font-size: .8rem;
+  padding: 3px 2px 0px 0;
+  font-weight: bold;
+}
+
+.platform-items-wrapper .platform-item:first-of-type {
+  margin-left: 0;
+}
+
+.platform-items-wrapper .platform-ios {
+  background-color: #0065ff;
+  color: #fff;
+}
+
+.platform-items-wrapper .platform-android {
+  background-color: #00feb6;
 }
