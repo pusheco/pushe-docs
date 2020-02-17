@@ -12,64 +12,243 @@ description: راهنمای آی‌اواس - پروتکل PusheProtocol
 
 ## functionها
 
-### start
+<div dir='ltr'>
+
+### `didReceiveNotificationExtensionRequest(::)`
+
+</div>
 
 ```swift
-public func start(pusheAppId: String)
-```
-
-با `appId` ورودی، پوشه را راه‌اندازی می‌کند. این تابع را در تابع 
-```swift
-application(_:didFinishLaunchingWithOptions:)
-```
-از کلاس ‍‍`AppDelegate` برنامه خود، call کنید.
-
-### didReceiveNotificationExtensionRequest
-
-```swift
-public func didReceiveNotificationExtensionRequest(mutableContent: UNMutableNotificationContent, contentHandler: @escaping (UNNotificationContent) -> ()) 
+@available(iOS 10.0, *)
+@objc(didReceiveNotificationExtensionRequest::) func didReceiveNotificationExtensionRequest(mutableContent: UNMutableNotificationContent, contentHandler: @escaping (UNNotificationContent) -> ())
 ```
 این تابع محتوای ضمیمه شده به پوش نوتیفیکیشن را دانلود می‌کند. این تابع را باید در تابع
+
+<div dir='ltr'>
+
+`didReceive(_:withContentHandler:)`
+
+</div>
+
+از کلاس `NotificationService` که در `Target` متناظر با `NotificationServiceExtension` قرار دارد، `call` کنید.
+
+&nbsp; &nbsp; &nbsp; &nbsp;[نحوه اضافه کردن Notification Service Extension](/docs/ios/extra/notification-service-extension)
+
+-----
+
+<div dir='ltr'>
+
+### `isRegistered()`
+
+</div>
+
 ```swift
-didReceive(_:withContentHandler:)
+@objc(isRegistered) func isRegistered() -> Bool
 ```
-از کلاس `NotificationService` در call `NotificationServiceExtension Target` کنید.
 
-### subscribe
+وضعیت ثبت دستگاه در سرورهای پوشه را مشخص می‌کند.
+
+<div dir='ltr'>
+
+-----
+
+### `getAPNsToken()`
+
+</div>
 
 ```swift
-public func subscribe(topic: String)
+@objc(getAPNsTokenAsString) func getAPNsToken() -> String?
+@objc(getAPNsTokenAsData) func getAPNsToken() -> Data?
+```
+
+در صورت دریافت توکن `APNs` توسط دستگاه، این توکن رو بر‌می‌گرداند. درغیراین‌صورت `nil` برمی‌گرداند.
+
+<div dir='ltr'>
+
+-----
+
+### `getDeviceId()`
+
+</div>
+
+```swift
+@objc(getDeviceId) func getDeviceId() -> String?
+```
+
+مقدار متناظر با 
+<div dir='ltr'>
+
+`UIDevice.current.identifierForVendor?.uuidString`
+
+</div>
+
+را برای دستگاه برمی‌گرداند.
+
+-----
+
+<div dir='ltr'>
+
+### `getAdvertisingId()`
+
+</div>
+
+```swift
+@objc(getAdvertisingId) func getAdvertisingId() -> String
+```
+
+مقدار متناظر با 
+<div dir='ltr'>
+
+`ASIdentifierManager.shared().advertisingIdentifier.uuidString`
+
+</div>
+
+را برای دستگاه برمی‌گرداند.
+
+-----
+
+<div dir='ltr'>
+
+### `subscribe(to:)`
+
+</div>
+
+```swift
+@objc(subscribe:) func subscribe(to topic: String)
 ```
 
 user را در topic ورودی، ثبت‌نام می‌کند.
 
+<div dir='ltr'>
+
+### `subscribe(to:completionHandler:)`
+
+</div>
+
 ```swift
-public func subscribe(topic: String, completionHandler: @escaping (Error?) -> ())
+@objc(subscribe::) func subscribe(to topic: String, completionHandler: @escaping (Error?) -> ())
 ```
+
 user را در topic ورودی ثبت‌نام می‌کند، سپس closure ورودی را اجرا می‌کند.
 
-### unsubscribe
+-----
+
+<div dir='ltr'>
+
+### `unsubscribe(from:)`
+
+</div>
 
 ```swift
-public func unsubscribe(topic: String)
+@objc(unsubscribe:) func unsubscribe(from topic: String)
 ```
 
 ثبت‌نام user در topic ورودی را باطل می‌کند.
 
+<div dir='ltr'>
+
+### `unsubscribe(from:completionHandler:)`
+
+</div>
+
 ```swift
-func unsubscribe(topic: String, completionHandler: @escaping (Error?) -> ())
+@objc(unsubscribe::) func unsubscribe(from topic: String, completionHandler: @escaping (Error?) -> ())
 ```
 
 ثبت‌نام user را در topic ورودی باطل می‌کند، سپس closure ورودی را اجرا می‌کند.
 
-### sendEvent
+-----
+
+<div dir='ltr'>
+
+### `getSubscribedTopics()`
+
+</div>
 
 ```swift
-public func sendEvent(event: Event)
+@objc(getSubscribedTopics) func getSubscribedTopics() -> [String]
 ```
+
+تاپیک‌هایی که کاربر در آن‌ها عضویت دارد را برمی‌گرداند.
+
+-----
+
+<div dir='ltr'>
+
+### `addTags(with:)`
+
+</div>
+
+```swift
+@objc(addTags:) func addTags(with keysAndValues: [String: String])
+```
+
+`tag`های ورودی را برای کاربر ثبت می‌کند. توجه کنید که برای هر دستگاه حداکثر می‌توانید ۱۰ عدد `tag` تعریف کنید.
+
+-----
+
+<div dir='ltr'>
+
+### `removeTags(with:)`
+
+</div>
+
+```swift
+@objc(removeTags:) func removeTags(with keys: [String])
+```
+
+تگ‌های دارای کلید‌های مشخص‌شده را برای کاربر در صورت وجود حذف می‌کند.
+
+-----
+
+<div dir='ltr'>
+
+### `getSubscribedTags()`
+
+</div>
+
+```swift
+@objc(getSubscribedTags) func getSubscribedTags() -> [String: String]
+```
+
+یک دیکشنری شامل تگ‌هایی که برای کاربر ثبت شده‌اند را برمی‌گرداند.
+
+-----
+
+<div dir='ltr'>
+
+### `sendEvent(event:)`
+
+</div>
+
+```swift
+@objc(sendEvent:) func sendEvent(event: Event)
+```
+
 رویداد ورودی را برای کاربر ثبت می‌کند.
 
+<div dir='ltr'>
+
+### `sendEvent(with:)`
+
+</div>
+
 ```swift
-func sendEvent(name: String)
+@objc(sendEventWithName:) func sendEvent(with name: String)
 ```
+
 رویدادی را با نام ورودی می‌سازد و برای کاربر ثبت می‌کند.
+
+## `property` ها
+
+<div dir='ltr'>
+
+### `registerationCompletionHandler`
+
+</div>
+
+```swift
+@objc var registerationCompletionHandler: (() -> ())? { get set }
+```
+
+می‌توانید `callback` خود برای رجیسترشدن دستگاه در پوشه را به این متغیر ‍‍‍‍`assign` کنید. پس از رجیستر شدن دستگاه در پوشه، این `closure` اجرا خواهد شد.

@@ -8,13 +8,12 @@ description: راهنمای آی‌اواس - کلاس PusheClient
 
 # معرفی کلاس PusheClient
 
-کلاس `PusheClient`، رابط شما با پوشه خواهد بود. این کلاس پروتکل `PusheProtocol` را پیاده‌سازی کرده است. برای call کردن این توابع باید از
-```swift
-public static let shared = PusheClient()
-```
-که در کلاس `PusheClient` تعریف شده است، استفاده کنید.
-همچنین کلاس `` دارای 
-```swift
-public weak var delegate: PusheDelegate?
-```
-است که callbackهای مختلفی را در اختیار شما قرار می‌دهد. می‌توانید پروتکل `PusheDeleage` را پیاده‌سازی کرده و این متغیر را مقداردهی کنید.
+کلاس `PusheClient` رابط شما با پوشه خواهد بود. این کلاس پروتکل [`PusheProtocol`]("ios/reference/pushe-protocol") را پیاده‌سازی کرده است. برای استفاده از این `API`، از 
+
+<div dir='ltr'>
+
+`@objc public static let shared = PusheClient()`
+
+</div>
+
+که در کلاس `PusheClient` تعریف شده‌است، استفاده کنید.
