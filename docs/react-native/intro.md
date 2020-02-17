@@ -66,6 +66,16 @@ react-native link pushe-react-native
 
 > در صورتی که نسخه ری‌اکت‌نیتو‌ی که استفاده می کنید 0.60.0 و به بعد می‌باشد دیگر نیازی به [لینک‌کردن کتابخانه](https://facebook.github.io/react-native/blog/2019/07/03/version-60#native-modules-are-now-autolinked) نیست.
 
+<Tabs
+  defaultValue="android"
+  values={[
+    { label: 'android', value: 'android', },
+    { label: 'iOS', value: 'ios', },
+  ]
+}>
+
+<TabItem value="android">
+
 ## اضافه‌کردن محتوای مانیفست
 
 <br />
@@ -95,6 +105,115 @@ react-native link pushe-react-native
 Trying to register to Pushe
 Successfully registered to pushe
 ```
+
+</TabItem>
+
+<TabItem value="ios">
+
+## اضافه‌کردن کد‌های لازم
+
+در فایل `Info.plist` متناظر با `Target` برنامه، کلید‌ها و مقادیر زیر را وارد کنید.
+
+<div dir='ltr'>
+
+| key | value | type |
+|--|:--:|--|
+|PusheAppId|دریافتی از کنسول پوشه [appId](/docs/ios/extra/pushe/how-to-get-pushe-app-id)|String|
+|FirebaseAppDelegateProxyEnabled|NO|Boolean|
+
+</div>
+
+و در Target مربوط به `NotificationServiceExtension`:
+
+<Tabs
+  defaultValue="swift"
+  values={[
+    { label: 'Swift', value: 'swift', },
+    { label: 'Objective-C', value: 'objc', },
+  ]}>
+
+<TabItem value="swift">
+
+```swift
+// NotificationService.swift file
+
+import UserNotifications
+import Pushe
+
+class NotificationService: UNNotificationServiceExtension {
+
+    var contentHandler: ((UNNotificationContent) -> Void)?
+    var bestAttemptContent: UNMutableNotificationContent?
+
+    override func didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (UNNotificationContent) -> Void) {
+        self.contentHandler = contentHandler
+        self.bestAttemptContent = (request.content.mutableCopy() as? UNMutableNotificationContent)
+        
+        if let bestAttemptContent = self.bestAttemptContent {
+            PusheClient.shared.didReceiveNotificationExtensionRequest(mutableContent: bestAttemptContent, contentHandler: contentHandler)
+        }
+    }
+    
+    override func serviceExtensionTimeWillExpire() {
+        if let contentHandler = self.contentHandler, let bestAttemptContent =  self.bestAttemptContent {
+            contentHandler(bestAttemptContent)
+        }
+    }
+}
+```
+
+</TabItem>
+
+<TabItem value="objc">
+
+```objc
+// NotificationService.m file
+
+#import "NotificationService.h"
+@import Pushe;
+
+@interface NotificationService ()
+
+@property (nonatomic, strong) void (^contentHandler)(UNNotificationContent *contentToDeliver);
+@property (nonatomic, strong) UNMutableNotificationContent *bestAttemptContent;
+
+@end
+
+@implementation NotificationService
+
+- (void)didReceiveNotificationRequest:(UNNotificationRequest *)request withContentHandler:(void (^)(UNNotificationContent * _Nonnull))contentHandler { 
+    self.contentHandler = contentHandler;
+    self.bestAttemptContent = [request.content mutableCopy];
+    
+    [PusheClient.shared didReceiveNotificationExtensionRequest:self.bestAttemptContent :self.contentHandler];
+}
+
+- (void)serviceExtensionTimeWillExpire {
+    self.contentHandler(self.bestAttemptContent);
+}
+
+@end
+```
+
+</TabItem>
+
+</Tabs>
+
+## تست و ثبت دستگاه در پوشه
+
+پس از اجرای برنامه و فراخوانی کد رجیستر پوشه، باید در کنسول **Xcode** لاگ‌های زیر را ببینید (ممکن است به دلیل ارتباط با سرور این پروسه چند ثانیه طول بکشد):
+
+```
+Setting up Pushe ...
+apns-token:<f5b7616ba649b73bc1dae34e019e35fc2602ecb05d578b369a85a8c480480abc>
+fcm-token:<uIMhZl83bOudsizqViJSl4:APA91bFNClxSt2AoVWl37MlXQS_RXlWAEJpRR44dcqBg-jfUvpfc0kclcYV4-hZAGvighZmvVF0lracKDZMtSuQNu6bJhXok6GI_pE8kxfDNXFq98ParWvjex8aAUPzB93gUQn0SKLBU>
+registering in Pushe ...
+📗 -> successfully registered in Pushe
+```
+
+</TabItem>
+
+</Tabs>
 
 > در صورتی که نصب و راه‌اندازی پوشه مشکل داشتید می‌توانید به [مشکلات و خطاها](/docs/react-native/rn-errors) مراجعه کنید.
 
