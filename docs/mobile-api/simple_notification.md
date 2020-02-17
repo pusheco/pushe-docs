@@ -16,7 +16,7 @@ sidebar_label: ارسال اعلان
 
 
 ```
-curl -X POST https://api.pushe.co/v2/messaging/notifications/ -H 'authorization: Token YOUR_Session_TOKEN' -H 'content-type: application/json' -d '{"app_ids":["com.exmaple.app"], "data" : {"title":"عنوان اعلان", "content":"محتوای اعلان"}}
+curl -X POST https://api.pushe.co/v2/messaging/notifications/ -H 'authorization: Token YOUR_Session_TOKEN' -H 'content-type: application/json' -d '{"app_ids":["UNIQUE_IDENTIFIER_GENERATED_BY_PUSHE"], "data" : {"title":"عنوان اعلان", "content":"محتوای اعلان"}}
 ```
 
 
@@ -24,7 +24,7 @@ curl -X POST https://api.pushe.co/v2/messaging/notifications/ -H 'authorization:
 
 ```json
 {
-  "app_ids": ["com.example.app"],
+  "app_ids": ["UNIQUE_IDENTIFIER_GENERATED_BY_PUSHE"],
   "data": {
     "title": "عنوان پیام",
     "content": "محتوای پیام"
@@ -47,7 +47,7 @@ curl -X POST https://api.pushe.co/v2/messaging/notifications/ -H 'authorization:
     "wrapper_id": "UNIQUE IDENTIFIER",
     "hashed_id": "SHARE_URL",
     "app_ids": [
-        "com.example.app"
+        "UNIQUE_IDENTIFIER_GENERATED_BY_PUSHE"
     ],
     "data": {
         "title": "عنوان اعلان",
@@ -134,7 +134,7 @@ curl -X POST https://api.pushe.co/v2/messaging/notifications/ -H 'authorization:
 برای مثال ارسال اعلان به دو کاربر بر اساس Pushe Id آن‌ها به صورت زیر خواهد بود:
 
 ```
-curl -X POST https://api.pushe.co/v2/messaging/notifications/ -H 'authorization: Token YOUR_Session_TOKEN' -H 'content-type: application/json' -d '{"app_ids": ["com.package_name_34"], "filters": {"pushe_id": ["pid_20aa-ba40-a0","pid_39ca-ee30-d9"]}, "data": {"title": "عنوان پیام", "content": "محتوای پیام"}}'
+curl -X POST https://api.pushe.co/v2/messaging/notifications/ -H 'authorization: Token YOUR_Session_TOKEN' -H 'content-type: application/json' -d '{"app_ids": ["UNIQUE_IDENTIFIER_GENERATED_BY_PUSHE"], "filters": {"pushe_id": ["pid_20aa-ba40-a0","pid_39ca-ee30-d9"]}, "data": {"title": "عنوان پیام", "content": "محتوای پیام"}}'
 ```
 
 
@@ -142,7 +142,7 @@ curl -X POST https://api.pushe.co/v2/messaging/notifications/ -H 'authorization:
 
 ```json
 {
-  "app_ids": ["com.example.app"],
+  "app_ids": ["UNIQUE_IDENTIFIER_GENERATED_BY_PUSHE"],
   "filters": {
     "pushe_id": ["pid_20aa-ba40-a0","pid_39ca-ee30-d9"]
   },
@@ -170,7 +170,7 @@ curl -X POST https://api.pushe.co/v2/messaging/notifications/ -H 'authorization:
 
 
 ```
-curl -X POST https://api.pushe.co/v2/messaging/notifications/ -H 'authorization: Token YOUR_Session_TOKEN' -H 'content-type: application/json' -d '{"app_ids": ["com.package_name"], "data": {"show_app": false}, "custom_content": {"key_1": "Value_1","Key_2": "Value_2"}}'
+curl -X POST https://api.pushe.co/v2/messaging/notifications/ -H 'authorization: Token YOUR_Session_TOKEN' -H 'content-type: application/json' -d '{"app_ids": ["UNIQUE_IDENTIFIER_GENERATED_BY_PUSHE"], "data": {"show_app": false}, "custom_content": {"key_1": "Value_1","Key_2": "Value_2"}}'
 ```
 
 
@@ -178,7 +178,7 @@ curl -X POST https://api.pushe.co/v2/messaging/notifications/ -H 'authorization:
 
 ```
 {
-  "app_ids": ["com.example.app"],
+  "app_ids": ["UNIQUE_IDENTIFIER_GENERATED_BY_PUSHE"],
   "data": {
     "show_app": false
   },
@@ -214,7 +214,7 @@ curl -X POST "https://api.pushe.co/v2/messaging/rapid/"  -i -H "Authorization: T
 
 ```json
 {
-    "app_id": "com.test.pushe",
+    "app_id": "UNIQUE_IDENTIFIER_GENERATED_BY_PUSHE",
 
     // One of the following identifiers, use either only G_AID, PusheID, or AndroidID
 
@@ -256,7 +256,7 @@ curl -X POST "https://api.pushe.co/v2/messaging/rapid/"  -i -H "Authorization: T
 ```json
 {
   "app_ids": [
-    "com.example.app"
+    "UNIQUE_IDENTIFIER_GENERATED_BY_PUSHE"
   ],
   "data": {
     "title": "عنوان",
