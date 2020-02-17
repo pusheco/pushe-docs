@@ -8,6 +8,8 @@ description: راهنمای ری‌اکت‌نیتیو - کانال نوتیفی
 
 # کانال نوتیفیکیشن
 
+import Platforms from "@site/src/components/Platforms.jsx";
+
 ## تعریف کانال نوتیفیکیشن
 
 کانال نوتیفیکیشن که در اندروید نسخه ۸ اضافه شده در واقع یک دسته‌بندی برای اعلان‌های ارسالی به کاربران می‌باشد که می‌توان در این دسته بندی رنگ ال‌ای‌دی ، صدای اعلان و ... را مشخص کرد.
@@ -21,6 +23,8 @@ description: راهنمای ری‌اکت‌نیتیو - کانال نوتیفی
 ## اضافه‌کردن کانال نوتیفیکیشن
 
 ### متد ```Pushe.createNotificationChannel```
+
+<Platforms android/>
 
 با استفاده از متد ‍‍```Pushe.createNotificationChannel``` می‌توانید یک کانال جدید ایجاد کنید.
 پارامتر‌های ورودی در جدول زیر توضیح داده شده اند.
@@ -91,6 +95,7 @@ Pushe.createNotificationChannel(
 
 ### متد ```Pushe.removeNotificationChannel```
 
+<Platforms android/>
 
 |پارامتر ورودی|استفاده|
 |:--:|--|

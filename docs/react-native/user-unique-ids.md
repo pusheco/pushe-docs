@@ -8,6 +8,10 @@ description: راهنمای ری‌اکت‌نیتیو - شناسه یکتا ک�
 
 # شناسه‌ی یکتا کاربران
 
+import Platforms from "@site/src/components/Platforms.jsx";
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 ## اختصاص شناسه سفارشی به کاربران
 
 شما می‌توانید به کاربران خود یک شناسه اختصاص دهید و از این شناسه برای ارسال اعلان تکی به کاربران استفاده کنید.
@@ -29,6 +33,8 @@ description: راهنمای ری‌اکت‌نیتیو - شناسه یکتا ک�
 
 
 ### متد Pushe.setUserEmail
+
+<Platforms android/>
 
 با استفاده از این متد می توانید ایمیل کاربر را به عنوان یک شناسه یکتا برای وی ذخیره کنید و با استفاده از آن اعلان یکتا برای این کاربر ارسال کنید.
 
@@ -52,6 +58,8 @@ Pushe.setUserEmail(userEmail)
 
 ### متد Pushe.setUserPhoneNumber
 
+<Platforms android/>
+
 با استفاده از این متد می توانید شماره کاربر را به عنوان شناسه یکتا برای وی‌ دخیره کنید و با استفاده از این شماره به این کاربر اعلان یکتا ارسال کنید.
 
 > این متد یک Promise برمیگرداند که true یا false مقدار resolve شده آن می باشد. در صورتی که با موفقیت مقدار ذخیره شود true و در غیر این صورت مقدار false برمی گرداند.
@@ -74,6 +82,8 @@ Pushe.setUserPhoneNumber(phoneNumber)
 
 
 ### متد Pushe.setCustomId
+
+<Platforms android/>
 
 با استفاده از این متد می توانید یک شناسه یکتا (می توانید از هر مقداری برای شناسه یکتا استفاده کنید فقط مقدار پارامتر باید از نوع string باشد) به کاربر اختصاص دهید تا با این شناسه به کاربر اعلان یکتا ارسال کنید.
 
@@ -102,6 +112,16 @@ Pushe.setCustomId(customId)
 
 علاوه بر شناسه‌های معرفی شده‌ی بالا، دو شناسه دیگر به صورت خودکار به کاربران شما اختصاص داده می‌شود که با استفاده از آن‌ها نیز می‌توانید به کاربران خود اعلان ارسال کنید.
 
+<Tabs
+  defaultValue="android"
+  values={[
+    { label: 'android', value: 'android', },
+    { label: 'iOS', value: 'ios', },
+  ]
+}>
+
+<TabItem value="android">
+
 توضیحات این شناسه‌ها در جدول زیر آمده است:
 
     
@@ -112,6 +132,8 @@ Pushe.setCustomId(customId)
 
 
 ### متد Pushe.getAndroidId
+
+<Platforms android/>
 
 > این متد یک Promise برمی‌گرداند که در صورت resolve مقدار androidId را برمی‌گرداند و در صورت بروز خطا reject می شود.
 
@@ -127,6 +149,8 @@ Pushe.getAndroidId()
 
 ### متد Pushe.getGoogleAdvertisingId
 
+<Platforms android/>
+
 > این متد یک Promise برمی‌گرداند که در صورت resolve شدن مقدار googleAdvertisingId را به ما می‌دهد و در صورت بروز خطا reject می شود.
 
 ```
@@ -138,6 +162,64 @@ Pushe.getGoogleAdvertisingId()
         console.log(`Could not get googleAdvertisingId`);
     });
 ```
+
+</TabItem>
+
+<TabItem value="ios">
+
+## DeviceId
+
+این شناسه متناظر است با:
+
+<div dir='ltr'>
+
+#### `UIDevice.current.identifierForVendor?.uuidString`
+
+</div>
+
+در ‍‍`native iOS`.
+
+## AdvertisingId
+
+این شناسه متناظر است با:
+
+<div dir='ltr'>
+
+#### `ASIdentifierManager.shared().advertisingIdentifier.uuidString`
+
+</div>
+
+در ‍‍`native iOS`.
+
+### متد Pushe.getDeviceId
+
+<Platforms ios/>
+
+> این متد یک Promise برمی‌گرداند که DeviceId را resolve می‌کند.
+
+```
+Pushe.getDeviceId()
+    .then((deviceId) => {
+        console.log(`deviceId is: ${deviceId}`);
+    })
+```
+
+### متد Pushe.getAdvertisingId
+
+<Platforms ios/>
+
+> این متد یک Promise برمی‌گرداند که AdvertisingId را resolve می‌کند.
+
+```
+Pushe.getAdvertisingId()
+    .then((advertisingId) => {
+        console.log(`advertisingId is: ${advertisingId}`);
+    })
+```
+
+</TabItem>
+
+</Tabs>
 
 ## دریافت مقدار شناسه‌های سفارشی
 
@@ -153,6 +235,8 @@ Pushe.getGoogleAdvertisingId()
 
 
 ### متد Pushe.getUserEmail
+
+<Platforms android/>
 
 این متد مقداری که برای email از قبل توسط [Pushe.setUserEmail](#متد-pushesetuseremail) ذخیره شده را برمی‌گرداند.
 در صورتی که هیچ مقدار ایمیلی از قبل برای آن ذخیره نشده باشد یک string خالی برمی‌گرداند.
@@ -171,6 +255,8 @@ Pushe.getUserEmail()
 
 ### متد Pushe.getUserPhoneNumber
 
+<Platforms android/>
+
 این متد مقداری که برای phoneNumber از قبل توسط [Pushe.setUserPhoneNumber](#متد-pushesetuserphonenumber) ذخیره شده را برمی‌گرداند.
 در صورتی که هیچ مقداری از قبل ذخیره نشده باشد یک string خالی بر‌می‌گرداند.
 
@@ -187,6 +273,8 @@ Pushe.getUserPhoneNumber()
 ```
 
 ### متد Pushe.getCustomId
+
+<Platforms android/>
 
 این متد مقداری که از قبل برای customId توسط [Pushe.setCustomId](#متد-pushesetcustomid) ذخیره شده را بر‌می‌گرداند.
 در صورتی که هیچ مقداری از قبل ذخیره نشده باشد یک string خالی برمی‌گرداند.
