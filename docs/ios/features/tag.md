@@ -23,7 +23,7 @@ import TabItem from '@theme/TabItem';
 
 <div dir='ltr'>
 
-#### `func addTags(with keysAndValues: [String: String])`
+#### `@objc(addTags:) func addTags(with keysAndValues: [String: String])`
 
 </div>
 
@@ -52,7 +52,10 @@ PusheClient.shared.addTags(with: tags)
 <TabItem value="objc">
 
 ```objc
-// MARK: TODO
+NSDictionary<NSString *, NSString *> * _Nonnull tags = @{@"name": @"Mohammad",
+                                                         @"age": @"25",
+                                                         @"birthday": @"1435187386"};
+[PusheClient.shared addTags:tags];
 ```
 
 </TabItem>
@@ -68,7 +71,7 @@ PusheClient.shared.addTags(with: tags)
 
 <div dir='ltr'>
 
-#### `func removeTags(with keys: [String])`
+#### `@objc(removeTags:) func removeTags(with keys: [String])`
 
 </div>
 
@@ -98,7 +101,8 @@ PusheClient.shared.removeTags(with: tags)
 <TabItem value="objc">
 
 ```objc
-// MARK: TODO
+NSArray<NSString *> * _Nonnull tags = @[@"name", @"age" , @"birthday"];
+[PusheClient.shared removeTags:tags];
 ```
 
 </TabItem>
@@ -127,7 +131,8 @@ PusheClient.shared.removeTags(with: tags)
 ```swift
 let tags: [String: String] = ["name": "Ali"]
 PusheClient.shared.addTags(with: tags);
-let subscribedtags = PusheClient.shared.getSubscribedTags()    // subscribedtags: ["name": "Ali"]
+let subscribedtags = PusheClient.shared.getSubscribedTags()    
+// subscribedtags: ["name": "Ali"]
 ```
 
 </TabItem>
@@ -135,7 +140,9 @@ let subscribedtags = PusheClient.shared.getSubscribedTags()    // subscribedtags
 <TabItem value="objc">
 
 ```objc
-// MARK: TODO
+NSDictionary<NSString *, NSString *> * _Nonnull tags = @{@"name": @"Ali"};
+    [PusheClient.shared addTags:tags];
+    NSDictionary<NSString *, NSString *> * _Nonnull subscribedTags = [PusheClient.shared getSubscribedTags];    // subscribedtags: {@"name": @"Ali"}
 ```
 
 </TabItem>

@@ -18,8 +18,8 @@ import TabItem from '@theme/TabItem';
 
 <div dir='ltr'>
 
-#### `func subscribe(topic: String)`
-#### `func subscribe(topic: String, completionHandler: @escaping (Error?) -> ())`
+#### `@objc(subscribe:) func subscribe(to topic: String)`
+#### `@objc(subscribe::) func subscribe(to topic: String, completionHandler: @escaping (Error?) -> ())`
 
 </div>
 
@@ -44,7 +44,7 @@ PusheClient.shared.subscribe(topic: sportTopic)
 // ----------
 let sportTopic = "sport"
 PusheClient.shared.subscribe(topic: sportTopic, completionHandler: { (error) in
-    // execute your completion closure here
+  // execute your completion closure here
 })
 ```
 
@@ -53,7 +53,13 @@ PusheClient.shared.subscribe(topic: sportTopic, completionHandler: { (error) in
 <TabItem value="objc">
 
 ```objc
-// MARK: TODO
+NSString *_Nonnull sportTopic = @"sport";
+[PusheClient.shared subscribe:sportTopic];
+// ----------
+NSString *_Nonnull sportTopic = @"sport";
+[PusheClient.shared subscribe:sportTopic :^(NSError * _Nullable error) {
+  // execute your completion closure here 
+}];
 ```
 
 </TabItem>
@@ -67,8 +73,8 @@ PusheClient.shared.subscribe(topic: sportTopic, completionHandler: { (error) in
 
 <div dir='ltr'>
 
-#### `func unsubscribe(topic: String)`
-#### `func unsubscribe(topic: String, completionHandler: @escaping (Error?) -> ())`
+#### `@objc(unsubscribe:) func unsubscribe(from topic: String)`
+#### `@objc(unsubscribe::) func unsubscribe(from topic: String, completionHandler: @escaping (Error?) -> ())`
 
 </div>
 
@@ -93,7 +99,7 @@ PusheClient.shared.unsubscribe(topic: topicToRemoveUserFrom);
 // ----------
 let topicToRemoveUserFrom = "sport"
 PusheClient.shared.unsubscribe(topic: topicToRemoveUserFrom, completionHandler: { (error) in
-    // execute your completion closure here
+  // execute your completion closure here
 })
 ```
 
@@ -102,7 +108,47 @@ PusheClient.shared.unsubscribe(topic: topicToRemoveUserFrom, completionHandler: 
 <TabItem value="objc">
 
 ```objc
-// MARK: TODO
+NSString *_Nonnull sportTopic = @"sport";
+[PusheClient.shared unsubscribe:sportTopic];
+// ----------
+NSString *_Nonnull sportTopic = @"sport";
+[PusheClient.shared unsubscribe:sportTopic :^(NSError * _Nullable error) {
+  // execute your completion closure here 
+```
+
+</TabItem>
+
+</Tabs>
+
+## تاپیک‌هایی که کاربر در حال حاضر در آن‌ها عضویت دارد
+
+<div dir='ltr'>
+
+#### `@objc(getSubscribedTopics) public func getSubscribedTopics() -> [String]`
+
+</div>
+
+تاپیک‌هایی که در حال حاضر کاربر در آن‌ها عضویت دارد، را به صورت آرایه‌ای از `String`ها برمی‌گرداند.
+
+<Tabs
+  defaultValue="swift"
+  values={[
+    { label: 'Swift', value: 'swift', },
+    { label: 'Objective-C', value: 'objc', },
+  ]}>
+
+<TabItem value="swift">
+
+```swift
+let subscribedTopics = PusheClient.shared.getSubscribedTopics()
+```
+
+</TabItem>
+
+<TabItem value="objc">
+
+```objc
+NSArray<NSString *> * _Nonnull subscribedTopics = [PusheClient.shared getSubscribedTopics];
 ```
 
 </TabItem>
