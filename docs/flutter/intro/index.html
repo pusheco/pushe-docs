@@ -23,23 +23,23 @@
 پس از اجرای برنامه به طور خودکار پوشه اقدام به رجیستر می‌کند و نیاز به اضافه‌کردن کدی نیست.</p><ul><li>در پنل پوشه خود به صفحه کاربران/نصب ها بروید.</li><li>بعد از گذشت زمان کوتاهی یک ردیف مشخصات نصب به لیست نصب ها اضافه می شود که متعلق به گوشی شما است.</li><li>یک اعلان تست ارسال کنید. دقت کنید تلفن همراه شما به اینترنت متصل باشد.</li></ul><p><strong>نکته</strong>: اگر می خواهید اپلیکیشن را بر روی Emulator تست کنید، بر روی ایمولاتور شما باید Google API نصب باشد.</p><p>پس از اجرای برنامه باید در <strong>Android logcat</strong> لاگ‌های زیر را ببینید (ممکن است به دلیل ارتباط با سرور این پروسه چند ثانیه طول بکشد):</p><blockquote><p>در اندروید استودیو لاگ‌کت از ابزار موجود است. در صورتی که از ابزار دیگری مانند VSCode استفاده‌ می‌کنید می‌توانید از هر روشی برای مشاهده‌ی لاگ استفاده کنید. <a href="https://developer.android.com/studio/command-line/logcat">مستندات اندروید برای لاگ‌کت</a></p></blockquote><p>برای مشاهده‌ی بهتر لاگ‌ها می‌توانید فیلتر <code>Pushe</code> را روی لاگ‌ها اعمال کنید.</p><pre class="mdxCodeBlock_iHAB"><div class="codeBlockWrapper_2QGZ"><pre class="prism-code language-js codeBlock_19pQ" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token comment" style="color:rgb(105, 112, 152);font-style:italic">// Android logcat:</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token maybe-class-name">Pushe</span><span class="token punctuation" style="color:rgb(199, 146, 234)">:</span><span class="token plain"> </span><span class="token maybe-class-name">Starting</span><span class="token plain"> </span><span class="token maybe-class-name">Pushe</span><span class="token plain"> initialization</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token maybe-class-name">Pushe</span><span class="token punctuation" style="color:rgb(199, 146, 234)">:</span><span class="token plain"> </span><span class="token maybe-class-name">Pushe</span><span class="token plain"> initialization complete</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token maybe-class-name">Pushe</span><span class="token punctuation" style="color:rgb(199, 146, 234)">:</span><span class="token plain"> </span><span class="token maybe-class-name">Registration</span><span class="token plain"> is required</span><span class="token punctuation" style="color:rgb(199, 146, 234)">,</span><span class="token plain"> performing registration</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token maybe-class-name">Pushe</span><span class="token punctuation" style="color:rgb(199, 146, 234)">:</span><span class="token plain"> </span><span class="token maybe-class-name">Registration</span><span class="token plain"> successful</span></div></pre><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button></div></pre><h2><a aria-hidden="true" tabindex="-1" class="anchor" id="ادامهی-کار"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#ادامهی-کار" title="Direct link to heading">#</a>ادامه‌ی کار</h2><p>(بر روی لینک مورد نظر کلیک کنید)</p><h3><a aria-hidden="true" tabindex="-1" class="anchor" id="پروژهی-نمونه-در-گیتهاب"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#پروژهی-نمونه-در-گیتهاب" title="Direct link to heading">#</a><a href="https://github.com/pusheco/pushe-flutter">پروژه‌ی نمونه در گیت‌هاب</a></h3><p>بررسی امکانات در نمونه‌ای از قبل طراحی شده دارای تمام امکانات کتابخانه‌ی پوشه</p><h3><a aria-hidden="true" tabindex="-1" class="anchor" id="سوالات-و-مشکلات-احتمالی"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#سوالات-و-مشکلات-احتمالی" title="Direct link to heading">#</a><a href="/docs/flutter/troubleshoot">سوالات و مشکلات احتمالی</a></h3><p>در صورتی که در یکی از مراحل زیر به مشکلی برخوردید یا هر سوالی در مورد کتابخانه‌ دارید</p></div></article><div class="margin-vert--lg"><nav class="pagination-nav"><div class="pagination-nav__item"></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/flutter/registration"><h5 class="pagination-nav__link--sublabel">Next</h5><h4 class="pagination-nav__link--label">بررسی آماده‌ به‌کار شدن کتابخانه »</h4></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"><ul class="contents contents__left-border"><li><a href="#پیشنیازها" class="contents__link">پیش‌نیازها</a></li><li><a href="#اضافهکردن-پلاگین-به-پروژه" class="contents__link">اضافه‌کردن پلاگین به پروژه</a></li><li><a href="#اضافهکردن-محتوای-مانیفست" class="contents__link">اضافه‌کردن محتوای مانیفست</a></li><li><a href="#اضافهکردن-کدهای-لازم" class="contents__link">اضافه‌کردن کدهای لازم</a></li><li><a href="#تست-برنامه-و-مشاهده-نصب-آن-در-پنل-پوشه" class="contents__link">تست برنامه و مشاهده نصب آن در پنل پوشه</a></li><li><a href="#ادامهی-کار" class="contents__link">ادامه‌ی کار</a><ul><li><a href="#پروژهی-نمونه-در-گیتهاب" class="contents__link">پروژه‌ی نمونه در گیت‌هاب</a></li><li><a href="#سوالات-و-مشکلات-احتمالی" class="contents__link">سوالات و مشکلات احتمالی</a></li></ul></li></ul></div></div></div></div></div></main></div></div><footer class="footer"><div class="container"><div class="text--center"></div></div></footer>
 </div>
 
-<script src="/styles.9dac1e75.js"></script>
+<script src="/styles.840ed9cf.js"></script>
 
-<script src="/runtime~main.6cc1a0e3.js"></script>
+<script src="/runtime~main.1f9aaa57.js"></script>
 
-<script src="/main.8a5ca5fd.js"></script>
+<script src="/main.2611e20b.js"></script>
 
-<script src="/1.51628345.js"></script>
+<script src="/1.52ee3b57.js"></script>
 
-<script src="/2.73927e4d.js"></script>
+<script src="/2.77dcdc60.js"></script>
 
-<script src="/1be78505.77389f33.js"></script>
+<script src="/1be78505.a5dd7068.js"></script>
 
-<script src="/20ac7829.5c5b6107.js"></script>
+<script src="/20ac7829.754b1727.js"></script>
 
-<script src="/17896441.91b8b06d.js"></script>
+<script src="/17896441.99c122b9.js"></script>
 
-<script src="/812b5c42.bca16e71.js"></script>
+<script src="/812b5c42.bd2480c1.js"></script>
 
 
 </body>
