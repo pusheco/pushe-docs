@@ -110,6 +110,16 @@ Successfully registered to pushe
 
 <TabItem value="ios">
 
+## نصب podهای لازم
+
+وارد فولدر ios شوید و دستور زیر را اجرا کنید.
+
+```ruby
+pod install --repo-update
+```
+
+پس از اجرای این دستور می‌توانید با بازکردن فایل `YourProjectName.xcworkspace` برنامه ios خود را اجرا کنید.
+
 ## اضافه‌کردن کد‌های لازم
 
 در فایل `Info.plist` متناظر با `Target` برنامه، کلید‌ها و مقادیر زیر را وارد کنید.
