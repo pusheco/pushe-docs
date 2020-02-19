@@ -4,8 +4,10 @@ title: فعال‌کردن مالتی‌دکس
 ---
 
 import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+import TabItem from '@theme/TabItem'; 
+import Platforms from '../../src/components/Platforms.jsx'
 
+<Platforms android />
 ## MultiDex چیست؟
 
 در صورتی که `minSdkVersion` پایینتر از ۲۱ باشد و پروژه را اجرا کنید ممکن است این خطا رخ‌دهد:
@@ -32,14 +34,14 @@ Dalvik
 در صورتی که خطایی همانند زیر برای شما رخ می‌دهد
 
 > **نکته‌ی مهم**:    
-> در صورتی که `MinSDK >= 21` باشد این مشکل رخ نخواهد داد زیرا MultiDex در این حالت به صورت پیش‌فرض پشتیبانی می‌شود و نیاز به کار اضافه نیست.    
+> در صورتی که `MinSDK` **۲۱ یا بالاتر** باشد این مشکل رخ نخواهد داد زیرا MultiDex در این حالت به صورت پیش‌فرض پشتیبانی می‌شود و نیاز به کار اضافه نیست.    
 > در صورتی که برنامه به این حالت است، مشکل شما MultiDex نیست.
 
 ## فعال‌کردن MultiDex در برنامه
 
 ### اضافه‌کردن کد گریدل
 
-‌در فایل `build.gradle(app:Module)` این موارد را اضافه کنید:
+‌در فایل `android/app/build.gradle` مالی‌دکس را فعال‌کنید:
 
 ```js {4}
 android {
@@ -52,31 +54,12 @@ android {
 
 ### تغییردادن کلاس اپلیکیشن
 
-### **۱.** استفاده از کلاس ازقبل‌ساخته‌شده‌ی پوشه
+* به آدرس `android/src/main/(java or kotlin)/<your_app>`بروید.    
+(`your_app` مسیر پکیج برنامه‌ی شماست)
 
-کلاس `PusheFlutterApplication` کلاس اپلیکیشنی‌ست که اعمال زیر را انجام داده است:
-* **MultiDex** فعال‌شده است.
-* [فعالسازی رویداد](listener.md) را پیاده‌سازی کرده است.
+<img src="/img/flutter/myAppDir.png" width="480" /><br /><br />
 
-برای استفاده از این کلاس برای فعال‌کردن مالتی‌دکس و رویداد خط کد زیر را در مانیفست جایگزین کنید:
-
-```xml {5}
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.myapp">
-    <application
-            android:name="co.pushe.plus.flutter.PusheFlutterApplication" 
-    >
-        ...
-    </application>
-</manifest>
-```
-
-#### **۲.** کلاس خود را قرار دهید:
-
-* به آدرس `android/src/main/java/<your_app>` یا `android/src/main/kotlin/<your_app>` بروید (`your_app` مسیر پکیج برنامه‌ی شماست)
 * کلاسی به نام `MyApp` در کنار `MainActivity` بسازید و کد زیر را در آن لحاظ کنید:
-
 
 <Tabs
   defaultValue="kt"
@@ -87,72 +70,109 @@ android {
 
 <TabItem value="kt">
 
+```java
+package <your_app>; // در اینجا پکیج‌نیم برنامه باید قرار داده شود
+
+ import io.flutter.app.FlutterApplication
+ import io.flutter.plugin.common.PluginRegistry
+ import io.flutter.plugin.common.PluginRegistry.PluginRegistrantCallback
+ import io.flutter.plugins.GeneratedPluginRegistrant
+ import co.pushe.plus.flutter.PushePlugin
+ import androidx.multidex.MultiDex
+
+class MyApp : FlutterApplication(), PluginRegistrantCallback {
+
+    override fun attachBaseContext(base: Context) {
+        super.attachBaseContext(base)
+        MultiDex.install(this)
+    }
+
+    override fun onCreate() {
+      super.onCreate()
+
+      // other codes
+
+    }
+
+    override fun registerWith(registry: PluginRegistry) {
+      GeneratedPluginRegistrant.registerWith(registry) // Only Embedded v1
+    }
+}
+```
+
 </TabItem>
 
 <TabItem value="java">
 
 ```java
- package <your_app>; // در اینجا پکیج‌نیم برنامه باید قرار داده شود
+package <your_app>; // در اینجا پکیج‌نیم برنامه باید قرار داده شود
 
  import io.flutter.app.FlutterApplication;
  import io.flutter.plugin.common.PluginRegistry;
  import io.flutter.plugin.common.PluginRegistry.PluginRegistrantCallback;
  import io.flutter.plugins.GeneratedPluginRegistrant;
- import io.flutter.plugins.firebasemessaging.FlutterFirebaseMessagingService;
+ import co.pushe.plus.flutter.PushePlugin;
 
- public class MyApp extends FlutterApplication implements PluginRegistrantCallback {
-   @Override
-   public void onCreate() {
-     super.onCreate();
-     
-   }
+public class MyApp extends FlutterApplication implements PluginRegistrantCallback {
 
-   @Override
-   public void registerWith(PluginRegistry registry) {
-     GeneratedPluginRegistrant.registerWith(registry);
-   }
- }
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
+    }
 
+    @Override
+    public void onCreate() {
+      super.onCreate();
+
+      // other codes
+
+    }
+
+    @Override
+    public void registerWith(PluginRegistry registry) {
+      GeneratedPluginRegistrant.registerWith(registry); // Only Embedded v1
+    }
+}
 ```
 
 </TabItem>
 
 </Tabs>
 
-<Tabs
-  defaultValue="androidx"
-  values={[
-    { label: 'AndroidX', value: 'androidx', },
-    { label: 'Android support', value: 'support', },
-  ]}>
 
-<TabItem value="androidx">
+در صورتی که پروژه با استفاده از 
+FlutterEmbeddingV2 (Flutter v1.12 یا بالاتر)
+ساخته‌شده است نیازی به رجیستر کردن پلاگین‌ها نیست و این کار خودکار انجام می‌شود،‌ اما در صورتی که پروژه با استفاده از نسخه‌ی قدیمی‌تری ساخته‌شده است، کافیست این خط را برای جلوگیری از خطای کالبک قرار دهید.
+
+```
+GeneratedPluginRegistrant.registerWith(registry);
+```
+
+
+
+> **از کجا بفهمیم پروژه از `Embedding v2` استفاده می‌کند یا `v1`؟**    
+>    
+> برای اینکه تشخیص دهید پروژه‌ی شما از `FlutterEmbedding v2` استفاده می‌کند یا `v1` می‌توانید فایل `AndroidManifest` را باز کنید و وجود تگ **flutterEmbedding** را بررسی کنید. در صورتی که تگ زیر وجود داشته باشد پروژه از `Embedding v2` استفاده می‌کند
+> 
+> `<meta-data android:name="flutterEmbedding" android:value="2"/>`
+
+
+> **رویدادهای نوتیفیکیشن**:    
+> برای اعمال‌کردن رویدادها در این فایل به [بخش رویدادها](listener) مراجعه کنید.
+
+### رجیسترکردن کلاس
+
+سپس کلاس اپلیکیشن خود را در فایل مانیفست رجیستر کنید:
 
 ```xml {5}
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myapp">
     <application
-            android:name="androidx.multidex.MultiDexApplication" >
+        android:name=".MyApp"
+    >
         ...
     </application>
 </manifest>
 ```
-
-</TabItem>
-
-<TabItem value="support">
-
-```xml {5}
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.myapp">
-    <application
-            android:name="android.support.multidex.MultiDexApplication" >
-        ...
-    </application>
-</manifest>
-```
-
-</TabItem>
-</Tabs>
