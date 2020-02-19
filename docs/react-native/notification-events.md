@@ -8,8 +8,11 @@ description: راهنما ری‌اکت‌نیتیو - اطلاع از روید�
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import Platforms from "@site/src/components/Platforms.jsx";
 
 # اطلاع از رویداد‌های نوتیفیکیشن
+
+<Platforms android/>
 
 ## تعریف رویدادهای نوتیفیکیشن
 

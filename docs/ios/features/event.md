@@ -8,7 +8,16 @@ description: راهنمای آی‌اواس - رویدادها
 
 # رویدادها
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 در صورتی که ایونت(رویداد) خاصی در برنامه اتفاق افتاد می‌توانید آن‌ را با استفاده از Pushe ثبت کنید.
+
+##  رویداد چیست
+
+برای بررسی کردن رفتار کاربرانتان هنگام استفاده از اپلیکیشن، می‌توانید هر جایی که اکشن کاربر برای شما اهمیت دارد یک رویداد یا ایونت به سمت سرورهای پوشه ارسال کنید. برای مثال وقتی کاربر وارد صفحه خرید می‌شود، وقتی که کاربر روی دکمه جستجو کلیک می‌کند و یا در صورتی که کاربر پلن خود را در برنامه از رایگان به پولی تغییر میدهد و به اصطلاح پرمیوم می‌شود و ...
+
+اینکه چه رویدادی را ثبت کنید به مدیر محصول، تیم مارکتینگ و یا کسی که تحلیل رفتارهای کاربران در اپلیکیشن را انجام می‌دهد بستگی دارد
 
 ## ارسال رویداد
 
@@ -17,10 +26,19 @@ description: راهنمای آی‌اواس - رویدادها
 
 <div dir='ltr'>
 
-#### `func sendEvent(name: String)`
-#### `func sendEvent(event: Event)`
+#### `@objc(sendEventWithName:) func sendEvent(with name: String)`
+#### `@objc(sendEvent:) func sendEvent(event: Event)`
 
 </div>
+
+<Tabs
+  defaultValue="swift"
+  values={[
+    { label: 'Swift', value: 'swift', },
+    { label: 'Objective-C', value: 'objc', },
+  ]}>
+
+<TabItem value="swift">
 
 ```swift
 let eventName = "permium_activated";
@@ -34,3 +52,24 @@ let eventData: [String: Any] = ["first": 1,
 let event = Event(name: eventName, action: eventAction, data: eventData)
 PusheClient.shared.sendEvent(event: event)
 ```
+
+</TabItem>
+
+<TabItem value="objc">
+
+```objc
+NSString * _Nonnull eventName = @"permium_activated";
+[PusheClient.shared sendEventWithName:eventName];
+// ----------
+NSString * _Nonnull eventName = @"permium_activated";
+EventAction * eventAction = EventActionPurchase;
+NSDictionary * _Nonnull eventData = @{@"first": @1,
+                                      @"second": @{@"nested": @"something"},
+                                      @"third": @TRUE};
+Event * _Nonnull event = [[Event alloc] initWithName:eventName action:eventAction data:eventData];
+[PusheClient.shared sendEvent:event];
+```
+
+</TabItem>
+
+</Tabs>

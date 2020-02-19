@@ -7,6 +7,8 @@ hide_title: true
 
 # غیر فعال کردن نمایش نوتیفیکیشن
 
+import Platforms from "@site/src/components/Platforms.jsx";
+
 به طور پیش‌فرض نمایش اعلان برای کاربر فعال‌است. اما می‌توان نمایش اعلان را برای کاربر با استفاده از کد غیرفعال و یا مجددا فعال نمود.
 
 
@@ -14,6 +16,7 @@ hide_title: true
 
 ### متد ```Pushe.disableNotifications```
 
+<Platforms android/>
 
 ```js
 Pushe.disableNotifications();
@@ -22,6 +25,8 @@ Pushe.disableNotifications();
 ## فعال‌کردن نمایش اعلان
 
 ### متد ```Pushe.enableNotifications```
+
+<Platforms android/>
 
 ```js
 Pushe.enableNotifications();

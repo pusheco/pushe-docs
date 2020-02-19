@@ -8,6 +8,8 @@ description: راهنمای ری‌اکت‌نیتیو - ثبت رویداد
 
 # ثبت رویداد در برنامه
 
+import Platforms from "@site/src/components/Platforms.jsx";
+
 ## تعریف رویداد
 
 در صورتی که رویداد یا ایونت خاصی در برنامه رخ دهد می‌توانید آن را از طریق کتابخانه پوشه ثبت کنید.
@@ -19,10 +21,13 @@ description: راهنمای ری‌اکت‌نیتیو - ثبت رویداد
 
 ### متد `Pushe.sendEvent`
 
+<Platforms ios android/>
+
 | پارامتر | نوع |
 |-- |--|
 | `name` | `string` |
-
+| `action` | `EventAction` |
+| `data` | `object` |
 
 ```
 const eventName = 'changePlan';
@@ -38,6 +43,8 @@ Pushe.sendEvent(eventName);
 این یک نوع از رویداد می‌باشد که مناسب رویداد هایی نظیر فروش کالا می باشد و در آن می‌توانید از فیلد های بیشتری در رویداد استفاده کنید.
 
 ### متد `Pushe.sendEcommerceData`
+
+<Platforms android/>
 
 | پارامتر | نوع |
 |-- |--|

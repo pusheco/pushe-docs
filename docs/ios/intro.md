@@ -13,18 +13,20 @@ import TabItem from '@theme/TabItem';
 
 ## پیش‌نیازها
 
-- برای داشتن امکان دریافت Push notification در برنامه خود، باید Apple Develeper Account داشته باشید.
-- با استفاده از Apple Developer Account خود، یک کلید APNs ایجاد کنید. 
+- برای داشتن امکان دریافت `Push notification` در برنامه خود، باید `Apple Develeper Account` داشته باشید.
+- با استفاده از `Apple Developer Account` خود، یک کلید `APNs` ایجاد کنید.
     - [نحوه ایجاد کلید APNs](/docs/ios/extra/apns-key)
 - در کنسول فایربیس یک پروژه ایجاد کنید و ‍`Server key` و `Sender ID` دریافت کنید.
-    - [نحوه دریافت Sender ID وServer key از فایربیس](/docs/ios/extra/firebase)
-- در کنسول فایربیس، یک برنامه متناظر با برنامه خود ایجاد کنید و ‍‍‍فایل `GoogleService-Info.plist` را دریافت کرده و به پروژه خود اضافه کنید. 
-    - [نحوه دریافت Sender ID وServer key از فایربیس](/docs/ios/extra/firebase)
-- اپلیکشین خود را در ** کنسول پوشه ** ثبت کنید و appId متناظر با برنامه خود را دریافت کنید.
-- دستگاه تست باید یک دستگاه فیزیکی باشد. (در حال حاضر simulatorهای Xcode از Push Notification پشتیبانی نمی‌کنند.)
-- قابلیت‌های موردنیاز را در Xcode به برنامه خود اضافه کنید.
+    - [نحوه دریافت Sender ID و Server key از فایربیس](/docs/general/firebase/get-credentials)
+- در کنسول فایربیس، یک برنامه ایجاد کرده و فایل `GoogleService-Info.plist` دریافتی را به پروژه خود در `Xcode` اضافه کنید.
+    - [نحوه ایجاد برنامه در فایربیس و دریافت فایل GoogleService-Info.plist](/docs/ios/extra/firebase/create-app)
+- کلید `APNs` خود را در برنامه‌تان در فایربیس آپلود کنید.
+    - [نحوه آپلود کلید APNs در فایربیس](/docs/ios/extra/firebase/upload-apns-to-firebase)
+- اپلیکشین خود را در ** کنسول پوشه ** ثبت کنید و `appId` متناظر با برنامه خود را دریافت کنید.
+- دستگاه تست باید یک دستگاه فیزیکی باشد. (در حال حاضر `simulator`های `Xcode` از `Push Notification` پشتیبانی نمی‌کنند.)
+- قابلیت‌های موردنیاز را در `Xcode` به برنامه خود اضافه کنید.
     - [نحوه فعال کردن قابلیت‌های موردنیاز برای دریافت Push Notification](/docs/ios/extra/capabilities)
-- برای دریافت عکس، فیلم و ... در Pushe Notification، یک Notification Service Extension به برنامه خود اضافه کنید.
+- برای دریافت عکس، فیلم و ... در `Pushe Notification`، یک `Notification Service Extension` به برنامه خود اضافه کنید.
     - [نحوه اضافه کردن Notification Service Extension](/docs/ios/extra/notification-service-extension)
 
 ## نصب پوشه با استفاده از cocoapods
@@ -34,7 +36,7 @@ import TabItem from '@theme/TabItem';
 ```ruby
 target 'PusheDemo' do
     use_frameworks!
-        pod 'Pushe'
+        pod 'Pushe', '1.0.5'
 
     target 'PusheDemoTests' do
         inherit! :search_paths
@@ -50,87 +52,27 @@ end
 
 target 'DemoNotificationServiceExtension' do
     use_frameworks!
-        pod 'Pushe'
+        pod 'Pushe', '1.0.5'
 end
 ```
 
 سپس با دستور زیر می‌توانید پوشه را نصب کنید.
 
 ```bash
-pod install
+pod install --repo-update
 ```
-توجه کنید که ورژن ۰.۹.۰ آخرین ورژن پوشه برای iOS است که از xcode  ورژن ۱۱.۲ و swift ورژن ۵.۱.۲ پشتیبانی می‌کند. در صورتی‌که می‌خواهید ورژن خاصی از پوشه مثلا ورژن ۰.۹.۰ را نصب کنید، به جای 
-```ruby
-pod Pushe
-```
-از دستور
-```ruby
-pod 'Pushe', '0.9.0'
-```
-استفاده کنید.
-
 ## اضافه‌کردن کد‌های لازم
 
-در Target مربوط به برنامه:
+در فایل `Info.plist` متناظر با `Target` برنامه، کلید‌ها و مقادیر زیر را وارد کنید.
 
-<Tabs
-  defaultValue="swift"
-  values={[
-    { label: 'Swift', value: 'swift', },
-    { label: 'Objective-C', value: 'objc', },
-  ]}>
+<div dir='ltr'>
 
-<TabItem value="swift">
+| key | value | type |
+|--|:--:|--|
+|PusheAppId|دریافتی از کنسول پوشه [appId](/docs/ios/extra/pushe/how-to-get-pushe-app-id)|String|
+|FirebaseAppDelegateProxyEnabled|NO|Boolean|
 
-```swift
-// AppDelegate.swift file
-
-import UIKit
-import Pushe
-
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    var window: UIWindow?
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        PusheClient.shared.pusheDelegate = somethingImplementingPusheDelegate    // this line is optional
-        PusheClient.shared.start(pusheAppId: "enter your appId from pushe console here")
-        
-        return true
-    }
-}
-```
-
-</TabItem>
-
-<TabItem value="objc">
-
-```objc
-// AppDelegate.m file
-
-#import "AppDelegate.h"
-@import Pushe;
-
-@interface AppDelegate () <UNUserNotificationCenterDelegate>
-
-@end
-
-@implementation AppDelegate 
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-	PusheClient.shared.delegate = somethingImplementingPusheDelegate;    // this line is optional
-    [PusheClient.shared start:@"enter your appId from pushe console here"];
-	
-    return YES;
-}
-
-@end
-```
-
-</TabItem>
-
-</Tabs>
+</div>
 
 و در Target مربوط به `NotificationServiceExtension`:
 
@@ -144,7 +86,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 <TabItem value="swift">
 
 ```swift
-// NotificationService.swift.swift file
+// NotificationService.swift file
 
 import UserNotifications
 import Pushe
@@ -194,8 +136,7 @@ class NotificationService: UNNotificationServiceExtension {
     self.contentHandler = contentHandler;
     self.bestAttemptContent = [request.content mutableCopy];
     
-    [PusheClient.shared didReceiveNotificationExtensionRequest:self.receivedRequest
-                      withMutableNotificationContent:self.bestAttemptContent];
+    [PusheClient.shared didReceiveNotificationExtensionRequest:self.bestAttemptContent :self.contentHandler];
 }
 
 - (void)serviceExtensionTimeWillExpire {
@@ -209,33 +150,18 @@ class NotificationService: UNNotificationServiceExtension {
 
 </Tabs>
 
-اگر مایل باشید، می‌توانید پروتکل `pusheDelegate` را پیاده‌سازی کنید تا بتوانید callbackهایی را در هنگام دریافت پوش‌نوتیفیکیشن، کلیک کاربر و ... اجرا کنید.
-
 ## تست و ثبت دستگاه در پوشه
 
-پس از اجرای برنامه و فراخوانی کد رجیستر پوشه، باید در **Xcode console** لاگ‌های زیر را ببینید (ممکن است به دلیل ارتباط با سرور این پروسه چند ثانیه طول بکشد):
+پس از اجرای برنامه و فراخوانی کد رجیستر پوشه، باید در کنسول **Xcode** لاگ‌های زیر را ببینید (ممکن است به دلیل ارتباط با سرور این پروسه چند ثانیه طول بکشد):
 
 ```
+Setting up Pushe ...
+apns-token:<f5b7616ba649b73bc1dae34e019e35fc2602ecb05d578b369a85a8c480480abc>
+fcm-token:<uIMhZl83bOudsizqViJSl4:APA91bFNClxSt2AoVWl37MlXQS_RXlWAEJpRR44dcqBg-jfUvpfc0kclcYV4-hZAGvighZmvVF0lracKDZMtSuQNu6bJhXok6GI_pE8kxfDNXFq98ParWvjex8aAUPzB93gUQn0SKLBU>
 registering in Pushe ...
 📗 -> successfully registered in Pushe
 ```
 <br /><br />
-
-<!--
-## [امکانات](#features)
-
-* برای دریافت DeviceID و AdvertisementID می‌توانید از توابع زیر استفاده کنید.
-
-```swift
-let deviceID = PusheApp.getDeviceID()
-let advertisementID = PusheApp.getAdvertisementID()
-```
-
-```objc
-NSString *deviceID = [PusheApp getDeviceID];
-NSString *advertisementID = [PusheApp getAdvertisementID];
-```
--->
 
 ## ادامه‌ی کار
 (بر روی لینک مورد نظر کلیک کنید)

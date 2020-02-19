@@ -34,8 +34,10 @@ module.exports = {
     "نصب و راه‌اندازی پوشه در Xcode": [
       "ios/intro"
     ],
-    "قابلیت‌ها": [
-      "ios/features",
+    "قابلیت‌ها و امکانات": [
+      "ios/configuration",
+      // "ios/features",
+      "ios/identifiers",
       {
         type: 'category',
         label: 'گروه بندی کاربران',
@@ -46,12 +48,12 @@ module.exports = {
         label: 'آنالیتیکس',
         items: ['ios/features/event']
       },
-      "ios/features/callbacks"
+      //"ios/features/callbacks"
     ],
     "API reference": [
       "ios/reference/pushe-protocol",
       "ios/reference/pushe-client",
-      "ios/reference/pushe-delegate",
+      // "ios/reference/pushe-delegate",
       {
         type: 'category',
         label: 'مدل‌ها',
