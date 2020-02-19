@@ -83,23 +83,24 @@ Pushe.setNotificationListener(
 هنگامی که نوتیفیکیشنی دریافت شود و برنامه بسته باشد، تنها کلاسی که کدهای آن فراخوانی می‌شود کلاس `Application` است. لذا انتظار اجرا کدهای فریم‌ورک را نباید داشته باشیم زیرا این کدها در `Foreground` اجرا می‌شوند.    
 برای دریافت رویداد حتی در هنگامی که برنامه بسته‌است باید کدی داشته باشیم که در کلاس `Application` اجرا شود. پس:
 
+### ساخت کلاس اپلیکیشن
+
 * به آدرس `android/src/main/java/` بروید.
 *  پکیج‌نیم خود را باز کنید و در کنار کلاس `MainActivity` کلاسی (جاوا) به نام **MyApp** ایجاد کنید.    
 * کد زیر را به جای کد اصلی قرار دهید:
 
-```java {1,22,23,28}
-package co.pushe.pushe.flutter;
+```java {1,21,22,27,28,29}
+package co.pushe.pushe.flutter; // پکیج‌نیم خود را قرار دهید
 
 import android.content.Context;
-
 import androidx.multidex.MultiDex;
-
 import co.pushe.plus.flutter.PushePlugin;
 import io.flutter.app.FlutterApplication;
 import io.flutter.plugin.common.PluginRegistry;
 
 public class MyApp extends FlutterApplication implements PluginRegistry.PluginRegistrantCallback {
 
+    // در صورتی که مالتی دکس را فعال کرده‌اید این تابع را نیز قرار دهید
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
@@ -109,20 +110,36 @@ public class MyApp extends FlutterApplication implements PluginRegistry.PluginRe
     @Override
     public void onCreate() {
         super.onCreate();
-        PushePlugin.setDebugMode(true);
+        PushePlugin.setDebugMode(true); // فعال‌سازی دیباگ مد برای چاپ اطلاعات بیشتر در کنسول
         PushePlugin.initialize(this);
     }
 
     @Override
     public void registerWith(PluginRegistry registry) {
-        PushePlugin.registerWith(registry);
+        // یکی از خطوط زیر
+        PushePlugin.registerWith(registry); // FlutterEmbedding v2
+        GeneratedPluginRegistrant.registerWith(registry); // FlutterEmbedding v1
     }
 }
 
 ```
 
-**نکته**: دقت کنید که به جای `co.pushe.pushe.flutter` پکیج‌نیم برنامه‌ی خود را قرار دهید (دقیقا پکیج‌نیم کلاس `MainActivity`).
 
+### تعیین state بازشدن برنامه (Flutter embedding v1)
+
+> **در صورتی که برنامه با استفاده از `Flutter v1.12` یا بالاتر ساخته شده است نیازی به انجام این بخش نیست**، زیرا پلاگین از چرخه‌ی حیات برنامه  مطلع خواهد شد. اما در غیر اینصورت بایستی بازشدن برنامه را به پوشه اطلاع دهید.
+
+در فایل `MainActivity` هنگام ساخته شدن اکتیویتی این خط را اضافه کنید:
+
+```java {4}
+class MainActivity: FlutterActivity() {
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    co.pushe.plus.flutter.PushePlugin.appOnForeground(true)
+    GeneratedPluginRegistrant.registerWith(this)
+  }
+}
+```
 
 * فایل `AndroidManifest.xml` را در آدرس `android/src/main` باز کنید و این خط (Highlight شده) را به تگ `application` اضافه‌کنید:
 
@@ -135,11 +152,14 @@ public class MyApp extends FlutterApplication implements PluginRegistry.PluginRe
 
 ```
 
+
+### تعریف تابع رویداد مختص بکگراند
+
 * در کد فلاتر خود، همانند زیر بصورت `TopLevel` (بیرون از کلاس) و یا `static` (دارای کلمه‌ی static) تعریف کنید:
 
 ```java
 
-onBackgroundMessageReceived(String eventType, dynamic message) { sdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdssd
+_onBackgroundMessageReceived(String eventType, dynamic message) {
   switch(eventType) {
     case Pushe.notificationReceived: // اعلان دریافت شده
       
@@ -172,42 +192,52 @@ onBackgroundMessageReceived(String eventType, dynamic message) { sdsdsdsdsdsdsds
 
 ورودی `eventType` می‌توانید یکی از موارد زیر باشد:
 
-* **`Pushe.notificationReceived`**: نوتیفیکیشن دریافت‌شده است و `message` می‌تواند به یک `NotificationData` تبدیل شود:
+* **`Pushe.notificationReceived`**, **`Pushe.notificationClicked`**, **`Pushe.notificationDismissed`**:    
+ نوتیفیکیشن دریافت، کلیک یا رد شده است و `message` می‌تواند به یک `NotificationData` تبدیل شود:
 
 ```java
 var notification = NotificationData.fromDynamic(message);
 ```
 
-* **`Pushe.notificationReceived`**: نوتیفیکیشن دریافت‌شده است و `message` می‌تواند به یک `NotificationData` تبدیل شود:
+* **`Pushe.notificationButtonClicked`**:    
+ دکمه‌ای از نوتیفیکیشن کلیک شده است و `message` می‌تواند به `NotificationData` تبدیل شود.
 
 ```java
 var notification = NotificationData.fromDynamic(message);
+NotificationButtonData clickedButton = notification.clickedButton;
 ```
 
 
-* **`Pushe.notificationReceived`**: نوتیفیکیشن دریافت‌شده است و `message` می‌تواند به یک `NotificationData` تبدیل شود:
+* **`Pushe.customContentReceived`**:    
+ دیتای دلخواه در غالب جیسون دریافت شده و `message` یک `Map` خواهد بود.
 
 ```java
-var notification = NotificationData.fromDynamic(message);
+var customDataKey1 = message['myKey1'];
 ```
 
+### استفاده از تابع برای دریافت رویداد
 
-* **`Pushe.notificationReceived`**: نوتیفیکیشن دریافت‌شده است و `message` می‌تواند به یک `NotificationData` تبدیل شود:
+برای دریافت رویداد در بکگراند بایستی تابع را به پوشه معرفی کنید. برای این کار کافیست نام تابع را به پارامتر آخر
+`setNotificationListener`
+بدهید:
 
-```java
-var notification = NotificationData.fromDynamic(message);
-```
+```js
+Pushe.setNotificationListener(
+  onReceived: (notificationData) { /* Your code for foreground */ },
+  onClicked: (notificationData) { /* Your code for foreground */ },
+  onDismissed: (notificationData) { /* Your code for foreground */ },
+  onButtonClicked: (notificationData) { /* Your code for foreground */ },
+  onCustomContentReceived: (customContent) { /* Your code for foreground */ },
+  // For background
+  onBackgroundNotificationReceived: _onBackgroundMessageReceived // TOP LEVEL function
+);
+``` 
 
-
-
-
+> **نکته**: رویداد بکگراند در یک Isolate دیگر فراخوانی می‌شود و لذا دسترسی به Ui در بکگراند وجود ندارد.
 
 </TabItem>
 
 </Tabs>
-
-
-
 
 
 

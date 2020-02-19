@@ -64,14 +64,14 @@ module.exports = {
   },
 
   flutter: {
-    "Flutter": ["flutter/intro"],
+    "Flutter": ["flutter/intro", "flutter/multidex"],
     "قابلیت‌ها و امکانات": [
       "flutter/registration",
       "flutter/unification",
       {
         type: 'category',
         label: 'گروه بندی کاربران',
-        items: ["flutter/topic"/*, "flutter/channel"*/, "flutter/tag"],
+        items: ["flutter/topic", "flutter/channel", "flutter/tag"],
       },
       {
         type: 'category',

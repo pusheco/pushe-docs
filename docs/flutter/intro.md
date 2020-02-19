@@ -11,20 +11,21 @@ sidebar_label: راه‌اندازی سریع
 قبل از شروع کار موارد زیر را بررسی و از درستی آنها اطمینان حاصل نمایید. در صورتی که هر یک از موارد زیر مشکل داشته باشد راه‌اندازی با مشکل مواجه خواهد شد.
 
 - برای گذر از تحریم سرور‌های Jcenter از **ابزار گذر از تحریم** یا ... استفاده کنید.
--  در پروژه شما باید `MinSDKVersion` >= 15 ,`TargetSDK` >= 28 باشد.
 - اپلیکیشن باید در**کنسول** ثبت‌ شود.
 - **توکن مانیفست** از کنسول برداشته ‌شود.
 - دستگاه تست باید دارای **گوگل‌پلی‌سرویس** بوده و اینترنت آن فعال‌ باشد.
 
 ## اضافه‌کردن پلاگین به پروژه
 
-به فایل `pubspec.yaml` پلاگین پوشه را اضافه‌کنید:
+> نسخه‌ی فلاتر باید حداقل **1.12.13+hotfix.6** باشد. در صورتی که نسخه‌ی قدیمی‌تری دارید، بایستی با دستور `flutter upgrade` اقدام به بروزرسانی کنید.
 
-```yaml
+به فایل `pubspec.yaml` [پلاگین پوشه](https://pub.dev/packages/pushe_flutter) را اضافه‌کنید:
+
+```yml {4}
 dependencies:
     # ...
     # Add Pushe
-    pushe_flutter: 2.0.3^
+    pushe_flutter: 2.1.0^
 ```
 
 سپس سینک کنید یا دستور `flutter packages get` را در ترمینال وارد کنید تا پلاگین‌ها به پروژه اضافه‌ شوند.
@@ -33,10 +34,13 @@ dependencies:
 
 > محل فایل‌مانیفست `android/app/src/main/AndroidManifest.xml` می‌باشد.
 
-تگ مانیفست را از [کنسول پوشه](https://console.pushe.co) دریافت‌کنید و در فایل `AndroidManifest.xml` خود اضافه کنید.
-و محل اضافه‌کردن آن در فایل `AndroidManifest` باید مطابق زیر باشد:
+تگ مانیفست را از [کنسول پوشه](https://console.pushe.co) به صورت زیر دریافت کنید:
 
-```xml
+<img src="/img/common/console_manifest.png" width="500" />
+
+سپس به صورت زیر به فایل مانیفست اضافه کنید (خط Highlight شده بایستی اضافه شود).
+
+```xml {5}
 <manifest ...>
     <application ...>
         ...
@@ -50,13 +54,16 @@ dependencies:
 
 برای استفاده از **امکان ارسال اعلان با استفاده‌ از موقعیت مکانی** پرمیشن لوکیشن را نیز به مانیفست اضافه‌کنید:
 
-```xml
-<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+```xml {2,3,5}
+<manifest>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!--برای اندرویدهای ۱۰ و بالاتر -->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
 
-<!--برای اندرویدهای ۱۰ و بالاتر -->
-<uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
 
+    <application ...>
+</manifest>
 ```
 
 > در صورتی که بخواهید **آمار کاربران را بر حسب موقعیت جغرافیایی** آنها مشاهده کنید و یا **با فیلتر لوکیشن، اعلان ارسال کنید** باید کاربر این دسترسی را به برنامه اضافه‌کنید.
@@ -64,9 +71,10 @@ dependencies:
 
 ## اضافه‌کردن کدهای لازم
 
-فایل `main.dart`:
+در صورتی که بخواهید تابعی از پوشه را استفاده کنید بایستی آن‌را در کد ایمپورت کنید:
 
-در بخش `import`ها کد زیر را اضافه‌کنید تا کلاس‌های پوشه در فایل قابل‌ استفاده شوند:
+
+در بخش `import`های فایل `main.dart` زیر را اضافه‌کنید تا کلاس‌های پوشه در فایل قابل‌ استفاده شوند:
 
 ```java
 import 'package:pushe_flutter/pushe.dart';
@@ -77,6 +85,8 @@ import 'package:pushe_flutter/pushe.dart';
 
 پس از اینکه کتابخانه پوشه را مطابق با آموزش داده شده به پروژه خود اضافه کردید، می‌توانید اپلیکیشن خود را اجرا کرده و بر روی دستگاه خود نصب و تست کنید.
  پس از اجرای برنامه به طور خودکار پوشه اقدام به رجیستر می‌کند و نیاز به اضافه‌کردن کدی نیست.
+
+> **نکته**: در صورتی که خطایی در رابطه با **dex limit** (Multidex) دارید برای فعال‌کردن مالتی‌دکس به [این بخش](multidex) مراجعه کنید.
 
 * در پنل پوشه خود به صفحه کاربران/نصب ها بروید.
 * بعد از گذشت زمان کوتاهی یک ردیف مشخصات نصب به لیست نصب ها اضافه می شود که متعلق به گوشی شما است.
@@ -103,8 +113,11 @@ Pushe: Registration successful
 ## ادامه‌ی کار
 (بر روی لینک مورد نظر کلیک کنید)
 
-### [پروژه‌ی نمونه در گیت‌هاب](https://github.com/pusheco/pushe-flutter)
+### [سورس‌کد پلاگین](https://github.com/pusheco/pushe-flutter)
+برای مشاهده‌ی سورس‌کد پروژه و تست نسخه‌های منتشرنشده می‌توانید در گیتهاب سورس پروژه را مشاهده نمایید.
+
+### [پروژه‌ی نمونه در گیت‌هاب](https://github.com/pusheco/pushe-flutter-sample)
 بررسی امکانات در نمونه‌ای از قبل طراحی شده دارای تمام امکانات کتابخانه‌ی پوشه
 
-### [سوالات و مشکلات احتمالی](/docs/flutter/troubleshoot)
+### [سوالات و مشکلات احتمالی](troubleshoot)
 در صورتی که در یکی از مراحل زیر به مشکلی برخوردید یا هر سوالی در مورد کتابخانه‌ دارید
