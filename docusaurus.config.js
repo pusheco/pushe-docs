@@ -15,7 +15,7 @@ module.exports = {
   organizationName: 'pusheco', // Usually your GitHub org/user name.
   projectName: 'pushe-docs', // Usually your repo name.
   themeConfig: {
-    sidebarCollapsible: true,
+    sidebarCollapsible: false,
     prism: {
       theme: require('prism-react-renderer/themes/palenight'),
       defaultLanguage: 'javascript',
