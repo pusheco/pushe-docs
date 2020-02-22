@@ -64,7 +64,7 @@ module.exports = {
   },
 
   flutter: {
-    "Flutter": ["flutter/intro", "flutter/multidex"],
+    "Flutter": ["flutter/intro"],
     "قابلیت‌ها و امکانات": [
       "flutter/registration",
       "flutter/unification",
