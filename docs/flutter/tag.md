@@ -3,6 +3,8 @@ id: tag
 title: برچسب (Tag)
 ---
 
+import Platforms from '../../src/components/Platforms.jsx'
+
 هر کاربری که در لیست نصب‌های برنامه قرار گیرد می‌تواند یک جیسون به همراه خود داشته باشد که نمایانگر ویژگی‌های مختلف مختص آن کاربر باشد.
 برای ارسال اعلان و ... می‌توان از این تگ‌ها استفاده کرد و دسته‌ی خاصی از کاربران را مشخص کرد.
 
@@ -12,10 +14,9 @@ title: برچسب (Tag)
 - و ...
 
 ## اضافه‌کردن تگ
+<Platforms android />
+
 > از نسخه‌ی 2.0.3
-
-
-### متد addTags
 
 
 |پارامتر ورودی|استفاده|
@@ -29,6 +30,7 @@ Map<String, String> tags = {
     "age": "25",
     "birthday":"1435187386"
 };
+
 Pushe.addTags(tags, callback: () {
     // Tags added successfully
 });
@@ -39,10 +41,9 @@ Pushe.addTags(tags, callback: () {
 
 
 ## حذف تگ از لیست تگ‌ها
+<Platforms android />
+
 > از نسخه‌ی 2.0.3
-
-
-### متد removeTags
 
 
 برای حذف می‌توانید لیست کلید‌هایی که می‌خواهید از جیسون تگ حذف کنید را به ورودی تابع بدهید.
@@ -60,11 +61,10 @@ Pushe.RemoveTag(["name", "age", "birthday"], callback: () {
 ```
 
 ## گرفتن لیست تگ‌ها
+<Platforms android />
+
 > از نسخه‌ی 2.0.3
 
-
-### متد getSubscribedTags
-> از نسخه‌ی 2.0.3
 
 
 خروجی این تابع یک `Map<String, String>` که تمام تگ‌های کاربر در آن وجود دارد خواهد بود.

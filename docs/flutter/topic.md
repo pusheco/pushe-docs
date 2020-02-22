@@ -3,36 +3,43 @@ id: topic
 title: تاپیک
 ---
 
+import Platforms from '../../src/components/Platforms.jsx'
+
  تاپیک را می‌توان یک گروه به حساب آورد که کاربران یک اپ را می‌توان به آن اضافه و از آن حذف کرد. شما می‌توانید کاربران خود را در تاپیک یا تاپیک‌های متفاوت ثبت‌نام کنید و برحسب علاقه‌مندی کاربران یا دسته‌بندی خودتان به تاپیک مرتبط پوش بفرستید. مثلا اگر شما اپلیکیشن خبری دارید و کاربرانی به اخبار ورزشی علاقمند هستند و عده‌ای به اخبار فرهنگی، می‌توانید دسته اول را در تاپیک ورزشی و دسته دوم را در تاپیک فرهنگی ثبت‌نام کنید و هنگام ارسال پوش، برحسب محتوای پوش‌تان به تاپیک مرتبط آن را ارسال کنید تا فقط کاربران علاقمند به آن موضوع آن را دریافت کنند.برای استفاده از این امکان باید کاربران خود را در تاپیک مورد نظر عضو کنید. 
 
 
 ## عضویت کاربر در تاپیک
+<Platforms android />
 
 کاربر را به تاپیک‌ مشخص اضافه می‌کند.
 
 ```java
- Pushe.subscribe('sport',callback:(result) {
-          if (result)
-          {
-             // Successfully subscribed to topic
-          }
-        });
+ Pushe.subscribe('topicName',callback:(result) {
+    // Successfully subscribed to topic
+ });
 
 ```
 
-> نام تاپیک باید انگلیسی باید و Regex آن مطابق داکیومنت فایربیس بصورت زیر است:
+> نام تاپیک باید انگلیسی باید و Regex آن مطابق داکیومنت فایربیس بصورت زیر است:    
 > `[a-zA-Z0-9-_.~%]+`
 
 ## لغو عضویت کاربر از تاپیک
+<Platforms android />
 
 کاربر را از تاپیک در صورت وجود حذف می‌کند (در صورتی که قبلا عضو نشده‌ باشد اتفاقی نمی‌افتد)
 
 ```java
- Pushe.unsubscribe('sport',callback:(result) {
-          if (result)
-          {
-             // Successfully unsubscribed from topic
-          }
-        });
+Pushe.unsubscribe('topicName',callback:(result) {
+   // Successfully unsubscribed from topic
+});
 
+```
+
+## گرفتن لیست تایپک‌های عضو شده‌ی کاربر
+<Platforms android />
+
+با استفاده از تابع `getSubscribedTopics`  می‌توان لیست تاپیک‌هایی که کاربر در آنها با استفاده از `Pushe.subscribe` عضو شده را به دست آورد:
+
+```java
+var listOfTopics = await Pushe.getSubscribedTopics();
 ```

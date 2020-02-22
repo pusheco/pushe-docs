@@ -3,6 +3,7 @@ id: unification
 title: تمایز کاربران با شناسه‌ها
 ---
 
+import Platforms from '../../src/components/Platforms.jsx'
 
 ## اختصاص شناسه سفارشی به کاربران
 
@@ -11,6 +12,10 @@ title: تمایز کاربران با شناسه‌ها
 > یکتا نگه داشتن شناسه‌هایی که به کاربران خود اختصاص می‌دهید بر عهده شماست.
 در صورتی که شناسه‌ای را به بیشتر از یک کاربر اختصاص دهید، موقع ارسال اعلان به آن شناسه همه کاربرانی که آن شناسه به آن‌ها اختصاص داده شده است اعلان را دریافت خواهند کرد.    
 در مواقعی ممکن است این رفتار مطلوب باشد، مثلا در صورتی که یک کاربر در چند دستگاه لاگین کرده باشد ولی در غیر این صورت توجه داشته باشید که یک شناسه را به بیش از یک کاربر اختصاص ندهید.
+
+> **حذف‌شدن PusheId**:    
+>زین‌پس، به جای PusheId می‌توانید از AndroidId و GoogleAdvertisingId و نیز CustomId استفاده کنید.
+
 
 سه نوع شناسه قابل اختصاص دادن به کاربران وجود دارد که شما برحسب نیاز از یک یا تعدادی از آن‌ها می‌توانید استفاده کنید.
 
@@ -23,6 +28,7 @@ title: تمایز کاربران با شناسه‌ها
 
 
 ### متد Pushe.setUserEmail
+<Platforms android />
 
 با استفاده از این متد می توانید ایمیل کاربر را به عنوان یک شناسه یکتا برای وی ذخیره کنید و با استفاده از آن اعلان یکتا برای این کاربر ارسال کنید.
 
@@ -35,6 +41,7 @@ Pushe.setUserEmail(userEmail);
 > نکته: برای حذف ایمیل از قبل ذخیره شده کاربر مقدار `null` را به عنوان پارامتر به این متد بدهید.
 
 ### متد Pushe.setUserPhoneNumber
+<Platforms android />
 
 با استفاده از این متد می توانید شماره کاربر را به عنوان شناسه یکتا برای وی‌ دخیره کنید و با استفاده از این شماره به این کاربر اعلان یکتا ارسال کنید.
 
@@ -47,6 +54,7 @@ Pushe.setUserPhoneNumber(phoneNumber);
 
 
 ### متد Pushe.setCustomId
+<Platforms android />
 
 با استفاده از این متد می توانید یک شناسه یکتا (می توانید از هر مقداری برای شناسه یکتا استفاده کنید فقط مقدار پارامتر باید از نوع string باشد) به کاربر اختصاص دهید تا با این شناسه به کاربر اعلان یکتا ارسال کنید.
 
@@ -73,6 +81,7 @@ Pushe.setCustomId(customId);
 
 
 ### متد Pushe.getAndroidId
+<Platforms android />
 
 
 ```js
@@ -80,6 +89,7 @@ var androidId = await Pushe.getAndroidId();
 ```
 
 ### متد Pushe.getGoogleAdvertisingId
+<Platforms android />
 
 
 ```js
@@ -100,6 +110,7 @@ var adId = await Pushe.getGoogleAdvertisingId();
 
 
 ### متد Pushe.getUserEmail
+<Platforms android />
 
 این متد مقداری که برای email از قبل توسط [Pushe.setUserEmail](#متد-pushesetuseremail) ذخیره شده را برمی‌گرداند.
 در صورتی که هیچ مقدار ایمیلی از قبل برای آن ذخیره نشده باشد یک string خالی برمی‌گرداند.
@@ -110,6 +121,7 @@ var email = await Pushe.getUserEmail();
 ```
 
 ### متد Pushe.getUserPhoneNumber
+<Platforms android />
 
 این متد مقداری که برای phoneNumber از قبل توسط [Pushe.setUserPhoneNumber](#متد-pushesetuserphonenumber) ذخیره شده را برمی‌گرداند.
 در صورتی که هیچ مقداری از قبل ذخیره نشده باشد یک string خالی بر‌می‌گرداند.
@@ -120,6 +132,7 @@ var phone = await Pushe.getUserPhoneNumber();
 ```
 
 ### متد Pushe.getCustomId
+<Platforms android />
 
 این متد مقداری که از قبل برای customId توسط [Pushe.setCustomId](#متد-pushesetcustomid) ذخیره شده را بر‌می‌گرداند.
 در صورتی که هیچ مقداری از قبل ذخیره نشده باشد یک string خالی برمی‌گرداند.
