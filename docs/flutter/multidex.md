@@ -8,6 +8,7 @@ import TabItem from '@theme/TabItem';
 import Platforms from '../../src/components/Platforms.jsx'
 
 <Platforms android />
+
 ## MultiDex چیست؟
 
 در صورتی که `minSdkVersion` پایینتر از ۲۱ باشد و پروژه را اجرا کنید ممکن است این خطا رخ‌دهد:
@@ -112,6 +113,7 @@ package <your_app>; // در اینجا پکیج‌نیم برنامه باید �
  import io.flutter.plugin.common.PluginRegistry.PluginRegistrantCallback;
  import io.flutter.plugins.GeneratedPluginRegistrant;
  import co.pushe.plus.flutter.PushePlugin;
+ import androidx.multidex.MultiDex;
 
 public class MyApp extends FlutterApplication implements PluginRegistrantCallback {
 

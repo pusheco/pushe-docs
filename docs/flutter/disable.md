@@ -3,12 +3,14 @@ id: disable-notification
 title: غیرفعال‌کردن نمایش اعلان
 ---
 
+import Platforms from '../../src/components/Platforms.jsx'
 
 به طور پیش‌فرض نمایش اعلان برای کاربر فعال‌است. اما می‌توان نمایش اعلان را برای کاربر با استفاده از کد غیرفعال و یا مجددا فعال نمود.
 
->‌ توابع callback کماکان اجرا می‌شوند و برای جلوگیری از اجرای آنها فعال‌بودن را بررسی کنید.
 
 ## غیرفعال‌کردن نمایش اعلان
+<Platforms android />
+
 > تمام نسخه‌ها
 
 
@@ -17,6 +19,8 @@ Pushe.setNotficationOff();
 ```
 
 ## فعال‌کردن نمایش اعلان
+<Platforms android />
+
 > تمام نسخه‌ها
 
 ```js
@@ -24,6 +28,8 @@ Pushe.setNotficationOn();
 ```
 
 ## بررسی وضعیت نمایش اعلان
+<Platforms android />
+
 > تمام نسخه‌ها
 
 

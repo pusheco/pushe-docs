@@ -3,19 +3,24 @@ id: channel
 title: کانال نوتیفیکیشن
 ---
 
+import Platforms from "@site/src/components/Platforms.jsx";
 
-برای دستگاه‌های **اندروید ۸ به بالا** می‌توان نوتیفیکیشن را علاوه بر کانال پیش‌فرض به کانال کاستوم‌ فرستاد.
+<Platforms android />
+
+
+## تعریف کانال نوتیفیکیشن
+
+
+کانال نوتیفیکیشن که در اندروید نسخه ۸ اضافه شده در واقع یک دسته‌بندی برای اعلان‌های ارسالی به کاربران می‌باشد که می‌توان در این دسته بندی رنگ ال‌ای‌دی ، صدای اعلان و ... را مشخص کرد.
+
+[اطلاعات بیشتر در مورد کانال نوتیفیکیشن](https://developer.android.com/training/notify-user/channels)
 
 > در نظر داشته‌باشید که کانفیگ نوتیفیکیشن که برای ارسال در کنسول تنظیم می‌کنید از بین‌می‌رود و تنظیمات نظیر کانال نوتیفیکیشن جایگزین آن می‌شود (مثلا صدای اعلان، رنگ LED و ...)
 
 ## اضافه‌کردن کانال نوتیفیکیشن
 > نسخه‌ی 2.1.0 به بعد
 
-<div dir='ltr'>
-
-#### `static void createNotificationChannel(parameters...)`
-
-</div>
+### تابع `createNotificationChannel`
 
 |پارامتر ورودی|استفاده|
 |:--:|--|
@@ -52,11 +57,7 @@ Pushe.createNotificationChannel(
 
 در صورتی که قصد دارید دستگاه را از کانال لغو عضویت کنید، کد زیر را فراخوانی کنید.
 
-<div dir='ltr'>
-
-#### `removeNotificationChannel(channelId)`
-
-</div>
+### تابع `removeNotificationChannel`
 
 |پارامتر ورودی|استفاده|
 |:--:|--|
@@ -66,3 +67,5 @@ Pushe.createNotificationChannel(
 String channelThatWasCreated = "sportChannel";
 Pushe.removeNotificationChannel(channelThatWasCreated);
 ```
+
+> **نکته**: برای ساخت یا حذف کانال می‌توانید از هر تابعی [حتی غیر پوشه] استفاده کنید.

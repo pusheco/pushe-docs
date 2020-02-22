@@ -8,7 +8,6 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 # تعریف رویداد‌های نوتیفیکیشن
-<Platforms android />
 
 > نسخه‌ی 0.9.0 به بعد
 
@@ -33,6 +32,7 @@ main
 
 
 ## تابع `setNotificationListener`
+<Platforms android />
 
 |پارامتر ورودی|استفاده|
 |:--:|--|
@@ -75,6 +75,9 @@ Pushe.setNotificationListener(
   onCustomContentReceived: (customContent) { /* Your code */ },
 );
 ```
+
+> **نکته**: در صورتی که این کالبک‌ها با هر بار اجرا دوبار فراخوانی می‌شوند، بدین معنی‌ست که پلاگین پوشه دوبار رجیستر می‌شود. بایستی بررسی کنید دلیل دوبار رجیستر شدن چیست.    
+> برای مثال، در صورتی که از نسخه‌ی جدید فلاتر برای ساخت برنامه استفاده کردید نیازی به `GeneratedPluginRegistrant` در اکتیویتی نیست و باید آنرا پاک کنید. [اطلاعات بیشتر](/docs/flutter/faq)
 
 </TabItem>
 
@@ -129,7 +132,7 @@ public class MyApp extends FlutterApplication implements PluginRegistry.PluginRe
 
 > **در صورتی که برنامه با استفاده از `Flutter v1.12` یا بالاتر ساخته شده است نیازی به انجام این بخش نیست**، زیرا پلاگین از چرخه‌ی حیات برنامه  مطلع خواهد شد. اما در غیر اینصورت بایستی بازشدن برنامه را به پوشه اطلاع دهید.
 
-در فایل `MainActivity` هنگام ساخته شدن اکتیویتی این خط را اضافه کنید:
+برای مطلع‌کردن پوشه از باز شدن برنامه، در فایل `MainActivity` هنگام ساخته شدن اکتیویتی این خط را اضافه کنید:
 
 ```java {4}
 class MainActivity: FlutterActivity() {
@@ -159,6 +162,7 @@ class MainActivity: FlutterActivity() {
 
 ```java
 
+// No class must surround this function. It Must be static or top level
 _onBackgroundMessageReceived(String eventType, dynamic message) {
   switch(eventType) {
     case Pushe.notificationReceived: // اعلان دریافت شده
@@ -200,7 +204,7 @@ var notification = NotificationData.fromDynamic(message);
 ```
 
 * **`Pushe.notificationButtonClicked`**:    
- دکمه‌ای از نوتیفیکیشن کلیک شده است و `message` می‌تواند به `NotificationData` تبدیل شود.
+ دکمه‌ای از نوتیفیکیشن کلیک شده است و `message` می‌تواند به `NotificationData` تبدیل شود و فیلد `clickedButton` نمایانگر اطلاعات دکمه‌ی کلیک‌شده است.
 
 ```java
 var notification = NotificationData.fromDynamic(message);
