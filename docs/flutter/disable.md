@@ -3,7 +3,7 @@ id: disable-notification
 title: غیرفعال‌کردن نمایش اعلان
 ---
 
-import Platforms from '../../src/components/Platforms.jsx'
+import Platforms from '@site/src/components/Platforms.jsx'
 
 به طور پیش‌فرض نمایش اعلان برای کاربر فعال‌است. اما می‌توان نمایش اعلان را برای کاربر با استفاده از کد غیرفعال و یا مجددا فعال نمود.
 

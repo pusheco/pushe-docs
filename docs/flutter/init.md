@@ -4,7 +4,7 @@ title: بررسی آماده‌ به‌کار شدن کتابخانه
 sidebar_label: بررسی آماده‌ به‌کار شدن کتابخانه
 ---
 
-import Platforms from '../../src/components/Platforms.jsx'
+import Platforms from '@site/src/components/Platforms.jsx'
 
 شروع به کار پوشه در برنامه در دو مرحله‌ی اصلی انجام می‌شود. **Initialization** و **Registration**.
 

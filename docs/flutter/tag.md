@@ -3,7 +3,7 @@ id: tag
 title: برچسب (Tag)
 ---
 
-import Platforms from '../../src/components/Platforms.jsx'
+import Platforms from '@site/src/components/Platforms.jsx'
 
 هر کاربری که در لیست نصب‌های برنامه قرار گیرد می‌تواند یک جیسون به همراه خود داشته باشد که نمایانگر ویژگی‌های مختلف مختص آن کاربر باشد.
 برای ارسال اعلان و ... می‌توان از این تگ‌ها استفاده کرد و دسته‌ی خاصی از کاربران را مشخص کرد.

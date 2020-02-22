@@ -3,7 +3,7 @@ id: fcm
 title: استفاده‌ی همزمان با سرویس‌های دیگر
 ---
 
-import Platforms from '../../src/components/Platforms.jsx'
+import Platforms from '@site/src/components/Platforms.jsx'
 
 <Platforms android />
 

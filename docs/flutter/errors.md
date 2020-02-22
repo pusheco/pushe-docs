@@ -3,15 +3,23 @@ id: troubleshoot
 title: خطاهای ممکن
 ---
 
+import BlankLink from "@site/src/components/BlankLink.jsx";
+
 در این بخش خطاهایی که ممکن‌است در مراحل مختلف راه‌اندازی پوشه در **فلاتر** با آن‌ها مواجه شوید به همراه راه‌حل ذکر شده‌اند.
 
 > در صورتی که مورد شما خطا (Error) نیست، ممکن است در بخش [سوالات](/docs/flutter/faq) ذکر شده باشد.
 
 
-> **خطای مورد نظر شما در لیست نیست؟** در [گیت‌هاب](https://github.com/pusheco/pushe-flutter/issues?utf8=%E2%9C%93&q=is%3Aissue) به دنبال آن بروید و در صورت نیافتن در آنجا [مورد جدیدی](https://github.com/pusheco/pushe-flutter/issues/new) مطرح کنید.
+> **خطای مورد نظر شما در لیست نیست؟** در <BlankLink link="https://github.com/pusheco/pushe-flutter/issues?utf8=%E2%9C%93&q=is%3Aissue">گیت‌هاب</BlankLink> به دنبال آن بروید و در صورت نیافتن در آنجا <BlankLink link="https://github.com/pusheco/pushe-flutter/issues/new">مورد جدیدی</BlankLink> مطرح کنید.
 
 
 ## خطاهای حین نصب‌ و راه‌اندازی
+
+### `Error -32601 received from application: Method not found`
+
+این مورد زمانی رخ می‌دهد که متد کالبک ست نشده باشد و یا مشکلی در گرفتن متد باشد.    
+در صورتی که متد وجود دارد و رویدادها در بکگراند دریافت می‌شوند می‌توانید از این خطا چشم‌پوشی کنید.
+
 
 ### Failed to resolve `co.pushe.plus:base`
 
@@ -24,7 +32,6 @@ title: خطاهای ممکن
     * برای حل این مورد بایستی تیک گزینه را از تنظیمات بردارید:
 
         <img src="/img/studio/gradle_offline.png" width="600" />
-
 
 ### Failed to resolve `Core`
 

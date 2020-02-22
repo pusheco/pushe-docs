@@ -3,7 +3,9 @@ id: faq
 title: سوالات و مشکلات
 ---
 
-> **سوال مورد نظر شما در لیست نیست؟** در [گیت‌هاب](https://github.com/pusheco/pushe-flutter/issues?utf8=%E2%9C%93&q=is%3Aissue) به دنبال آن بروید و در صورت نیافتن در آنجا [مورد جدیدی](https://github.com/pusheco/pushe-flutter/issues/new) مطرح کنید.
+import BlankLink from "@site/src/components/BlankLink.jsx";
+
+> **سوال مورد نظر شما در لیست نیست؟** در <BlankLink link="https://github.com/pusheco/pushe-flutter/issues?utf8=%E2%9C%93&q=is%3Aissue">گیت‌هاب</BlankLink> به دنبال آن بروید و در صورت نیافتن در آنجا <BlankLink link="https://github.com/pusheco/pushe-flutter/issues/new">مورد جدیدی</BlankLink> مطرح کنید.
 
 ## مرتبط با امکانات
 

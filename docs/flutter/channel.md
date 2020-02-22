@@ -4,6 +4,7 @@ title: کانال نوتیفیکیشن
 ---
 
 import Platforms from "@site/src/components/Platforms.jsx";
+import BlankLink from "@site/src/components/BlankLink.jsx";
 
 <Platforms android />
 
@@ -13,7 +14,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 
 کانال نوتیفیکیشن که در اندروید نسخه ۸ اضافه شده در واقع یک دسته‌بندی برای اعلان‌های ارسالی به کاربران می‌باشد که می‌توان در این دسته بندی رنگ ال‌ای‌دی ، صدای اعلان و ... را مشخص کرد.
 
-[اطلاعات بیشتر در مورد کانال نوتیفیکیشن](https://developer.android.com/training/notify-user/channels)
+<BlankLink link="https://developer.android.com/training/notify-user/channels">اطلاعات بیشتر در مورد کانال نوتیفیکیشن</BlankLink>
 
 > در نظر داشته‌باشید که کانفیگ نوتیفیکیشن که برای ارسال در کنسول تنظیم می‌کنید از بین‌می‌رود و تنظیمات نظیر کانال نوتیفیکیشن جایگزین آن می‌شود (مثلا صدای اعلان، رنگ LED و ...)
 
@@ -27,12 +28,12 @@ import Platforms from "@site/src/components/Platforms.jsx";
 |channelId| شناسه‌ای که بتوان کانال را شناسایی کرد. مثلا `sportChannel`|
 |channelName|نامی که برای کانال خود انتخاب می‌کنید|
 |description|توضیحات دلخواه در مورد کانال|
-|importance|عددی برای مشخص‌کردن میزان اهمیت ([اطلاعات بیشتر](https://developer.android.com/training/notify-user/channels#importance))|
+|importance|عددی برای مشخص‌کردن میزان اهمیت (<BlankLink link="https://developer.android.com/training/notify-user/channels#importance">اطلاعات بیشتر</BlankLink>)|
 |enableLight|فعال‌کردن LED|
 |enableVibration|فعال‌کردن ویبره‌ی نوتیفیکیشن|
 |showBadge|فعال‌کردن نمایش بچ در لانچر دستگاه|
-|ledColor|رنگ LED ([اطلاعات بیشتر](https://developer.android.com/reference/android/app/NotificationChannel.html#setLightColor(int)))|
-|vibrationPattern|پترن ویبره ([اطلاعات بیشتر](https://developer.android.com/reference/android/app/NotificationChannel.html#setVibrationPattern(long[])))|
+|ledColor|رنگ LED (<BlankLink link="https://developer.android.com/reference/android/app/NotificationChannel.html#setLightColor(int)">اطلاعات بیشتر</BlankLink>)|
+|vibrationPattern|پترن ویبره (<BlankLink link="https://developer.android.com/reference/android/app/NotificationChannel.html#setVibrationPattern(long[])">اطلاعات بیشتر</BlankLink>)|
 
 
 ```js

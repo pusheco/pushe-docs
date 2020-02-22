@@ -3,7 +3,7 @@ id: listener
 title: رویداد نوتیفیکیشن
 ---
 
-import Platforms from '../../src/components/Platforms.jsx'
+import Platforms from '@site/src/components/Platforms.jsx'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

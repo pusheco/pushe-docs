@@ -5,7 +5,7 @@ title: فعال‌کردن مالتی‌دکس
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem'; 
-import Platforms from '../../src/components/Platforms.jsx'
+import Platforms from '@site/src/components/Platforms.jsx'
 
 <Platforms android />
 
