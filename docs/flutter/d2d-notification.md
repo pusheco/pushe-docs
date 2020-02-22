@@ -3,7 +3,7 @@ id: d2d
 title: اعلان از یک دیوایس به دیوایس دیگر
 ---
 
-import Platforms from '../../src/components/Platforms.jsx'
+import Platforms from '@site/src/components/Platforms.jsx'
 
 
 با استفاده‌ از [شناسه‌های کاربر](/docs/flutter/unification) می‌توان از یک دیوایس به دیگری اعلان فرستاد.
@@ -31,7 +31,7 @@ import Platforms from '../../src/components/Platforms.jsx'
 |notifIcon|آیکن اعلان|اختیاری|
 |customContent|محتوای سفارشی (محتوایی که شامل کلید های سفارشی برای استفاده در اپلیکیشن‌تان می‌باشد)|اختیاری|
 
-> از اندروید ۹ بعد توصیه می‌شود که تمام لینک‌ها را **Https** قرار دهید و یا `android:clearTextTraffic="true"` را در مانیفست اضافه کنید. [بیشتر بخوانید](/docs/flutter/faq#%D8%A7%D8%B9%D9%84%D8%A7%D9%86-%D8%AF%D8%A7%D8%B1%D8%A7%DB%8C-%D8%B9%DA%A9%D8%B3-%DB%8C%D8%A7-%D9%84%DB%8C%D9%86%DA%A9-%D8%AF%D8%B1%DB%8C%D8%A7%D9%81%D8%AA-%D9%86%D9%85%DB%8C%D8%B4%D9%88%D8%AF-%D9%88-%DB%8C%D8%A7-%D8%A8%D8%AF%D9%88%D9%86-%D8%B9%DA%A9%D8%B3-%D8%A7%D8%B3%D8%AA)
+> از اندروید ۹ بعد توصیه می‌شود که تمام لینک‌ها را **Https** قرار دهید و یا `android:clearTextTraffic="true"` را در مانیفست اضافه کنید. [بیشتر بخوانید](/docs/flutter/faq#اعلان-دارای-عکس-یا-لینک-دریافت-نمی‌شود-و-یا-بدون-عکس-است)
 
 می‌توانید با استفاده از این تابع نوتیفیکیشنی با تیتر و متن به کاربر خاصی که این اپلیکیشن را نصب کرده و نصب آن در کنسول ثبت‌ شده ارسال کنید.
 

@@ -4,7 +4,8 @@ title: راه‌اندازی در فلاتر
 sidebar_label: راه‌اندازی سریع
 ---
 
-import Platforms from '../../src/components/Platforms.jsx'
+import Platforms from '@site/src/components/Platforms.jsx'
+import BlankLink from '@site/src/components/BlankLink.jsx'
 
 > نسخه‌ی فعلی پلاگین فقط از سیستم‌عامل اندروید پشتیبانی می‌کند.
 
@@ -21,7 +22,7 @@ import Platforms from '../../src/components/Platforms.jsx'
 
 > نسخه‌ی فلاتر باید حداقل **1.12.13+hotfix.6** باشد. در صورتی که نسخه‌ی قدیمی‌تری دارید، بایستی با دستور `flutter upgrade` اقدام به بروزرسانی کنید.
 
-به فایل `pubspec.yaml` [پلاگین پوشه](https://pub.dev/packages/pushe_flutter) را اضافه‌کنید:
+به فایل `pubspec.yaml` <BlankLink link="https://pub.dev/packages/pushe_flutter">پلاگین پوشه</BlankLink> را اضافه‌کنید:
 
 ```yml {4}
 dependencies:
@@ -36,7 +37,7 @@ dependencies:
 
 > محل فایل‌مانیفست `android/app/src/main/AndroidManifest.xml` می‌باشد.
 
-تگ مانیفست را از [کنسول پوشه](https://console.pushe.co) به صورت زیر دریافت کنید:
+تگ مانیفست را از <BlankLink link="https://console.pushe.co">کنسول پوشه</BlankLink> به صورت زیر دریافت کنید:
 
 <img src="/img/common/console_manifest.png" width="500" />
 
@@ -68,7 +69,9 @@ dependencies:
 </manifest>
 ```
 
-> در صورتی که بخواهید **آمار کاربران را بر حسب موقعیت جغرافیایی** آنها مشاهده کنید و یا **با فیلتر لوکیشن، اعلان ارسال کنید** باید کاربر این دسترسی را به برنامه اضافه‌کنید.
+> در صورتی که بخواهید **آمار کاربران را بر حسب موقعیت جغرافیایی** آنها مشاهده کنید و یا **با فیلتر لوکیشن، اعلان ارسال کنید** باید کاربر این دسترسی را به برنامه اضافه‌کنید.    
+> این پرمیشن‌ها **بایستی از کاربر درخواست شوند** و اضافه‌شدن در مانیفست لازم ولی کافی نیست. <BlankLink link="https://developer.android.com/guide/topics/permissions/overview">اطلاعات بیشتر</BlankLink>
+
 
 
 ## فعال‌کردن مالتی‌دکس
@@ -105,7 +108,7 @@ import 'package:pushe_flutter/pushe.dart';
 
 پس از اجرای برنامه باید در **Android logcat** لاگ‌های زیر را ببینید (ممکن است به دلیل ارتباط با سرور این پروسه چند ثانیه طول بکشد):
 
-> در اندروید استودیو لاگ‌کت از ابزار موجود است. در صورتی که از ابزار دیگری مانند VSCode استفاده‌ می‌کنید می‌توانید از هر روشی برای مشاهده‌ی لاگ استفاده کنید. [مستندات اندروید برای لاگ‌کت](https://developer.android.com/studio/command-line/logcat)
+> در اندروید استودیو لاگ‌کت از ابزار موجود است. در صورتی که از ابزار دیگری مانند VSCode استفاده‌ می‌کنید می‌توانید از هر روشی برای مشاهده‌ی لاگ استفاده کنید. <BlankLink link="https://developer.android.com/studio/command-line/logcat">مستندات اندروید برای لاگ‌کت</BlankLink>
 
 برای مشاهده‌ی بهتر لاگ‌ها می‌توانید فیلتر `Pushe` را روی لاگ‌ها اعمال کنید.
 
@@ -122,10 +125,10 @@ Pushe: Registration successful
 ## ادامه‌ی کار
 (بر روی لینک مورد نظر کلیک کنید)
 
-### [سورس‌کد پلاگین](https://github.com/pusheco/pushe-flutter)
+### <BlankLink link="https://github.com/pusheco/pushe-flutter">سورس‌کد پلاگین</BlankLink>
 برای مشاهده‌ی سورس‌کد پروژه و تست نسخه‌های منتشرنشده می‌توانید در گیتهاب سورس پروژه را مشاهده نمایید.
 
-### [پروژه‌ی نمونه در گیت‌هاب](https://github.com/pusheco/pushe-flutter-sample)
+### <BlankLink link="https://github.com/pusheco/pushe-flutter-sample">پروژه‌ی نمونه در گیت‌هاب</BlankLink>
 بررسی امکانات در نمونه‌ای از قبل طراحی شده دارای تمام امکانات کتابخانه‌ی پوشه
 
 ### [سوالات و مشکلات احتمالی](troubleshoot)

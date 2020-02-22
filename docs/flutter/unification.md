@@ -3,7 +3,7 @@ id: unification
 title: تمایز کاربران با شناسه‌ها
 ---
 
-import Platforms from '../../src/components/Platforms.jsx'
+import Platforms from '@site/src/components/Platforms.jsx'
 
 ## اختصاص شناسه سفارشی به کاربران
 
