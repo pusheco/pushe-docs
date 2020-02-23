@@ -26,7 +26,7 @@ import BlankLink from '@site/src/components/BlankLink.jsx'
 dependencies:
     # ...
     # Add Pushe
-    pushe_flutter: 2.1.0^
+    pushe_flutter: ^2.1.0
 ```
 
 سپس سینک کنید یا دستور `flutter packages get` را در ترمینال وارد کنید تا پلاگین‌ها به پروژه اضافه‌ شوند.
