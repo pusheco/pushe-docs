@@ -16,7 +16,6 @@ const docs = [
     img: '/img/android_native.png',
     github: 'https://github.com/pusheco/pushe-android-studio-sample/issues?utf8=%E2%9C%93&amp;q=is%3Aissue',
     desc: <>استفاده از پوشه در پروژه‌های گریدل نوشته‌شده با <strong>جاوا و کاتلین</strong></>,
-    version: 2,
   },
   {
     display: true,
@@ -24,7 +23,6 @@ const docs = [
     img: '/img/ios_native.png',
     github: '#',
     desc: 'استفاده از پوشه در iOS',
-    version: '-'
   },
   {
     display: true,
@@ -32,7 +30,6 @@ const docs = [
     img: '/img/flutter_logo.png',
     github: 'https://github.com/pusheco/pushe-flutter/issues?utf8=%E2%9C%93&amp;q=is%3Aissue',
     desc: <>استفاده از پوشه در فریم‌ورک <strong>فلاتر</strong></>,
-    version: 1,
   },
   {
     display: true,
@@ -40,7 +37,6 @@ const docs = [
     img: '/img/unity_logo.png',
     github: 'https://github.com/pusheco/pushe-unity-sample/issues?utf8=%E2%9C%93&amp;q=is%3Aissue',
     desc: 'یونیتی برای اندروید',
-    version: 2,
   },
   {
     display: false,
@@ -48,7 +44,6 @@ const docs = [
     img: '/img/b4a_logo.png',
     github: 'https://github.com/pusheco/b4a-sample/issues?utf8=%E2%9C%93&amp;q=is%3Aissue',
     desc: <>استفاده از سرویس نوتیفیکیشن در <strong>بیسیک‌فور‌اندروید</strong></>,
-    version: 1,
   },
   {
     display: true,
@@ -56,7 +51,6 @@ const docs = [
     img: '/img/rn_logo.png',
     github: 'https://github.com/pusheco/pushe-react-native/issues?utf8=%E2%9C%93&amp;q=is%3Aissue',
     desc: <>استفاده از سرویس نوتیفیکیشن در <strong>React native</strong></>,
-    version: 1,
   },
   {
     display: false,
@@ -64,7 +58,6 @@ const docs = [
     img: '/img/cordova_logo.png',
     github: 'https://github.com/pusheco/cordova-sample/issues?utf8=%E2%9C%93&amp;q=is%3Aissue',
     desc: <>استفاده از سرویس نوتیفیکیشن در <strong>Apache Cordova</strong></>,
-    version: 1,
   },
   {
     display: true,
@@ -72,7 +65,6 @@ const docs = [
     img: '/img/restapi.png',
     github: 'https://github.com/pusheco/pushe-api-android-samples',
     desc: 'وب‌سرویس پوشه برای موبایل (iOS, Android)',
-    version: 2,
   },
   {
     display: true,
@@ -80,7 +72,6 @@ const docs = [
     img: '/img/webpush.png',
     github: 'https://github.com/pusheco/pushe-api-webpush-samples',
     desc: 'وب‌سرویس پوشه برای وب',
-    version: 2,
   },
   {
     display: true,
@@ -88,7 +79,6 @@ const docs = [
     img: '/img/webpush.png',
     github: '#',
     desc: 'راه ‌اندازی وب‌پوش پوشه',
-    version: 2,
   },
   {
     display: false,
@@ -96,7 +86,6 @@ const docs = [
     img: '/img/pushe_logo.jpeg',
     github: '#',
     desc: <>آموزش استفاده از <strong>کنسول پوشه</strong></>,
-    version: '-'
   },
   {
     display: true,
@@ -104,7 +93,6 @@ const docs = [
     img: '/img/wordpress_logo.png',
     github: 'https://github.com/pusheco/webpush-wordpress-plugin',
     desc: 'پلاگین وردپرس برای وب‌پوش',
-    version: '-'
   },
 ];
 
@@ -126,13 +114,12 @@ return (
                 <th align="center">مستندات</th>
                 <th align="center">پشتیبانی و سوالات</th>
                 <th>توضیحات</th>
-                <th>ورژن</th>
               </tr>
             </thead>
             <tbody>
               
               {docs.filter(({display}) => display).map(({docLink, img, github, desc, version}) => 
-              <TRow key={docLink} docLink={docLink} img={img} github={github} desc={desc} version={version} />)}
+              <TRow key={docLink} docLink={docLink} img={img} github={github} desc={desc} />)}
 
             </tbody>
           </table>

@@ -16,8 +16,6 @@ export default ({display, docLink, img, github, desc, version}) => {
             </td>
 
             <td>{desc}</td>
-
-            <td align="center">{version}</td>
         </tr>
     );
 };
