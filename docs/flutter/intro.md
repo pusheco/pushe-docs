@@ -20,8 +20,6 @@ import BlankLink from '@site/src/components/BlankLink.jsx'
 
 ## اضافه‌کردن پلاگین به پروژه
 
-> نسخه‌ی فلاتر باید حداقل **1.12.13+hotfix.6** باشد. در صورتی که نسخه‌ی قدیمی‌تری دارید، بایستی با دستور `flutter upgrade` اقدام به بروزرسانی کنید.
-
 به فایل `pubspec.yaml` <BlankLink link="https://pub.dev/packages/pushe_flutter">پلاگین پوشه</BlankLink> را اضافه‌کنید:
 
 ```yml {4}
