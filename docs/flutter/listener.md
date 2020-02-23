@@ -158,7 +158,12 @@ class MainActivity: FlutterActivity() {
 
 ### تعریف تابع رویداد مختص بکگراند
 
-* در کد فلاتر خود، همانند زیر بصورت `TopLevel` (بیرون از کلاس) و یا `static` (دارای کلمه‌ی static) تعریف کنید:
+* برای دریافت رویداد،‌ در بکگراند نیاز به تابعی دارید که **TopLevel** و یا **Static** باشد.
+
+> تابع **TopLevel** تابعی‌ است که داخل هیچ کلاسی نیست و به صورت جدا در یک فایل قرار دارد.    
+> تابع **Static** تابعی از یک کلاس است که دارای کلید **static** است.
+
+برای مثال تابع زیر یک تابع **TopLevel** است:
 
 ```java
 
@@ -194,7 +199,7 @@ _onBackgroundMessageReceived(String eventType, dynamic message) {
 }
 ```
 
-ورودی `eventType` می‌توانید یکی از موارد زیر باشد:
+پارامتر `eventType` می‌تواند یکی از موارد زیر باشد:
 
 * **`Pushe.notificationReceived`**, **`Pushe.notificationClicked`**, **`Pushe.notificationDismissed`**:    
  نوتیفیکیشن دریافت، کلیک یا رد شده است و `message` می‌تواند به یک `NotificationData` تبدیل شود:
