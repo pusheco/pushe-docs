@@ -1,7 +1,12 @@
 ---
 id: topic
-title: تاپیک
+title: پوشه | راهنمای فلاتر | تاپیک
+sidebar_label: تاپیک
+hide_title: true
+description: راهنمای فلاتر - تاپیک
 ---
+
+# تاپیک
 
 import Platforms from '@site/src/components/Platforms.jsx'
 

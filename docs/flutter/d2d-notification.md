@@ -1,7 +1,12 @@
 ---
 id: d2d
-title: اعلان از یک دیوایس به دیوایس دیگر
+title: پوشه | راهنمای فلاتر | اعلان از یک دیوایس به دیوایس دیگر
+sidebar_label: اعلان از یک دیوایس به دیوایس دیگر
+hide_title: true
+description: راهنمای فلاتر - اعلان از یک دیوایس به دیوایس دیگر
 ---
+
+# اعلان از یک دیوایس به دیوایس دیگر
 
 import Platforms from '@site/src/components/Platforms.jsx'
 

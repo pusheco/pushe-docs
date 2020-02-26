@@ -1,7 +1,12 @@
 ---
 id: faq
-title: سوالات و مشکلات
+title: پوشه | راهنمای فلاتر | سوالات و مشکلات
+sidebar_label: سوالات و مشکلات
+hide_title: true
+description: راهنمای فلاتر - سوالات و مشکلات
 ---
+
+# سوالات و مشکلات
 
 import BlankLink from "@site/src/components/BlankLink.jsx";
 

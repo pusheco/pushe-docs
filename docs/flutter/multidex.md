@@ -1,7 +1,12 @@
 ---
 id: multidex
-title: فعال‌کردن مالتی‌دکس
+title: پوشه | راهنمای فلاتر | فعال‌کردن مالتی‌دکس
+sidebar_label: فعال‌کردن مالتی‌دکس
+hide_title: true
+description: راهنمای فلاتر - فعال‌کردن مالتی‌دکس
 ---
+
+# فعال‌کردن مالتی‌دکس
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem'; 

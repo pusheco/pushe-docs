@@ -1,7 +1,13 @@
 ---
 id: listener
-title: رویداد نوتیفیکیشن
+title: پوشه | راهنمای فلاتر | رویداد نوتیفیکیشن
+sidebar_label: رویداد نوتیفیکیشن
+hide_title: true
+description: راهنمای فلاتر - رویداد نوتیفیکیشن
 ---
+
+# رویداد نوتیفیکیشن
+
 
 import Platforms from '@site/src/components/Platforms.jsx'
 import Tabs from '@theme/Tabs';

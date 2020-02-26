@@ -1,7 +1,12 @@
 ---
 id: tag
-title: برچسب (Tag)
+title: پوشه | راهنمای فلاتر | برچسب (Tag)
+sidebar_label: برچسب (Tag)
+hide_title: true
+description: راهنمای فلاتر - برچسب (Tag)
 ---
+
+# برچسب (Tag)
 
 import Platforms from '@site/src/components/Platforms.jsx'
 

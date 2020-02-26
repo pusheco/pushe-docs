@@ -1,7 +1,12 @@
 ---
 id: disable-notification
-title: غیرفعال‌کردن نمایش اعلان
+title: پوشه | راهنمای فلاتر | غیرفعال‌کردن نمایش اعلان
+sidebar_label: غیرفعال‌کردن نمایش اعلان
+hide_title: true
+description: راهنمای فلاتر - غیرفعال‌کردن نمایش اعلان
 ---
+
+# غیرفعال‌کردن نمایش اعلان
 
 import Platforms from '@site/src/components/Platforms.jsx'
 
