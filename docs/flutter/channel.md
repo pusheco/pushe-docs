@@ -1,7 +1,12 @@
 ---
 id: channel
-title: کانال نوتیفیکیشن
+title: پوشه | راهنما فلاتر | کانال نوتیفیکیشن
+sidebar_label: کانال نوتیفیکیشن
+hide_title: true
+description: راهنمای فلاتر - کانال نوتیفیکیشن
 ---
+
+# کانال نوتیفیکیشن
 
 import Platforms from "@site/src/components/Platforms.jsx";
 import BlankLink from "@site/src/components/BlankLink.jsx";

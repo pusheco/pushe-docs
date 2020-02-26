@@ -1,8 +1,12 @@
 ---
 id: registration
-title: بررسی آماده‌ به‌کار شدن کتابخانه
+title: پوشه | راهنمای فلاتر | بررسی آماده‌ به‌کار شدن کتابخانه
 sidebar_label: بررسی آماده‌ به‌کار شدن کتابخانه
+hide_title: true
+description: راهنمای فلاتر - بررسی آماده‌ به‌کار شدن کتابخانه
 ---
+
+# بررسی آماده‌ به‌کار شدن کتابخانه
 
 import Platforms from '@site/src/components/Platforms.jsx'
 

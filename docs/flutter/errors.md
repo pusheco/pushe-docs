@@ -1,7 +1,12 @@
 ---
 id: troubleshoot
-title: خطاهای ممکن
+title: پوشه | راهنمای فلاتر | خطاهای ممکن
+sidebar_label: خطاهای ممکن
+hide_title: true
+description: راهنمای فلاتر - خطاهای ممکن
 ---
+
+# خطاهای ممکن
 
 import BlankLink from "@site/src/components/BlankLink.jsx";
 

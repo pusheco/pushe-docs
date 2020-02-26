@@ -1,8 +1,12 @@
 ---
 id: intro
-title: راه‌اندازی در فلاتر
-sidebar_label: راه‌اندازی سریع
+title: پوشه | راهنمای فلاتر | راه‌اندازی در فلاتر
+sidebar_label: راه‌اندازی در فلاتر
+hide_title: true
+description: راهنمای فلاتر - راه‌اندازی در فلاتر
 ---
+
+# راه‌اندازی در فلاتر
 
 import Platforms from '@site/src/components/Platforms.jsx'
 import BlankLink from '@site/src/components/BlankLink.jsx'
