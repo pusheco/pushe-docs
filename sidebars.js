@@ -206,6 +206,18 @@ module.exports = {
     ],
   },
 
+  'web-sebservice': {
+    "وب‌سرویس وب": [
+      "web-webservice/intro",
+      "web-webservice/authentication",
+      "web-webservice/get-app-id",
+      "web-webservice/simple-notification",
+      "web-webservice/filtered-notification",
+      "web-webservice/notification-keys",
+      "web-webservice/notification-actions",
+    ],
+  },
+
   wordpress: {
     "راه اندازی": [
       "wordpress/intro",
