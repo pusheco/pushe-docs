@@ -176,6 +176,23 @@ module.exports = {
     ],
   },
 
+  'mobile-webservice': {
+    "وب‌سرویس موبایل": [
+      "mobile-webservice/intro",
+      "mobile-webservice/authentication",
+      "mobile-webservice/get-app-id",
+      "mobile-webservice/simple-notification",
+      "mobile-webservice/filtered-notification",
+      "mobile-webservice/transactional-notification",
+      "mobile-webservice/custom-content-notification",
+      "mobile-webservice/notification-keys",
+      "mobile-webservice/notification-actions",
+      "mobile-webservice/notification-icons-table",
+      "mobile-webservice/notification-frameworks-table",
+      "mobile-webservice/notification-led-table",
+    ]
+  },
+
   'web-api': {
     "وب‌سرویس وب‌پوش": [
       "web-api/authentication",
