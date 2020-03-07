@@ -44,7 +44,8 @@ co.pushe.plus:analytics:${pushe_version}
 ```
 ### Datalytics
 
-در صورتی که بخواهید پوش جغرافیایی به کاربر بفرستید باید این ماژول به اپلیکیشنتان اضافه شده باشد.
+در صورتی که بخواهید پوش جغرافیایی به کاربر بفرستید باید این ماژول به اپلیکیشنتان اضافه شده باشد.    
+همچنین قابلیت `Geofence` در پوشه هم توسط این ماژول به پروژه اضافه می‌شود.
 
 ```js
 co.pushe.plus:datalytics:${pushe_version}
@@ -56,13 +57,16 @@ co.pushe.plus:datalytics:${pushe_version}
 
 ```java
 
-// به هر ماژولی که نیاز داشته باشید این ماژول را باید حتما اضافه کنید
+// اجباری
 implementation 'co.pushe.plus:core:${pushe_version}'
 
-// در صورتی که میخواهید از قابلیت‌های مربوط به نمایش نوتیفیکیشن به کاربر استفاده کنید این ماژول را اضافه کنید
+// ارسال نوتیفیکیشن
 implementation 'co.pushe.plus:notification:${pushe_version}'
 
-// در صورتی که میخواهید از قابلیت‌های مربوط به ارسال رویداد استفاده کنید این ماژول را اضافه کنید
+// ارسال رویداد و سگمنتیشن
+implementation 'co.pushe.plus:analytics:${pushe_version}'
+
+// ارسال پوش جئوفنس و ارسال اعلان باتوجه به موقعیت کاربر
 implementation 'co.pushe.plus:analytics:${pushe_version}'
 ```
 
@@ -88,6 +92,10 @@ implementation 'co.pushe.plus:base:${pushe_version}'
 ### اضافه‌کردن RxJava
 
 با توجه به اینکه پوشه از RxJavaی ویرایش شده استفاده می‌کند، در صورتی که بخواهید از RxJava در برنامه‌ی خود استفاده کنید باید این ماژول را از پوشه جدا کنید.
+
+> **نکته**:
+> - از نسخه‌ی حداقل **2.2.8** برای RxJava استفاده کنید.
+> - بایستی از `RxJava2` استفاده کنید و `RxJava3` ماژولی متفاوت است.
 
 ```js
 dependencies {
