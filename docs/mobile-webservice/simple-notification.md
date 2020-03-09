@@ -18,7 +18,6 @@ import SimpleNotificationTabs from "./codes/simple-notification.mdx";
 می‌باشد.
 
 در این حالت با استفاده از [شناسه اپلیکیشن](/docs/mobile-webservice/get-app-id)
-(**‍‍app_id**)
 که در کنسول پوشه قابل دریافت می‌باشد می‌توانید به تمام کاربران اپلیکیشن‌تان اعلان ارسال کنید.
 
 [مشاهده راهنمای دریافت شناسه اپلیکیشن](/docs/mobile-webservice/get-app-id)
@@ -26,14 +25,18 @@ import SimpleNotificationTabs from "./codes/simple-notification.mdx";
 
 ## آدرس (url) ارسال اعلان
 
-برای ارسال اعلان ساده می‌توانید از آدرس  زیر که برای ارسال اعلان به پلتفرم‌های آی‌او‌اس و اندروید می‌باشد استفاده کنید.
-```https://api.pushe.co/v2/messaging/notifications/```
+برای ارسال اعلان ساده می‌توانید از آدرس‌های  زیر که برای ارسال اعلان به پلتفرم‌های آی‌او‌اس و اندروید می‌باشد استفاده کنید.
+
+| endpoint  | platform |
+|:----------|:----------|
+| ```https://api.pushe.co/v2/messaging/notifications/android/```  | Android |
+| ```https://api.pushe.co/v2/messaging/notifications/ios/```      | iOS     |
 
 ## کلید‌های ارسال اعلان ساده
 
 برای ارسال یک اعلان ساده **حداقل کلیدهایی که می توان استفاده کرد** تا یک اعلان به صورت صحیح ساخته و ارسال شود به شکل زیر می‌باشد.
 
-- **app_id**: شناسه اپلیکیشن که از نوع رشته string می‌باشد.    
+- **app_ids**: شناسه اپلیکیشن که از نوع رشته string می‌باشد.    
     **این فیلد اجباری است**
 - **data**: یک دیکشنری که مقادیر (محتوای) اعلان را نگه می‌دارد.    
     **این فیلد اجباری است**
@@ -43,11 +46,11 @@ import SimpleNotificationTabs from "./codes/simple-notification.mdx";
         **این فیلد اجباری است**
 
 
-> **نکته:** برای مشاهده تمامی کلید‌های قابل استفاده در ارسال اعلان به [تمامی کلید های اعلان](/docs/mobile-webservice/notification-keys-list) مراجعه کنید.
+> **نکته:** برای مشاهده تمامی کلید‌های قابل استفاده در ارسال اعلان به [تمامی کلید های اعلان](/docs/mobile-webservice/notification-keys) مراجعه کنید.
 
 ## نمونه کد ارسال اعلان ساده
 
 در نمونه کد های زیر حداقل کد مورد نیاز برای ارسال یک اعلان ساده در زبان های مختلف با عنوان و متن نمایش داده شده.
-برای مشاهده تمامی کلید های قابل استفاده به بخش [تمامی کلید های اعلان](/docs/mobile-webservice/notification-keys-list) مراجعه کنید.
+برای مشاهده تمامی کلید های قابل استفاده به بخش [تمامی کلید های اعلان](/docs/mobile-webservice/notification-keys) مراجعه کنید.
 
 <SimpleNotificationTabs />
