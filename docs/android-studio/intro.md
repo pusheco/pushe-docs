@@ -39,18 +39,18 @@ allprojects{
 عبارت زیر را اضافه کنید:
 
 ```java
-implementation 'co.pushe.plus:base:2.0.4' 
+implementation 'co.pushe.plus:base:2.0.5' 
 ```
 
 در صورتی که در پروژه از لایبرری ‌`RxJava` استفاده‌ می‌نمایید، برای جلوگیری از تداخل به جای کد بالا کد زیر را به dependencies اضافه‌ نمایید:
 
 ```java
-implementation("co.pushe.plus:base:2.0.4") {
+implementation("co.pushe.plus:base:2.0.5") {
     exclude group: 'co.pushe.plus', module: 'rxjava'
 }
 ```
 
-> در نظر داشته باشید نسخه‌ی **RxJava2** حداقل 2.2.8 باشد. [اطلاعات بیشتر](advanced-setup)
+> در نظر داشته باشید نسخه‌ی **RxJava2** حداقل **2.2.8** باشد. [اطلاعات بیشتر](advanced-setup) 
 
 
 * در بخش `android` مقدار `compileSdkVersion` را برابر ۲۸ (و یا بیشتر) قرار دهید.
