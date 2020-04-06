@@ -153,6 +153,7 @@ module.exports = {
       "webpush/subscribe-prompt",
       "webpush/unique-device-id",
       "webpush/unsubscribe",
+      "webpush/pwa",
     ],
     "سوالات و مشکلات": [
       "webpush/errors",
