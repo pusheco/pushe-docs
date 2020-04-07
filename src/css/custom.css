@@ -120,6 +120,16 @@ pre {
   direction: ltr;
 }
 
+
+.prism-code {
+  direction: ltr;
+}
+
+.copyButton_node_modules-\@docusaurus-theme-classic-src-theme-CodeBlock- {
+  color: #f5f6f7 !important;
+}
+
+
 .navbar .navbar__sidebar {
   left: unset;
   right: 0;
