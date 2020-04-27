@@ -83,7 +83,7 @@ react-native link pushe-react-native
 محتوای مانیفست را از کنسول (اطلاعات بیشتر) کپی‌ کنید و آ‌ن را به فایل `AndroidManifest.xml` در پروژه‌ی خود اضافه‌کنید. محتوا باید شبیه خط زیر باشد:
 
 ```xml
-<meta-data android:name="co.ronash.pushe.token" android:value="PUSHE_TOKEN"/>
+<meta-data android:name="pushe_token" android:value="PUSHE_TOKEN"/>
 ```
 
 >‌ فایل مانیفست برنامه در آدرس زیر در پروژه قابل دسترسی‌ست: `android/src/main/AndroidManifest.xml`
