@@ -27,12 +27,12 @@ description: راهنمایی ری‌اکت‌نیتیو - استفاده همز
 
 ```xml
 <service
-   android:name="co.ronash.pushe.fcm.FcmService" 
+   android:name="co.pushe.plus.messaging.fcm.FcmService" 
    tools:node="remove" />
    
 <!-- Add your own service name instead of this , if you are not using firebase -->
 <service
-   android:name="com.reactlibrary.RNPusheNotificationService" 
+   android:name="co.pushe.plus.RNPusheNotificationService" 
    tools:node="remove" />
 ```
 
