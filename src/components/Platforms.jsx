@@ -1,7 +1,7 @@
 
 import React from "react";
 
-export default ({ios, android}) => {
+export default ({ios, android, web}) => {
     return (
         <div className="platform-items-wrapper">
             {ios && (
@@ -14,6 +14,12 @@ export default ({ios, android}) => {
                     Android
                 </div>
             )}
+            {web && (
+                <div className="platform-item platform-web">
+                    Web
+                </div>
+            )}
+
         </div>
     );
 };

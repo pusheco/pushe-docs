@@ -15,21 +15,21 @@ import Platforms from "@site/src/components/Platforms.jsx";
 در این صفحه لیست تمامی کلید‌های اعلان به همراه توضیح آن‌ها قابل مشاهده می‌باشد.
 قالب کلی اعلان یک دیکشنری است که کلید های زیر را درون خود نگه می‌دارد.
 
-### **app_id**
+### **app_ids**
 
-<Platforms android ios />
+<Platforms android ios web/>
 
 `app_id`
 
 **استفاده**: اجباری در همه نوع اعلان    
 **کلید پدر**: -     
-**نوع مقدار**: رشته string  
+ **نوع مقدار**: رشته string   
 **توضیحات**:
 این کلید بیانگر [شناسه اپلیکیشن](/docs/mobile-webservice/get-app-id) می‌باشد که برای همه انواع اعلان اجباری می‌باشد
 
 ### **data**
 
-<Platforms android ios />
+<Platforms android ios web/>
 
 `data`
 
@@ -42,7 +42,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 
 ### **title**
 
-<Platforms android ios />
+<Platforms android ios web/>
 
 `data.title`
 
@@ -54,7 +54,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 
 ### **content**
 
-<Platforms android ios />
+<Platforms android ios web/>
 
 `data.content`
 
@@ -66,7 +66,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 
 ### **icon**
 
-<Platforms android ios />
+<Platforms android ios web/>
 
 `data.icon`
 
@@ -75,7 +75,8 @@ import Platforms from "@site/src/components/Platforms.jsx";
 **نوع مقدار**: رشته string    
 **توضیحات**:
 آیکن اعلانی که در دستگاه نمایش داده می‌شود   
-توصیه می‌شود که حتما از https برای آدرس آیکن استفاده شود
+توصیه می‌شود که حتما از **https** برای آدرس آیکن استفاده شود.
+
 
 ### **big_title**
 
@@ -88,7 +89,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 **نوع مقدار**: رشته string    
 **توضیحات**:
 عنوان اعلانی که در دستگاه نمایش داده می‌شود 
-[در حالتی که اعلان باز شده می‌باشد](https://developer.android.com/guide/topics/ui/notifiers/notifications#expandable)
+[در حالتی که اعلان باز شده می‌باشد.](https://developer.android.com/guide/topics/ui/notifiers/notifications#expandable)
 
 ### **big_content**
 
@@ -100,8 +101,8 @@ import Platforms from "@site/src/components/Platforms.jsx";
 **کلید پدر**: [کلید data](/docs/mobile-webservice/notification-keys#data)   
 **نوع مقدار**: رشته string    
 **توضیحات**:
-متن اعلانی که در دستگاه نمیاش داده می‌شود
-[در حالتی که اعلان باز شده می‌باشد](https://developer.android.com/guide/topics/ui/notifiers/notifications#expandable)
+متن اعلانی که در دستگاه نمایش داده می‌شود
+[در حالتی که اعلان باز شده می‌باشد.](https://developer.android.com/guide/topics/ui/notifiers/notifications#expandable)
 
 ### **summary**
 
@@ -112,11 +113,12 @@ import Platforms from "@site/src/components/Platforms.jsx";
 **استفاده**:  اختیاری   
 **کلید پدر**: [کلید data](/docs/mobile-webservice/notification-keys#data)   
 **نوع مقدار**: رشته string    
-**توضیحات**:
+**توضیحات**: نمایش خلاصه اعلان در حالتی که [اعلان‌ها بسته می‌باشند.][1]
 
+[1]: https://developer.android.com/guide/topics/ui/notifiers/notifications#bundle
 ### **image**
 
-<Platforms android ios />
+<Platforms android ios web/>
 
 `data.image`
 
@@ -148,9 +150,11 @@ import Platforms from "@site/src/components/Platforms.jsx";
 
 **استفاده**:  اختیاری   
 **کلید پدر**: [کلید data](/docs/mobile-webservice/notification-keys#data)   
-**نوع مقدار**: 00000000000000000    
+**نوع مقدار**: رشته string    
 **توضیحات**:
-آیکون جایگزین آیکون اپ
+آیکون جایگزین آیکون اپ     
+[مشاهده لیست آیکن‌های اعلان](/docs/mobile-webservice/notification-icons)
+
 
 ### **wake_screen**
 
@@ -209,9 +213,10 @@ import Platforms from "@site/src/components/Platforms.jsx";
 
 **استفاده**:  اختیاری   
 **کلید پدر**: [کلید data](/docs/mobile-webservice/notification-keys#data)   
-**نوع مقدار**:  0000000000000000000000000000    
+**نوع مقدار**: رشته string    
 **توضیحات**:
-led تعیین رنگ	
+led تعیین رنگ     
+[مشاهده لیست رنگ‌های LED](/docs/mobile-webservice/notification-led-table)
 
 
 ### **led_on**
@@ -240,7 +245,7 @@ led زمان خاموش ماندن
 
 ### **action**
 
-<Platform android />
+<Platforms android ios web/>
 
 `data.action`
 
@@ -253,31 +258,31 @@ led زمان خاموش ماندن
 
 ### **action_type**
 
-<Platforms android />
+<Platforms android ios web/>
 
 `data.action.action_type`
 
 **استفاده**:  اختیاری   
 **کلید پدر**: [کلید action](/docs/mobile-webservice/notification-keys#action)   
-**نوع مقدار**:         
+ **نوع مقدار**: رشته string         
 **توضیحات**: نوع عملکرد اعلان   
 [مشاهده لیست تمامی عملکرد‌های اعلان](/docs/mobile-webservice/notification-actions)
 
 ### **url**
 
-<Platforms android />
+<Platforms android ios web/>
 
 `data.action.url`
 
 **استفاده**:  اختیاری   
 **کلید پدر**: [کلید action](/docs/mobile-webservice/notification-keys#action)   
-**نوع مقدار**:         
+ **نوع مقدار**: رشته string         
 **توضیحات**: مقدار یا عملکردی است که اکشن اعلان انجام می‌دهد   
 [مشاهده لیست تمامی عملکرد‌های اعلان و url های مرتبط](/docs/mobile-webservice/notification-actions)
 
 ### **buttons**
 
-<Platforms android />
+<Platforms android web/>
 
 `data.buttons`
 
@@ -289,7 +294,7 @@ led زمان خاموش ماندن
 
 ### [button]
 
-<Platforms android />
+<Platforms android web/>
 
 `data.buttons`
 
@@ -313,7 +318,7 @@ led زمان خاموش ماندن
 
 ### **btn_content**
 
-<Platforms android />
+<Platforms android web/>
 
 `data.buttons.button.btn_content`
 
@@ -338,7 +343,7 @@ led زمان خاموش ماندن
 
 ### **btn_action**
 
-<Platforms android />
+<Platforms android web/>
 
 `data.buttons.button.btn_action`
 
@@ -357,12 +362,15 @@ led زمان خاموش ماندن
 
 **استفاده**:  اختیاری   
 **کلید پدر**: -        
-**نوع مقدار**: 000000000000000     
-**توضیحات**: 0000000000000000
+**نوع مقدار**: رشته string     
+**توضیحات**:  کلید حایگزینی اعلان‌های خوانده نشده   
+**مقادیر**: ``key1``, ``key2``, ``key3``, ``key4`` 
+
+> **نکته:** همانطور که از تعداد کلید‌های جایگزینی مشخص است، حداکثر تعداد اعلان خوانده نشده بر روی گوشی کاربران ۴ عدد است.
 
 ### **time_to_live**
 
-<Platforms android />
+<Platforms android web/>
 
 `time_to_live`
 
@@ -480,6 +488,8 @@ led زمان خاموش ماندن
 **توضیحات**: تعیین زمان ارسال برای نمونه به شکل ‍`"2016-10-18T13:28:00+03:30"`
 
 ### **priority**
+
+<Platforms android ios web/>
 
 `priority`
 

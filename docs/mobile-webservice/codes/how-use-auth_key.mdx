@@ -10,6 +10,15 @@ import BlankLink from '@site/src/components/BlankLink.jsx';
 
 <TabItem value={1}>
 
+* در این نمونه کد از <BlankLink href="https://curl.haxx.se/">cURL</BlankLink> استفاده شده است که می‌توانیدتوسط `sudo apt install curl` آن را نصب کنید.
+```bash {9}
+curl -X POST some url to call ... -H 'authorization: Token YOUR_AUTH_KEY' -H 'content-type: application/json' -d 'your data'
+
+```
+</TabItem>
+
+<TabItem value={2}>
+
 * در این نمونه کد از پکیج <BlankLink href="https://www.npmjs.com/package/axios">axios</BlankLink> استفاده شده که می توانید توسط 
 `npm i axios` آن را نصب کنید.
 * در این مثال فقط قسمتی از کد که برای احراز هویت می باشد نمایش داده شده و برای ارسال اعلان نیاز به کامل کردن این کد می‌باشد که در قسمت های دیگر راهنما توضیح داده خواهد شد
@@ -35,7 +44,7 @@ axios.post(url, data, options);
 
 </TabItem>
 
-<TabItem value={2}>
+<TabItem value={3}>
 
 * در این نمونه از پکیج <BlankLink href='https://pypi.org/project/requests/'>requests</BlankLink> استفاده شده که می‌توانید توسط دستور 
 `pip install requests` آن را نصب کنید.
@@ -61,7 +70,7 @@ r = requests.post(url, data=data, headers=headers)
 
 </TabItem>
 
-<TabItem value={3}>
+<TabItem value={4}>
 
 * در این مثال فقط قسمتی از کد که برای احراز هویت می باشد نمایش داده شده و برای ارسال اعلان نیاز به کامل کردن این کد می‌باشد که در قسمت های دیگر راهنما توضیح داده خواهد شد
 
@@ -83,7 +92,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER,
 
 </TabItem>
 
-<TabItem value={4}>
+<TabItem value={5}>
 
 * در این مثال فقط قسمتی از کد که برای احراز هویت می باشد نمایش داده شده و برای ارسال اعلان نیاز به کامل کردن این کد می‌باشد که در قسمت های دیگر راهنما توضیح داده خواهد شد
 

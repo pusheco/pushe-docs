@@ -11,6 +11,17 @@ import BlankLink from '@site/src/components/BlankLink.jsx';
 
 <TabItem value={1}>
 
+* در این نمونه کد از <BlankLink href="https://curl.haxx.se/">cURL</BlankLink> استفاده شده است که می‌توانیدتوسط `sudo apt install curl` آن را نصب کنید.
+
+```bash {9}
+curl -X POST https://api.pushe.co/v2/messaging/notifications/ -H 'authorization: Token YOUR_TOKEN' -H 'content-type: application/json' -d '{"app_ids": "YOUR_APP_ID", "filters": {"device_id": ["device_id_1","device_id_3", "device_id_2", "device_id_4"], "brand": ["samsung", "sony"], "app_version": ["1.0.1", "1.0.2"]}, "data": {"title": "عنوان پیام", "content": "محتوای پیام"}}'
+```
+
+</TabItem>
+
+
+<TabItem value={2}>
+
 * برای اجرای این کد باید ابتدا پکیج <BlankLink href='https://www.npmjs.com/package/axios'>axios</BlankLink> را نصب کنید
 ‍`npm install axios`
 
@@ -55,7 +66,7 @@ axios.post(url, data, options)
 
 </TabItem>
 
-<TabItem value={2}>
+<TabItem value={3}>
 
 * برای اجرا نیاز به پایتون ورژن ۳.۶ و به بالا می‌باشد
 * برای اجرای این کد باید ابتدا پکیج <BlankLink href='https://pypi.org/project/requests/'>requests</BlankLink> را نصب کنید. 
@@ -101,7 +112,7 @@ print(r.status_code)
 </TabItem>
 
 
-<TabItem value={3}>
+<TabItem value={4}>
 
 ```php
 $YOUR_TOKEN = 'put your token here ...';
@@ -152,7 +163,7 @@ echo $result;
 
 </TabItem>
 
-<TabItem value={4}>
+<TabItem value={5}>
 
 ```go
 package main
