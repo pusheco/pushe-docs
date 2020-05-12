@@ -42,7 +42,7 @@ const options = {
 };
 
 const data = {
-    app_id: YOUR_APP_ID,
+    app_ids: YOUR_APP_ID,
     data: {
         title: 'عنوان پیام',
         content: 'متن پیام'
@@ -66,6 +66,7 @@ axios.post(url, data, options)
 
 </TabItem>
 
+
 <TabItem value={3}>
 
 * برای اجرا نیاز به پایتون ورژن ۳.۶ و به بالا می‌باشد
@@ -87,7 +88,7 @@ headers = {
 }
 
 payload = json.dumps({
-    'app_id': YOUR_APP_ID,
+    'app_ids': YOUR_APP_ID,
     'data': {
         'title': 'عنوان اعلان',
         'content': 'متن اعلان'
@@ -108,7 +109,6 @@ r = requests.post(url, data=payload, headers=headers)
 
 print(r.status_code)
 ```
-
 </TabItem>
 
 
@@ -131,7 +131,7 @@ curl_setopt_array($ch, array(
 ));
 
 curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode(array(
-    'app_id' => $YOUR_APP_ID,
+    'app_ids' => $YOUR_APP_ID,
     'data' => array(
         'data' => 'title',
         'content' => 'content'
@@ -183,7 +183,7 @@ func main() {
 	url := "https://api.pushe.co/v2/messaging/notifications/"
 
 	payload := map[string]interface{}{
-		"app_id" : YOUR_APP_ID,
+		"app_ids" : YOUR_APP_ID,
 		"data": map[string]string{
 			"title": "عنوان اعلان",
 			"content": "متن اعلان",

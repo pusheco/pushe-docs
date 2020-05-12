@@ -16,7 +16,6 @@ import BlankLink from '@site/src/components/BlankLink.jsx';
 ```bash
 curl -X POST https://api.pushe.co/v2/messaging/notifications/ -H 'authorization: Token YOUR_TOKEN' -H 'content-type: application/json' -d '{"app_ids": "YOUR_APP_ID", "custom_content": {"key1": "Value1","Key2": "Value2"}}'
 
-
 ```
 
 </TabItem>
@@ -43,7 +42,7 @@ const options = {
 };
 
 const data = {
-    app_id: YOUR_APP_ID,
+    app_ids: YOUR_APP_ID,
     custom_content: {
         key1: "value1",
         key2: "value2"
@@ -78,7 +77,7 @@ headers = {
 }
 
 payload = json.dumps({
-    'app_id': YOUR_APP_ID,
+    'app_ids': YOUR_APP_ID,
     'custom_content': {
         'key1': 'value1',
         'key2': 'value2'
@@ -112,7 +111,7 @@ curl_setopt_array($ch, array(
 ));
 
 curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode(array(
-    'app_id' => $YOUR_APP_ID,
+    'app_ids' => $YOUR_APP_ID,
     'custom_content' => array(
         'key1' => 'value1',
         'key2' => 'value2'
@@ -148,7 +147,7 @@ func main() {
 	url := "https://api.pushe.co/v2/messaging/notifications/"
 
 	payload := map[string]interface{}{
-		"app_id" : YOUR_APP_ID,
+		"app_ids" : YOUR_APP_ID,
 		"custom_content": map[string]string{
             "key1": "value1",
             "key2": "value2",

@@ -44,7 +44,10 @@ import SimpleNotificationTabs from "./codes/simple-notification.mdx";
         **این فیلد اجباری است**
 
 
-> **نکته:** برای مشاهده تمامی کلید‌های قابل استفاده در ارسال اعلان به [تمامی کلید های اعلان](/docs/mobile-webservice/notification-keys-list) مراجعه کنید.
+:::tip **نکته**
+برای مشاهده تمامی کلید‌های قابل استفاده در ارسال اعلان به [تمامی کلید های اعلان](/docs/mobile-webservice/notification-keys-list) مراجعه کنید.
+:::
+
 
 ## نمونه کد ارسال اعلان ساده
 
