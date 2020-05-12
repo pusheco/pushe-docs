@@ -25,7 +25,7 @@ import FilteredNotification from "./codes/filtered-notification.mdx";
 ## آدرس (url) ارسال اعلان
 
 برای ارسال اعلان فیلتردار وب ‌می‌توانید از آدرس زیر استفاده کنید.     
-```https://api.pushe.co/v2/messaging/notifications/web```
+```https://api.pushe.co/v2/messaging/notifications/```
 
 ## کلید‌های ارسال اعلان فیلتردار
 

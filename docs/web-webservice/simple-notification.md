@@ -27,7 +27,7 @@ import SimpleNotificationTabs from "./codes/simple-notification.mdx";
 ## آدرس (url) ارسال اعلان
 
 برای ارسال اعلان ساده وب ‌می‌توانید از آدرس زیر استفاده کنید.     
-```https://api.pushe.co/v2/messaging/notifications/web/```
+```https://api.pushe.co/v2/messaging/notifications/```
 
 ## کلید‌های ارسال اعلان ساده
 
