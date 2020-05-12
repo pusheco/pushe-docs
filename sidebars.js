@@ -64,7 +64,7 @@ module.exports = {
   },
 
   flutter: {
-    "Flutter": ["flutter/intro"],
+    "Flutter": ["flutter/intro", "flutter/multidex"],
     "قابلیت‌ها و امکانات": [
       "flutter/registration",
       "flutter/unification",
@@ -153,6 +153,7 @@ module.exports = {
       "webpush/subscribe-prompt",
       "webpush/unique-device-id",
       "webpush/unsubscribe",
+      "webpush/pwa",
     ],
     "سوالات و مشکلات": [
       "webpush/errors",

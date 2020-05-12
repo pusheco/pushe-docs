@@ -1,7 +1,12 @@
 ---
 id: unification
-title: تمایز کاربران با شناسه‌ها
+title: پوشه | راهنمای فلاتر | تمایز کاربران با شناسه‌ها
+sidebar_label: تمایز کاربران با شناسه‌ها
+hide_title: true
+description: راهنمای فلاتر - تمایز کاربران با شناسه‌ها
 ---
+
+# تمایز کاربران با شناسه‌ها
 
 import Platforms from '@site/src/components/Platforms.jsx'
 

@@ -29,6 +29,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 
 از این متد می توانید وضعیت ```initializiation``` را بررسی کنید.
 این متد یک Promise بر‌می‌گرداند که مقدار true یا false را در حالت resolve شدن به ما می‌دهد.
+دقت کنید که این متد برای چک کردن رجیستر شدن دستگاه در سرورهای پوشه نیست و برای چک کردن رجیستر شدن دستگاه باید از تابع isRegistered که در پایین توضیح داده شده است استفاده کنید.
 
 ```
 Pushe.isInitialized()

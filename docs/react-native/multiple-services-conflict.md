@@ -27,12 +27,12 @@ description: راهنمایی ری‌اکت‌نیتیو - استفاده همز
 
 ```xml
 <service
-   android:name="co.ronash.pushe.fcm.FcmService" 
+   android:name="co.pushe.plus.messaging.fcm.FcmService" 
    tools:node="remove" />
    
 <!-- Add your own service name instead of this , if you are not using firebase -->
 <service
-   android:name="com.reactlibrary.RNPusheNotificationService" 
+   android:name="co.pushe.plus.RNPusheNotificationService" 
    tools:node="remove" />
 ```
 
@@ -46,27 +46,27 @@ description: راهنمایی ری‌اکت‌نیتیو - استفاده همز
 public class MyFCMService extends FirebaseMessagingService {
     @Override
     public void onNewToken(String s) {
-        co.ronash.pushe.Pushe.getFcmHandler(this).onNewToken(s);
+        co.pushe.plus.Pushe.getFcmHandler(this).onNewToken(s);
         super.onNewToken(s);
     }
     @Override
     public void onDeletedMessages() {
-        co.ronash.pushe.Pushe.getFcmHandler(this).onDeletedMessages();
+        co.pushe.plus.Pushe.getFcmHandler(this).onDeletedMessages();
         super.onDeletedMessages();
     }
     @Override
     public void onSendError(String s, Exception e) {
-        co.ronash.pushe.Pushe.getFcmHandler(this).onSendError(s, e);
+        co.pushe.plus.Pushe.getFcmHandler(this).onSendError(s, e);
         super.onSendError(s, e);
     }
     @Override
     public void onMessageSent(String s) {
-        co.ronash.pushe.Pushe.getFcmHandler(this).onMessageSent(s);
+        co.pushe.plus.Pushe.getFcmHandler(this).onMessageSent(s);
         super.onMessageSent(s);
     }
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
-        if (!co.ronash.pushe.Pushe
+        if (!co.pushe.plus.Pushe
             .getFcmHandler(this)
             .onMessageReceived(remoteMessage)) {
             // It is for fire base, otherwise the condition will handle the message for Pushe
