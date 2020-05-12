@@ -4,6 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
+const admonitions = require('remark-admonitions')
 
 
 module.exports = {
@@ -44,6 +45,7 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          remarkPlugins: [admonitions],
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

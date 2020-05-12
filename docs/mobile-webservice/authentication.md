@@ -24,7 +24,11 @@ Authorization: Token YOUR_AUTH_KEY
 
 در کد بالا عبارت ```Token``` مقدار ثابتی است که باید حتما قبل از مقدار کلید احراز هویت (‍```YOUR_AUTH_KEY```) قرار گیرد.
 
->  **نکته:** بین کلید
+:::important
+:::
+
+
+  **:** بین کلید
  ``Token``
 و کلید
 ``YOUR_AUTH_KEY``
