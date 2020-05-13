@@ -13,6 +13,27 @@ description: راهنمای وب‌سرویس پوشه - اکشن‌های اع�
 **نوع عملکرد (action_type):** ‍`U`    
 **مقدار عملکرد (url):** آدرس لینک
 
+```json
+{
+"data": { 
+  "action": {
+    "action_type": "U",
+    "url": "https://some url to link"         
+    }  
+  }
+}
+```
+
 ### **بستن اعلان**   
 **نوع عملکرد (action_type):** ‍`D`    
 **مقدار عملکرد (url):** ندارد
+
+```json
+{
+"data": { 
+  "action": {
+    "action_type": "D"
+    }  
+  }
+}
+```

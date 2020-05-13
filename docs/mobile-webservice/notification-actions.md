@@ -22,7 +22,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 ```json
 {
 "data": { 
-  "actions": {
+  "action": {
     "action_type": "A"
     }  
   }
@@ -31,7 +31,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 
 ### **بستن اعلان**   
 
-<Platforms android web/>
+<Platforms android />
 
 **نوع عملکرد (action_type):** ‍`D`    
 **مقدار عملکرد (url):** ندارد
@@ -39,7 +39,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 ```json
 {
 "data": { 
-  "actions": {
+  "action": {
     "action_type": "D"
     }  
   }
@@ -57,7 +57,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 ```json
 {
 "data": { 
-  "actions": {
+  "action": {
     "action_type": "G"
     }  
   }
@@ -76,7 +76,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 ```json
 {
 "data": { 
-  "actions": {
+  "action": {
     "action_type": "T",
     "action_data": "نام اکتیویتی",
     "url": ""
@@ -95,7 +95,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 ```json
 {
 "data": { 
-  "actions": {
+  "action": {
     "action_type": "W",
     "url": "https://pushe.co"
     }  
@@ -106,7 +106,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 
 ### **باز کردن لینک در مرورگر**   
 
-<Platforms android web/>
+<Platforms android />
 
 **نوع عملکرد (action_type):** ‍`U`    
 **مقدار عملکرد (url):** آدرس لینکی که قرار است باز شود
@@ -114,7 +114,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 ```json
 {
 "data": { 
-  "actions": {
+  "action": {
     "action_type": "U",
     "url": "https://some url to link"         
     }  
@@ -132,7 +132,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 ```json
 {
 "data": { 
-  "actions": {
+  "action": {
     "action_type": "U",
     "url": "tg://resolve?domain=نام کانال"
     }  
@@ -154,7 +154,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 ```json
 {
 "data": { 
-  "actions": {
+  "action": {
     "action_type": "U",
     "url": "myket://application/#Intent;scheme=myket;package=شناسه اپلیکیشن"
     }  
@@ -173,7 +173,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 ```json
 {
 "data": { 
-  "actions": {
+  "action": {
     "action_type": "U",
     "url": "bazaar://details?id=شناسه اپلیکیشن"
     }  
@@ -192,7 +192,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 ```json
 {
 "data": { 
-  "actions": {
+  "action": {
     "action_type": "U",
     "url": "iranapps://app/شناسه اپلیکیشن"
     }  
@@ -211,7 +211,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 ```json
 {
 "data": { 
-  "actions": {
+  "action": {
     "action_type": "U",
     "url": "market://details?id=شناسه اپلیکیشن"
     }  
@@ -230,7 +230,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 ```json
 {
 "data": { 
-  "actions": {
+  "action": {
     "action_type": "U",
     "url": "bazaar://collection?slug=by_author&aid=شناسه اپلیکیشن"
     }  
@@ -249,7 +249,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 ```json
 {
 "data": { 
-  "actions": {
+  "action": {
     "action_type": "U",
     "url": "tel:شماره تلفن"
     }  
@@ -268,7 +268,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 ```json
 {
 "data": { 
-  "actions": {
+  "action": {
     "action_type": "U",
     "url": "sms:شماره پیامک?body=متن پیام"
     }  
@@ -287,7 +287,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 ```json
 {
 "data": { 
-  "actions": {
+  "action": {
     "action_type": "U",
     "url": "mailto:آدرس ایمیل?subject=عنوان ایمیل&body=متن ایمیل"
     }  
@@ -306,7 +306,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 ```json
 {
 "data": { 
-  "actions": {
+  "action": {
     "action_type": "U",
     "url": "اینتنت مورد نظر"
     }  

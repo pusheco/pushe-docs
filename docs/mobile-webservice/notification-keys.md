@@ -29,7 +29,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 
 ### **data**
 
-<Platforms android ios web/>
+<Platforms android ios />
 
 `data`
 
@@ -42,7 +42,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 
 ### **title**
 
-<Platforms android ios web/>
+<Platforms android ios />
 
 `data.title`
 
@@ -54,7 +54,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 
 ### **content**
 
-<Platforms android ios web/>
+<Platforms android ios />
 
 `data.content`
 
@@ -66,7 +66,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 
 ### **icon**
 
-<Platforms android ios web/>
+<Platforms android ios />
 
 `data.icon`
 
@@ -118,7 +118,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 [1]: https://developer.android.com/guide/topics/ui/notifiers/notifications#bundle
 ### **image**
 
-<Platforms android ios web/>
+<Platforms android ios />
 
 `data.image`
 
@@ -245,7 +245,7 @@ led زمان خاموش ماندن
 
 ### **action**
 
-<Platforms android ios web/>
+<Platforms android ios />
 
 `data.action`
 
@@ -258,7 +258,7 @@ led زمان خاموش ماندن
 
 ### **action_type**
 
-<Platforms android ios web/>
+<Platforms android ios />
 
 `data.action.action_type`
 
@@ -270,7 +270,7 @@ led زمان خاموش ماندن
 
 ### **url**
 
-<Platforms android ios web/>
+<Platforms android ios />
 
 `data.action.url`
 
@@ -282,7 +282,7 @@ led زمان خاموش ماندن
 
 ### **buttons**
 
-<Platforms android web/>
+<Platforms android />
 
 `data.buttons`
 
@@ -294,7 +294,7 @@ led زمان خاموش ماندن
 
 ### [button]
 
-<Platforms android web/>
+<Platforms android />
 
 `data.buttons`
 
@@ -318,7 +318,7 @@ led زمان خاموش ماندن
 
 ### **btn_content**
 
-<Platforms android web/>
+<Platforms android />
 
 `data.buttons.button.btn_content`
 
@@ -343,7 +343,7 @@ led زمان خاموش ماندن
 
 ### **btn_action**
 
-<Platforms android web/>
+<Platforms android />
 
 `data.buttons.button.btn_action`
 
@@ -371,7 +371,7 @@ led زمان خاموش ماندن
 :::
 ### **time_to_live**
 
-<Platforms android web/>
+<Platforms android />
 
 `time_to_live`
 
@@ -490,7 +490,7 @@ led زمان خاموش ماندن
 
 ### **priority**
 
-<Platforms android ios web/>
+<Platforms android ios />
 
 `priority`
 
