@@ -19,7 +19,7 @@ import TransactionalNotificationTabs from "./codes/transactional-notification.md
 
 در ارسال این نوع اعلان باید به موارد زیر دقت کنید
 
-- گیرندگان اعلان در هر درخواست باید توسط یکی از چهار امکان دسته‌بندی `device_id`, `android_id`, `custom_id` و یا `google_ad_id` مشخص شوند
+- گیرندگان اعلان در هر درخواست باید توسط یکی از چهار امکان دسته‌بندی `device_id`, `android_id`, `custom_id` و یا `ad_id` مشخص شوند
 - حداکثر تعداد دریافت کننده‌گان اعلان در یک درخواست **۵۰۰** کاربر می‌باشد
 
 ## آدرس (url) ارسال اعلان تراکنشی
@@ -46,7 +46,7 @@ import TransactionalNotificationTabs from "./codes/transactional-notification.md
 [برای مشاده روش دریافت به راهنما پلتفرم مورد استفاده‌تان بروید](https://pushe.co/docs)
 
 
-- **google_ad_id**: 
+- **ad_id**: 
 لیستی از شناسه(های) یکتا کاربر می‌باشد که توسط **اندروید** و **آی‌او‌اس** به کاربر داده می‌شود و
  مقدار آن از طریق کتابخانه پوشه قابل دریافت می‌باشد.    
 [برای مشاده روش دریافت به راهنما پلتفرم مورد استفاده‌تان بروید](https://pushe.co/docs)
@@ -57,7 +57,7 @@ import TransactionalNotificationTabs from "./codes/transactional-notification.md
 
 :::warning **دقت کنید**
 برای دسته‌بندی کاربران در اعلان تراکنشی تنها استفاده از یکی از چهار امکان دسته بندی یعنی 
-`custom_id`, `google_ad_id` ,`device_id` یا `android_id`
+`custom_id`, `ad_id` ,`device_id` یا `android_id`
 **اجباری** می‌باشد و در صورت استفاده همزمان *بیش از یک مورد* به شما پیام خطا بازگردانده می‌شود.
 :::
 

@@ -44,7 +44,7 @@ import FilteredNotification from "./codes/filtered-notification.mdx";
       به ناچار از این کلید برای فیلتر کردن دستگاه‌های آی‌او‌اس هم مورد استفاده قرار می‌گیرد و مقدار آن برابر با مقدار کلید `device_id` است.
 
 
-- **شناسه یکتا google_ad_id:**
+- **شناسه یکتا ad_id:**
     - **اندروید:**
         این شناسه را Google Play Services به کاربران اختصاص می‌دهد و در واقع معادل همان Advertising ID می‌باشد. شناسه Advertising ID کاربر بین تمام اپلیکیشن‌های نصب شده بر روی گوشی او ثابت است ولی کاربر قادر است که این شناسه را reset و یا غیر فعال کند.    
     - **آی‌او‌اس:**
@@ -61,7 +61,7 @@ import FilteredNotification from "./codes/filtered-notification.mdx";
     "filters": {
         "device_id": ["list of device ids or android ids ..."],
         "android_id": ["list of device ids or android ids ..."],
-        "google_ad_id": ["list of ad_ids ..."]
+        "ad_id": ["list of ad_ids ..."]
     }
 }
 ```
