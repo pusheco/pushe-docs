@@ -1,6 +1,6 @@
 ---
 id: notification-keys
-title: وب‌سرویس موبایل پوشه
+title: همه کلید‌های اعلان
 sidebar_label: همه کلید‌های اعلان
 hide_title: true
 hide_table_of_contents: true
@@ -17,7 +17,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 
 ### **app_ids**
 
-<Platforms android ios web/>
+<Platforms android ios/>
 
 `app_ids`
 
@@ -25,7 +25,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 **کلید پدر**: -     
  **نوع مقدار**: رشته string   
 **توضیحات**:
-این کلید بیانگر [شناسه اپلیکیشن](/docs/mobile-webservice/get-app-id) می‌باشد که برای همه انواع اعلان اجباری می‌باشد
+این کلید بیانگر [شناسه اپلیکیشن](/docs/mobile-api/get-app-id) می‌باشد که برای همه انواع اعلان اجباری می‌باشد
 
 ### **data**
 
@@ -47,7 +47,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 `data.title`
 
 **استفاده**:  (در صورت استفاده از کلید **data**) اجباری     
-**کلید پدر**: [کلید data](/docs/mobile-webservice/notification-keys#data)   
+**کلید پدر**: [کلید data](/docs/mobile-api/notification-keys#data)   
 **نوع مقدار**: رشته string    
 **توضیحات**:
 عنوان اعلانی که در دستگاه نمایش داده می‌شود
@@ -59,7 +59,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 `data.content`
 
 **استفاده**:  (در صورت استفاده از کلید **data**) اجباری     
-**کلید پدر**: [کلید data](/docs/mobile-webservice/notification-keys#data)   
+**کلید پدر**: [کلید data](/docs/mobile-api/notification-keys#data)   
 **نوع مقدار**: رشته string    
 **توضیحات**:
 متن اعلانی که در دستگاه نمایش داده می‌شود
@@ -71,7 +71,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 `data.icon`
 
 **استفاده**:  اختیاری   
-**کلید پدر**: [کلید data](/docs/mobile-webservice/notification-keys#data)   
+**کلید پدر**: [کلید data](/docs/mobile-api/notification-keys#data)   
 **نوع مقدار**: رشته string    
 **توضیحات**:
 آیکن اعلانی که در دستگاه نمایش داده می‌شود   
@@ -85,7 +85,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 `data.big_title`
 
 **استفاده**:  اختیاری   
-**کلید پدر**: [کلید data](/docs/mobile-webservice/notification-keys#data)   
+**کلید پدر**: [کلید data](/docs/mobile-api/notification-keys#data)   
 **نوع مقدار**: رشته string    
 **توضیحات**:
 عنوان اعلانی که در دستگاه نمایش داده می‌شود 
@@ -98,7 +98,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 `data.big_content`
 
 **استفاده**:  اختیاری   
-**کلید پدر**: [کلید data](/docs/mobile-webservice/notification-keys#data)   
+**کلید پدر**: [کلید data](/docs/mobile-api/notification-keys#data)   
 **نوع مقدار**: رشته string    
 **توضیحات**:
 متن اعلانی که در دستگاه نمایش داده می‌شود
@@ -111,7 +111,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 `data.summary`
 
 **استفاده**:  اختیاری   
-**کلید پدر**: [کلید data](/docs/mobile-webservice/notification-keys#data)   
+**کلید پدر**: [کلید data](/docs/mobile-api/notification-keys#data)   
 **نوع مقدار**: رشته string    
 **توضیحات**: نمایش خلاصه اعلان در حالتی که [اعلان‌ها بسته می‌باشند.][1]
 
@@ -123,7 +123,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 `data.image`
 
 **استفاده**:  اختیاری   
-**کلید پدر**: [کلید data](/docs/mobile-webservice/notification-keys#data)   
+**کلید پدر**: [کلید data](/docs/mobile-api/notification-keys#data)   
 **نوع مقدار**: رشته string    
 **توضیحات**:
 عکس اعلانی که در دستگاه نمایش داده می‌شود.   
@@ -136,7 +136,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 `data.ticker`
 
 **استفاده**:  اختیاری   
-**کلید پدر**: [کلید data](/docs/mobile-webservice/notification-keys#data)   
+**کلید پدر**: [کلید data](/docs/mobile-api/notification-keys#data)   
 **نوع مقدار**: رشته string    
 **توضیحات**:
 متن خلاصه ای که در نوار بالای صفحه نمایش داده میشود.    
@@ -149,11 +149,11 @@ import Platforms from "@site/src/components/Platforms.jsx";
 `data.notif_icon`
 
 **استفاده**:  اختیاری   
-**کلید پدر**: [کلید data](/docs/mobile-webservice/notification-keys#data)   
+**کلید پدر**: [کلید data](/docs/mobile-api/notification-keys#data)   
 **نوع مقدار**: رشته string    
 **توضیحات**:
 آیکون جایگزین آیکون اپ     
-[مشاهده لیست آیکن‌های اعلان](/docs/mobile-webservice/notification-icons)
+[مشاهده لیست آیکن‌های اعلان](/docs/mobile-api/notification-icons)
 
 
 ### **wake_screen**
@@ -163,7 +163,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 `data.wake_screen`
 
 **استفاده**:  اختیاری   
-**کلید پدر**: [کلید data](/docs/mobile-webservice/notification-keys#data)   
+**کلید پدر**: [کلید data](/docs/mobile-api/notification-keys#data)   
 **نوع مقدار**: بولین true/false    
 **توضیحات**:
 روشن شدن صفحه نمایش به هنگام دریافت پیام	
@@ -176,7 +176,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 `data.sound_url`
 
 **استفاده**:  اختیاری   
-**کلید پدر**: [کلید data](/docs/mobile-webservice/notification-keys#data)   
+**کلید پدر**: [کلید data](/docs/mobile-api/notification-keys#data)   
 **نوع مقدار**:  رشته string (url صدا)     
 **توضیحات**:
 تغییر صدای هشدار به هنگام دریافت اعلان	
@@ -188,7 +188,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 `data.notif_channel_id`
 
 **استفاده**:  اختیاری   
-**کلید پدر**: [کلید data](/docs/mobile-webservice/notification-keys#data)   
+**کلید پدر**: [کلید data](/docs/mobile-api/notification-keys#data)   
 **نوع مقدار**:  رشته‌ای که حاوی شناسه کانال می‌باشد      
 **توضیحات**:
 ارسال به کاربران کانال خاص	
@@ -200,7 +200,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 `data.visibility`
 
 **استفاده**:  اختیاری   
-**کلید پدر**: [کلید data](/docs/mobile-webservice/notification-keys#data)   
+**کلید پدر**: [کلید data](/docs/mobile-api/notification-keys#data)   
 **نوع مقدار**:  بولین true/false      
 **توضیحات**:
 اعلان نمایش داده شود یا خیر	
@@ -212,11 +212,11 @@ import Platforms from "@site/src/components/Platforms.jsx";
 `data.led_color`
 
 **استفاده**:  اختیاری   
-**کلید پدر**: [کلید data](/docs/mobile-webservice/notification-keys#data)   
+**کلید پدر**: [کلید data](/docs/mobile-api/notification-keys#data)   
 **نوع مقدار**: رشته string    
 **توضیحات**:
 led تعیین رنگ     
-[مشاهده لیست رنگ‌های LED](/docs/mobile-webservice/notification-led-table)
+[مشاهده لیست رنگ‌های LED](/docs/mobile-api/notification-led-table)
 
 
 ### **led_on**
@@ -226,7 +226,7 @@ led تعیین رنگ
 `data.led_on`
 
 **استفاده**:  اختیاری   
-**کلید پدر**: [کلید data](/docs/mobile-webservice/notification-keys#data)   
+**کلید پدر**: [کلید data](/docs/mobile-api/notification-keys#data)   
 **نوع مقدار**:  زمان به میلی ثانیه      
 **توضیحات**:
 led زمان روشن ماندن	
@@ -238,7 +238,7 @@ led زمان روشن ماندن
 `data.led_off`
 
 **استفاده**:  اختیاری   
-**کلید پدر**: [کلید data](/docs/mobile-webservice/notification-keys#data)   
+**کلید پدر**: [کلید data](/docs/mobile-api/notification-keys#data)   
 **نوع مقدار**:  زمان به میلی ثانیه      
 **توضیحات**:
 led زمان خاموش ماندن
@@ -250,7 +250,7 @@ led زمان خاموش ماندن
 `data.action`
 
 **استفاده**:  اختیاری   
-**کلید پدر**: [کلید data](/docs/mobile-webservice/notification-keys#data)   
+**کلید پدر**: [کلید data](/docs/mobile-api/notification-keys#data)   
 **نوع مقدار**:  دیکشنری      
 **توضیحات**:
 این کلید یک دیکشنری می‌باشد که مقادیر مربوط به اکشن اعلان نظیر باز کردن اپلیکیشن و یا باز کردن یه آدرس و ... را نگه می‌دارد
@@ -263,10 +263,10 @@ led زمان خاموش ماندن
 `data.action.action_type`
 
 **استفاده**:  اختیاری   
-**کلید پدر**: [کلید action](/docs/mobile-webservice/notification-keys#action)   
+**کلید پدر**: [کلید action](/docs/mobile-api/notification-keys#action)   
  **نوع مقدار**: رشته string         
 **توضیحات**: نوع عملکرد اعلان   
-[مشاهده لیست تمامی عملکرد‌های اعلان](/docs/mobile-webservice/notification-actions)
+[مشاهده لیست تمامی عملکرد‌های اعلان](/docs/mobile-api/notification-actions)
 
 ### **url**
 
@@ -275,10 +275,10 @@ led زمان خاموش ماندن
 `data.action.url`
 
 **استفاده**:  اختیاری   
-**کلید پدر**: [کلید action](/docs/mobile-webservice/notification-keys#action)   
+**کلید پدر**: [کلید action](/docs/mobile-api/notification-keys#action)   
  **نوع مقدار**: رشته string         
 **توضیحات**: مقدار یا عملکردی است که اکشن اعلان انجام می‌دهد   
-[مشاهده لیست تمامی عملکرد‌های اعلان و url های مرتبط](/docs/mobile-webservice/notification-actions)
+[مشاهده لیست تمامی عملکرد‌های اعلان و url های مرتبط](/docs/mobile-api/notification-actions)
 
 ### **buttons**
 
@@ -287,7 +287,7 @@ led زمان خاموش ماندن
 `data.buttons`
 
 **استفاده**:  اختیاری   
-**کلید پدر**: [کلید data](/docs/mobile-webservice/notification-keys#data)   
+**کلید پدر**: [کلید data](/docs/mobile-api/notification-keys#data)   
 **نوع مقدار**: لیست     
 **توضیحات**: لیستی از button ها می باشد     
 هر button یک دیکشنری می‌باشد که کلید‌هایی نظیر `btn_action`, `btn_order` , ... را در برمیگیرد
@@ -299,7 +299,7 @@ led زمان خاموش ماندن
 `data.buttons`
 
 **استفاده**:  اختیاری   
-**کلید پدر**: [کلید buttons](/docs/mobile-webservice/notification-keys#buttons)   
+**کلید پدر**: [کلید buttons](/docs/mobile-api/notification-keys#buttons)   
 **نوع مقدار**: دیکشنری     
 **توضیحات**:    
 **(این کلید وجود ندارد)** ، صرفا بیانگر این است که button یک دیکشنری درون کلید **buttons** می باشد که کلیدهایی  که در ادامه توضیح داده می‌شود را نگه می‌دارد.
@@ -311,7 +311,7 @@ led زمان خاموش ماندن
 `data.buttons.button.btn_order`
 
 **استفاده**:  در صورت استفاده از button(s) این کلید اجباری می‌باشد   
-**کلید پدر**: [کلید button](/docs/mobile-webservice/notification-keys#button)   
+**کلید پدر**: [کلید button](/docs/mobile-api/notification-keys#button)   
 **نوع مقدار**: نوع عددی integer     
 **توضیحات**:
 ترتیب قرار گیری buttons در اعلان
@@ -323,7 +323,7 @@ led زمان خاموش ماندن
 `data.buttons.button.btn_content`
 
 **استفاده**:  اختیاری   
-**کلید پدر**: [کلید button](/docs/mobile-webservice/notification-keys#button)   
+**کلید پدر**: [کلید button](/docs/mobile-api/notification-keys#button)   
 **نوع مقدار**: رشته string     
 **توضیحات**:
 متن button
@@ -335,11 +335,11 @@ led زمان خاموش ماندن
 `data.buttons.button.btn_icon`
 
 **استفاده**:  اختیاری   
-**کلید پدر**: [کلید button](/docs/mobile-webservice/notification-keys#button)   
+**کلید پدر**: [کلید button](/docs/mobile-api/notification-keys#button)   
 **نوع مقدار**: رشته string     
 **توضیحات**:
 آیکن button     
-[مشاهده لیست آیکن‌های اعلان](/docs/mobile-webservice/notification-icons)
+[مشاهده لیست آیکن‌های اعلان](/docs/mobile-api/notification-icons)
 
 ### **btn_action**
 
@@ -348,11 +348,11 @@ led زمان خاموش ماندن
 `data.buttons.button.btn_action`
 
 **استفاده**:  اختیاری   
-**کلید پدر**: [کلید button](/docs/mobile-webservice/notification-keys#button)   
+**کلید پدر**: [کلید button](/docs/mobile-api/notification-keys#button)   
 **نوع مقدار**: دیکشنری     
 **توضیحات**:
-همانند کلید [action](/docs/mobile-webservice/notification-keys#action) می‌باشد و دو کلید `action_type` , `url` قبول می‌کند که مقادیر آنها را می توانید
-در قسمت [اکشن‌های اعلان](/docs/mobile-webservice/notification-actions) مشاهده کنید.
+همانند کلید [action](/docs/mobile-api/notification-keys#action) می‌باشد و دو کلید `action_type` , `url` قبول می‌کند که مقادیر آنها را می توانید
+در قسمت [اکشن‌های اعلان](/docs/mobile-api/notification-actions) مشاهده کنید.
 
 ### **collapse_key**
 
@@ -399,7 +399,7 @@ led زمان خاموش ماندن
 `filters.operator`
 
 **استفاده**:  اختیاری   
-**کلید پدر**: [کلید filters](/docs/mobile-webservice/notification-keys#filters)   
+**کلید پدر**: [کلید filters](/docs/mobile-api/notification-keys#filters)   
 **نوع مقدار**: لیستی از رشته string     
 **توضیحات**: فیلتر اعلان برای مشخص کردن نوع اپراتور     
 **مقادیر**: `ir-mci` , `irancell` , `rightel`
@@ -411,7 +411,7 @@ led زمان خاموش ماندن
 `filters.brand`
 
 **استفاده**:  اختیاری   
-**کلید پدر**: [کلید filters](/docs/mobile-webservice/notification-keys#filters)   
+**کلید پدر**: [کلید filters](/docs/mobile-api/notification-keys#filters)   
 **نوع مقدار**: لیستی از رشته string     
 **توضیحات**: فیلتر اعلان برای مشخص کردن نوع برند دستگاه     
 **مقادیر**: `samsung` , `LGE` , `asus` , `htc` , `lenovo` , `sony` , `huawei`
@@ -423,7 +423,7 @@ led زمان خاموش ماندن
 `filters.mobile_net`
 
 **استفاده**:  اختیاری   
-**کلید پدر**: [کلید filters](/docs/mobile-webservice/notification-keys#filters)   
+**کلید پدر**: [کلید filters](/docs/mobile-api/notification-keys#filters)   
 **نوع مقدار**: لیستی از رشته string     
 **توضیحات**: فیلتر اعلان برای مشخص کردن نوع اینترنت  
 **مقادیر**: `lte` , `wifi‍‍`
@@ -435,7 +435,7 @@ led زمان خاموش ماندن
 `filters.mobile_net`
 
 **استفاده**:  اختیاری   
-**کلید پدر**: [کلید filters](/docs/mobile-webservice/notification-keys#filters)   
+**کلید پدر**: [کلید filters](/docs/mobile-api/notification-keys#filters)   
 **نوع مقدار**: لیستی از رشته string     
 **توضیحات**: فیلتر اعلان برای مشخص کردن استان  
 **مقادیر**:
@@ -451,7 +451,7 @@ led زمان خاموش ماندن
 `filters.app_version`
 
 **استفاده**:  اختیاری   
-**کلید پدر**: [کلید filters](/docs/mobile-webservice/notification-keys#filters)   
+**کلید پدر**: [کلید filters](/docs/mobile-api/notification-keys#filters)   
 **نوع مقدار**: لیستی از رشته string     
 **توضیحات**: فیلتر اعلان برای مشخص کردن ورژن اپلیکیشن
 

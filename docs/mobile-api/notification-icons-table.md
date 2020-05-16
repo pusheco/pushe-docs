@@ -1,14 +1,14 @@
 ---
-id: table_icons
-title: وب‌سرویس موبایل (اندروید و آی‌او‌اس) پوشه | pushe.co Android, iOS API
+id: notification-icons-table
+title: جدول ۱ - آیکن‌های اعلان
+sidebar_label: جدول ۱ - آیکن‌های اعلان
 hide_title: true
-hide_table_of_contents: true
-sidebar_label: جدول ۲ - آیکون‌ها 
+description: راهنمای وب‌سرویس پوشه - جدول ۱ - آیکن‌های اعلان
 ---
 
-import Icons from "./Icons.jsx";
+import Icons from "@site/src/components/Icons.jsx";
 
-# جدول ۲ - آیکون های قابل استفاده در ارسال اعلان
+# جدول ۱ - آیکن‌های قابل استفاده در اعلان
 
 |      مقدار    |                                  آیکون                         |         مقدار   |                                        آیکون            |        مقدار       |                                                    آیکون  |    مقدار            |                               آیکون                 |
 |:--------------|:--------------------------------------------------------------:|:---------------:|:-------------------------------------------------------:|:------------------:|:---------------------------------------------------------:|:-------------------:|----------------------------------------------------:|
@@ -25,4 +25,3 @@ import Icons from "./Icons.jsx";
 |  language         |   <Icons name="language" />                   |local_cafe            | <Icons name="local_cafe" />           | local_dining        |    <Icons name="local_dining" />          | local_offer         |   <Icons name="local_offer" />   |
 |  loyalty          |   <Icons name="loyalty" />                    |map                   | <Icons name="map" />                  | mood_bad            |    <Icons name="mood_bad" />              | mood                |   <Icons name="mood" />          |
 |  attach           |   <Icons name="attach_file" />                |
-

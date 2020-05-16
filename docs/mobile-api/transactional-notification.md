@@ -1,6 +1,6 @@
 ---
 id: transactional-notification
-title: وب‌سرویس موبایل پوشه
+title: ارسال اعلان تراکنشی
 sidebar_label: ارسال اعلان تراکنشی
 hide_title: true
 description: راهنمای وب‌سرویس پوشه - ارسال اعلان تراکنشی
@@ -76,11 +76,11 @@ import TransactionalNotificationTabs from "./codes/transactional-notification.md
 :::
 
 
-> **نکته:** برای مشاهده تمامی کلید‌های قابل استفاده در ارسال اعلان به قسمت [تمامی کلید های اعلان](/docs/mobile-webservice/notification-keys-list) مراجعه کنید.
+> **نکته:** برای مشاهده تمامی کلید‌های قابل استفاده در ارسال اعلان به قسمت [تمامی کلید های اعلان](/docs/mobile-api/notification-keys) مراجعه کنید.
 
 ## نمونه کد ارسال اعلان تراکنشی
 
 در نمونه کد های زیر حداقل کد مورد نیاز برای ارسال یک اعلان ساده در زبان های مختلف با عنوان و متن نمایش داده شده.
-برای مشاهده تمامی کلید های قابل استفاده به بخش [تمامی کلید های اعلان](/docs/mobile-webservice/notification-keys-list) مراجعه کنید.
+برای مشاهده تمامی کلید های قابل استفاده به بخش [تمامی کلید های اعلان](/docs/mobile-api/notification-keys) مراجعه کنید.
 
 <TransactionalNotificationTabs />

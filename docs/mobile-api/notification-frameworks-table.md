@@ -1,12 +1,12 @@
 ---
-id: table_frameworks
-title: وب‌سرویس موبایل (اندروید و آی‌او‌اس) پوشه | pushe.co Android, iOS API
+id: notification-frameworks-table
+title: جدول ۲ - کد‌های فریمورک‌ها
+sidebar_label: جدول ۲ - کد‌های فریمورک‌ها
 hide_title: true
-hide_table_of_contents: true
-sidebar_label: جدول ۵ - کدهای فریمورک‌ها
+description: راهنمای وب‌سرویس پوشه - جدول ۲ - کد‌های فریمورک‌ها
 ---
 
-# جدول ۵ - کدهای فریمورک‌ها
+# جدول ۲ - کدهای فریمورک‌ها
 
 |    کد چارچوب    | نام چارچوب    |    نام چارچوب به لاتین      | 
 |:----------------:|---------------:|:---------------------------|
@@ -19,4 +19,3 @@ sidebar_label: جدول ۵ - کدهای فریمورک‌ها
 |       ۷         | اپلیکیشن ساز  |         app builder        |
 |       ۸         |       ایکس کد |         xcode              |
 |       ۹         |       فلاتر |         flutter              |
-

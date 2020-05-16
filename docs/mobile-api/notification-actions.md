@@ -1,6 +1,6 @@
 ---
 id: notification-actions
-title: وب‌سرویس موبایل پوشه
+title: اکشن‌های اعلان
 sidebar_label: اکشن‌های اعلان
 hide_title: true
 description: راهنمای وب‌سرویس پوشه - اکشن‌های اعلان

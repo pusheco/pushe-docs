@@ -1,6 +1,6 @@
 ---
 id: notification-led-table
-title: وب‌سرویس موبایل پوشه
+title: جدول ۳ - کد‌های رنگ LED
 sidebar_label: جدول ۳ - کد‌های رنگ LED
 hide_title: true
 description: راهنمای وب‌سرویس پوشه - جدول ۳ - کد‌های رنگ LED

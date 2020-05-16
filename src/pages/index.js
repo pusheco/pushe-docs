@@ -61,7 +61,7 @@ const docs = [
   },
   {
     display: true,
-    docLink: '/docs/mobile-api/authentication',
+    docLink: '/docs/mobile-api/intro',
     img: '/img/restapi.png',
     github: 'https://github.com/pusheco/pushe-api-android-samples',
     desc: 'وب‌سرویس پوشه برای موبایل (iOS, Android)',

@@ -47,6 +47,6 @@ import FilteredNotification from "./codes/filtered-notification.mdx";
 
 ## نمونه کد ارسال اعلان فیلتردار
 
-برای مشاهده تمامی کلید های قابل استفاده در ارسال اعلان به بخش [تمامی کلید های اعلان](/docs/mobile-webservice/notification-keys-list) مراجعه کنید.
+برای مشاهده تمامی کلید های قابل استفاده در ارسال اعلان به بخش [تمامی کلید های اعلان](/docs/mobile-api/notification-keys) مراجعه کنید.
 
 <FilteredNotification />

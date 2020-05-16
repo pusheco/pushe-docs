@@ -1,6 +1,6 @@
 ---
 id: get-app-id
-title: وب‌سرویس موبایل پوشه
+title: دریافت شناسه اپلیکیشن
 sidebar_label: دریافت شناسه اپلیکیشن
 hide_title: true
 description: راهنمای وب‌سرویس پوشه - دریافت شناسه اپلیکیشن

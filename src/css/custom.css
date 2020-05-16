@@ -276,3 +276,30 @@ div.menu .menu__list .menu__list {
   background-color: #a65dce;
   color: #fff;
 }
+
+.admonition .admonition-icon {
+  margin-left: 0.4em;
+}
+
+.admonition.alert--info {
+  --ifm-alert-background-color: #0065ff;
+  color: #ffffff;
+  background-color: #0065ff;
+  border-color: #0065ff;
+}
+
+.admonition.alert--success {
+  --ifm-alert-background-color: #00feb6;
+  color: #000000;
+  background-color: #00feb6;
+  border-color: #00feb6;
+}
+
+.admonition.alert--success svg {
+  fill: #000000;
+}
+
+.admonition.alert--success a {
+  color: #0065ff;
+  text-decoration: none;
+}

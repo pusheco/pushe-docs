@@ -43,11 +43,11 @@ import SimpleNotificationTabs from "./codes/simple-notification.mdx";
         **این فیلد اجباری است**
 
 :::tip **نکته**
-برای مشاهده تمامی کلید‌های قابل استفاده در ارسال اعلان به [تمامی کلید های اعلان](/docs/web-webservice/notification-keys-list) مراجعه کنید.
+برای مشاهده تمامی کلید‌های قابل استفاده در ارسال اعلان به [تمامی کلید های اعلان](/docs/web-webservice/notification-keys) مراجعه کنید.
 :::
 ## نمونه کد ارسال اعلان ساده
 
 در نمونه کد های زیر حداقل کد مورد نیاز برای ارسال یک اعلان ساده در زبان های مختلف با عنوان و متن نمایش داده شده.
-برای مشاهده تمامی کلید های قابل استفاده به بخش [تمامی کلید های اعلان](/docs/web-webservice/notification-keys-list) مراجعه کنید.
+برای مشاهده تمامی کلید های قابل استفاده به بخش [تمامی کلید های اعلان](/docs/web-webservice/notification-keys) مراجعه کنید.
 
 <SimpleNotificationTabs />

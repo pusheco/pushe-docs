@@ -5,22 +5,28 @@ import BlankLink from '@site/src/components/BlankLink.jsx';
 
 
 <Tabs
-    defaultValue={1}
+    groupId="language-codes"
+    defaultValue="1"
     values={languages}
 >
 
-<TabItem value={1}>
+<TabItem value="1">
 
 * در این نمونه کد از <BlankLink href="https://curl.haxx.se/">cURL</BlankLink> استفاده شده است که می‌توانیدتوسط `sudo apt install curl` آن را نصب کنید.
 
 ```bash
-curl -X POST https://api.pushe.co/v2/messaging/notifications/ -H 'authorization: Token YOUR_TOKEN' -H 'content-type: application/json' -d '{"app_ids": "YOUR_APP_ID", "custom_content": {"key1": "Value1","Key2": "Value2"}}'
-
+curl -X POST https://api.pushe.co/v2/messaging/notifications/ \
+-H 'authorization: Token YOUR_TOKEN' \
+-H 'content-type: application/json' \
+-d '{
+"app_ids": "YOUR_APP_ID", 
+"data" :{"title":"عنوان اعلان", "content":"محتوای اعلان"}
+}'
 ```
 
 </TabItem>
 
-<TabItem value={2}>
+<TabItem value="2">
 
 * برای اجرای این کد باید ابتدا پکیج <BlankLink href='https://www.npmjs.com/package/axios'>axios</BlankLink> را نصب کنید
 ‍`npm install axios`
@@ -43,9 +49,9 @@ const options = {
 
 const data = {
     app_ids: YOUR_APP_ID,
-    custom_content: {
-        key1: "value1",
-        key2: "value2"
+    data: {
+        title: 'عنوان پیام',
+        content: 'متن پیام'
     }
 };
 
@@ -56,7 +62,7 @@ axios.post(url, data, options)
 
 </TabItem>
 
-<TabItem value={3}>
+<TabItem value="3">
 
 * برای اجرا نیاز به پایتون ورژن ۳.۶ و به بالا می‌باشد
 * برای اجرای این کد باید ابتدا پکیج <BlankLink href='https://pypi.org/project/requests/'>requests</BlankLink> را نصب کنید. 
@@ -78,9 +84,9 @@ headers = {
 
 payload = json.dumps({
     'app_ids': YOUR_APP_ID,
-    'custom_content': {
-        'key1': 'value1',
-        'key2': 'value2'
+    'data': {
+        'title': 'عنوان اعلان',
+        'content': 'متن اعلان'
     }
 })
 
@@ -92,7 +98,7 @@ print(r.status_code)
 </TabItem>
 
 
-<TabItem value={4}>
+<TabItem value="4">
 
 ```php
 $YOUR_TOKEN = 'put your token here ...';
@@ -112,9 +118,9 @@ curl_setopt_array($ch, array(
 
 curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode(array(
     'app_ids' => $YOUR_APP_ID,
-    'custom_content' => array(
-        'key1' => 'value1',
-        'key2' => 'value2'
+    'data' => array(
+        'data' => 'title',
+        'content' => 'content'
     )
 )));
 
@@ -127,7 +133,7 @@ echo $result;
 
 </TabItem>
 
-<TabItem value={5}>
+<TabItem value="5">
 
 ```go
 package main
@@ -148,10 +154,10 @@ func main() {
 
 	payload := map[string]interface{}{
 		"app_ids" : YOUR_APP_ID,
-		"custom_content": map[string]string{
-            "key1": "value1",
-            "key2": "value2",
-        }
+		"data": map[string]string{
+			"title": "عنوان اعلان",
+			"content": "متن اعلان",
+		},
 	}
 
 	jsonValue, _ := json.Marshal(payload)

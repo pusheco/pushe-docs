@@ -1,6 +1,6 @@
 ---
 id: custom-content-notification
-title: وب‌سرویس موبایل پوشه
+title: ارسال اعلان با محتوا دلخواه
 sidebar_label: ارسال اعلان با محتوا دلخواه
 hide_title: true
 description: راهنمای وب‌سرویس پوشه - ارسال اعلان با محتوا دلخواه
@@ -17,7 +17,7 @@ import CustomContentNotificationTabs from "./codes/custom-content-notification.m
 
 یکی از کاربردهای رایج این نوع اعلان تغییر و به‌روزرسانی تنظیمات در اپلیکیشن‌تان می‌باشد.
 
-در این نوع اعلان از شناسه های یکتا و فیلتر‌های اعلان که در [قسمت ارسال اعلان فیلتردار](/docs/mobile-webservice/filtered-notification) توضیح داده شد هم می‌توانید برای فیلتر و مشخص کردن مخاطبین دریافت کننده اعلان استفاده کنید.
+در این نوع اعلان از شناسه های یکتا و فیلتر‌های اعلان که در [قسمت ارسال اعلان فیلتردار](/docs/mobile-api/filtered-notification) توضیح داده شد هم می‌توانید برای فیلتر و مشخص کردن مخاطبین دریافت کننده اعلان استفاده کنید.
 
 ## دریافت محتوای دلخواه فرستاده شده در اپلیکیشن
 
@@ -42,11 +42,11 @@ import CustomContentNotificationTabs from "./codes/custom-content-notification.m
 - **custom_content**: یک دیکشنری است که کلید ها و مقادیر دلخواهی که می‌خواهید ارسال کنید را نگه می‌دارد    
     **این فیلد اجباری است**
 
-**امکان استفاده از کلیدهایی که در [قسمت ارسال اعلان ساده](/docs/mobile-webservice/simple-notification) و در [قسمت ارسال اعلان فیلتردار](/docs/mobile-webservice/filtered-notification) گفته شد در این نوع اعلان هم امکان‌پذیر می‌باشد.**
+**امکان استفاده از کلیدهایی که در [قسمت ارسال اعلان ساده](/docs/mobile-api/simple-notification) و در [قسمت ارسال اعلان فیلتردار](/docs/mobile-api/filtered-notification) گفته شد در این نوع اعلان هم امکان‌پذیر می‌باشد.**
 
 
 :::tip **نکته**
-برای مشاهده تمامی کلید‌های قابل استفاده در ارسال اعلان به [تمامی کلید های اعلان](/docs/mobile-webservice/notification-keys-list) مراجعه کنید.
+برای مشاهده تمامی کلید‌های قابل استفاده در ارسال اعلان به [تمامی کلید های اعلان](/docs/mobile-api/notification-keys) مراجعه کنید.
 :::
 
 :::important **تبصره**
@@ -61,6 +61,6 @@ import CustomContentNotificationTabs from "./codes/custom-content-notification.m
 ## نمونه کد ارسال اعلان با محتوای دلخواه
 
 در نمونه کد های زیر حداقل کد مورد نیاز برای ارسال یک اعلان ساده در زبان های مختلف با عنوان و متن نمایش داده شده.
-برای مشاهده تمامی کلید های قابل استفاده به بخش [تمامی کلید های اعلان](/docs/mobile-webservice/notification-keys-list) مراجعه کنید.
+برای مشاهده تمامی کلید های قابل استفاده به بخش [تمامی کلید های اعلان](/docs/mobile-api/notification-keys) مراجعه کنید.
 
 <CustomContentNotificationTabs />
