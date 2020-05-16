@@ -295,7 +295,25 @@ div.menu .menu__list .menu__list {
   border-color: #00feb6;
 }
 
+.admonition.alert--danger {
+  --ifm-alert-background-color: #ea3946;
+  color: #ffffff;
+  background-color: #ea3946;
+  border-color: #ea3946;
+}
+
+.admonition.alert--warning {
+  --ifm-alert-background-color: #ffd93b;
+  color: #000000;
+  background-color: #ffd93b;
+  border-color: #ffd93b;
+}
+
 .admonition.alert--success svg {
+  fill: #000000;
+}
+
+.admonition.alert--warning svg {
   fill: #000000;
 }
 
