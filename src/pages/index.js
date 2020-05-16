@@ -68,7 +68,7 @@ const docs = [
   },
   {
     display: true,
-    docLink: '/docs/web-api/authentication',
+    docLink: '/docs/web-api/intro',
     img: '/img/webpush.png',
     github: 'https://github.com/pusheco/pushe-api-webpush-samples',
     desc: 'وب‌سرویس پوشه برای وب',

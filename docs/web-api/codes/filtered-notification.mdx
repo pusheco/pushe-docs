@@ -5,6 +5,7 @@ import BlankLink from '@site/src/components/BlankLink.jsx';
 
 
 <Tabs
+    groupId="language-codes"
     defaultValue="1"
     values={languages}
 >
@@ -13,8 +14,17 @@ import BlankLink from '@site/src/components/BlankLink.jsx';
 
 * در این نمونه کد از <BlankLink href="https://curl.haxx.se/">cURL</BlankLink> استفاده شده است که می‌توانیدتوسط `sudo apt install curl` آن را نصب کنید.
 
-```bash {9}
-curl -X POST https://api.pushe.co/v2/messaging/notifications/ -H 'authorization: Token YOUR_TOKEN' -H 'content-type: application/json' -d '{"app_ids": "YOUR_APP_ID", "filters": {"device_id": ["device_id_1","device_id_3", "device_id_2", "device_id_4"]}, "data": {"title": "عنوان پیام", "content": "محتوای پیام"}}'
+```bash
+curl -X POST https://api.pushe.co/v2/messaging/notifications/ \
+-H 'authorization: Token YOUR_TOKEN' \
+-H 'content-type: application/json' \
+-d '{
+"app_ids": "YOUR_APP_ID", 
+"filters": {
+    "device_id": ["device_id_1","device_id_3", "device_id_2", "device_id_4"]
+}, 
+"data": {"title": "عنوان پیام", "content": "محتوای پیام"}
+}'
 ```
 
 </TabItem>

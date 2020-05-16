@@ -4,6 +4,7 @@ import languages from '@site/src/components/languages.js';
 import BlankLink from '@site/src/components/BlankLink.jsx';
 
 <Tabs
+    groupId="language-codes"
     defaultValue="1"
     values={languages}
 >
@@ -12,8 +13,10 @@ import BlankLink from '@site/src/components/BlankLink.jsx';
 
 * در این نمونه کد از <BlankLink href="https://curl.haxx.se/">cURL</BlankLink> استفاده شده است که می‌توانیدتوسط `sudo apt install curl` آن را نصب کنید.
 ```bash {9}
-curl -X POST some url to call ... -H 'authorization: Token YOUR_AUTH_KEY' -H 'content-type: application/json' -d 'your data'
-
+curl -X POST some url to call ... \
+-H 'authorization: Token YOUR_AUTH_KEY' \
+-H 'content-type: application/json' \
+-d 'your data'
 ```
 </TabItem>
 

@@ -1,6 +1,6 @@
 ---
 id: simple-notification
-title: وب‌سرویس موبایل پوشه
+title: ارسال اعلان ساده
 sidebar_label: ارسال اعلان ساده
 hide_title: true
 description: راهنمای وب‌سرویس پوشه - ارسال اعلان ساده
@@ -17,11 +17,11 @@ import SimpleNotificationTabs from "./codes/simple-notification.mdx";
 **تمامی کاربران وب‌سایت**
 می‌باشد.
 
-در این حالت با استفاده از [شناسه اپلیکیشن](/docs/web-webservice/get-app-id)
+در این حالت با استفاده از [شناسه اپلیکیشن](/docs/web-api/get-app-id)
 (**‍‍app_id**)
 که در کنسول پوشه قابل دریافت می‌باشد می‌توانید به تمام کاربران اپلیکیشن‌تان اعلان ارسال کنید.
 
-[مشاهده راهنمای دریافت شناسه اپلیکیشن](/docs/web-webservice/get-app-id)
+[مشاهده راهنمای دریافت شناسه اپلیکیشن](/docs/web-api/get-app-id)
 
 
 ## آدرس (url) ارسال اعلان
@@ -43,11 +43,11 @@ import SimpleNotificationTabs from "./codes/simple-notification.mdx";
         **این فیلد اجباری است**
 
 :::tip **نکته**
-برای مشاهده تمامی کلید‌های قابل استفاده در ارسال اعلان به [تمامی کلید های اعلان](/docs/web-webservice/notification-keys) مراجعه کنید.
+برای مشاهده تمامی کلید‌های قابل استفاده در ارسال اعلان به [تمامی کلید های اعلان](/docs/web-api/notification-keys) مراجعه کنید.
 :::
 ## نمونه کد ارسال اعلان ساده
 
 در نمونه کد های زیر حداقل کد مورد نیاز برای ارسال یک اعلان ساده در زبان های مختلف با عنوان و متن نمایش داده شده.
-برای مشاهده تمامی کلید های قابل استفاده به بخش [تمامی کلید های اعلان](/docs/web-webservice/notification-keys) مراجعه کنید.
+برای مشاهده تمامی کلید های قابل استفاده به بخش [تمامی کلید های اعلان](/docs/web-api/notification-keys) مراجعه کنید.
 
 <SimpleNotificationTabs />

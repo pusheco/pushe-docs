@@ -179,27 +179,14 @@ module.exports = {
   },
 
   'web-api': {
-    "وب‌سرویس وب‌پوش": [
-      "web-api/authentication",
-      "web-api/create_website",
-      "web-api/get_website_list",
-      "web-api/rename_website",
-      "web-api/remove_website",
-      "web-api/send_notification",
-      "web-api/table_notification_keys",
-      "web-api/table_actions",
-    ],
-  },
-
-  'web-sebservice': {
     "وب‌سرویس وب": [
-      "web-webservice/intro",
-      "web-webservice/authentication",
-      "web-webservice/get-app-id",
-      "web-webservice/simple-notification",
-      "web-webservice/filtered-notification",
-      "web-webservice/notification-keys",
-      "web-webservice/notification-actions",
+      "web-api/intro",
+      "web-api/authentication",
+      "web-api/get-app-id",
+      "web-api/simple-notification",
+      "web-api/filtered-notification",
+      "web-api/notification-keys",
+      "web-api/notification-actions",
     ],
   },
 
