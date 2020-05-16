@@ -97,7 +97,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 "data": { 
   "action": {
     "action_type": "W",
-    "url": "https://pushe.co"
+    "url": "https://website address"
     }  
   }
 }
@@ -116,7 +116,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 "data": { 
   "action": {
     "action_type": "U",
-    "url": "https://some url to link"         
+    "url": "https://website address"         
     }  
   }
 }
