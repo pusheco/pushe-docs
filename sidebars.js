@@ -162,31 +162,31 @@ module.exports = {
   },
 
   'mobile-api': {
-    "وب‌سرویس موبایل (اندروید و آی‌او‌اس)": [
+    "وب‌سرویس موبایل": [
+      "mobile-api/intro",
       "mobile-api/authentication",
-      "mobile-api/create_application",
-      "mobile-api/get_applications_list",
-      "mobile-api/rename_application",
-      "mobile-api/remove_application",
-      "mobile-api/application_installations",
-      "mobile-api/table_notification_keys",
-      "mobile-api/table_icons",
-      "mobile-api/table_notification_actions",
-      "mobile-api/table_notification_led_colors",
-      "mobile-api/table_frameworks",
-    ],
+      "mobile-api/get-app-id",
+      "mobile-api/simple-notification",
+      "mobile-api/filtered-notification",
+      "mobile-api/transactional-notification",
+      "mobile-api/custom-content-notification",
+      "mobile-api/notification-keys",
+      "mobile-api/notification-actions",
+      "mobile-api/notification-icons-table",
+      "mobile-api/notification-frameworks-table",
+      "mobile-api/notification-led-table",
+    ]
   },
 
   'web-api': {
-    "وب‌سرویس وب‌پوش": [
+    "وب‌سرویس وب": [
+      "web-api/intro",
       "web-api/authentication",
-      "web-api/create_website",
-      "web-api/get_website_list",
-      "web-api/rename_website",
-      "web-api/remove_website",
-      "web-api/send_notification",
-      "web-api/table_notification_keys",
-      "web-api/table_actions",
+      "web-api/get-app-id",
+      "web-api/simple-notification",
+      "web-api/filtered-notification",
+      "web-api/notification-keys",
+      "web-api/notification-actions",
     ],
   },
 

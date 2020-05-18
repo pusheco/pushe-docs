@@ -26,35 +26,35 @@
 @font-face {
   font-family: 'IRANSans';
   src: url('/fonts/IRANSansWeb.eot') format('eot'),
-    url('/fonts/IRANSansWeb.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/IRANSansWeb.woff2') format('woff2'),
-    url('/fonts/IRANSansWeb.woff') format('woff'),
-    url('/fonts/IRANSansWeb.ttf') format('truetype');
+  url('/fonts/IRANSansWeb.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/IRANSansWeb.woff2') format('woff2'),
+  url('/fonts/IRANSansWeb.woff') format('woff'),
+  url('/fonts/IRANSansWeb.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'IRANYekanWebLight';
   src: url('/fonts/iranyekanweblight.eot') format('eot'),
-    url('/fonts/iranyekanweblight.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/iranyekanweblight.woff2') format('woff2'),
-    url('/fonts/iranyekanweblight.woff') format('woff'),
-    url('/fonts/iranyekanweblight.ttf') format('truetype');
+  url('/fonts/iranyekanweblight.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/iranyekanweblight.woff2') format('woff2'),
+  url('/fonts/iranyekanweblight.woff') format('woff'),
+  url('/fonts/iranyekanweblight.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Material Icons';
   src: url('/fonts/MaterialIcons-Regular.eot') format('eot'),
-    url('/fonts/MaterialIcons-Regular.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/MaterialIcons-Regularwoff2') format('woff2'),
-    url('/fonts/MaterialIcons-Regular.woff') format('woff'),
-    url('/fonts/MaterialIcons-Regular.ttf') format('truetype');
+  url('/fonts/MaterialIcons-Regular.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/MaterialIcons-Regularwoff2') format('woff2'),
+  url('/fonts/MaterialIcons-Regular.woff') format('woff'),
+  url('/fonts/MaterialIcons-Regular.ttf') format('truetype');
 }
 
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
+  font-size: 24px; /* Preferred icon size */
   display: inline-block;
   line-height: 1;
   text-transform: none;
@@ -79,6 +79,10 @@ html,
 body {
   direction: rtl;
   font-family: IRANYekanWebLight !important;
+}
+
+img {
+  padding: 10px 0;
 }
 
 a {
@@ -266,4 +270,54 @@ div.menu .menu__list .menu__list {
 
 .platform-items-wrapper .platform-android {
   background-color: #00feb6;
+}
+
+.platform-items-wrapper .platform-web {
+  background-color: #a65dce;
+  color: #fff;
+}
+
+.admonition .admonition-icon {
+  margin-left: 0.4em;
+}
+
+.admonition.alert--info {
+  --ifm-alert-background-color: #0065ff;
+  color: #ffffff;
+  background-color: #0065ff;
+  border-color: #0065ff;
+}
+
+.admonition.alert--success {
+  --ifm-alert-background-color: #00feb6;
+  color: #000000;
+  background-color: #00feb6;
+  border-color: #00feb6;
+}
+
+.admonition.alert--danger {
+  --ifm-alert-background-color: #ea3946;
+  color: #ffffff;
+  background-color: #ea3946;
+  border-color: #ea3946;
+}
+
+.admonition.alert--warning {
+  --ifm-alert-background-color: #ffd93b;
+  color: #000000;
+  background-color: #ffd93b;
+  border-color: #ffd93b;
+}
+
+.admonition.alert--success svg {
+  fill: #000000;
+}
+
+.admonition.alert--warning svg {
+  fill: #000000;
+}
+
+.admonition.alert--success a {
+  color: #0065ff;
+  text-decoration: none;
 }

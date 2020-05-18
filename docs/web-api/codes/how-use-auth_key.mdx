@@ -1,0 +1,123 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import languages from '@site/src/components/languages.js';
+import BlankLink from '@site/src/components/BlankLink.jsx';
+
+<Tabs
+    groupId="language-codes"
+    defaultValue="1"
+    values={languages}
+>
+
+<TabItem value="1">
+
+* در این نمونه کد از <BlankLink href="https://curl.haxx.se/">cURL</BlankLink> استفاده شده است که می‌توانیدتوسط `sudo apt install curl` آن را نصب کنید.
+```bash {9}
+curl -X POST some url to call ... \
+-H 'authorization: Token YOUR_AUTH_KEY' \
+-H 'content-type: application/json' \
+-d 'your data'
+```
+</TabItem>
+
+<TabItem value="2">
+
+* در این نمونه کد از پکیج <BlankLink href="https://www.npmjs.com/package/axios">axios</BlankLink> استفاده شده که می توانید توسط 
+`npm i axios` آن را نصب کنید.
+* در این مثال فقط قسمتی از کد که برای احراز هویت می باشد نمایش داده شده و برای ارسال اعلان نیاز به کامل کردن این کد می‌باشد که در قسمت های دیگر راهنما توضیح داده خواهد شد
+
+```js {9}
+const axios = require('axios');
+
+const YOUR_AUTH_KEY = 'put your auth key here ...';
+
+const url = 'some endpoint to call ...';
+
+const options = {
+    headers: {
+        'Authorization': Token YOUR_AUTH_KEY,
+        'Content-Type': 'application/json'
+    }
+}
+
+const data = {} // Some data to post 
+
+axios.post(url, data, options);
+```
+
+</TabItem>
+
+<TabItem value="3">
+
+* در این نمونه از پکیج <BlankLink href='https://pypi.org/project/requests/'>requests</BlankLink> استفاده شده که می‌توانید توسط دستور 
+`pip install requests` آن را نصب کنید.
+* در این مثال فقط قسمتی از کد که برای احراز هویت می باشد نمایش داده شده و برای ارسال اعلان نیاز به کامل کردن این کد می‌باشد که در قسمت های دیگر راهنما توضیح داده خواهد شد
+
+```python {9}
+import requests
+
+YOUR_AUTH_KEY = 'put your auth key here ...'
+YOUR_APP_ID = 'put your app id here ...'
+
+url = 'some endpoint to call ...'
+
+headers = {
+    'Authorization': f'Token {YOUR_AUTH_KEY}',
+    'Content-Type': 'application/json'
+}
+
+data = {} // some data to post
+
+r = requests.post(url, data=data, headers=headers)
+```
+
+</TabItem>
+
+<TabItem value="4">
+
+* در این مثال فقط قسمتی از کد که برای احراز هویت می باشد نمایش داده شده و برای ارسال اعلان نیاز به کامل کردن این کد می‌باشد که در قسمت های دیگر راهنما توضیح داده خواهد شد
+
+```php {10}
+$YOUR_AUTH_KEY = 'put your auth key here ...';
+
+$url = 'some endpoint to call ...';
+
+$ch = curl_init($url);
+
+curl_setopt($ch, CURLOPT_HTTPHEADER, 
+    array(
+        "Content-Type: application/json", 
+        "Authorization: Token " . $YOUR_AUTH_KEY
+    ),
+);
+
+```
+
+</TabItem>
+
+<TabItem value="5">
+
+* در این مثال فقط قسمتی از کد که برای احراز هویت می باشد نمایش داده شده و برای ارسال اعلان نیاز به کامل کردن این کد می‌باشد که در قسمت های دیگر راهنما توضیح داده خواهد شد
+
+```go {8}
+package main
+
+import "net/http"
+
+func main() {
+    url := "some endpoint to call ..."
+
+    client := &http.Client{}
+
+    req, err := http.NewRequest("GET", url, nil)
+    req.Headers.Set("Content-Type", "application/json")
+    req.Headers.Set("Authorization", "Token YOUR_TOKEN")	
+
+    resp, err := client.Do(req)
+}
+
+```
+
+</TabItem>
+
+</Tabs>

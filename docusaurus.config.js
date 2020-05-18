@@ -5,7 +5,6 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-
 module.exports = {
   title: 'پوشه',
   tagline: 'مستندات پوشه',
@@ -44,10 +43,10 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          admonitions: {},
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
-          
         },
         
       },
