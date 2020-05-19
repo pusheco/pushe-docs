@@ -6,7 +6,7 @@ hide_title: true
 description: راهنمای فلاتر - تمایز کاربران با شناسه‌ها
 ---
 
-# تمایز کاربران با شناسه‌ها
+## تمایز کاربران با شناسه‌ها
 
 import Platforms from '@site/src/components/Platforms.jsx'
 
@@ -19,7 +19,7 @@ import Platforms from '@site/src/components/Platforms.jsx'
 در مواقعی ممکن است این رفتار مطلوب باشد، مثلا در صورتی که یک کاربر در چند دستگاه لاگین کرده باشد ولی در غیر این صورت توجه داشته باشید که یک شناسه را به بیش از یک کاربر اختصاص ندهید.
 
 > **حذف‌شدن PusheId**:    
->زین‌پس، به جای PusheId می‌توانید از AndroidId و GoogleAdvertisingId و نیز CustomId استفاده کنید.
+>زین‌پس، به جای PusheId می‌توانید از DeviceId و GoogleAdvertisingId و نیز CustomId استفاده کنید.
 
 
 سه نوع شناسه قابل اختصاص دادن به کاربران وجود دارد که شما برحسب نیاز از یک یا تعدادی از آن‌ها می‌توانید استفاده کنید.

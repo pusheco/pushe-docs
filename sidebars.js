@@ -89,7 +89,7 @@ module.exports = {
   },
 
   reactnative: {
-    "ری‌اکت نیتیو": ["react-native/intro"],
+    "ری‌اکت نیتیو": ["react-native/intro", "react-native/multidex"],
     "قابلیت‌ها و امکانات": [
       "react-native/check-library-status",
       "react-native/user-unique-ids",

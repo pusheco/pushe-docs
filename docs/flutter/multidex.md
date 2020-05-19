@@ -57,6 +57,33 @@ android {
     }
 }
 ```
+<Tabs
+  defaultValue="androidx"
+  values={[
+    { label: 'AndroidX', value: 'androidx', },
+    { label: 'Android support', value: 'support', },
+  ]}>
+
+<TabItem value="androidx">
+
+```js {2}
+dependencies {
+    implementation "androidx.multidex:multidex:2.0.1"
+}
+```
+
+</TabItem>
+
+<TabItem value="support">
+
+```js {2}
+dependencies {
+    implementation 'com.android.support:multidex:1.0.3'
+}
+```
+
+</TabItem>
+</Tabs>
 
 ### تغییردادن کلاس اپلیکیشن
 
