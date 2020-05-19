@@ -18,23 +18,23 @@
 
 <link rel="preload" href="/styles.9ff22cb7.js" as="script">
 
-<link rel="preload" href="/runtime~main.75e0c7ab.js" as="script">
+<link rel="preload" href="/runtime~main.3c808c29.js" as="script">
 
-<link rel="preload" href="/main.015912df.js" as="script">
+<link rel="preload" href="/main.96aa680a.js" as="script">
 
-<link rel="preload" href="/1.5f58ec1d.js" as="script">
+<link rel="preload" href="/1.fc7b874b.js" as="script">
 
-<link rel="preload" href="/2.20cfb443.js" as="script">
+<link rel="preload" href="/2.b8ef795f.js" as="script">
 
-<link rel="preload" href="/3.f23aca27.js" as="script">
+<link rel="preload" href="/3.25707238.js" as="script">
 
-<link rel="preload" href="/1be78505.784eb2f8.js" as="script">
+<link rel="preload" href="/1be78505.8b540b69.js" as="script">
 
-<link rel="preload" href="/20ac7829.709b6e9a.js" as="script">
+<link rel="preload" href="/20ac7829.7b5ac282.js" as="script">
 
-<link rel="preload" href="/17896441.159bc11b.js" as="script">
+<link rel="preload" href="/17896441.ad09d44a.js" as="script">
 
-<link rel="preload" href="/82395931.3986ddef.js" as="script">
+<link rel="preload" href="/82395931.6ff15e27.js" as="script">
 
 </head>
 <body>
@@ -56,7 +56,7 @@ MultiDex
 Dalvik
 ممکن شود.</p><p>در صورتی که خطایی همانند زیر برای شما رخ می‌دهد</p><blockquote><p><strong>نکته‌ی مهم</strong>:<br>
 در صورتی که <code>MinSDK</code> <strong>۲۱ یا بالاتر</strong> باشد این مشکل رخ نخواهد داد زیرا MultiDex در این حالت به صورت پیش‌فرض پشتیبانی می‌شود و نیاز به کار اضافه نیست.<br>
-در صورتی که برنامه به این حالت است، مشکل شما MultiDex نیست.</p></blockquote><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="فعالکردن-multidex-در-برنامه"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#فعالکردن-multidex-در-برنامه" title="Direct link to heading">#</a>فعال‌کردن MultiDex در برنامه</h2><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="اضافهکردن-کد-گریدل"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#اضافهکردن-کد-گریدل" title="Direct link to heading">#</a>اضافه‌کردن کد گریدل</h3><p>‌در فایل <code>android/app/build.gradle</code> مالی‌دکس را فعال‌کنید:</p><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><div tabindex="0" class="prism-code language-js codeBlock_19pQ"><div class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">android </span><span class="token punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    defaultConfig </span><span class="token punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    </span><span class="token comment" style="color:rgb(105, 112, 152);font-style:italic">// ...</span><span class="token plain"></span></div><div class="token-line docusaurus-highlight-code-line" style="color:#bfc7d5"><span class="token plain">        multiDexEnabled </span><span class="token boolean" style="color:rgb(255, 88, 116)">true</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(199, 146, 234)">}</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token punctuation" style="color:rgb(199, 146, 234)">}</span></div></div></div></div></div><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="تغییردادن-کلاس-اپلیکیشن"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#تغییردادن-کلاس-اپلیکیشن" title="Direct link to heading">#</a>تغییردادن کلاس اپلیکیشن</h3><ul><li>به آدرس <code>android/src/main/(java or kotlin)/&lt;your_app&gt;</code>بروید.<br>(<code>your_app</code> مسیر پکیج برنامه‌ی شماست)</li></ul><img src="/img/flutter/myAppDir.png" width="480"><br><br><ul><li>کلاسی به نام <code>MyApp</code> در کنار <code>MainActivity</code> بسازید و کد زیر را در آن لحاظ کنید:</li></ul><div><ul role="tablist" aria-orientation="horizontal" class="tabs"><li role="tab" tabindex="0" aria-selected="true" class="tab-item tabItem_3zTA tab-item--active">Kotlin</li><li role="tab" tabindex="0" aria-selected="false" class="tab-item tabItem_3zTA">Java</li></ul><div role="tabpanel" class="margin-vert--md"><div><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><div tabindex="0" class="prism-code language-java codeBlock_19pQ"><div class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">package &lt;your_app&gt;; // در اینجا پکیج‌نیم برنامه باید قرار داده شود</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
+در صورتی که برنامه به این حالت است، مشکل شما MultiDex نیست.</p></blockquote><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="فعالکردن-multidex-در-برنامه"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#فعالکردن-multidex-در-برنامه" title="Direct link to heading">#</a>فعال‌کردن MultiDex در برنامه</h2><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="اضافهکردن-کد-گریدل"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#اضافهکردن-کد-گریدل" title="Direct link to heading">#</a>اضافه‌کردن کد گریدل</h3><p>‌در فایل <code>android/app/build.gradle</code> مالی‌دکس را فعال‌کنید:</p><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><div tabindex="0" class="prism-code language-js codeBlock_19pQ"><div class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">android </span><span class="token punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    defaultConfig </span><span class="token punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    </span><span class="token comment" style="color:rgb(105, 112, 152);font-style:italic">// ...</span><span class="token plain"></span></div><div class="token-line docusaurus-highlight-code-line" style="color:#bfc7d5"><span class="token plain">        multiDexEnabled </span><span class="token boolean" style="color:rgb(255, 88, 116)">true</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(199, 146, 234)">}</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token punctuation" style="color:rgb(199, 146, 234)">}</span></div></div></div></div></div><div><ul role="tablist" aria-orientation="horizontal" class="tabs"><li role="tab" tabindex="0" aria-selected="true" class="tab-item tabItem_3zTA tab-item--active">AndroidX</li><li role="tab" tabindex="0" aria-selected="false" class="tab-item tabItem_3zTA">Android support</li></ul><div role="tabpanel" class="margin-vert--md"><div><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><div tabindex="0" class="prism-code language-js codeBlock_19pQ"><div class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">dependencies </span><span class="token punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token plain"></span></div><div class="token-line docusaurus-highlight-code-line" style="color:#bfc7d5"><span class="token plain">    implementation </span><span class="token string" style="color:rgb(195, 232, 141)">&quot;androidx.multidex:multidex:2.0.1&quot;</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token punctuation" style="color:rgb(199, 146, 234)">}</span></div></div></div></div></div></div></div></div><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="تغییردادن-کلاس-اپلیکیشن"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#تغییردادن-کلاس-اپلیکیشن" title="Direct link to heading">#</a>تغییردادن کلاس اپلیکیشن</h3><ul><li>به آدرس <code>android/src/main/(java or kotlin)/&lt;your_app&gt;</code>بروید.<br>(<code>your_app</code> مسیر پکیج برنامه‌ی شماست)</li></ul><img src="/img/flutter/myAppDir.png" width="480"><br><br><ul><li>کلاسی به نام <code>MyApp</code> در کنار <code>MainActivity</code> بسازید و کد زیر را در آن لحاظ کنید:</li></ul><div><ul role="tablist" aria-orientation="horizontal" class="tabs"><li role="tab" tabindex="0" aria-selected="true" class="tab-item tabItem_3zTA tab-item--active">Kotlin</li><li role="tab" tabindex="0" aria-selected="false" class="tab-item tabItem_3zTA">Java</li></ul><div role="tabpanel" class="margin-vert--md"><div><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><div tabindex="0" class="prism-code language-java codeBlock_19pQ"><div class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">package &lt;your_app&gt;; // در اینجا پکیج‌نیم برنامه باید قرار داده شود</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
 </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"> import io.flutter.app.FlutterApplication</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"> import io.flutter.plugin.common.PluginRegistry</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"> import io.flutter.plugin.common.PluginRegistry.PluginRegistrantCallback</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"> import io.flutter.plugins.GeneratedPluginRegistrant</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"> import co.pushe.plus.flutter.PushePlugin</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"> import androidx.multidex.MultiDex</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
 </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">class MyApp : FlutterApplication(), PluginRegistrantCallback {</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
 </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    override fun attachBaseContext(base: Context) {</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">        super.attachBaseContext(base)</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">        MultiDex.install(this)</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    }</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
@@ -71,23 +71,23 @@ FlutterEmbeddingV2 (Flutter v1.12 یا بالاتر)
 
 <script src="/styles.9ff22cb7.js"></script>
 
-<script src="/runtime~main.75e0c7ab.js"></script>
+<script src="/runtime~main.3c808c29.js"></script>
 
-<script src="/main.015912df.js"></script>
+<script src="/main.96aa680a.js"></script>
 
-<script src="/1.5f58ec1d.js"></script>
+<script src="/1.fc7b874b.js"></script>
 
-<script src="/2.20cfb443.js"></script>
+<script src="/2.b8ef795f.js"></script>
 
-<script src="/3.f23aca27.js"></script>
+<script src="/3.25707238.js"></script>
 
-<script src="/1be78505.784eb2f8.js"></script>
+<script src="/1be78505.8b540b69.js"></script>
 
-<script src="/20ac7829.709b6e9a.js"></script>
+<script src="/20ac7829.7b5ac282.js"></script>
 
-<script src="/17896441.159bc11b.js"></script>
+<script src="/17896441.ad09d44a.js"></script>
 
-<script src="/82395931.3986ddef.js"></script>
+<script src="/82395931.6ff15e27.js"></script>
 
 
 </body>
