@@ -66,7 +66,7 @@ import FilteredNotification from "./codes/filtered-notification.mdx";
 }
 ```
 :::important **نکته مهم**
-دو کلید یکتای `android_id` و `device_id` در وب سرویس پوشه مقادیر یکسانی رو دیافت می‌کنند.
+دو کلید یکتای `android_id` و `device_id` در وب سرویس پوشه مقادیر یکسانی رو دریافت می‌کنند.
 :::
 
 :::important **نکته مهم**
