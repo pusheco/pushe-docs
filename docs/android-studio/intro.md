@@ -48,14 +48,15 @@ implementation 'co.pushe.plus:base:2.0.5'
 
 ```java
 implementation("co.pushe.plus:base:2.0.5") {
-    exclude group: 'co.pushe.plus', module: 'rxjava'
+    exclude(group: 'co.pushe.plus', module: 'rxjava')
 }
+implementation('io.reactivex.rxjava2:rxjava:2.2.9')
 ```
 
 > در نظر داشته باشید نسخه‌ی **RxJava2** حداقل **2.2.8** باشد. [اطلاعات بیشتر](advanced-setup) 
 
 
-* در بخش `android` مقدار `compileSdkVersion` را برابر ۲۸ (و یا بیشتر) قرار دهید.
+* در بخش `android` مقدار `compileSdkVersion` را برابر ۲۸ [و یا بیشتر] قرار دهید.
 
 ```groovy
 android {
@@ -98,6 +99,7 @@ android {
 
 ```xml
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
 <!--برای اندرویدهای ۱۰ و بالاتر -->
 <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
@@ -109,12 +111,16 @@ android {
 البته توجه داشته  باشید که در اندرویدهای ۶ به بالا برای گرفتن این دسترسی ها علاوه بر 
 اضافه کردن آنها به منیفست باید دسترسی در زمان اجرا هم از کاربر گرفته شود.
   
+## بررسی MultiDex
+در صورتی که `MinSDK` پایین‌تر از **۲۱** است ممکن است نیاز به فعالسازی **مالتی‌دکس** در برنامه باشد.  
+برای اطلاعات بیشتر به بخش
+[**فعال‌سازی MultiDex در برنامه**](https://docs.pushe.co/docs/android-studio/multidex)
+مراجعه کنید.
+
 ## تست برنامه و مشاهده نصب آن در پنل پوشه
 
 پس از اینکه کتابخانه پوشه را مطابق با آموزش داده شده به پروژه خود اضافه کردید، می‌توانید اپلیکیشن خود را اجرا کرده و بر روی دستگاه خود نصب و تست کنید.
  پس از اجرای برنامه به طور خودکار پوشه اقدام به رجیستر می‌کند و نیاز به اضافه‌کردن کدی نیست.
-
-> در صورتی که با خطای MultiDex مواجه شدید به بخش [فعال‌کردن MultiDex](multidex) مراجعه کنید.
 
 * در پنل پوشه خود به صفحه کاربران/نصب ها بروید.
 * بعد از گذشت زمان کوتاهی یک ردیف مشخصات نصب به لیست نصب ها اضافه می شود که متعلق به گوشی شما است.
