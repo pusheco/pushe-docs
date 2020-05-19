@@ -27,7 +27,8 @@ module.exports = {
 ,
       "android-studio/multiple-fcm"
     ],
-    "سوالات و مشکلات": ["android-studio/troubleshoot", "android-studio/faq"]
+    "سوالات و مشکلات": ["android-studio/troubleshoot", "android-studio/faq"],
+    "تاریخچه نسخه های کتابخانه":["android-studio/releasenote"]
   },
 
   iOS: {
