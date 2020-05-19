@@ -1,7 +1,7 @@
 ---
 id: releasenote
-title: تاریخچه نسخه های کتابخانه
-sidebar_label: تاریخچه نسخه های کتابخانه
+title: تغییرات نسخه ها
+sidebar_label: تغییرات نسخه ها
 ---
 
 
