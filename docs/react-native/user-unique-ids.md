@@ -127,23 +127,23 @@ Pushe.setCustomId(customId)
     
 شناسه|توضیحات|نحوه دریافت
 ------------|-------------| --------------
-**Android ID**| این شناسه توسط اندروید به کاربران اختصاص داده می‌شود. در گوشی‌های با سیستم عامل پایین‌تر از اندروید ۸، شناسه‌ی Android ID کاربر بین تمامی اپلیکیشن‌های نصب شده بر روی گوشی ثابت است و همچنین پس از حذف و نصب مجدد اپلیکیشن نیز ثابت می‌ماند. در نسخه‌ی اندروید ۸ به بالا، شناسه‌ی Android ID یک کاربر تنها برای اپلیکیشن‌هایی که با کلید‌های یکسان امضا شده باشند یکتا است و برای بقیه‌ی اپلیکیشن‌ها متفاوت است. |‌`Pushe.getAndroidId`
+**Device ID**| این شناسه توسط اندروید به کاربران اختصاص داده می‌شود. در گوشی‌های با سیستم عامل پایین‌تر از اندروید ۸، شناسه‌ی Device ID کاربر بین تمامی اپلیکیشن‌های نصب شده بر روی گوشی ثابت است و همچنین پس از حذف و نصب مجدد اپلیکیشن نیز ثابت می‌ماند. در نسخه‌ی اندروید ۸ به بالا، شناسه‌ی Device ID یک کاربر تنها برای اپلیکیشن‌هایی که با کلید‌های یکسان امضا شده باشند یکتا است و برای بقیه‌ی اپلیکیشن‌ها متفاوت است. |‌`Pushe.getDeviceId`
 **Google Advertising ID**| این شناسه را Google Play Services به کاربران اختصاص می‌دهد. شناسه Advertising ID کاربر بین تمام اپلیکیشن‌های نصب شده بر روی گوشی او ثابت است ولی کاربر قادر است که این شناسه را reset  و یا غیر فعال کند. |‌`Pushe.getGoogleAdvertisingId`
 
 
-### متد Pushe.getAndroidId
+### متد Pushe.getDeviceId
 
 <Platforms android/>
 
-> این متد یک Promise برمی‌گرداند که در صورت resolve مقدار androidId را برمی‌گرداند و در صورت بروز خطا reject می شود.
+> این متد یک Promise برمی‌گرداند که در صورت resolve مقدار deviceId را برمی‌گرداند و در صورت بروز خطا reject می شود.
 
 ```
-Pushe.getAndroidId()
-    .then((androidId) => {
-        console.log(`androidId is: ${androidId}`);
+Pushe.getDeviceId()
+    .then((deviceId) => {
+        console.log(`deviceId is: ${deviceId}`);
     })
     .catch((error) => {
-        console.log('Could not get androidId');
+        console.log('Could not get deviceId');
     })
 ```
 
