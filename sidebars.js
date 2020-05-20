@@ -135,15 +135,9 @@ module.exports = {
           "unity/events",
         ]
       },
-      {
-        type: "category",
-        label: "سوالات و مشکلات",
-        items: [
-          "unity/troubleshoot",
-          "unity/faq",
-        ]
-      },
-    ]
+    ],
+    "سوالات و مشکلات": ["unity/troubleshoot", "unity/faq"],
+    "تاریخچه نسخه های پلاگین":["unity/releasenote"]
   },
 
   webpush: {
