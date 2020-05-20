@@ -1,0 +1,231 @@
+---
+id: intro
+title: راه‌اندازی سریع در Unity
+sidebar_label: راه‌اندازی سریع
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+## پیش‌نیازها
+
+- پروژه باید از **Gradle** استفاده کند.
+([**گریدل چیست؟**](https://docs.unity3d.com/Manual/android-gradle-overview.html))
+- داشتن‌ ابزار گذرازتحریم (به دلیل تحریم‌بودن ‌Bintray)
+- باید Android SDK بروزرسانی شود.
+([**راه‌اندازی Android SDK**](https://docs.unity3d.com/Manual/android-sdksetup.html))
+- ثبت اپلیکیشن در کنسول.
+([**کنسول پوشه**](https://console.pushe.co))
+- دستگاه تست باید گوگل‌پلی‌سرویس داشته‌باشد
+
+:::note توجه
+
+پلاگین در حال حاضر فقط برای **Android** قابل استفاده است.
+
+:::
+
+## افزودن پلاگین
+
+### دانلود
+با استفاده از لینک زیر می‌توانید فایل **unitypackage** پوشه را دانلود کنید: 
+
+[**پلاگین پوشه نسخه‌ی 0.4.7**](https://static.pushe.co/d/unity/pushe-plus-unity-0.4.7-beta10.unitypackage)
+
+:::tip نسخه‌های پیشین
+
+برای دانلود و یا کسب اطلاعات در مورد **نسخه‌های پیشین** به بخش
+[**تاریخچه‌ی نسخه‌ها**](releasenote.md)
+مراجعه کنید
+:::
+
+### ایمپورت‌
+
+* در پروژه‌ روی **Assets** کلیک‌راست کرده و **Import package > Custom package** را انتخاب کنید
+* پلاگین دانلود شده را انتخاب کنید
+
+> همچنین در صورت **دابل‌کلیک کردن روی فایل دانلودشده** می‌توانید آنرا مستقیما به پروژه اضافه کنید.
+
+## فعالسازی کتابخانه
+
+برای فعالسازی لایبرری در پوشه بایستی ابتدا پلاگین نیتیو را به گریدل اضافه کنید.
+
+<Tabs
+  defaultValue="above20172"
+  values={[
+    { label: 'Unity 2017.2 یا بالاتر', value: 'above20172', },
+    { label: 'پایین‌تر از Unity 2017.2', value: 'below20172', },
+  ]
+}>
+
+<TabItem value="above20172">
+
+#### ابتدا مطابق تصویر زیر فایل‌های لازم را در پروژه اضافه کنید:
+
+* ابتدا منوی File > Build settings گزینه‌ی **Player settings** را انتخاب کنید.
+* از بخش **Publishing settings** مقادیری که در تصویر زیر مشخص است فعال کنید:
+  * **Custom Main Manifest** (برای اضافه‌کردن توکن پوشه)
+  * **Custom Launcher Gradle Template** (برای اضافه‌کردن پلاگین اندروید پوشه)
+  * **Custom Base Gradle Template** (برای اضافه‌کردن آدرس ریپازیتوری پوشه)
+
+<img src="/img/unity/gradle.png" height="380" />  
+
+> فایل‌های گریدل ساخته شده در آدرس **Assets/Plugins/Android** قابل مشاهده هستند.
+
+#### سپس پلاگین اندروید پوشه را به گریدل اضافه کنید
+
+* به آدرس **Assets/Plugins/Android** در پروژه‌ی خود بروید.
+
+* فایل `baseProjectTemplate.gradle` را باز کنید و ریموت پوشه را به ریپازیتوری‌ها اضافه کنید:
+
+```js {9,11} title="Assets/plugins/android/baseProjectTemplate.gradle"
+repositories {**ARTIFACTORYREPOSITORY**
+    google()
+    jcenter()
+    mavenLocal()
+    flatDir {
+        dirs "${project(':unityLibrary').projectDir}/libs"
+    }
+    // Stable remote
+    maven { url "https://dl.bintray.com/pushe/plugin" }
+    // PreRelease remote
+    maven { url "https://dl.bintray.com/pushe/preview" }
+}
+```
+
+* سپس فایل `launcherTemplate.gradle` را باز کنید و مطابق تصویر زیر اضافه کنید.
+
+```js {3,4} title="Assets/plugins/android/launcherTemplate.gradle"
+dependencies {
+  implementation project(':unityLibrary')
+  def version = "0.4.7-beta12"
+  implementation ("co.pushe.plus:unity-extended:$version")
+}
+```
+
+</TabItem>
+
+<TabItem value="below20172">
+
+<br />
+
+#### فایل `mainTemplate.gradle` را در آدرس **Assets/Plugins/Android** بسازید
+
+##### فایل وجود ندارد
+در صورتی که در آدرس ذکرشده فایل `mainTemplate.gradle` **وجود ندارد**، این فایل را از فولدر `Pushe/Setup` در آدرس `Assets/Plugin/Android` کپی کنید.  
+در این حالت تمام موارد لازم در فایل قرار داده شده و می‌توانید به مرحله‌ی بعد بروید.
+
+##### فایل از قبل موجود است
+در صورتی که این فایل از قبل وجود دارد موارد زیر را در فایل `mainTemplate.gradle` خود اضافه‌کنید:
+
+* آدرس ریموت پلاگین را اضافه کنید
+
+```java
+allprojects {
+   repositories {
+      google()
+      jcenter()
+	  
+      // Pushe Extended plugin
+	  maven { url 'https://dl.bintray.com/pushe/plugin' }
+      // Pushe prerelease channel
+      maven { url 'https://dl.bintray.com/pushe/preview' }
+      
+      flatDir {
+        dirs 'libs'
+      }
+   }
+}
+```
+
+* کد dependency پلاگین را اضافه کنید.
+
+```java
+dependencies {
+	implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+  def version = "0.4.7-beta12"
+	implementation("co.pushe.plus:unity-extended:$version")
+**DEPS**}
+```
+
+</TabItem>
+
+</Tabs>
+
+---
+
+:::caution مالتی‌دکس
+
+در صورت اجرای بازی اگر با خطای 
+`D8: Cannot fit requested classes in a single dex file`
+مواجه شدید بایستی **MultiDex** را برای بازی خود فعال کنید:
+([**مالتی‌دکس چیست؟**](https://developer.android.com/studio/build/multidex))
+
+- ابتدا مطمئن شوید که در بلاک `dafaultConfig` عبارت `multiDexEnabled true` اضافه‌شده باشد.
+
+```java {2} title="mainTemplate.gradle یا launcherTemplate.gradle"
+defaultConfig {
+    multiDexEnabled true
+    //...
+```
+
+- سپس در فایل `AndroidManifest` عبارت زیر را به اتریبیوت‌های `<application>` اضافه‌کنید:
+
+```xml {2} title="AndroidManifest.xml"
+<application
+        android:name="co.pushe.plus.ext.PusheMultiDexApplication"
+        ...>
+```
+
+:::
+
+## افزودن شناسه به مانیفست
+
+قبل از اجرای برنامه باید توکن برنامه را از کنسول پوشه برداشته و در فایل `AndroidManifest.xml` قرار دهید. تگ دریافتی باید کدی همانند زیر باشد:
+
+
+```xml {3} title="AndroidManifest.xml"
+<manifest ...>
+    <application ...>
+        <meta-data android:name="pushe_token" android:value="{PUSHE_TOKEN}" />
+    </application>
+</manifest>
+```
+
+به جای `{PUSHE_TOKEN}` باید توکن برنامه‌ی خود را قرار دهید.
+
+برای استفاده از **امکان ارسال اعلان با استفاده‌ از موقعیت مکانی** پرمیشن لوکیشن را نیز به مانیفست اضافه‌کنید:
+
+```xml
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+<!-- Android 9 and higher -->
+<uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+```
+
+> در صورتی که بخواهید **آمار کاربران را بر حسب موقعیت جغرافیایی** آنها مشاهده کنید و یا **با فیلتر لوکیشن اعلان ارسال کنید** باید کاربر این دسترسی را به برنامه بدهد.
+
+## اجرای برنامه
+
+برای اجرا شدن عملیات رجیستر پوشه نیازی به اضافه‌کردن اسکریپت خاصی نیست. کافیست برنامه را اجرا کنید.
+
+
+> در فایل `SampleCode.cs` مثالهایی از قابلیت‌های بیشتر قرار داده شده است.
+
+:::important استفاده از توابع پوشه
+
+در صورتی که بخواهید تابعی از پوشه صدا بزنید بایستی آن تابع را در یک اسکریپت صدا زده و آن اسکریپت را به یک **GameObject** متصل کنید.  
+
+* بر روی یک GameObject که در Scene موجود است کلیک کنید.
+* گزینه‌ی **`Add component`** را انتخاب کنید و از گزینه‌ی Script یک اسکریپ (برای مثال SampleCode.cs) به GameObject متصل کنید.
+:::
+
+## ادامه‌ی کار
+(بر روی لینک مورد نظر کلیک کنید)
+
+### [پروژه‌ی نمونه در گیت‌هاب](https://github.com/pusheco/pushe-unity-sample)
+بررسی امکانات در نمونه‌ای از قبل طراحی شده دارای تمام امکانات کتابخانه‌ی پوشه
+
+### [سوالات و مشکلات احتمالی](/docs/unity/troubleshoot)
+در صورتی که در یکی از مراحل زیر به مشکلی برخوردید یا هر سوالی در مورد کتابخانه‌ دارید
