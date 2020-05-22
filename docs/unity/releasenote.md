@@ -10,7 +10,7 @@ sidebar_label: تغییرات نسخه‌ها
 
 ## نسخه‌ی ۰.۴.۷ ([دانلود](https://static.pushe.co/d/unity/pushe-plus-unity-0.4.7-beta10.unitypackage))
 - مهاجرت لایبرری پوشه به **AndroidX**.
-- افزودن سازگاری با حالت `unity as library` در Unity 2017.2 و بالاتر
+- افزودن سازگاری با حالت `unity as library` در Unity 2017 و بالاتر
 - بروزرسانی لایبرری پوشه به آخرین نسخه‌ (۲.۱.۱)
 - تابع `GetPusheId` حذف شده. برای تمایزکاربران بایستی از شناسه‌های دیگر استفاده کنید.
 - اضافه‌شدن سازگاری با `GDPR compliance`. ([?What is GDPR](https://gdpr.eu/what-is-gdpr/))
