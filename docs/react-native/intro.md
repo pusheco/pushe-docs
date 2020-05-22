@@ -91,6 +91,8 @@ react-native link pushe-react-native
 </manifest>
 ```
 
+به جای `{PUSHE_TOKEN}` باید توکن برنامه‌ی خود را قرار دهید.
+
 >‌ فایل مانیفست برنامه در آدرس زیر در پروژه قابل دسترسی‌ست: `android/src/main/AndroidManifest.xml`
 
 
@@ -103,12 +105,14 @@ react-native link pushe-react-native
 
 برای مشاهده‌ی بهتر لاگ‌ها می‌توانید فیلتر `Pushe` را روی لاگ‌ها اعمال کنید.
 
-```js
+```js {7}
 // Android logcat:
 
---------+ Started Initialization of Pushe 2.0.4 +--------
-Trying to register to Pushe
-Successfully registered to pushe
+Pushe: Starting Pushe initialization
+Pushe: Pushe initialization complete
+
+Pushe: Registration is required, performing registration
+Pushe: Registration successful
 ```
 
 </TabItem>
@@ -149,7 +153,7 @@ pod install --repo-update
 
 <TabItem value="swift">
 
-```swift
+```js
 // NotificationService.swift file
 
 import UserNotifications
