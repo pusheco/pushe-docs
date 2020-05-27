@@ -101,9 +101,11 @@ react-native link pushe-react-native
 ```js
 // Android logcat:
 
---------+ Started Initialization of Pushe 2.0.4 +--------
-Trying to register to Pushe
-Successfully registered to pushe
+Pushe: Starting Pushe initialization
+Pushe: Pushe initialization complete
+
+Pushe: Registration is required, performing registration
+Pushe: Registration successful
 ```
 
 </TabItem>
