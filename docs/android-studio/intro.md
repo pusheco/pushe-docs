@@ -38,16 +38,25 @@ allprojects{
 `dependencies`
 عبارت زیر را اضافه کنید:
 
-```java
-implementation 'co.pushe.plus:base:2.0.5' 
+```java title="build.gradle (app:module)"
+implementation 'co.pushe.plus:base:2.1.1' 
 ```
->در صورتی که میخواهید از نسخه های دیگر کتابخانه استفاده کنید بخش مربوط به [تغییرات نسخه ها](releasenote) را مطالعه کنید.
+:::tip **AndroidX**
+
+از نسخه‌ی `2.1.0` به بعد، پوشه از
+[**AndroidX**](https://developer.android.com/jetpack/androidx)
+استفاده می‌کند. بدین معنی که پروژه‌ای که پوشه را ایمپورت می‌کند نیز بایستی از **AndroidX** استفاده کند. در صورتی که پروژه‌ی شما از AndroidX استفاده نمی‌کند
+و همچنین امکان مهاجرت را نیز ندارد می‌توانید از نسخه‌های پیشین پوشه استفاده کنید.  
+برای اطلاعات بیشتر به
+[**تاریخچه‌ی نسخه‌ها**](releasenote)
+مراجعه کنید.
+:::
 
 
 در صورتی که در پروژه از لایبرری ‌`RxJava` استفاده‌ می‌نمایید، برای جلوگیری از تداخل به جای کد بالا کد زیر را به dependencies اضافه‌ نمایید:
 
-```java
-implementation("co.pushe.plus:base:2.0.5") {
+```java title="build.gradle (app:module)"
+implementation("co.pushe.plus:base:2.1.1") {
     exclude(group: 'co.pushe.plus', module: 'rxjava')
 }
 implementation('io.reactivex.rxjava2:rxjava:2.2.9')
@@ -58,7 +67,7 @@ implementation('io.reactivex.rxjava2:rxjava:2.2.9')
 
 * در بخش `android` مقدار `compileSdkVersion` را برابر ۲۸ [و یا بیشتر] قرار دهید.
 
-```groovy
+```js {2} title="build.gradle (app:module)"
 android {
     compileSdkVersion 28
  
@@ -127,6 +136,20 @@ android {
 * یک اعلان تست ارسال کنید. برای ارسال اعلان تست می‌توانید از دکمه ارسال نوتیفیکیشن که در کنسول وجود دارد استفاده کنید. دقت کنید تلفن همراه شما به اینترنت متصل باشد.
 
 **نکته**: اگر می خواهید اپلیکیشن را بر روی Emulator تست کنید، بر روی ایمولاتور شما باید Google API نصب باشد.
+
+پس از اجرای برنامه باید در **Android logcat** لاگ‌های زیر را ببینید (ممکن است به دلیل ارتباط با سرور این پروسه چند ثانیه طول بکشد):
+
+برای مشاهده‌ی بهتر لاگ‌ها می‌توانید فیلتر `Pushe` را روی لاگ‌ها اعمال کنید.
+
+```js
+// Android logcat:
+
+Pushe: Starting Pushe initialization
+Pushe: Pushe initialization complete
+
+Pushe: Registration is required, performing registration
+Pushe: Registration successful
+```
 
 
 ## ادامه‌ی کار
