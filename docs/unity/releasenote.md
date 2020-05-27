@@ -8,7 +8,7 @@ sidebar_label: تغییرات نسخه‌ها
 
 > [**Pushe unity on GitHub**](https://github.com/pusheco/pushe-unity)
 
-## نسخه‌ی ۰.۴.۷ ([دانلود](https://static.pushe.co/d/unity/pushe-plus-unity-0.4.7-beta10.unitypackage))
+## نسخه‌ی ۰.۴.۷ ([دانلود](https://static.pushe.co/d/unity/pushe-plus-unity-0.4.7.unitypackage))
 - مهاجرت لایبرری پوشه به **AndroidX**.
 - افزودن سازگاری با حالت `unity as library` در Unity 2017 و بالاتر
 - بروزرسانی لایبرری پوشه به آخرین نسخه‌ (۲.۱.۱)

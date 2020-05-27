@@ -29,7 +29,7 @@ import TabItem from '@theme/TabItem';
 ### دانلود
 با استفاده از لینک زیر می‌توانید فایل **unitypackage** پوشه را دانلود کنید: 
 
-[**پلاگین پوشه نسخه‌ی 0.4.7**](https://static.pushe.co/d/unity/pushe-plus-unity-0.4.7-beta10.unitypackage)
+[**پلاگین پوشه نسخه‌ی 0.4.7**](https://static.pushe.co/d/unity/pushe-plus-unity-0.4.7.unitypackage)
 
 :::tip نسخه‌های پیشین
 
@@ -97,7 +97,7 @@ repositories {**ARTIFACTORYREPOSITORY**
 ```js {3,4} title="Assets/plugins/android/launcherTemplate.gradle"
 dependencies {
   implementation project(':unityLibrary')
-  def version = "0.4.7-beta12"
+  def version = "0.4.7"
   implementation ("co.pushe.plus:unity-extended:$version")
 }
 ```
@@ -143,7 +143,7 @@ allprojects {
 dependencies {
 	implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-  def version = "0.4.7-beta12"
+  def version = "0.4.7"
 	implementation("co.pushe.plus:unity-extended:$version")
 **DEPS**}
 ```
