@@ -16,25 +16,25 @@
 <link rel="stylesheet" href="/styles.ab52f940.css">
 
 
-<link rel="preload" href="/styles.9ff22cb7.js" as="script">
+<link rel="preload" href="/styles.026a558b.js" as="script">
 
-<link rel="preload" href="/runtime~main.0e9a35ab.js" as="script">
+<link rel="preload" href="/runtime~main.8fac07c6.js" as="script">
 
-<link rel="preload" href="/main.96aa680a.js" as="script">
+<link rel="preload" href="/main.0233866c.js" as="script">
 
-<link rel="preload" href="/1.fc7b874b.js" as="script">
+<link rel="preload" href="/1.061dbafe.js" as="script">
 
-<link rel="preload" href="/2.b8ef795f.js" as="script">
+<link rel="preload" href="/2.e4fad117.js" as="script">
 
-<link rel="preload" href="/3.25707238.js" as="script">
+<link rel="preload" href="/3.6b6d9043.js" as="script">
 
-<link rel="preload" href="/1be78505.8b540b69.js" as="script">
+<link rel="preload" href="/1be78505.e1c0b4bc.js" as="script">
 
-<link rel="preload" href="/20ac7829.7b5ac282.js" as="script">
+<link rel="preload" href="/20ac7829.61b32791.js" as="script">
 
-<link rel="preload" href="/17896441.ad09d44a.js" as="script">
+<link rel="preload" href="/17896441.c7593a30.js" as="script">
 
-<link rel="preload" href="/68fa183b.868f1cea.js" as="script">
+<link rel="preload" href="/68fa183b.5d6dff0f.js" as="script">
 
 </head>
 <body>
@@ -44,25 +44,25 @@
 برای اینکار می‌توانید کالبکی تعریف‌ کنید و هنگام رخ‌دادن یکی از رویدادهای زیر کدهای خود را فراخوانی کنید.</p><ul><li>دریافت نوتیفیکیشن</li><li>دریافت JSON (Custom content)</li><li>کاربر بر روی اعلان کلیک کند</li><li>کاربر اعلان را رد (Dismiss) کند</li><li>کاربر بر روی دکمه‌ای از اعلان کلیک کند</li></ul><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="اجرای-کد-هنگام-رخدادن-رویداد"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#اجرای-کد-هنگام-رخدادن-رویداد" title="Direct link to heading">#</a>اجرای کد هنگام رخ‌دادن رویداد</h2><div dir="ltr"><h4><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="setnotificationlistenernotificationlistener"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#setnotificationlistenernotificationlistener" title="Direct link to heading">#</a><code>setNotificationListener(notificationListener)</code></h4></div><table><thead><tr><th align="center">پارامتر ورودی</th><th>استفاده</th></tr></thead><tbody><tr><td align="center">notificationListener</td><td>یک اینترفیس که متدهای رویدادها را نگه‌داری و در زمان رخ‌داد فراخوانی می‌کند</td></tr></tbody></table><blockquote><p>برای اینکه بتوانید <strong>رویدادها را در هر زمانی دریافت کنید</strong> بهتر است پیاده‌سازی کدهای رویداد را در <strong>کلاس اپلیکیشن</strong> انجام دهید. برای اینکار:</p><ul><li>کلاسی بسازید که از <code>Application</code> ارث ببرد.</li><li>آن‌را بصورت زیر به مانیفست اضافه‌کنید:</li></ul><p><code>AndroidManfiest.xml</code>:</p><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><div tabindex="0" class="prism-code language-xml codeBlock_19pQ"><div class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token comment" style="color:rgb(105, 112, 152);font-style:italic">&lt;!-- MyApplication is your class --&gt;</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token tag punctuation" style="color:rgb(199, 146, 234)">&lt;</span><span class="token tag" style="color:rgb(255, 85, 114)">Manifest</span><span class="token tag" style="color:rgb(255, 85, 114)"> </span><span class="token tag attr-name" style="color:rgb(255, 203, 107)">...</span><span class="token tag punctuation" style="color:rgb(199, 146, 234)">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    </span><span class="token tag punctuation" style="color:rgb(199, 146, 234)">&lt;</span><span class="token tag" style="color:rgb(255, 85, 114)">application</span><span class="token tag" style="color:rgb(255, 85, 114)"> </span><span class="token tag attr-name" style="color:rgb(255, 203, 107)">...</span><span class="token tag" style="color:rgb(255, 85, 114)"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token tag" style="color:rgb(255, 85, 114)">        </span><span class="token tag attr-name namespace" style="color:rgb(178, 204, 214)">android:</span><span class="token tag attr-name" style="color:rgb(255, 203, 107)">name</span><span class="token tag attr-value punctuation" style="color:rgb(199, 146, 234)">=</span><span class="token tag attr-value punctuation" style="color:rgb(199, 146, 234)">&quot;</span><span class="token tag attr-value" style="color:rgb(255, 85, 114)">.MyApplication</span><span class="token tag attr-value punctuation" style="color:rgb(199, 146, 234)">&quot;</span><span class="token tag punctuation" style="color:rgb(199, 146, 234)">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">        ...</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">...</span></div></div></div></div></div><p>در متد <code>onCreate</code> کلاس، کدهای لازم (زیر) اضافه‌کنید </p></blockquote><p>کدهای دریافت رویداد را می‌توانید به صورت زیر استفاده کنید:</p><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><div tabindex="0" class="prism-code language-java codeBlock_19pQ"><div class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">PusheNotification notificationModule = Pushe.getPusheService(PusheNotification.class);</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">notificationModule.setNotificationListener(new PusheNotificationListener() {</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    @Override</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    public void onNotification(@NonNull NotificationData notification) {</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">       //Notification Received</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    @Override</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    public void onCustomContentNotification(@NonNull Map&lt;String, Object&gt; customContent) {</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">        // Notification custom content (Json) received</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    @Override</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    public void onNotificationClick(@NonNull NotificationData notification) {</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">       // Notification clicked</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    @Override</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    public void onNotificationDismiss(@NonNull NotificationData notification) {</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">        // Notification dismissed</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    @Override</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    public void onNotificationButtonClick(@NonNull NotificationButtonData button, @NonNull NotificationData notification) {</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">        // Notification button clicked</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    }</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">});</span></div></div></div></div></div><p>به محض دریافت نوتیفیکیشن بایستی کد داخل <code>onNotification</code> اجرا شود و برای رویدادهای دیگر نیز به همین ترتیب، وقتی رخ بدهند کدهای مربوط به آنها اجرا می‌شود.</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="اینترفیس-notificationlistener"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#اینترفیس-notificationlistener" title="Direct link to heading">#</a>اینترفیس <code>NotificationListener</code></h2><p>اینترفیس callback برای این‌کار به صورت زیر است:</p><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><div tabindex="0" class="prism-code language-java codeBlock_19pQ"><div class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">public interface PusheNotificationListener {</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    void onNotification(@NonNull NotificationData notification);</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    void onCustomContentNotification(@NonNull Map&lt;String, Object&gt; customContent);</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    void onNotificationClick(@NonNull NotificationData notification);</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    void onNotificationDismiss(@NonNull NotificationData notification);</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    void onNotificationButtonClick(@NonNull NotificationButtonData button, @NonNull NotificationData notification);</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">}</span></div></div></div></div></div><p>و کلاس‌های <code>NotificationData</code> و <code>NotificationButtonData</code> دارای فیلدهای زیر هستند:</p><div dir="ltr"><h4><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="notificationdatajava"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#notificationdatajava" title="Direct link to heading">#</a><code>NotificationData.java</code>:</h4></div><table><thead><tr><th align="center">فیلد</th><th>توضیحات</th></tr></thead><tbody><tr><td align="center">title</td><td>تیتر نوتیفیکیشن</td></tr><tr><td align="center">content</td><td>محتوای نوتیفیکیشن</td></tr><tr><td align="center">bigTitle</td><td>تیتر بزرگ نوتیفیکیشن</td></tr><tr><td align="center">bigContent</td><td>محتوای بزرگ نوتیفیکیشن</td></tr><tr><td align="center">summary</td><td>متن خلاصه‌ی نوتیفکیشن</td></tr><tr><td align="center">imageUrl</td><td>لینک عکس نوتیفیکیشن</td></tr><tr><td align="center">iconUrl</td><td>لینک آیکون نوتیفیکیشن</td></tr><tr><td align="center">customContent</td><td>مپ دلخواه نوتیفیکیشن</td></tr><tr><td align="center">buttons</td><td>لیست دکمه‌هایی که نوتیفیکیشن دارد</td></tr></tbody></table><p>جز <code>title</code> و <code>content</code> بقیه‌ی فیلدها می‌توانند <code>null</code> باشند.</p><div dir="ltr"><h4><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="notificationbuttondatajava"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#notificationbuttondatajava" title="Direct link to heading">#</a><code>NotificationButtonData.java</code></h4></div><table><thead><tr><th align="center">فیلد</th><th>توضیحات</th></tr></thead><tbody><tr><td align="center">id</td><td>شناسه‌ای برای تشخیص دکمه</td></tr><tr><td align="center">text</td><td>متن دکمه</td></tr><tr><td align="center">icon</td><td>آیکن دکمه</td></tr></tbody></table></div></article><div class="margin-vert--lg"><nav class="pagination-nav"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/android-studio/d2d-notification"><div class="pagination-nav__link--sublabel">Previous</div><div class="pagination-nav__link--label">« اعلان از دیوایس به دیوایس دیگر</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/android-studio/disable-notification"><div class="pagination-nav__link--sublabel">Next</div><div class="pagination-nav__link--label">غیرفعال‌کردن نمایش اعلان »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"><ul class="contents contents__left-border"><li><a href="#اجرای-کد-هنگام-رخدادن-رویداد" class="contents__link">اجرای کد هنگام رخ‌دادن رویداد</a></li><li><a href="#اینترفیس-notificationlistener" class="contents__link">اینترفیس <code>NotificationListener</code></a></li></ul></div></div></div></div></main></div></div><footer class="footer"><div class="container"><div class="text--center"><div></div></div></div></footer>
 </div>
 
-<script src="/styles.9ff22cb7.js"></script>
+<script src="/styles.026a558b.js"></script>
 
-<script src="/runtime~main.0e9a35ab.js"></script>
+<script src="/runtime~main.8fac07c6.js"></script>
 
-<script src="/main.96aa680a.js"></script>
+<script src="/main.0233866c.js"></script>
 
-<script src="/1.fc7b874b.js"></script>
+<script src="/1.061dbafe.js"></script>
 
-<script src="/2.b8ef795f.js"></script>
+<script src="/2.e4fad117.js"></script>
 
-<script src="/3.25707238.js"></script>
+<script src="/3.6b6d9043.js"></script>
 
-<script src="/1be78505.8b540b69.js"></script>
+<script src="/1be78505.e1c0b4bc.js"></script>
 
-<script src="/20ac7829.7b5ac282.js"></script>
+<script src="/20ac7829.61b32791.js"></script>
 
-<script src="/17896441.ad09d44a.js"></script>
+<script src="/17896441.c7593a30.js"></script>
 
-<script src="/68fa183b.868f1cea.js"></script>
+<script src="/68fa183b.5d6dff0f.js"></script>
 
 
 </body>

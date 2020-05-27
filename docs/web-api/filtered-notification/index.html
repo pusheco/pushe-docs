@@ -16,25 +16,25 @@
 <link rel="stylesheet" href="/styles.ab52f940.css">
 
 
-<link rel="preload" href="/styles.9ff22cb7.js" as="script">
+<link rel="preload" href="/styles.026a558b.js" as="script">
 
-<link rel="preload" href="/runtime~main.0e9a35ab.js" as="script">
+<link rel="preload" href="/runtime~main.8fac07c6.js" as="script">
 
-<link rel="preload" href="/main.96aa680a.js" as="script">
+<link rel="preload" href="/main.0233866c.js" as="script">
 
-<link rel="preload" href="/1.fc7b874b.js" as="script">
+<link rel="preload" href="/1.061dbafe.js" as="script">
 
-<link rel="preload" href="/2.b8ef795f.js" as="script">
+<link rel="preload" href="/2.e4fad117.js" as="script">
 
-<link rel="preload" href="/3.25707238.js" as="script">
+<link rel="preload" href="/3.6b6d9043.js" as="script">
 
-<link rel="preload" href="/1be78505.8b540b69.js" as="script">
+<link rel="preload" href="/1be78505.e1c0b4bc.js" as="script">
 
-<link rel="preload" href="/20ac7829.7b5ac282.js" as="script">
+<link rel="preload" href="/20ac7829.61b32791.js" as="script">
 
-<link rel="preload" href="/17896441.ad09d44a.js" as="script">
+<link rel="preload" href="/17896441.c7593a30.js" as="script">
 
-<link rel="preload" href="/1bdbbe1c.ff71de7b.js" as="script">
+<link rel="preload" href="/1bdbbe1c.91638da1.js" as="script">
 
 </head>
 <body>
@@ -44,25 +44,25 @@
 <code>https://api.pushe.co/v2/messaging/notifications/</code></p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="کلیدهای-ارسال-اعلان-فیلتردار"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#کلیدهای-ارسال-اعلان-فیلتردار" title="Direct link to heading">#</a>کلید‌های ارسال اعلان فیلتردار</h2><p>برای ارسال یک اعلان فیلتردار <strong>حداقل کلیدهایی که می توان استفاده کرد</strong> تا یک اعلان به صورت صحیح ساخته و ارسال شود به شکل زیر می‌باشد.</p><ul><li><strong>app_ids</strong>: شناسه اپلیکیشن که از نوع رشته string می‌باشد.<br><strong>این فیلد اجباری است</strong></li><li><strong>filters</strong>: یک دیکشنری می‌باشد که مقدار فیلتر device_id را نگه می‌دارد<br><strong>این فیلد اجباری است</strong><ul><li><strong>device_id</strong> لیستی از رشته string (لیستی از شناسه های device_id)<br><strong>این فیلد اجباری است</strong></li></ul></li><li><strong>data</strong>: یک دیکشنری که مقادیر (محتوای) اعلان را نگه می‌دارد.<br><strong>این فیلد اجباری است</strong><ul><li><strong>title</strong>: این فیلد بیانگر عنوان اعلان می‌باشد و از نوع رشته string می‌باشد.<br><strong>این فیلد اجباری است</strong></li><li><strong>content</strong>: این فیلد بیانگر متن اعلان می‌باشد و از نوع رشته string می‌باشد.<br><strong>این فیلد اجباری است</strong></li></ul></li></ul><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="نمونه-کد-ارسال-اعلان-فیلتردار"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#نمونه-کد-ارسال-اعلان-فیلتردار" title="Direct link to heading">#</a>نمونه کد ارسال اعلان فیلتردار</h2><p>برای مشاهده تمامی کلید های قابل استفاده در ارسال اعلان به بخش <a href="/docs/web-api/notification-keys">تمامی کلید های اعلان</a> مراجعه کنید.</p><div><ul role="tablist" aria-orientation="horizontal" class="tabs"><li role="tab" tabindex="0" aria-selected="true" class="tab-item tabItem_3zTA tab-item--active">CURL</li><li role="tab" tabindex="0" aria-selected="false" class="tab-item tabItem_3zTA">NODE.JS</li><li role="tab" tabindex="0" aria-selected="false" class="tab-item tabItem_3zTA">PYTHON</li><li role="tab" tabindex="0" aria-selected="false" class="tab-item tabItem_3zTA">PHP</li><li role="tab" tabindex="0" aria-selected="false" class="tab-item tabItem_3zTA">GO</li></ul><div role="tabpanel" class="margin-vert--md"><div><ul><li>در این نمونه کد از <a style="padding-right:1px;padding-left:1px" href="https://curl.haxx.se/" target="_blank">cURL</a> استفاده شده است که می‌توانیدتوسط <code>sudo apt install curl</code> آن را نصب کنید.</li></ul><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><div tabindex="0" class="prism-code language-bash codeBlock_19pQ"><div class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token function" style="color:rgb(130, 170, 255)">curl</span><span class="token plain"> -X POST https://api.pushe.co/v2/messaging/notifications/ </span><span class="token punctuation" style="color:rgb(199, 146, 234)">\</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">-H </span><span class="token string" style="color:rgb(195, 232, 141)">&#x27;authorization: Token YOUR_TOKEN&#x27;</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(199, 146, 234)">\</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">-H </span><span class="token string" style="color:rgb(195, 232, 141)">&#x27;content-type: application/json&#x27;</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(199, 146, 234)">\</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">-d </span><span class="token string" style="color:rgb(195, 232, 141)">&#x27;{</span></div><div class="token-line" style="color:#bfc7d5"><span class="token string" style="color:rgb(195, 232, 141)">&quot;app_ids&quot;: &quot;YOUR_APP_ID&quot;, </span></div><div class="token-line" style="color:#bfc7d5"><span class="token string" style="color:rgb(195, 232, 141)">&quot;filters&quot;: {</span></div><div class="token-line" style="color:#bfc7d5"><span class="token string" style="color:rgb(195, 232, 141)">    &quot;device_id&quot;: [&quot;device_id_1&quot;,&quot;device_id_3&quot;, &quot;device_id_2&quot;, &quot;device_id_4&quot;]</span></div><div class="token-line" style="color:#bfc7d5"><span class="token string" style="color:rgb(195, 232, 141)">}, </span></div><div class="token-line" style="color:#bfc7d5"><span class="token string" style="color:rgb(195, 232, 141)">&quot;data&quot;: {&quot;title&quot;: &quot;عنوان پیام&quot;, &quot;content&quot;: &quot;محتوای پیام&quot;}</span></div><div class="token-line" style="color:#bfc7d5"><span class="token string" style="color:rgb(195, 232, 141)">}&#x27;</span></div></div></div></div></div></div></div></div></div></article><div class="margin-vert--lg"><nav class="pagination-nav"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/web-api/simple-notification"><div class="pagination-nav__link--sublabel">Previous</div><div class="pagination-nav__link--label">« ارسال اعلان ساده</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/web-api/notification-keys"><div class="pagination-nav__link--sublabel">Next</div><div class="pagination-nav__link--label">همه کلید‌های اعلان »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"><ul class="contents contents__left-border"><li><a href="#تعریف-اعلان-فیلتردار" class="contents__link">تعریف اعلان فیلتردار</a></li><li><a href="#تعریف-شناسه-یکتا-device_id" class="contents__link">تعریف شناسه یکتا device_id</a></li><li><a href="#آدرس-url-ارسال-اعلان" class="contents__link">آدرس (url) ارسال اعلان</a></li><li><a href="#کلیدهای-ارسال-اعلان-فیلتردار" class="contents__link">کلید‌های ارسال اعلان فیلتردار</a></li><li><a href="#نمونه-کد-ارسال-اعلان-فیلتردار" class="contents__link">نمونه کد ارسال اعلان فیلتردار</a></li></ul></div></div></div></div></main></div></div><footer class="footer"><div class="container"><div class="text--center"><div></div></div></div></footer>
 </div>
 
-<script src="/styles.9ff22cb7.js"></script>
+<script src="/styles.026a558b.js"></script>
 
-<script src="/runtime~main.0e9a35ab.js"></script>
+<script src="/runtime~main.8fac07c6.js"></script>
 
-<script src="/main.96aa680a.js"></script>
+<script src="/main.0233866c.js"></script>
 
-<script src="/1.fc7b874b.js"></script>
+<script src="/1.061dbafe.js"></script>
 
-<script src="/2.b8ef795f.js"></script>
+<script src="/2.e4fad117.js"></script>
 
-<script src="/3.25707238.js"></script>
+<script src="/3.6b6d9043.js"></script>
 
-<script src="/1be78505.8b540b69.js"></script>
+<script src="/1be78505.e1c0b4bc.js"></script>
 
-<script src="/20ac7829.7b5ac282.js"></script>
+<script src="/20ac7829.61b32791.js"></script>
 
-<script src="/17896441.ad09d44a.js"></script>
+<script src="/17896441.c7593a30.js"></script>
 
-<script src="/1bdbbe1c.ff71de7b.js"></script>
+<script src="/1bdbbe1c.91638da1.js"></script>
 
 
 </body>

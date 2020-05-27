@@ -16,25 +16,25 @@
 <link rel="stylesheet" href="/styles.ab52f940.css">
 
 
-<link rel="preload" href="/styles.9ff22cb7.js" as="script">
+<link rel="preload" href="/styles.026a558b.js" as="script">
 
-<link rel="preload" href="/runtime~main.0e9a35ab.js" as="script">
+<link rel="preload" href="/runtime~main.8fac07c6.js" as="script">
 
-<link rel="preload" href="/main.96aa680a.js" as="script">
+<link rel="preload" href="/main.0233866c.js" as="script">
 
-<link rel="preload" href="/1.fc7b874b.js" as="script">
+<link rel="preload" href="/1.061dbafe.js" as="script">
 
-<link rel="preload" href="/2.b8ef795f.js" as="script">
+<link rel="preload" href="/2.e4fad117.js" as="script">
 
-<link rel="preload" href="/3.25707238.js" as="script">
+<link rel="preload" href="/3.6b6d9043.js" as="script">
 
-<link rel="preload" href="/1be78505.8b540b69.js" as="script">
+<link rel="preload" href="/1be78505.e1c0b4bc.js" as="script">
 
-<link rel="preload" href="/20ac7829.7b5ac282.js" as="script">
+<link rel="preload" href="/20ac7829.61b32791.js" as="script">
 
-<link rel="preload" href="/17896441.ad09d44a.js" as="script">
+<link rel="preload" href="/17896441.c7593a30.js" as="script">
 
-<link rel="preload" href="/c265d8f3.6738a7a6.js" as="script">
+<link rel="preload" href="/c265d8f3.ec12cbad.js" as="script">
 
 </head>
 <body>
@@ -51,25 +51,25 @@
 </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    override func didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (UNNotificationContent) -&gt; Void) {</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">        self.contentHandler = contentHandler</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">        self.bestAttemptContent = (request.content.mutableCopy() as? UNMutableNotificationContent)</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">        </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">        if let bestAttemptContent = self.bestAttemptContent {</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">            PusheClient.shared.didReceiveNotificationExtensionRequest(mutableContent: bestAttemptContent, contentHandler: contentHandler)</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">        }</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    }</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    override func serviceExtensionTimeWillExpire() {</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">        if let contentHandler = self.contentHandler, let bestAttemptContent =  self.bestAttemptContent {</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">            contentHandler(bestAttemptContent)</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">        }</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    }</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">}</span></div></div></div></div></div></div></div></div><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="تست-و-ثبت-دستگاه-در-پوشه"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#تست-و-ثبت-دستگاه-در-پوشه" title="Direct link to heading">#</a>تست و ثبت دستگاه در پوشه</h2><p>پس از اجرای برنامه و فراخوانی کد رجیستر پوشه، باید در کنسول <strong>Xcode</strong> لاگ‌های زیر را ببینید (ممکن است به دلیل ارتباط با سرور این پروسه چند ثانیه طول بکشد):</p><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><div tabindex="0" class="prism-code language-javascript codeBlock_19pQ"><div class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token maybe-class-name">Setting</span><span class="token plain"> up </span><span class="token maybe-class-name">Pushe</span><span class="token plain"> </span><span class="token spread operator" style="color:rgb(137, 221, 255)">...</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">apns</span><span class="token operator" style="color:rgb(137, 221, 255)">-</span><span class="token plain">token</span><span class="token operator" style="color:rgb(137, 221, 255)">:</span><span class="token operator" style="color:rgb(137, 221, 255)">&lt;</span><span class="token plain">f5b7616ba649b73bc1dae34e019e35fc2602ecb05d578b369a85a8c480480abc</span><span class="token operator" style="color:rgb(137, 221, 255)">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">fcm</span><span class="token operator" style="color:rgb(137, 221, 255)">-</span><span class="token plain">token</span><span class="token operator" style="color:rgb(137, 221, 255)">:</span><span class="token operator" style="color:rgb(137, 221, 255)">&lt;</span><span class="token plain">uIMhZl83bOudsizqViJSl4</span><span class="token operator" style="color:rgb(137, 221, 255)">:</span><span class="token maybe-class-name">APA91bFNClxSt2AoVWl37MlXQS_RXlWAEJpRR44dcqBg</span><span class="token operator" style="color:rgb(137, 221, 255)">-</span><span class="token plain">jfUvpfc0kclcYV4</span><span class="token operator" style="color:rgb(137, 221, 255)">-</span><span class="token plain">hZAGvighZmvVF0lracKDZMtSuQNu6bJhXok6GI_pE8kxfDNXFq98ParWvjex8aAUPzB93gUQn0SKLBU</span><span class="token operator" style="color:rgb(137, 221, 255)">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">registering </span><span class="token keyword" style="font-style:italic">in</span><span class="token plain"> </span><span class="token maybe-class-name">Pushe</span><span class="token plain"> </span><span class="token spread operator" style="color:rgb(137, 221, 255)">...</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">📗 </span><span class="token operator" style="color:rgb(137, 221, 255)">-</span><span class="token operator" style="color:rgb(137, 221, 255)">&gt;</span><span class="token plain"> successfully registered </span><span class="token keyword" style="font-style:italic">in</span><span class="token plain"> </span><span class="token maybe-class-name">Pushe</span></div></div></div></div></div><br><br><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="ادامهی-کار"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#ادامهی-کار" title="Direct link to heading">#</a>ادامه‌ی کار</h2><p>(بر روی لینک مورد نظر کلیک کنید)</p><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="پروژهی-نمونه-در-گیتهاب"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#پروژهی-نمونه-در-گیتهاب" title="Direct link to heading">#</a><a href="https://github.com/pusheco/android-studio-sample">پروژه‌ی نمونه در گیت‌هاب</a></h3><p>بررسی امکانات در نمونه‌ای از قبل طراحی شده دارای تمام امکانات کتابخانه‌ی پوشه</p><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="سوالات-و-مشکلات-احتمالی"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#سوالات-و-مشکلات-احتمالی" title="Direct link to heading">#</a><a href="/docs/ios/errors">سوالات و مشکلات احتمالی</a></h3><p>در صورتی که در یکی از مراحل زیر به مشکلی برخوردید یا هر سوالی در مورد کتابخانه‌ دارید</p></div></article><div class="margin-vert--lg"><nav class="pagination-nav"><div class="pagination-nav__item"></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/ios/configuration"><div class="pagination-nav__link--sublabel">Next</div><div class="pagination-nav__link--label">پوشه | راهنما آی‌اواس | بررسی آماده‌ به‌کار شدن کتابخانه »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"><ul class="contents contents__left-border"><li><a href="#پیشنیازها" class="contents__link">پیش‌نیازها</a></li><li><a href="#نصب-پوشه-با-استفاده-از-cocoapods" class="contents__link">نصب پوشه با استفاده از cocoapods</a></li><li><a href="#اضافهکردن-کدهای-لازم" class="contents__link">اضافه‌کردن کد‌های لازم</a></li><li><a href="#تست-و-ثبت-دستگاه-در-پوشه" class="contents__link">تست و ثبت دستگاه در پوشه</a></li><li><a href="#ادامهی-کار" class="contents__link">ادامه‌ی کار</a><ul><li><a href="#پروژهی-نمونه-در-گیتهاب" class="contents__link">پروژه‌ی نمونه در گیت‌هاب</a></li><li><a href="#سوالات-و-مشکلات-احتمالی" class="contents__link">سوالات و مشکلات احتمالی</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer"><div class="container"><div class="text--center"><div></div></div></div></footer>
 </div>
 
-<script src="/styles.9ff22cb7.js"></script>
+<script src="/styles.026a558b.js"></script>
 
-<script src="/runtime~main.0e9a35ab.js"></script>
+<script src="/runtime~main.8fac07c6.js"></script>
 
-<script src="/main.96aa680a.js"></script>
+<script src="/main.0233866c.js"></script>
 
-<script src="/1.fc7b874b.js"></script>
+<script src="/1.061dbafe.js"></script>
 
-<script src="/2.b8ef795f.js"></script>
+<script src="/2.e4fad117.js"></script>
 
-<script src="/3.25707238.js"></script>
+<script src="/3.6b6d9043.js"></script>
 
-<script src="/1be78505.8b540b69.js"></script>
+<script src="/1be78505.e1c0b4bc.js"></script>
 
-<script src="/20ac7829.7b5ac282.js"></script>
+<script src="/20ac7829.61b32791.js"></script>
 
-<script src="/17896441.ad09d44a.js"></script>
+<script src="/17896441.c7593a30.js"></script>
 
-<script src="/c265d8f3.6738a7a6.js"></script>
+<script src="/c265d8f3.ec12cbad.js"></script>
 
 
 </body>
