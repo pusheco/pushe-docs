@@ -21,9 +21,7 @@ curl -X POST https://api.pushe.co/v2/messaging/notifications/ \
 -d '{
 "app_ids": "YOUR_APP_ID",
 "filters": {
-    "device_id": ["device_id_1","device_id_3", "device_id_2", "device_id_4"],
-    "brand": ["samsung", "sony"],
-    "app_version": ["1.0.1", "1.0.2"]
+    "device_id": ["device_id_1"]
 },
 "data":{
     "title": "سلام {{ name | کاربر }} عزیز",
@@ -64,13 +62,8 @@ const data = {
     },
     filters: {
         device_id: [
-            'device_id_1',
-            'device_id_2',
-            'device_id_3',
-            'device_id_4'
-        ],
-        brand: ['samsung', 'sony'],
-        app_version: ['1.0.1', '1.0.2']
+            'device_id_1'
+        ]
     }
 };
 
@@ -110,13 +103,8 @@ payload = json.dumps({
     },
     'filters': {
         'device_id': [
-            'device_id_1',
-            'device_id_2',
-            'device_id_3',
-            'device_id_4'
-        ],
-        'brand': ['samsung', 'sony'],
-        'app_version': ['1.0.1', '1.0.2']
+            'device_id_1'
+        ]
     }
 })
 
@@ -153,18 +141,7 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode(array(
     ),
     'filters' => array(
         'device_id' => array(
-            'device_id_1',
-            'device_id_2',
-            'device_id_3',
-            'device_id_4'
-        ),
-        'brand' => array(
-            'samsung',
-            'sony'
-        ),
-        'app_version' => array(
-            '1.0.1',
-            '1.0.2'
+            'device_id_1'
         )
     )
 )));
@@ -205,19 +182,8 @@ func main() {
 		},
         "filters": map[string][]string{
             "device_id": []string{
-                "device_id_1",
-                "device_id_2",
-                "device_id_3",
-                "device_id_4"
-            },
-            "brand": []string{
-                "samsung",
-                "sony"
-            },
-            "app_version": []string{
-                "1.0.1",
-                "1.0.2"
-            },
+                "device_id_1"
+            }
         }
 	}
 
