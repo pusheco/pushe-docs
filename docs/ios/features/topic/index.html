@@ -16,25 +16,25 @@
 <link rel="stylesheet" href="/styles.ab52f940.css">
 
 
-<link rel="preload" href="/styles.026a558b.js" as="script">
+<link rel="preload" href="/styles.30f2c643.js" as="script">
 
-<link rel="preload" href="/runtime~main.11ef6d6e.js" as="script">
+<link rel="preload" href="/runtime~main.6a6c1f59.js" as="script">
 
-<link rel="preload" href="/main.0233866c.js" as="script">
+<link rel="preload" href="/main.c9bc3c68.js" as="script">
 
-<link rel="preload" href="/1.061dbafe.js" as="script">
+<link rel="preload" href="/1.54007196.js" as="script">
 
-<link rel="preload" href="/2.e4fad117.js" as="script">
+<link rel="preload" href="/2.5e3aa113.js" as="script">
 
-<link rel="preload" href="/3.6b6d9043.js" as="script">
+<link rel="preload" href="/3.49e0d483.js" as="script">
 
-<link rel="preload" href="/1be78505.e1c0b4bc.js" as="script">
+<link rel="preload" href="/1be78505.268024ef.js" as="script">
 
-<link rel="preload" href="/20ac7829.61b32791.js" as="script">
+<link rel="preload" href="/20ac7829.3cb9715b.js" as="script">
 
-<link rel="preload" href="/17896441.c7593a30.js" as="script">
+<link rel="preload" href="/17896441.de229920.js" as="script">
 
-<link rel="preload" href="/979ffd24.210ef574.js" as="script">
+<link rel="preload" href="/979ffd24.f6f5d6bc.js" as="script">
 
 </head>
 <body>
@@ -44,25 +44,25 @@
 <code>[a-zA-Z0-9-_.~%]+</code></p></blockquote><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="لغو-عضویت-کاربر-از-تاپیک"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#لغو-عضویت-کاربر-از-تاپیک" title="Direct link to heading">#</a>لغو عضویت کاربر از تاپیک</h2><div dir="ltr"><h4><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="objcunsubscribe-func-unsubscribefrom-topic-string"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#objcunsubscribe-func-unsubscribefrom-topic-string" title="Direct link to heading">#</a><code>@objc(unsubscribe:) func unsubscribe(from topic: String)</code></h4><h4><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="objcunsubscribe-func-unsubscribefrom-topic-string-completionhandler-escaping-error---"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#objcunsubscribe-func-unsubscribefrom-topic-string-completionhandler-escaping-error---" title="Direct link to heading">#</a><code>@objc(unsubscribe::) func unsubscribe(from topic: String, completionHandler: @escaping (Error?) -&gt; ())</code></h4></div><p>عضویت کاربر در تاپیک را حذف می‌کند.</p><table><thead><tr><th align="center">پارامتر ورودی</th><th>استفاده</th></tr></thead><tbody><tr><td align="center">topic</td><td>یک string بیان‌گر عنوان تاپیک موردنظر</td></tr></tbody></table><div><ul role="tablist" aria-orientation="horizontal" class="tabs"><li role="tab" tabindex="0" aria-selected="true" class="tab-item tabItem_3zTA tab-item--active">Swift</li><li role="tab" tabindex="0" aria-selected="false" class="tab-item tabItem_3zTA">Objective-C</li></ul><div role="tabpanel" class="margin-vert--md"><div><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><div tabindex="0" class="prism-code language-swift codeBlock_19pQ"><div class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">let topicToRemoveUserFrom = &quot;sport&quot;;</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">PusheClient.shared.unsubscribe(topic: topicToRemoveUserFrom);</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">// ----------</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">let topicToRemoveUserFrom = &quot;sport&quot;</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">PusheClient.shared.unsubscribe(topic: topicToRemoveUserFrom, completionHandler: { (error) in</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">  // execute your completion closure here</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">})</span></div></div></div></div></div></div></div></div><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="تاپیکهایی-که-کاربر-در-حال-حاضر-در-آنها-عضویت-دارد"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#تاپیکهایی-که-کاربر-در-حال-حاضر-در-آنها-عضویت-دارد" title="Direct link to heading">#</a>تاپیک‌هایی که کاربر در حال حاضر در آن‌ها عضویت دارد</h2><div dir="ltr"><h4><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="objcgetsubscribedtopics-public-func-getsubscribedtopics---string"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#objcgetsubscribedtopics-public-func-getsubscribedtopics---string" title="Direct link to heading">#</a><code>@objc(getSubscribedTopics) public func getSubscribedTopics() -&gt; [String]</code></h4></div><p>تاپیک‌هایی که در حال حاضر کاربر در آن‌ها عضویت دارد، را به صورت آرایه‌ای از <code>String</code>ها برمی‌گرداند.</p><div><ul role="tablist" aria-orientation="horizontal" class="tabs"><li role="tab" tabindex="0" aria-selected="true" class="tab-item tabItem_3zTA tab-item--active">Swift</li><li role="tab" tabindex="0" aria-selected="false" class="tab-item tabItem_3zTA">Objective-C</li></ul><div role="tabpanel" class="margin-vert--md"><div><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><div tabindex="0" class="prism-code language-swift codeBlock_19pQ"><div class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">let subscribedTopics = PusheClient.shared.getSubscribedTopics()</span></div></div></div></div></div></div></div></div></div></article><div class="margin-vert--lg"><nav class="pagination-nav"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/ios/identifiers"><div class="pagination-nav__link--sublabel">Previous</div><div class="pagination-nav__link--label">« پوشه | راهنما آی‌اواس | شناسه‌ها</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/ios/features/tag"><div class="pagination-nav__link--sublabel">Next</div><div class="pagination-nav__link--label">پوشه | راهنما آی‌اواس | برچسب (Tag) »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"><ul class="contents contents__left-border"><li><a href="#عضویت-کاربر-در-تاپیک" class="contents__link">عضویت کاربر در تاپیک</a></li><li><a href="#لغو-عضویت-کاربر-از-تاپیک" class="contents__link">لغو عضویت کاربر از تاپیک</a></li><li><a href="#تاپیکهایی-که-کاربر-در-حال-حاضر-در-آنها-عضویت-دارد" class="contents__link">تاپیک‌هایی که کاربر در حال حاضر در آن‌ها عضویت دارد</a></li></ul></div></div></div></div></main></div></div><footer class="footer"><div class="container"><div class="text--center"><div></div></div></div></footer>
 </div>
 
-<script src="/styles.026a558b.js"></script>
+<script src="/styles.30f2c643.js"></script>
 
-<script src="/runtime~main.11ef6d6e.js"></script>
+<script src="/runtime~main.6a6c1f59.js"></script>
 
-<script src="/main.0233866c.js"></script>
+<script src="/main.c9bc3c68.js"></script>
 
-<script src="/1.061dbafe.js"></script>
+<script src="/1.54007196.js"></script>
 
-<script src="/2.e4fad117.js"></script>
+<script src="/2.5e3aa113.js"></script>
 
-<script src="/3.6b6d9043.js"></script>
+<script src="/3.49e0d483.js"></script>
 
-<script src="/1be78505.e1c0b4bc.js"></script>
+<script src="/1be78505.268024ef.js"></script>
 
-<script src="/20ac7829.61b32791.js"></script>
+<script src="/20ac7829.3cb9715b.js"></script>
 
-<script src="/17896441.c7593a30.js"></script>
+<script src="/17896441.de229920.js"></script>
 
-<script src="/979ffd24.210ef574.js"></script>
+<script src="/979ffd24.f6f5d6bc.js"></script>
 
 
 </body>

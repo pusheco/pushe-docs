@@ -16,25 +16,25 @@
 <link rel="stylesheet" href="/styles.ab52f940.css">
 
 
-<link rel="preload" href="/styles.026a558b.js" as="script">
+<link rel="preload" href="/styles.30f2c643.js" as="script">
 
-<link rel="preload" href="/runtime~main.11ef6d6e.js" as="script">
+<link rel="preload" href="/runtime~main.6a6c1f59.js" as="script">
 
-<link rel="preload" href="/main.0233866c.js" as="script">
+<link rel="preload" href="/main.c9bc3c68.js" as="script">
 
-<link rel="preload" href="/1.061dbafe.js" as="script">
+<link rel="preload" href="/1.54007196.js" as="script">
 
-<link rel="preload" href="/2.e4fad117.js" as="script">
+<link rel="preload" href="/2.5e3aa113.js" as="script">
 
-<link rel="preload" href="/3.6b6d9043.js" as="script">
+<link rel="preload" href="/3.49e0d483.js" as="script">
 
-<link rel="preload" href="/1be78505.e1c0b4bc.js" as="script">
+<link rel="preload" href="/1be78505.268024ef.js" as="script">
 
-<link rel="preload" href="/20ac7829.61b32791.js" as="script">
+<link rel="preload" href="/20ac7829.3cb9715b.js" as="script">
 
-<link rel="preload" href="/17896441.c7593a30.js" as="script">
+<link rel="preload" href="/17896441.de229920.js" as="script">
 
-<link rel="preload" href="/05abb0d7.31fc8476.js" as="script">
+<link rel="preload" href="/05abb0d7.4c821d46.js" as="script">
 
 </head>
 <body>
@@ -45,25 +45,25 @@
 در صورتی که در مانیفیست اندروید برنامه <code>flutterEmbedding</code> دارای مقدار <code>2</code> است اما در فایل <code>MainActivity</code> تابع <code>GeneratedPluginRegistrat.registerWith</code> صدا زده شده،‌ بایستی آن را حذف کنید، زیرا این کار خودکار انجام می‌شود.</p><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="تابع-اعلان-در-بکگراند-صدا-زده-نمیشود"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#تابع-اعلان-در-بکگراند-صدا-زده-نمیشود" title="Direct link to heading">#</a>تابع اعلان در بکگراند صدا زده نمی‌شود</h3><p>حتما بایستی اپلیکیشن override شده و به مانیفست اندروید معرفی شود. در صورتی که این اتفاق نیفتد، توابع رویداد در صورتی دریافت کالبک، مطلع نخواند شد.</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="مرتبط-با-نمایش-نوتیفیکیشن"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#مرتبط-با-نمایش-نوتیفیکیشن" title="Direct link to heading">#</a>مرتبط با نمایش نوتیفیکیشن</h2><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="آیکن-نوتیفیکیشن-مربعی-سفید-و-یا-خاکستری-است"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#آیکن-نوتیفیکیشن-مربعی-سفید-و-یا-خاکستری-است" title="Direct link to heading">#</a>آیکن نوتیفیکیشن مربعی سفید و یا خاکستری‌ است</h3><p>هنگام رسیدن اعلان به دیوایس، کتابخانه‌ی پوشه وجود آیکن در اعلان دریافتی را بررسی می‌کند؛ در صورتی که آیکن (small icon)  در پنل ارسال نوتیفیکشن و یا از طریق API تعیین شده باشد، آن را قرار می‌دهد و در غیر اینصورت:</p><ul><li>در صورتی که Android دستگاه بالای 5.1 باشد ابتدا به دنبال آیکن جایگزینی به نام <strong>ic_silhouette</strong> می‌گردد.</li><li>در صورتی که آیکنی با نام <strong>ic_silhouette</strong> در اپ شما وجود نداشته  باشد آیکن برنامه را به عنوان آیکن کوچک نوتیفیکیشن قرار می‌دهد.</li></ul><blockquote><p>دلیل سفید دیده شدن آیکن کوچک نوتیفیکیشن چیست؟</p></blockquote><p>در اندروید 5 به بالا، آیکن کوچک نوتیفیکیشن باید تماما سفید و بدون بک‌گراند باشد. به عبارت دیگر بک‌گراند transparent داشته باشد. در غیر اینصورت آیکن نمایش‌ داده شده حالت درستی نخواهد داشت و سفید یا خاکستری دیده می‌شود.</p><p>در صورتی که آیکنی در پنل ارسال نوتیفیکیشن و یا از طریق API مشخص نشده باشد، آیکن جایگزینی با نام (<code>ic_silhouette</code>) در اپ شما وجود نداشته باشد و آیکن برنامه‌ی شما نیز سفید بدون بک‌گراند نباشد که معمولا آیکن برنامه اینطوری نیست، این مورد رخ خواهد داد.</p><blockquote><p>راه‌حل: می‌توانید یکی از موارد زیر را در نظر داشته باشید.</p></blockquote><ul><li><p>هنگام ارسال نوتیفیکیشن همیشه آیکن کوچک تنظیم کنید (small icon).</p></li><li><p>آیکنی برای اعلان به صورت سفید بدون بک‌گراند یا در واقع بک‌گراند transparent طراحی‌ کنید و با نام ‌<code>ic_silhouette</code> در <strong>drawable</strong>  برنامه‌ی خود ذخیره‌ کنید. در صورتی که مشکلی وجود‌ داشته باشد پوشه از این آیکن استفاده می‌کند. سایز آیکنی که برای نوتیفیکیشن استفاده می‌کنید باید به صورت جدول زیر باشد.</p></li></ul><table><thead><tr><th>MDPI</th><th>HDPI</th><th>XHDPI</th><th>XXHDPI</th><th>XXXHDPI</th></tr></thead><tbody><tr><td>24px</td><td>36px</td><td>48px</td><td>72px</td><td>96px</td></tr></tbody></table><ul><li>آیکن برنامه‌ی شما سفید بدون بک‌گراند باشد. غالبا این راه‌حل کاربرد چندانی ندارد به خاطر اینکه آیکن برنامه معمولا یک آیکن سفید بدون بک‌گراند نیست  و برای نوتیفیکیشن از آیکن متفاوتی استفاده می‌شود.</li></ul><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="اعلان-دارای-عکس-یا-لینک-دریافت-نمیشود-و-یا-بدون-عکس-است"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#اعلان-دارای-عکس-یا-لینک-دریافت-نمیشود-و-یا-بدون-عکس-است" title="Direct link to heading">#</a>اعلان دارای عکس یا لینک دریافت نمی‌شود و یا بدون عکس است</h3><p>در صورتی که دستگاه دریافت کننده دارای android 9 یا بالاتر باشد، ترافیک‌های Http در برنامه انجام نمی‌شود و فقط ریکوئست‌های Https قابل انجام است.</p><p><strong>راه‌حل:</strong> یکی از راه‌های زیر را انتخاب کنید:</p><ul><li>همیشه از لینک‌های <strong>Https</strong> استفاده‌کنید و عکس‌ها نیز از سرور <strong>Https</strong> باشند.</li><li>برای تغییر تنظیمات اینکه ریکوئست‌های Http نیز کار کنند، این فیلد را در مانیفست خود قرار دهید:</li></ul><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><div tabindex="0" class="prism-code language-xml codeBlock_19pQ"><div class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token tag punctuation" style="color:rgb(199, 146, 234)">&lt;</span><span class="token tag" style="color:rgb(255, 85, 114)">application</span><span class="token tag" style="color:rgb(255, 85, 114)"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token tag" style="color:rgb(255, 85, 114)">    </span><span class="token tag attr-name namespace" style="color:rgb(178, 204, 214)">android:</span><span class="token tag attr-name" style="color:rgb(255, 203, 107)">usesCleartextTraffic</span><span class="token tag attr-value punctuation" style="color:rgb(199, 146, 234)">=</span><span class="token tag attr-value punctuation" style="color:rgb(199, 146, 234)">&quot;</span><span class="token tag attr-value" style="color:rgb(255, 85, 114)">true</span><span class="token tag attr-value punctuation" style="color:rgb(199, 146, 234)">&quot;</span><span class="token tag" style="color:rgb(255, 85, 114)"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token tag" style="color:rgb(255, 85, 114)">    </span><span class="token tag attr-name" style="color:rgb(255, 203, 107)">...</span><span class="token tag" style="color:rgb(255, 85, 114)"> </span><span class="token tag punctuation" style="color:rgb(199, 146, 234)">/&gt;</span></div></div></div></div></div></div></article><div class="margin-vert--lg"><nav class="pagination-nav"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/flutter/troubleshoot"><div class="pagination-nav__link--sublabel">Previous</div><div class="pagination-nav__link--label">« پوشه | راهنمای فلاتر | خطاهای ممکن</div></a></div><div class="pagination-nav__item pagination-nav__item--next"></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"><ul class="contents contents__left-border"><li><a href="#مرتبط-با-امکانات" class="contents__link">مرتبط با امکانات</a><ul><li><a href="#رویداد-زمانی-که-اپ-باز-است-دوبار-صدا-زده-میشود" class="contents__link">رویداد زمانی که اپ باز است دوبار صدا زده می‌شود</a></li><li><a href="#تابع-اعلان-در-بکگراند-صدا-زده-نمیشود" class="contents__link">تابع اعلان در بکگراند صدا زده نمی‌شود</a></li></ul></li><li><a href="#مرتبط-با-نمایش-نوتیفیکیشن" class="contents__link">مرتبط با نمایش نوتیفیکیشن</a><ul><li><a href="#آیکن-نوتیفیکیشن-مربعی-سفید-و-یا-خاکستری-است" class="contents__link">آیکن نوتیفیکیشن مربعی سفید و یا خاکستری‌ است</a></li><li><a href="#اعلان-دارای-عکس-یا-لینک-دریافت-نمیشود-و-یا-بدون-عکس-است" class="contents__link">اعلان دارای عکس یا لینک دریافت نمی‌شود و یا بدون عکس است</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer"><div class="container"><div class="text--center"><div></div></div></div></footer>
 </div>
 
-<script src="/styles.026a558b.js"></script>
+<script src="/styles.30f2c643.js"></script>
 
-<script src="/runtime~main.11ef6d6e.js"></script>
+<script src="/runtime~main.6a6c1f59.js"></script>
 
-<script src="/main.0233866c.js"></script>
+<script src="/main.c9bc3c68.js"></script>
 
-<script src="/1.061dbafe.js"></script>
+<script src="/1.54007196.js"></script>
 
-<script src="/2.e4fad117.js"></script>
+<script src="/2.5e3aa113.js"></script>
 
-<script src="/3.6b6d9043.js"></script>
+<script src="/3.49e0d483.js"></script>
 
-<script src="/1be78505.e1c0b4bc.js"></script>
+<script src="/1be78505.268024ef.js"></script>
 
-<script src="/20ac7829.61b32791.js"></script>
+<script src="/20ac7829.3cb9715b.js"></script>
 
-<script src="/17896441.c7593a30.js"></script>
+<script src="/17896441.de229920.js"></script>
 
-<script src="/05abb0d7.31fc8476.js"></script>
+<script src="/05abb0d7.4c821d46.js"></script>
 
 
 </body>

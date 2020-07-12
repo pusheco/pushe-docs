@@ -16,25 +16,25 @@
 <link rel="stylesheet" href="/styles.ab52f940.css">
 
 
-<link rel="preload" href="/styles.026a558b.js" as="script">
+<link rel="preload" href="/styles.30f2c643.js" as="script">
 
-<link rel="preload" href="/runtime~main.11ef6d6e.js" as="script">
+<link rel="preload" href="/runtime~main.6a6c1f59.js" as="script">
 
-<link rel="preload" href="/main.0233866c.js" as="script">
+<link rel="preload" href="/main.c9bc3c68.js" as="script">
 
-<link rel="preload" href="/1.061dbafe.js" as="script">
+<link rel="preload" href="/1.54007196.js" as="script">
 
-<link rel="preload" href="/2.e4fad117.js" as="script">
+<link rel="preload" href="/2.5e3aa113.js" as="script">
 
-<link rel="preload" href="/3.6b6d9043.js" as="script">
+<link rel="preload" href="/3.49e0d483.js" as="script">
 
-<link rel="preload" href="/1be78505.e1c0b4bc.js" as="script">
+<link rel="preload" href="/1be78505.268024ef.js" as="script">
 
-<link rel="preload" href="/20ac7829.61b32791.js" as="script">
+<link rel="preload" href="/20ac7829.3cb9715b.js" as="script">
 
-<link rel="preload" href="/17896441.c7593a30.js" as="script">
+<link rel="preload" href="/17896441.de229920.js" as="script">
 
-<link rel="preload" href="/d6155998.901a84d7.js" as="script">
+<link rel="preload" href="/d6155998.3910766b.js" as="script">
 
 </head>
 <body>
@@ -49,25 +49,25 @@
 </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    public void OnButtonClick(NotificationButtonData notificationButtonData, NotificationData notificationData)</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    {</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">        // Pushe.Log(&quot;Notification button clicked\n Data: &quot; + notificationData +</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">                  // &quot;\n ButtonData: &quot; + notificationButtonData);</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    }</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">}</span></div></div></div></div></div><p>سپس کد زیر را فراخوانی کنید تا Listener اضافه‌شود:</p><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><div tabindex="0" class="prism-code language-java codeBlock_19pQ"><div class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">PusheNotification.SetNotificationListener(new PusheNotifListener());</span></div></div></div></div></div><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="موارد-اضافی"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#موارد-اضافی" title="Direct link to heading">#</a>موارد اضافی</h2><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="استفاده-از-gameobject-دلخواه"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#استفاده-از-gameobject-دلخواه" title="Direct link to heading">#</a>استفاده از GameObject دلخواه</h3><blockquote><p>از نسخه‌ی 0.4.4</p></blockquote><p>در صورتی که قصد دارید شئی اضافه نداشته باشید و یا به هردلیلی امکان استفاده از <code>PusheCallback</code> ممکن نیست، می‌توانید با استفاده از کد زیر GameObject کاستوم استفاده کنید.</p><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><div tabindex="0" class="prism-code language-java codeBlock_19pQ"><div class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">PusheNotification.SetNotificationListener(gameObject.name, new PusheNotifListener());</span></div></div></div></div></div><blockquote><p><strong>نکته</strong>: باید اسکریپت <code>PusheCallback.cs</code> به این GameObject متصل شده‌باشد.</p></blockquote></div></article><div class="margin-vert--lg"><nav class="pagination-nav"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/unity/d2d"><div class="pagination-nav__link--sublabel">Previous</div><div class="pagination-nav__link--label">« اعلان از یک دیوایس یه دیوایس دیگر</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/unity/disable"><div class="pagination-nav__link--sublabel">Next</div><div class="pagination-nav__link--label">غیرفعال‌کردن نمایش اعلان »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"><ul class="contents contents__left-border"><li><a href="#فعالکردن-notification-listener" class="contents__link">فعال‌کردن Notification listener</a><ul><li><a href="#ساخت-gameobject" class="contents__link">ساخت GameObject</a></li><li><a href="#اضافهکردن-کد-به-اسکریپت-خود" class="contents__link">اضافه‌کردن کد به اسکریپت خود</a></li></ul></li><li><a href="#موارد-اضافی" class="contents__link">موارد اضافی</a><ul><li><a href="#استفاده-از-gameobject-دلخواه" class="contents__link">استفاده از GameObject دلخواه</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer"><div class="container"><div class="text--center"><div></div></div></div></footer>
 </div>
 
-<script src="/styles.026a558b.js"></script>
+<script src="/styles.30f2c643.js"></script>
 
-<script src="/runtime~main.11ef6d6e.js"></script>
+<script src="/runtime~main.6a6c1f59.js"></script>
 
-<script src="/main.0233866c.js"></script>
+<script src="/main.c9bc3c68.js"></script>
 
-<script src="/1.061dbafe.js"></script>
+<script src="/1.54007196.js"></script>
 
-<script src="/2.e4fad117.js"></script>
+<script src="/2.5e3aa113.js"></script>
 
-<script src="/3.6b6d9043.js"></script>
+<script src="/3.49e0d483.js"></script>
 
-<script src="/1be78505.e1c0b4bc.js"></script>
+<script src="/1be78505.268024ef.js"></script>
 
-<script src="/20ac7829.61b32791.js"></script>
+<script src="/20ac7829.3cb9715b.js"></script>
 
-<script src="/17896441.c7593a30.js"></script>
+<script src="/17896441.de229920.js"></script>
 
-<script src="/d6155998.901a84d7.js"></script>
+<script src="/d6155998.3910766b.js"></script>
 
 
 </body>
