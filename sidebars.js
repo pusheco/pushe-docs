@@ -161,6 +161,7 @@ module.exports = {
       "mobile-api/intro",
       "mobile-api/authentication",
       "mobile-api/get-app-id",
+      "mobile-api/customized-notification",
       "mobile-api/simple-notification",
       "mobile-api/filtered-notification",
       "mobile-api/transactional-notification",
