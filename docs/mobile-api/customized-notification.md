@@ -115,7 +115,7 @@ import Platforms from "@site/src/components/Platforms.jsx";
 
 ```
 {
-    "title":"سلام (( name | کاربر }} خوبی؟"
+    "title":"سلام  {{  کاربر | name }} خوبی؟"
 }
 ```
 :::
