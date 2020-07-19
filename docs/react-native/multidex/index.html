@@ -16,25 +16,25 @@
 <link rel="stylesheet" href="/styles.ab52f940.css">
 
 
-<link rel="preload" href="/styles.30f2c643.js" as="script">
+<link rel="preload" href="/styles.a6ef6bdf.js" as="script">
 
-<link rel="preload" href="/runtime~main.5690caa9.js" as="script">
+<link rel="preload" href="/runtime~main.d3a33a07.js" as="script">
 
-<link rel="preload" href="/main.c9bc3c68.js" as="script">
+<link rel="preload" href="/main.99992947.js" as="script">
 
-<link rel="preload" href="/1.54007196.js" as="script">
+<link rel="preload" href="/1.3c0ad1f2.js" as="script">
 
-<link rel="preload" href="/2.5e3aa113.js" as="script">
+<link rel="preload" href="/2.001ae09f.js" as="script">
 
-<link rel="preload" href="/3.49e0d483.js" as="script">
+<link rel="preload" href="/3.c4520914.js" as="script">
 
-<link rel="preload" href="/1be78505.268024ef.js" as="script">
+<link rel="preload" href="/1be78505.cfca172f.js" as="script">
 
-<link rel="preload" href="/20ac7829.6f55f11a.js" as="script">
+<link rel="preload" href="/20ac7829.f0c99db2.js" as="script">
 
-<link rel="preload" href="/17896441.de229920.js" as="script">
+<link rel="preload" href="/17896441.9074fa4d.js" as="script">
 
-<link rel="preload" href="/af52e54e.27f1fd6b.js" as="script">
+<link rel="preload" href="/af52e54e.c229124b.js" as="script">
 
 </head>
 <body>
@@ -57,25 +57,25 @@ Dalvik
 در صورتی که برنامه این خطا را دارد، مشکل شما MultiDex نیست.</p></blockquote><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="فعالکردن-multidex-در-برنامه"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#فعالکردن-multidex-در-برنامه" title="Direct link to heading">#</a>فعال‌کردن MultiDex در برنامه</h2><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="اضافهکردن-کد-گریدل"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#اضافهکردن-کد-گریدل" title="Direct link to heading">#</a>اضافه‌کردن کد گریدل</h3><p>‌در فایل <code>android/app/build.gradle</code> این موارد را اضافه کنید:</p><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><div tabindex="0" class="prism-code language-js codeBlock_19pQ"><div class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">android </span><span class="token punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    defaultConfig </span><span class="token punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    </span><span class="token comment" style="color:rgb(105, 112, 152);font-style:italic">// ...</span><span class="token plain"></span></div><div class="token-line docusaurus-highlight-code-line" style="color:#bfc7d5"><span class="token plain">        multiDexEnabled </span><span class="token boolean" style="color:rgb(255, 88, 116)">true</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(199, 146, 234)">}</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token punctuation" style="color:rgb(199, 146, 234)">}</span></div></div></div></div></div><div><ul role="tablist" aria-orientation="horizontal" class="tabs"><li role="tab" tabindex="0" aria-selected="true" class="tab-item tabItem_3zTA tab-item--active">AndroidX</li><li role="tab" tabindex="0" aria-selected="false" class="tab-item tabItem_3zTA">Android support</li></ul><div role="tabpanel" class="margin-vert--md"><div><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><div tabindex="0" class="prism-code language-js codeBlock_19pQ"><div class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">dependencies </span><span class="token punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token plain"></span></div><div class="token-line docusaurus-highlight-code-line" style="color:#bfc7d5"><span class="token plain">    implementation </span><span class="token string" style="color:rgb(195, 232, 141)">&quot;androidx.multidex:multidex:2.0.1&quot;</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token punctuation" style="color:rgb(199, 146, 234)">}</span></div></div></div></div></div></div></div></div><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="تغییردادن-کلاس-اپلیکیشن"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#تغییردادن-کلاس-اپلیکیشن" title="Direct link to heading">#</a>تغییردادن کلاس اپلیکیشن</h3><ul><li>به آدرس <code>android/src/main/java or kotlin/&lt;your_app&gt;</code> بروید.<br><code>your_app</code> مسیر پکیج برنامه‌ی شماست</li></ul><p>کلاس MainApplication را تغییر دهید به طوریکه به جای کلاس Application کلاس MultidexApplication را extend کند.</p></div></article><div class="margin-vert--lg"><nav class="pagination-nav"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/react-native/intro"><div class="pagination-nav__link--sublabel">Previous</div><div class="pagination-nav__link--label">« راه اندازی در ری‌اکت نیتیو</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/react-native/check-library-status"><div class="pagination-nav__link--sublabel">Next</div><div class="pagination-nav__link--label">پوشه | راهنما ری‌اکت‌نیتیو | بررسی رجیستر دستگاه »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"><ul class="contents contents__left-border"><li><a href="#multidex-چیست؟" class="contents__link">MultiDex چیست؟</a></li><li><a href="#فعالکردن-multidex-در-برنامه" class="contents__link">فعال‌کردن MultiDex در برنامه</a><ul><li><a href="#اضافهکردن-کد-گریدل" class="contents__link">اضافه‌کردن کد گریدل</a></li><li><a href="#تغییردادن-کلاس-اپلیکیشن" class="contents__link">تغییردادن کلاس اپلیکیشن</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer"><div class="container"><div class="text--center"><div></div></div></div></footer>
 </div>
 
-<script src="/styles.30f2c643.js"></script>
+<script src="/styles.a6ef6bdf.js"></script>
 
-<script src="/runtime~main.5690caa9.js"></script>
+<script src="/runtime~main.d3a33a07.js"></script>
 
-<script src="/main.c9bc3c68.js"></script>
+<script src="/main.99992947.js"></script>
 
-<script src="/1.54007196.js"></script>
+<script src="/1.3c0ad1f2.js"></script>
 
-<script src="/2.5e3aa113.js"></script>
+<script src="/2.001ae09f.js"></script>
 
-<script src="/3.49e0d483.js"></script>
+<script src="/3.c4520914.js"></script>
 
-<script src="/1be78505.268024ef.js"></script>
+<script src="/1be78505.cfca172f.js"></script>
 
-<script src="/20ac7829.6f55f11a.js"></script>
+<script src="/20ac7829.f0c99db2.js"></script>
 
-<script src="/17896441.de229920.js"></script>
+<script src="/17896441.9074fa4d.js"></script>
 
-<script src="/af52e54e.27f1fd6b.js"></script>
+<script src="/af52e54e.c229124b.js"></script>
 
 
 </body>
