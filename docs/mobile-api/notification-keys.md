@@ -455,6 +455,40 @@ led زمان خاموش ماندن
 **نوع مقدار**: لیستی از رشته string     
 **توضیحات**: فیلتر اعلان برای مشخص کردن ورژن اپلیکیشن
 
+
+### **phone_number**
+
+<Platforms android />
+
+`filters.phone_number`
+
+**استفاده**:  اختیاری   
+**کلید پدر**: [کلید filters](/docs/mobile-api/notification-keys#filters)   
+**نوع مقدار**: لیستی از رشته string     
+**توضیحات**: فیلتر اعلان بر اساس شماره تلفن کاربر
+
+### **email**
+
+<Platforms android />
+
+`filters.email`
+
+**استفاده**:  اختیاری   
+**کلید پدر**: [کلید filters](/docs/mobile-api/notification-keys#filters)   
+**نوع مقدار**: لیستی از رشته string     
+**توضیحات**: فیلتر اعلان بر اساس آدرس ایمیل کاربر
+
+### **custom_id**
+
+<Platforms android />
+
+`filters.custom_id`
+
+**استفاده**:  اختیاری   
+**کلید پدر**: [کلید filters](/docs/mobile-api/notification-keys#filters)   
+**نوع مقدار**: لیستی از رشته string     
+**توضیحات**: فیلتر اعلان بر اساس شناسه دلخواه
+
 ### **topics**
 
 <Platforms android />

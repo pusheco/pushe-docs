@@ -164,6 +164,7 @@ module.exports = {
       "mobile-api/customized-notification",
       "mobile-api/simple-notification",
       "mobile-api/filtered-notification",
+      "mobile-api/topic-notification",
       "mobile-api/transactional-notification",
       "mobile-api/custom-content-notification",
       "mobile-api/notification-keys",
