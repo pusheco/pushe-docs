@@ -119,7 +119,34 @@ Pushe: Registration successful
 
 ## نصب podهای لازم
 
-وارد فولدر ios شوید و دستور زیر را اجرا کنید.
+وارد فولدر ios شوید. قبل از نصب پادها اطمینان حاصل کنید که تگ `use_frameworks!` را به `Podfile` اضافه کرده و همچنین تمام ارجاع‌های به `iFlipper` را حذف کرده باشید.
+
+```ruby
+platform :ios, '10.0'
+use_frameworks!
+
+target 'DummyRNApp' do
+  config = use_native_modules!
+
+  use_react_native!(:path => config["reactNativePath"])
+
+  target 'DummyRNAppTests' do
+    inherit! :complete
+    # Pods for testing
+  end
+
+  # Enables Flipper.
+  #
+  # Note that if you have use_frameworks! enabled, Flipper will not work and
+  # you should disable these next few lines.
+  # use_flipper!
+  # post_install do |installer|
+    # flipper_post_install(installer)
+  # end
+end
+```
+
+سپس دستور زیر را اجرا کنید.
 
 ```ruby
 pod install --repo-update
